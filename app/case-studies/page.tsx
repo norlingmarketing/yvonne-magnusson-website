@@ -1,6 +1,30 @@
+import type { Metadata } from "next";
+import { BlurFade } from "@/components/magicui/blur-fade";
+
+export const metadata: Metadata = {
+  title: "Case Studies - Bevisade Transformationsresultat",
+  description: "Verkliga framgångshistorier från 30+ transformationsprojekt. 40%+ tillväxt, 15 procentenheter EBITDA-förbättring och beprövade resultat inom retail och FMCG.",
+  keywords: [
+    "case studies",
+    "transformation resultat", 
+    "retail turnaround",
+    "FMCG transformation",
+    "digital transformation cases",
+    "framgångshistorier",
+    "business transformation",
+    "turnaround results",
+    "interim VD resultat",
+    "retail case studies"
+  ],
+  openGraph: {
+    title: "Case Studies - Bevisade Transformationsresultat | Yvonne Magnusson",
+    description: "Verkliga framgångshistorier från 30+ transformationsprojekt med 40%+ tillväxt och beprövade resultat.",
+    url: "https://yvonnemagnusson.com/case-studies",
+  },
+};
+
 "use client";
 
-import { BlurFade } from "@/components/magicui/blur-fade";
 import { NumberTicker } from "@/components/magicui/number-ticker";
 import { ShimmerButton } from "@/components/magicui/shimmer-button";
 import { TrendingUp, Users, Target, ArrowRight, Building, Zap, Award, CheckCircle, BarChart3 } from "lucide-react";

@@ -1,6 +1,29 @@
-"use client";
-
+import type { Metadata } from "next";
 import { BlurFade } from "@/components/magicui/blur-fade";
+
+export const metadata: Metadata = {
+  title: "Media & Press - Pressresurser och Expertkommentarer",
+  description: "Presskit, mediematerial och expertkommentarer från Yvonne Magnusson. Tillgänglig för intervjuer, keynotes och expertanalys inom transformation och retail.",
+  keywords: [
+    "media kit",
+    "press resources",
+    "expert commentary",
+    "keynote speaker",
+    "media appearances",
+    "transformation expert",
+    "retail expert",
+    "press releases",
+    "speaking engagements",
+    "media interviews"
+  ],
+  openGraph: {
+    title: "Media & Press - Pressresurser och Expertkommentarer | Yvonne Magnusson",
+    description: "Presskit, mediematerial och expertkommentarer från transformationsexperten Yvonne Magnusson.",
+    url: "https://yvonnemagnusson.com/media",
+  },
+};
+
+"use client";
 import { ShimmerButton } from "@/components/magicui/shimmer-button";
 import { Download, ExternalLink, Calendar, Users, Camera, Mic, FileText, Image, Video, Award, Star, Mail } from "lucide-react";
 import Link from "next/link";
