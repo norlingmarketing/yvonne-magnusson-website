@@ -12,8 +12,9 @@ const navigation = [
   { name: "Om Yvonne", href: "/om-yvonne" },
   { name: "Tjänster", href: "/tjanster" },
   { name: "Föreläsningar", href: "/forelasningar" },
-  { name: "Case & Referenser", href: "/case-referenser" },
+  { name: "Case Studies", href: "/case-studies" },
   { name: "Insikter", href: "/insikter" },
+  { name: "Media", href: "/media" },
   { name: "Kontakt", href: "/kontakt" },
 ];
 
