@@ -6,12 +6,32 @@ import { ShimmerButton } from "@/components/magicui/shimmer-button";
 import { BlurFade } from "@/components/magicui/blur-fade";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
+import { FlickeringGrid } from "@/components/magicui/flickering-grid";
+import { Ripple } from "@/components/magicui/ripple";
+import { NumberTicker } from "@/components/magicui/number-ticker";
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center bg-gradient-to-br from-gray-50 to-white">
-      {/* Background pattern */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KPGcgZmlsbD0iIzJDNUY3QyIgZmlsbC1vcGFjaXR5PSIwLjAzIj4KPGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPgo8L2c+CjwvZz4KPC9zdmc+')] opacity-40"></div>
+    <section className="relative min-h-[90vh] flex items-center justify-center bg-gradient-to-br from-gray-50 to-white overflow-hidden">
+      {/* Animated Background Grid */}
+      <FlickeringGrid
+        className="absolute inset-0 z-0 [mask-image:radial-gradient(800px_circle_at_center,white,transparent)]"
+        squareSize={4}
+        gridGap={6}
+        color="#2C5F7C"
+        maxOpacity={0.1}
+        flickerChance={0.05}
+        height={800}
+        width={800}
+      />
+      
+      {/* Ripple Effect */}
+      <Ripple
+        className="absolute inset-0 z-0"
+        mainCircleSize={300}
+        mainCircleOpacity={0.08}
+        numCircles={5}
+      />
       
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
         <BlurFade delay={0.2}>
@@ -66,19 +86,27 @@ export function HeroSection() {
         <BlurFade delay={1.0}>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-2xl mx-auto text-center">
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-[#2C5F7C] mb-2">30+</div>
+              <div className="text-3xl md:text-4xl font-bold text-[#2C5F7C] mb-2">
+                <NumberTicker value={30} />+
+              </div>
               <div className="text-sm text-gray-600">års erfarenhet</div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-[#2C5F7C] mb-2">18</div>
+              <div className="text-3xl md:text-4xl font-bold text-[#2C5F7C] mb-2">
+                <NumberTicker value={18} />
+              </div>
               <div className="text-sm text-gray-600">år som VD</div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-[#2C5F7C] mb-2">4</div>
+              <div className="text-3xl md:text-4xl font-bold text-[#2C5F7C] mb-2">
+                <NumberTicker value={4} />
+              </div>
               <div className="text-sm text-gray-600">turnarounds</div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-[#2C5F7C] mb-2">6</div>
+              <div className="text-3xl md:text-4xl font-bold text-[#2C5F7C] mb-2">
+                <NumberTicker value={6} />
+              </div>
               <div className="text-sm text-gray-600">lönsamma tillväxtresor</div>
             </div>
           </div>

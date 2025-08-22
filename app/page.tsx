@@ -4,6 +4,7 @@ import { ServicesSection } from "@/components/sections/services-section";
 import { CredentialsSection } from "@/components/sections/credentials-section";
 import { TestimonialsSection } from "@/components/sections/testimonials-section";
 import { CTASection } from "@/components/sections/cta-section";
+import { LogoCloudSection } from "@/components/sections/logo-cloud-section";
 import { Footer } from "@/components/layout/footer";
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
       <MainNav />
       <main>
         <HeroSection />
+        <LogoCloudSection />
         <CredentialsSection />
         <ServicesSection />
         <TestimonialsSection />
