@@ -24,6 +24,7 @@ export const metadata: Metadata = {
 };
 
 "use client";
+
 import { ShimmerButton } from "@/components/magicui/shimmer-button";
 import { Calendar, Clock, ArrowRight, TrendingUp, Users, Target, Lightbulb, BookOpen, Filter } from "lucide-react";
 import Link from "next/link";
@@ -114,7 +115,6 @@ export default function InsightsPage() {
     : articles.filter(article => article.category === selectedCategory);
 
   const featuredArticles = articles.filter(article => article.featured);
-  const recentArticles = articles.slice(0, 3);
 
   const insights = [
     {

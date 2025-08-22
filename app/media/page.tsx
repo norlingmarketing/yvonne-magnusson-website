@@ -24,8 +24,9 @@ export const metadata: Metadata = {
 };
 
 "use client";
+
 import { ShimmerButton } from "@/components/magicui/shimmer-button";
-import { Download, ExternalLink, Calendar, Users, Camera, Mic, FileText, Image, Video, Award, Star, Mail } from "lucide-react";
+import { Download, ExternalLink, Calendar, Users, Camera, Mic, FileText, Image as ImageIcon, Video, Award, Star, Mail } from "lucide-react";
 import Link from "next/link";
 
 export default function MediaPage() {
@@ -56,7 +57,7 @@ export default function MediaPage() {
   const mediaKit = [
     {
       type: "Högupplösta Bilder",
-      icon: <Image className="h-6 w-6" />,
+      icon: <ImageIcon className="h-6 w-6" />,
       description: "Professionella profilbilder och presentationsfoton",
       items: [
         { name: "Yvonne_Magnusson_Portrait_HighRes.jpg", size: "3.2 MB" },
