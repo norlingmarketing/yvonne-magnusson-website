@@ -10,6 +10,8 @@ import { FlickeringGrid } from "@/components/magicui/flickering-grid";
 import { Ripple } from "@/components/magicui/ripple";
 import { NumberTicker } from "@/components/magicui/number-ticker";
 
+import Image from "next/image";
+
 export function HeroSection() {
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center bg-gradient-to-br from-gray-50 to-white overflow-hidden">
@@ -33,7 +35,9 @@ export function HeroSection() {
         numCircles={5}
       />
       
-      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="text-center lg:text-left">
         <BlurFade delay={0.2}>
           <AnimatedGradientText className="mb-6">
             🌟 Transformation Leadership
@@ -111,6 +115,26 @@ export function HeroSection() {
             </div>
           </div>
         </BlurFade>
+          </div>
+          
+          {/* Professional Image */}
+          <BlurFade delay={0.4}>
+            <div className="relative hidden lg:block">
+              <div className="absolute inset-0 bg-gradient-to-tr from-[#2C5F7C]/20 to-[#D4A574]/20 rounded-3xl blur-3xl" />
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/50">
+                <Image
+                  src="/images/yvonne-headshot.jpg"
+                  alt="Yvonne Magnusson - Transformation Leadership Expert"
+                  width={600}
+                  height={600}
+                  className="w-full h-auto object-cover"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+              </div>
+            </div>
+          </BlurFade>
+        </div>
       </div>
     </section>
   );
