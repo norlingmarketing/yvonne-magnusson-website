@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
+import { siteConfig } from "@/lib/site-config";
 import { 
   Mail, 
   Phone, 
@@ -30,28 +31,28 @@ const contactMethods = [
   {
     icon: Mail,
     title: "E-post",
-    value: "info@yvonnemagnusson.com",
-    href: "mailto:info@yvonnemagnusson.com",
+    value: siteConfig.contact.email,
+    href: `mailto:${siteConfig.contact.email}`,
     description: "Skicka meddelande direkt"
   },
   {
     icon: Phone,
     title: "Telefon",
-    value: "+46 73 985 32 60",
-    href: "tel:+46739853260",
+    value: siteConfig.contact.phoneDisplay,
+    href: `tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`,
     description: "Ring för direktkontakt"
   },
   {
     icon: Linkedin,
     title: "LinkedIn",
-    value: "Yvonne Magnusson",
-    href: "https://linkedin.com/in/yvonne-magnusson",
+    value: siteConfig.social.linkedin.displayName,
+    href: siteConfig.social.linkedin.url,
     description: "Professionellt nätverk"
   },
   {
     icon: MapPin,
     title: "Plats",
-    value: "Stockholm, Sverige",
+    value: siteConfig.contact.location,
     href: "",
     description: "Huvudsakligen nordisk marknad"
   }

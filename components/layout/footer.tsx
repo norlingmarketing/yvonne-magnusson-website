@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { Mail, Phone, MapPin, Linkedin } from "lucide-react";
+import { siteConfig } from "@/lib/site-config";
 
 const navigation = {
   services: [
@@ -19,7 +20,7 @@ const navigation = {
   social: [
     {
       name: "LinkedIn",
-      href: "https://linkedin.com/in/yvonne-magnusson",
+      href: siteConfig.social.linkedin.url,
       icon: Linkedin,
     },
   ],
@@ -32,10 +33,9 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <h3 className="text-xl font-bold font-serif mb-4">Yvonne Magnusson</h3>
+            <h3 className="text-xl font-bold font-serif mb-4">{siteConfig.company.name}</h3>
             <p className="text-gray-300 text-sm leading-relaxed mb-6">
-              Transformation specialist med 30+ års erfarenhet från retail och FMCG. 
-              Hjälper företag och styrelser navigera genom förändring.
+              {siteConfig.company.description}
             </p>
             <div className="flex space-x-4">
               {navigation.social.map((item) => {
@@ -95,19 +95,19 @@ export function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-sm text-gray-300">
                 <Mail className="h-4 w-4 flex-shrink-0" />
-                <a href="mailto:info@yvonnemagnusson.com" className="hover:text-white transition-colors">
-                  info@yvonnemagnusson.com
+                <a href={`mailto:${siteConfig.contact.email}`} className="hover:text-white transition-colors">
+                  {siteConfig.contact.email}
                 </a>
               </div>
               <div className="flex items-center space-x-3 text-sm text-gray-300">
                 <Phone className="h-4 w-4 flex-shrink-0" />
-                <a href="tel:+46739853260" className="hover:text-white transition-colors">
-                  +46 73 985 32 60
+                <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`} className="hover:text-white transition-colors">
+                  {siteConfig.contact.phoneDisplay}
                 </a>
               </div>
               <div className="flex items-center space-x-3 text-sm text-gray-300">
                 <MapPin className="h-4 w-4 flex-shrink-0" />
-                <span>Stockholm, Sverige</span>
+                <span>{siteConfig.contact.location}</span>
               </div>
             </div>
           </div>
