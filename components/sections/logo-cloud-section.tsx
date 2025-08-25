@@ -65,24 +65,25 @@ export function LogoCloudSection() {
         {/* Client Logos */}
         <BlurFade delay={0.4}>
           <div className="mb-16">
-            <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
-              {clientLogos.map((client) => (
-                <div 
-                  key={client.name}
-                  className="group relative"
-                >
-                  <div className="flex flex-col items-center space-y-2 p-4 rounded-lg transition-all duration-300 hover:bg-white/80 hover:shadow-lg">
-                    <div className="w-28 h-14 bg-gradient-to-br from-gray-100 to-gray-200 rounded flex items-center justify-center text-gray-700 font-bold text-sm group-hover:text-[#2C5F7C] transition-all group-hover:scale-105">
-                      {client.name}
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 max-w-6xl mx-auto">
+              {clientLogos.map((client, index) => (
+                <BlurFade key={client.name} delay={0.4 + index * 0.05}>
+                  <div className="group relative">
+                    <div className="flex flex-col items-center space-y-2 p-4 rounded-lg transition-all duration-300 hover:bg-white/80 hover:shadow-lg h-full min-h-[120px] justify-between">
+                      <div className="w-full h-14 bg-gradient-to-br from-gray-100 to-gray-200 rounded flex items-center justify-center text-gray-700 font-bold text-sm group-hover:text-[#2C5F7C] transition-all group-hover:scale-105">
+                        {client.name}
+                      </div>
+                      <div className="flex flex-col items-center space-y-1">
+                        <span className="text-xs text-gray-600 font-medium group-hover:text-gray-800 transition-colors text-center">
+                          {client.category}
+                        </span>
+                        <span className="text-xs text-gray-400 group-hover:text-gray-600 transition-colors">
+                          {client.years}
+                        </span>
+                      </div>
                     </div>
-                    <span className="text-xs text-gray-600 font-medium group-hover:text-gray-800 transition-colors">
-                      {client.category}
-                    </span>
-                    <span className="text-xs text-gray-400 group-hover:text-gray-600 transition-colors">
-                      {client.years}
-                    </span>
                   </div>
-                </div>
+                </BlurFade>
               ))}
             </div>
           </div>

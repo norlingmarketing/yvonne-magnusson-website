@@ -96,7 +96,7 @@ export function ServicesSection() {
             const Icon = service.icon;
             return (
               <BlurFade key={index} delay={0.4 + index * 0.1}>
-                <Card className="relative h-full hover:shadow-2xl transition-all duration-500 group border-0 bg-white/80 backdrop-blur-sm hover:bg-white overflow-hidden">
+                <Card className="relative h-full hover:shadow-2xl transition-all duration-500 group border-0 bg-white/80 backdrop-blur-sm hover:bg-white overflow-hidden flex flex-col">
                   {/* Card background pattern */}
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                     <AnimatedGridPattern
@@ -118,8 +118,8 @@ export function ServicesSection() {
                       {service.description}
                     </CardDescription>
                   </CardHeader>
-                  <CardContent className="pt-0">
-                    <ul className="space-y-2 mb-6">
+                  <CardContent className="pt-0 flex flex-col flex-1">
+                    <ul className="space-y-2 mb-6 flex-1">
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                           <div className="w-1.5 h-1.5 bg-[#2C5F7C] rounded-full mr-3 flex-shrink-0"></div>
@@ -127,7 +127,7 @@ export function ServicesSection() {
                         </li>
                       ))}
                     </ul>
-                    <ShinyButton className="w-full border border-[#2C5F7C]/20 text-[#2C5F7C] hover:shadow-lg">
+                    <ShinyButton className="w-full border border-[#2C5F7C]/20 text-[#2C5F7C] hover:shadow-lg mt-auto">
                       <Link href={service.href} className="flex items-center justify-center gap-2 w-full">
                         Läs mer
                         <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
