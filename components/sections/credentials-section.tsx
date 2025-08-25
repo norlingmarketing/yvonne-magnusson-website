@@ -66,18 +66,20 @@ export function CredentialsSection() {
             const Icon = achievement.icon;
             return (
               <BlurFade key={index} delay={0.4 + index * 0.1}>
-                <div className="text-center p-6 rounded-lg border border-gray-100 hover:border-[#2C5F7C]/20 hover:shadow-lg transition-all duration-300">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-[#2C5F7C]/10 rounded-full mb-4">
-                    <Icon className="h-8 w-8 text-[#2C5F7C]" />
+                <div className="text-center p-6 rounded-lg border border-gray-100 hover:border-[#2C5F7C]/20 hover:shadow-lg transition-all duration-300 h-full flex flex-col justify-between min-h-[200px] group">
+                  <div className="flex flex-col items-center">
+                    <div className="inline-flex items-center justify-center w-16 h-16 bg-[#2C5F7C]/10 rounded-full mb-4 group-hover:bg-[#2C5F7C]/20 group-hover:scale-110 transition-all duration-300">
+                      <Icon className="h-8 w-8 text-[#2C5F7C]" />
+                    </div>
+                    <div className="text-4xl font-bold text-[#2C5F7C] mb-2">
+                      <NumberTicker value={achievement.number} />
+                      {achievement.suffix}
+                    </div>
+                    <div className="text-lg font-semibold text-gray-900 mb-1">
+                      {achievement.label}
+                    </div>
                   </div>
-                  <div className="text-4xl font-bold text-[#2C5F7C] mb-2">
-                    <NumberTicker value={achievement.number} />
-                    {achievement.suffix}
-                  </div>
-                  <div className="text-lg font-semibold text-gray-900 mb-1">
-                    {achievement.label}
-                  </div>
-                  <div className="text-sm text-gray-600">
+                  <div className="text-sm text-gray-600 mt-auto">
                     {achievement.description}
                   </div>
                 </div>
@@ -98,14 +100,15 @@ export function CredentialsSection() {
             </div>
             
             <div className="flex flex-wrap justify-center gap-3">
-              {expertise.map((skill) => (
-                <Badge 
-                  key={skill} 
-                  variant="secondary"
-                  className="px-4 py-2 text-sm bg-white border border-[#2C5F7C]/20 text-[#2C5F7C] hover:bg-[#2C5F7C]/5"
-                >
-                  {skill}
-                </Badge>
+              {expertise.map((skill, index) => (
+                <BlurFade key={skill} delay={0.9 + index * 0.05}>
+                  <Badge 
+                    variant="secondary"
+                    className="px-4 py-2 text-sm bg-white border border-[#2C5F7C]/20 text-[#2C5F7C] hover:bg-[#2C5F7C]/5 hover:scale-105 transition-all duration-300 cursor-pointer"
+                  >
+                    {skill}
+                  </Badge>
+                </BlurFade>
               ))}
             </div>
           </div>

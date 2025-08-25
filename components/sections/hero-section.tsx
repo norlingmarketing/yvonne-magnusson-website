@@ -4,7 +4,7 @@ import Link from "next/link";
 import { AnimatedGradientText } from "@/components/magicui/animated-gradient-text";
 import { ShimmerButton } from "@/components/magicui/shimmer-button";
 import { BlurFade } from "@/components/magicui/blur-fade";
-import { Button } from "@/components/ui/button";
+import { ShinyButton } from "@/components/magicui/shiny-button";
 import { ArrowRight, Play } from "lucide-react";
 import { FlickeringGrid } from "@/components/magicui/flickering-grid";
 import { Ripple } from "@/components/magicui/ripple";
@@ -71,16 +71,12 @@ export function HeroSection() {
               </Link>
             </ShimmerButton>
             
-            <Button 
-              variant="outline" 
-              size="lg" 
-              className="border-[#2C5F7C] text-[#2C5F7C] hover:bg-[#2C5F7C] hover:text-white px-8 py-3 text-lg"
-            >
+            <ShinyButton className="border border-[#2C5F7C]/20 text-[#2C5F7C] hover:shadow-lg px-8 py-3 text-lg">
               <Link href="/forelasningar" className="flex items-center gap-2">
                 <Play className="h-5 w-5" />
                 Se föreläsningar
               </Link>
-            </Button>
+            </ShinyButton>
           </div>
         </BlurFade>
 
