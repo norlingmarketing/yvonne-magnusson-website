@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import { MainNav } from "@/components/navigation/main-nav";
-import { Footer } from "@/components/layout/footer";
 import { BlurFade } from "@/components/magicui/blur-fade";
 import { NumberTicker } from "@/components/magicui/number-ticker";
 import { Timeline } from "@/components/ui/timeline";
@@ -128,10 +126,7 @@ const languages = [
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen">
-      <MainNav />
-      
-      <main>
+    <>
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -343,9 +338,6 @@ export default function AboutPage() {
             </BlurFade>
           </div>
         </section>
-      </main>
-
-      <Footer />
-    </div>
+    </>
   );
 }

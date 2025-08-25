@@ -1,6 +1,22 @@
-"use client";
-
+import type { Metadata } from "next";
 import { BlurFade } from "@/components/magicui/blur-fade";
+
+export const metadata: Metadata = {
+  title: "Case Studies - Bevisade Transformationsresultat",
+  description: "Verkliga framgångshistorier från 30+ transformationsprojekt. 40%+ tillväxt, 15 procentenheter EBITDA-förbättring och beprövade resultat inom retail och FMCG.",
+  keywords: [
+    "case studies",
+    "transformation resultat", 
+    "retail turnaround",
+    "FMCG transformation",
+    "digital transformation cases",
+    "framgångshistorier",
+    "business transformation",
+    "turnaround results",
+    "interim VD resultat",
+    "retail case studies"
+  ],
+};
 
 import { NumberTicker } from "@/components/magicui/number-ticker";
 import { ShimmerButton } from "@/components/magicui/shimmer-button";
@@ -114,7 +130,7 @@ export default function CaseStudiesPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <div className="bg-gradient-to-b from-gray-50 to-white">
       {/* Hero Section */}
       <section className="py-20 lg:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

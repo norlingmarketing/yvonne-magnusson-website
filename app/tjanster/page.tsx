@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import { MainNav } from "@/components/navigation/main-nav";
-import { Footer } from "@/components/layout/footer";
 import { BlurFade } from "@/components/magicui/blur-fade";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -138,10 +136,7 @@ const processSteps = [
 
 export default function ServicesPage() {
   return (
-    <div className="min-h-screen">
-      <MainNav />
-      
-      <main>
+    <main className="min-h-screen">
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -309,9 +304,6 @@ export default function ServicesPage() {
             </BlurFade>
           </div>
         </section>
-      </main>
-
-      <Footer />
-    </div>
+    </main>
   );
 }
