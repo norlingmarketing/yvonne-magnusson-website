@@ -9,7 +9,7 @@ import Link from "next/link";
 export default function WorkshopsPage() {
   const workshopTypes = [
     {
-      icon: <TrendingUp className="h-8 w-8 text-[#2C5F7C]" />,
+      icon: <TrendingUp className="h-8 w-8 text-primary" />,
       title: "Transformationsledarskap",
       description: "Utveckla din förmåga att leda framgångsrika organisationsförändringar",
       duration: "1-2 dagar",
@@ -17,7 +17,7 @@ export default function WorkshopsPage() {
       focus: "Ledarskap & Förändring"
     },
     {
-      icon: <Users className="h-8 w-8 text-[#2C5F7C]" />,
+      icon: <Users className="h-8 w-8 text-primary" />,
       title: "Teamutveckling",
       description: "Bygga högpresterande team genom praktiska verktyg och metoder",
       duration: "1 dag",
@@ -25,7 +25,7 @@ export default function WorkshopsPage() {
       focus: "Team & Samarbete"
     },
     {
-      icon: <Target className="h-8 w-8 text-[#2C5F7C]" />,
+      icon: <Target className="h-8 w-8 text-primary" />,
       title: "Strategisk Verkställighet",
       description: "Från strategi till resultat - säkerställ framgångsrik implementering",
       duration: "1-2 dagar",
@@ -33,7 +33,7 @@ export default function WorkshopsPage() {
       focus: "Strategi & Execution"
     },
     {
-      icon: <Lightbulb className="h-8 w-8 text-[#2C5F7C]" />,
+      icon: <Lightbulb className="h-8 w-8 text-primary" />,
       title: "Innovation & Digitaliserng",
       description: "Navigera digital transformation och skapa innovativa lösningar",
       duration: "1 dag", 
@@ -110,18 +110,18 @@ export default function WorkshopsPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Breadcrumbs */}
-      <div className="border-b border-gray-200 bg-white">
+      <div className="border-b border-border bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <nav className="flex items-center space-x-2 text-sm text-gray-600">
-            <Link href="/" className="hover:text-[#2C5F7C] transition-colors">
+          <nav className="flex items-center space-x-2 text-sm text-muted-foreground">
+            <Link href="/" className="hover:text-primary transition-colors">
               Hem
             </Link>
             <ChevronRight className="h-4 w-4" />
-            <Link href="/tjanster" className="hover:text-[#2C5F7C] transition-colors">
+            <Link href="/tjanster" className="hover:text-primary transition-colors">
               Tjänster
             </Link>
             <ChevronRight className="h-4 w-4" />
-            <span className="text-[#2C5F7C] font-medium">Workshops</span>
+            <span className="text-primary font-medium">Workshops</span>
           </nav>
         </div>
       </div>
@@ -131,10 +131,10 @@ export default function WorkshopsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <BlurFade delay={0.1}>
             <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-                Praktiska <span className="text-[#2C5F7C]">Workshops</span>
+              <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
+                Praktiska <span className="text-primary">Workshops</span>
               </h1>
-              <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
                 Utveckla era ledare och team genom interaktiva workshops baserade på 
                 30+ års praktisk erfarenhet från transformation och tillväxt.
               </p>
@@ -144,22 +144,22 @@ export default function WorkshopsPage() {
           <BlurFade delay={0.3}>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
               <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-[#2C5F7C] mb-2">
+                <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
                   <NumberTicker value={500} />+
                 </div>
-                <p className="text-gray-600 font-medium">Utbildade Ledare</p>
+                <p className="text-muted-foreground font-medium">Utbildade Ledare</p>
               </div>
               <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-[#2C5F7C] mb-2">
+                <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
                   <NumberTicker value={4} />.<NumberTicker value={8} />
                 </div>
-                <p className="text-gray-600 font-medium">Genomsnittligt Betyg (5.0)</p>
+                <p className="text-muted-foreground font-medium">Genomsnittligt Betyg (5.0)</p>
               </div>
               <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-[#2C5F7C] mb-2">
+                <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
                   <NumberTicker value={95} />%
                 </div>
-                <p className="text-gray-600 font-medium">Skulle Rekommendera</p>
+                <p className="text-muted-foreground font-medium">Skulle Rekommendera</p>
               </div>
             </div>
           </BlurFade>
@@ -171,10 +171,10 @@ export default function WorkshopsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <BlurFade delay={0.1}>
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
                 Populära Workshop-områden
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                 Våra mest efterfrågade workshops täcker de kritiska områden som driver 
                 framgångsrik transformation och ledarskapsutveckling.
               </p>
@@ -184,25 +184,25 @@ export default function WorkshopsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {workshopTypes.map((workshop, index) => (
               <BlurFade key={index} delay={0.2 + index * 0.1}>
-                <div className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                <div className="bg-muted/50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                   <div className="flex items-start justify-between mb-6">
                     <div>{workshop.icon}</div>
-                    <span className="bg-[#D4A574] text-white px-3 py-1 rounded-full text-sm font-medium">
+                    <span className="bg-accent text-accent-foreground px-3 py-1 rounded-full text-sm font-medium">
                       {workshop.focus}
                     </span>
                   </div>
                   
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">{workshop.title}</h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">{workshop.description}</p>
+                  <h3 className="text-xl font-bold text-foreground mb-4">{workshop.title}</h3>
+                  <p className="text-muted-foreground mb-6 leading-relaxed">{workshop.description}</p>
                   
                   <div className="grid grid-cols-2 gap-4 text-sm">
                     <div className="flex items-center">
-                      <Clock className="h-4 w-4 text-[#2C5F7C] mr-2" />
-                      <span className="text-gray-600">{workshop.duration}</span>
+                      <Clock className="h-4 w-4 text-primary mr-2" />
+                      <span className="text-muted-foreground">{workshop.duration}</span>
                     </div>
                     <div className="flex items-center">
-                      <Users className="h-4 w-4 text-[#2C5F7C] mr-2" />
-                      <span className="text-gray-600">{workshop.participants}</span>
+                      <Users className="h-4 w-4 text-primary mr-2" />
+                      <span className="text-muted-foreground">{workshop.participants}</span>
                     </div>
                   </div>
                 </div>
@@ -213,14 +213,14 @@ export default function WorkshopsPage() {
       </section>
 
       {/* Formats */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-muted/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <BlurFade delay={0.1}>
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
                 Flexibla Workshop-format
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                 Olika format för att passa era specifika behov, tidsramar och målsättningar.
               </p>
             </div>
@@ -253,10 +253,10 @@ export default function WorkshopsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <BlurFade delay={0.1}>
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
                 Vår Approach
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                 En beprövad metodik som säkerställer att workshopen skapar varaktig förändring 
                 och konkreta resultat för er organisation.
               </p>
@@ -321,11 +321,11 @@ export default function WorkshopsPage() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-muted/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <BlurFade delay={0.1}>
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
                 Vad Deltagarna Säger
               </h2>
             </div>
@@ -362,7 +362,7 @@ export default function WorkshopsPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <BlurFade delay={0.1}>
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
                 Investering & Bokning
               </h2>
               <p className="text-xl text-gray-600 leading-relaxed">

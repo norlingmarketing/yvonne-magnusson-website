@@ -142,22 +142,22 @@ export default function ServicesPage() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <BlurFade delay={0.2}>
               <div className="text-center mb-16">
-                <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
                   Professionella tjänster
                 </h1>
-                <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8 leading-relaxed">
+                <p className="text-xl text-muted-foreground max-w-4xl mx-auto mb-8 leading-relaxed">
                   Fyra fokuserade tjänsteområden för att driva transformation och tillväxt inom retail 
                   och consumer markets. Alla byggda på 30+ års erfarenhet och beprövade metoder.
                 </p>
                 
                 <div className="flex flex-wrap justify-center gap-3">
-                  <Badge variant="secondary" className="px-4 py-2 text-sm bg-[#2C5F7C]/10 border border-[#2C5F7C]/20 text-[#2C5F7C]">
+                  <Badge variant="secondary" className="px-4 py-2 text-sm bg-primary/10 border border-primary/20 text-primary">
                     30+ års erfarenhet
                   </Badge>
-                  <Badge variant="secondary" className="px-4 py-2 text-sm bg-[#2C5F7C]/10 border border-[#2C5F7C]/20 text-[#2C5F7C]">
+                  <Badge variant="secondary" className="px-4 py-2 text-sm bg-primary/10 border border-primary/20 text-primary">
                     4 genomförda turnarounds
                   </Badge>
-                  <Badge variant="secondary" className="px-4 py-2 text-sm bg-[#2C5F7C]/10 border border-[#2C5F7C]/20 text-[#2C5F7C]">
+                  <Badge variant="secondary" className="px-4 py-2 text-sm bg-primary/10 border border-primary/20 text-primary">
                     Internationell erfarenhet
                   </Badge>
                 </div>
@@ -179,20 +179,20 @@ export default function ServicesPage() {
                         <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl mb-4 group-hover:scale-110 transition-transform duration-300`}>
                           <Icon className={`h-8 w-8 ${service.iconColor}`} />
                         </div>
-                        <CardTitle className="text-2xl text-gray-900 group-hover:text-[#2C5F7C] transition-colors">
+                        <CardTitle className="text-2xl text-foreground group-hover:text-primary transition-colors">
                           {service.title}
                         </CardTitle>
-                        <CardDescription className="text-gray-600 text-lg leading-relaxed">
+                        <CardDescription className="text-muted-foreground text-lg leading-relaxed">
                           {service.description}
                         </CardDescription>
                       </CardHeader>
                       
                       <CardContent className="space-y-6">
                         <div>
-                          <h4 className="font-semibold text-gray-900 mb-3">Vad som ingår:</h4>
+                          <h4 className="font-semibold text-foreground mb-3">Vad som ingår:</h4>
                           <ul className="space-y-2">
                             {service.features.map((feature, featureIndex) => (
-                              <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                              <li key={featureIndex} className="flex items-center text-sm text-muted-foreground">
                                 <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
                                 {feature}
                               </li>
@@ -201,13 +201,13 @@ export default function ServicesPage() {
                         </div>
                         
                         <div>
-                          <h4 className="font-semibold text-gray-900 mb-3">Idealiskt för:</h4>
+                          <h4 className="font-semibold text-foreground mb-3">Idealiskt för:</h4>
                           <div className="flex flex-wrap gap-2">
                             {service.idealFor.map((item, itemIndex) => (
                               <Badge 
                                 key={itemIndex}
                                 variant="outline" 
-                                className="text-xs border-gray-300 text-gray-600"
+                                className="text-xs border-border text-muted-foreground"
                               >
                                 {item}
                               </Badge>
@@ -215,14 +215,14 @@ export default function ServicesPage() {
                           </div>
                         </div>
                         
-                        <div className="pt-4 border-t border-gray-100">
+                        <div className="pt-4 border-t border-border">
                           <div className="flex justify-between items-center">
-                            <div className="text-sm text-gray-500">
+                            <div className="text-sm text-muted-foreground">
                               {service.investment}
                             </div>
                             <Button 
                               asChild 
-                              className="bg-[#2C5F7C] hover:bg-[#2C5F7C]/90 group-hover:bg-[#2C5F7C] group-hover:text-white"
+                              className="bg-primary hover:bg-primary/90 group-hover:bg-primary group-hover:text-primary-foreground"
                             >
                               <Link href={service.href} className="flex items-center gap-2">
                                 Läs mer
@@ -241,14 +241,14 @@ export default function ServicesPage() {
         </section>
 
         {/* Process */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-20 bg-muted/50">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <BlurFade delay={0.2}>
               <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                   Så arbetar vi tillsammans
                 </h2>
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                   En strukturerad process som säkerställer att vi skapar maximal värde för er organisation.
                 </p>
               </div>
@@ -258,13 +258,13 @@ export default function ServicesPage() {
               {processSteps.map((step, index) => (
                 <BlurFade key={index} delay={0.4 + index * 0.1}>
                   <div className="text-center">
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-[#2C5F7C] text-white rounded-full text-xl font-bold mb-4">
+                    <div className="inline-flex items-center justify-center w-16 h-16 bg-primary text-primary-foreground rounded-full text-xl font-bold mb-4">
                       {step.step}
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    <h3 className="text-xl font-bold text-foreground mb-3">
                       {step.title}
                     </h3>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-muted-foreground leading-relaxed">
                       {step.description}
                     </p>
                   </div>
@@ -275,7 +275,7 @@ export default function ServicesPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-br from-[#2C5F7C] to-[#1e4a5f] text-white">
+        <section className="py-20 bg-gradient-to-br from-primary to-primary/80 text-primary-foreground">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <BlurFade delay={0.2}>
               <div className="text-center">
@@ -287,13 +287,13 @@ export default function ServicesPage() {
                   för er transformation.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button asChild size="lg" className="bg-white text-[#2C5F7C] hover:bg-gray-50">
+                  <Button asChild size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90">
                     <Link href="/kontakt" className="flex items-center gap-2">
                       Boka kostnadsfritt samtal
                       <ArrowRight className="h-5 w-5" />
                     </Link>
                   </Button>
-                  <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-[#2C5F7C]">
+                  <Button asChild variant="outline" size="lg" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
                     <Link href="/forelasningar" className="flex items-center gap-2">
                       Se föreläsningar
                       <Presentation className="h-5 w-5" />
