@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { MainNav } from "@/components/navigation/main-nav";
+import { AnimatedNav } from "@/components/navigation/animated-nav";
 import { Footer } from "@/components/layout/footer";
 
 export const metadata: Metadata = {
@@ -78,7 +78,7 @@ export default function RootLayout({
   return (
     <html lang="sv" className="scroll-smooth">
       <body className="min-h-screen bg-white text-gray-900 antialiased">
-        <MainNav />
+        <AnimatedNav />
         <main>
           {children}
         </main>

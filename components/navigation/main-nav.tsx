@@ -7,7 +7,6 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { FlickeringGrid } from "@/components/magicui/flickering-grid";
-import { ShimmerButton } from "@/components/magicui/shimmer-button";
 
 const navigation = [
   { name: "Hem", href: "/" },
@@ -25,13 +24,13 @@ export function MainNav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200 relative overflow-hidden">
+    <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border relative overflow-hidden">
       {/* Subtle Background Pattern */}
       <FlickeringGrid
         className="absolute inset-0 z-0 opacity-30"
         squareSize={8}
         gridGap={12}
-        color="#2C5F7C"
+        color="hsl(var(--primary))"
         maxOpacity={0.03}
         flickerChance={0.02}
         height={100}
@@ -41,7 +40,7 @@ export function MainNav() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href="/" className="text-xl font-bold text-gray-900">
+            <Link href="/" className="text-xl font-bold text-foreground">
               <span className="font-serif">Yvonne Magnusson</span>
             </Link>
           </div>
@@ -56,13 +55,13 @@ export function MainNav() {
                   className={cn(
                     "relative px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 group",
                     pathname === item.href
-                      ? "bg-gray-900 text-white"
-                      : "text-gray-600 hover:text-gray-900 hover:bg-gradient-to-r hover:from-white hover:to-gray-50"
+                      ? "bg-primary text-primary-foreground"
+                      : "text-muted-foreground hover:text-foreground hover:bg-muted"
                   )}
                 >
                   <span className="relative z-10">{item.name}</span>
                   {pathname !== item.href && (
-                    <div className="absolute inset-0 bg-gradient-to-r from-[#2C5F7C]/5 to-[#D4A574]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md" />
+                    <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md" />
                   )}
                 </Link>
               ))}
@@ -71,12 +70,9 @@ export function MainNav() {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <ShimmerButton
-              className="text-white bg-[#2C5F7C] hover:bg-[#2C5F7C]/90 px-4 py-2 text-sm"
-              shimmerColor="#D4A574"
-            >
+            <Button className="px-4 py-2 text-sm" asChild>
               <Link href="/kontakt">Boka möte</Link>
-            </ShimmerButton>
+            </Button>
           </div>
 
           {/* Mobile menu button */}
@@ -98,7 +94,7 @@ export function MainNav() {
         {/* Mobile menu */}
         {mobileMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-gray-200">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-border">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
@@ -106,8 +102,8 @@ export function MainNav() {
                   className={cn(
                     "block px-3 py-2 rounded-md text-base font-medium transition-colors",
                     pathname === item.href
-                      ? "bg-gray-900 text-white"
-                      : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
+                      ? "bg-primary text-primary-foreground"
+                      : "text-muted-foreground hover:bg-muted hover:text-foreground"
                   )}
                   onClick={() => setMobileMenuOpen(false)}
                 >
@@ -115,14 +111,11 @@ export function MainNav() {
                 </Link>
               ))}
               <div className="pt-2">
-                <ShimmerButton
-                  className="w-full text-white bg-[#2C5F7C] hover:bg-[#2C5F7C]/90 px-4 py-2 text-sm"
-                  shimmerColor="#D4A574"
-                >
+                <Button className="w-full px-4 py-2 text-sm" asChild>
                   <Link href="/kontakt" onClick={() => setMobileMenuOpen(false)}>
                     Boka möte
                   </Link>
-                </ShimmerButton>
+                </Button>
               </div>
             </div>
           </div>
