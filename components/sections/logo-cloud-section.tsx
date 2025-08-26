@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const clientLogos = [
   "Indiska",
   "Insula", 
@@ -19,9 +21,11 @@ export function LogoCloudSection() {
         <div className="relative">
           <div className="grid grid-cols-2 place-items-center gap-2 md:gap-4 lg:grid-cols-4 xl:gap-x-6 2xl:grid-cols-8">
             {clientLogos.map((logo, idx) => (
-              <img
+              <Image
                 key={idx}
                 src={`https://cdn.magicui.design/companies/${logo}.svg`}
+                width={160}
+                height={40}
                 className="h-10 w-40 px-2 brightness-0 opacity-60 hover:opacity-100 transition-opacity duration-300"
                 alt={`${logo} logo`}
               />
