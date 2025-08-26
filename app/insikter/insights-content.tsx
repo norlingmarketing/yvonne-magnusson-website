@@ -94,25 +94,25 @@ export default function InsightsContent() {
 
   const insights = [
     {
-      icon: <TrendingUp className="h-8 w-8 text-[#2C5F7C]" />,
+      icon: <TrendingUp className="h-8 w-8 text-primary" />,
       title: "Transformation Insights",
       description: "Djupgående analyser av framgångsrika förändringsprocesser",
       count: "12 artiklar"
     },
     {
-      icon: <Users className="h-8 w-8 text-[#2C5F7C]" />,
+      icon: <Users className="h-8 w-8 text-primary" />,
       title: "Ledarskap & Team",
       description: "Praktiska råd för att utveckla ledarskapskraft och teameffektivitet",
       count: "8 artiklar"
     },
     {
-      icon: <Target className="h-8 w-8 text-[#2C5F7C]" />,
+      icon: <Target className="h-8 w-8 text-primary" />,
       title: "Retail Strategy",
       description: "Branschspecifika insikter och strategiska perspektiv",
       count: "15 artiklar"
     },
     {
-      icon: <Lightbulb className="h-8 w-8 text-[#2C5F7C]" />,
+      icon: <Lightbulb className="h-8 w-8 text-primary" />,
       title: "Innovation & Digital",
       description: "Navigering av digital transformation och innovationsprocesser",
       count: "6 artiklar"
@@ -126,10 +126,10 @@ export default function InsightsContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <BlurFade delay={0.1}>
             <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-                Insights & <span className="text-[#2C5F7C]">Perspektiv</span>
+              <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
+                Insights & <span className="text-primary">Perspektiv</span>
               </h1>
-              <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
                 Djupgående analyser, praktiska råd och strategiska perspektiv från 
                 30+ år av transformation och ledarskap inom retail och FMCG.
               </p>
@@ -139,11 +139,11 @@ export default function InsightsContent() {
           <BlurFade delay={0.3}>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-20">
               {insights.map((insight, index) => (
-                <div key={index} className="bg-gray-50 rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-300">
+                <div key={index} className="bg-muted/50 rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-300">
                   <div className="mb-4">{insight.icon}</div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">{insight.title}</h3>
-                  <p className="text-gray-600 text-sm mb-3 leading-relaxed">{insight.description}</p>
-                  <span className="text-[#2C5F7C] font-medium text-sm">{insight.count}</span>
+                  <h3 className="text-lg font-bold text-foreground mb-2">{insight.title}</h3>
+                  <p className="text-muted-foreground text-sm mb-3 leading-relaxed">{insight.description}</p>
+                  <span className="text-primary font-medium text-sm">{insight.count}</span>
                 </div>
               ))}
             </div>
@@ -152,14 +152,14 @@ export default function InsightsContent() {
       </section>
 
       {/* Featured Articles */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-muted/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <BlurFade delay={0.1}>
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
                 Utvalda Artiklar
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                 De mest lästa och diskuterade artiklarna med praktiska insikter 
                 för transformation och ledarskap.
               </p>
@@ -170,10 +170,10 @@ export default function InsightsContent() {
             {featuredArticles.map((article, index) => (
               <BlurFade key={article.id} delay={0.2 + index * 0.1}>
                 <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                  <div className="aspect-video bg-gradient-to-br from-[#2C5F7C] to-[#1a4a5c] relative">
+                  <div className="aspect-video bg-gradient-to-br from-primary to-primary/80 relative">
                     <div className="absolute inset-0 bg-black/20"></div>
                     <div className="absolute top-4 left-4">
-                      <span className="bg-[#D4A574] text-white px-3 py-1 rounded-full text-sm font-medium">
+                      <span className="bg-accent text-accent-foreground px-3 py-1 rounded-full text-sm font-medium">
                         Utvalda
                       </span>
                     </div>
@@ -185,26 +185,26 @@ export default function InsightsContent() {
                   </div>
                   
                   <div className="p-6">
-                    <p className="text-gray-600 mb-4 leading-relaxed">{article.excerpt}</p>
+                    <p className="text-muted-foreground mb-4 leading-relaxed">{article.excerpt}</p>
                     
                     <div className="flex items-center justify-between mb-4">
-                      <span className="bg-[#2C5F7C] text-white px-3 py-1 rounded-full text-sm">
+                      <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm">
                         {article.category}
                       </span>
-                      <div className="flex items-center text-gray-500 text-sm">
+                      <div className="flex items-center text-muted-foreground text-sm">
                         <Clock className="h-4 w-4 mr-1" />
                         {article.readTime}
                       </div>
                     </div>
                     
                     <div className="flex items-center justify-between">
-                      <div className="flex items-center text-gray-500 text-sm">
+                      <div className="flex items-center text-muted-foreground text-sm">
                         <Calendar className="h-4 w-4 mr-2" />
                         {new Date(article.publishDate).toLocaleDateString('sv-SE')}
                       </div>
                       <Link 
                         href={`/insikter/${article.id}`}
-                        className="inline-flex items-center text-[#2C5F7C] font-medium hover:text-[#1a4a5c] transition-colors"
+                        className="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-colors"
                       >
                         Läs mer
                         <ArrowRight className="ml-1 h-4 w-4" />
@@ -227,7 +227,7 @@ export default function InsightsContent() {
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                   Alla Artiklar
                 </h2>
-                <p className="text-xl text-gray-600">
+                <p className="text-xl text-muted-foreground">
                   Utforska vårt kompletta bibliotek av insights och analyser.
                 </p>
               </div>
@@ -235,8 +235,8 @@ export default function InsightsContent() {
               {/* Category Filter */}
               <div className="mt-6 md:mt-0">
                 <div className="flex items-center gap-2 mb-4 md:mb-0">
-                  <Filter className="h-5 w-5 text-gray-500" />
-                  <span className="text-gray-700 font-medium">Filtrera:</span>
+                  <Filter className="h-5 w-5 text-muted-foreground" />
+                  <span className="text-foreground font-medium">Filtrera:</span>
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {categories.map((category) => (
@@ -245,8 +245,8 @@ export default function InsightsContent() {
                       onClick={() => setSelectedCategory(category)}
                       className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
                         selectedCategory === category
-                          ? 'bg-[#2C5F7C] text-white'
-                          : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                          ? 'bg-primary text-primary-foreground'
+                          : 'bg-muted text-foreground hover:bg-muted/80'
                       }`}
                     >
                       {category}
@@ -260,39 +260,39 @@ export default function InsightsContent() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredArticles.map((article, index) => (
               <BlurFade key={article.id} delay={0.2 + index * 0.1}>
-                <div className="bg-gray-50 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                <div className="bg-muted/50 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                   <div className="flex items-center justify-between mb-4">
-                    <span className="bg-[#2C5F7C] text-white px-3 py-1 rounded-full text-sm">
+                    <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm">
                       {article.category}
                     </span>
-                    <div className="flex items-center text-gray-500 text-sm">
+                    <div className="flex items-center text-muted-foreground text-sm">
                       <Clock className="h-4 w-4 mr-1" />
                       {article.readTime}
                     </div>
                   </div>
                   
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                  <h3 className="text-xl font-bold text-foreground mb-3 leading-tight">
                     {article.title}
                   </h3>
                   
-                  <p className="text-gray-600 mb-4 leading-relaxed">{article.excerpt}</p>
+                  <p className="text-muted-foreground mb-4 leading-relaxed">{article.excerpt}</p>
                   
                   <div className="flex flex-wrap gap-2 mb-4">
                     {article.tags.map((tag, tagIndex) => (
-                      <span key={tagIndex} className="bg-white text-gray-600 px-2 py-1 rounded text-xs">
+                      <span key={tagIndex} className="bg-background text-muted-foreground px-2 py-1 rounded text-xs">
                         {tag}
                       </span>
                     ))}
                   </div>
                   
-                  <div className="flex items-center justify-between pt-4 border-t border-gray-200">
-                    <div className="flex items-center text-gray-500 text-sm">
+                  <div className="flex items-center justify-between pt-4 border-t border-border">
+                    <div className="flex items-center text-muted-foreground text-sm">
                       <Calendar className="h-4 w-4 mr-2" />
                       {new Date(article.publishDate).toLocaleDateString('sv-SE')}
                     </div>
                     <Link 
                       href={`/insikter/${article.id}`}
-                      className="inline-flex items-center text-[#2C5F7C] font-medium hover:text-[#1a4a5c] transition-colors"
+                      className="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-colors"
                     >
                       Läs mer
                       <ArrowRight className="ml-1 h-4 w-4" />
@@ -306,10 +306,10 @@ export default function InsightsContent() {
       </section>
 
       {/* Newsletter Signup */}
-      <section className="py-20 bg-gradient-to-br from-[#2C5F7C] to-[#1a4a5c] text-white">
+      <section className="py-20 bg-gradient-to-br from-primary to-primary/80 text-primary-foreground">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <BlurFade delay={0.1}>
-            <BookOpen className="h-16 w-16 text-[#D4A574] mx-auto mb-8" />
+            <BookOpen className="h-16 w-16 text-accent mx-auto mb-8" />
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Få de Senaste Insikterna
             </h2>
@@ -323,7 +323,7 @@ export default function InsightsContent() {
                 <input
                   type="email"
                   placeholder="Din e-postadress"
-                  className="flex-1 px-4 py-3 rounded-full text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#D4A574]"
+                  className="flex-1 px-4 py-3 rounded-full text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent"
                 />
                 <ShimmerButton className="whitespace-nowrap">
                   Prenumerera
@@ -339,13 +339,13 @@ export default function InsightsContent() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-muted/50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <BlurFade delay={0.1}>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Vill Du Diskutera Dina Utmaningar?
             </h2>
-            <p className="text-xl text-gray-600 mb-10 leading-relaxed">
+            <p className="text-xl text-muted-foreground mb-10 leading-relaxed">
               Boka ett kostnadsfritt strategisamtal för att diskutera hur dessa insights 
               kan tillämpas på era specifika utmaningar och möjligheter.
             </p>
@@ -357,7 +357,7 @@ export default function InsightsContent() {
               </Link>
               <Link 
                 href="/tjanster"
-                className="inline-flex items-center justify-center px-8 py-4 border-2 border-[#2C5F7C] text-[#2C5F7C] font-semibold rounded-full hover:bg-[#2C5F7C] hover:text-white transition-all duration-300"
+                className="inline-flex items-center justify-center px-8 py-4 border-2 border-primary text-primary font-semibold rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300"
               >
                 Se Alla Tjänster
                 <ArrowRight className="ml-2 h-5 w-5" />

@@ -95,25 +95,25 @@ export default function CaseStudiesPage() {
 
   const impactAreas = [
     {
-      icon: <TrendingUp className="h-8 w-8 text-[#2C5F7C]" />,
+      icon: <TrendingUp className="h-8 w-8 text-primary" />,
       title: "Tillväxt & Lönsamhet",
       description: "Genomsnittlig omsättningstillväxt på 40%+ och förbättrad EBITDA-marginal med 8-15 procentenheter",
       cases: "12 framgångsrika cases"
     },
     {
-      icon: <Users className="h-8 w-8 text-[#2C5F7C]" />,
+      icon: <Users className="h-8 w-8 text-primary" />,
       title: "Organisationsförändring",
       description: "Kulturförändringar som resulterat i 50%+ förbättring av medarbetarengagemang och retention",
       cases: "8 transformationer"
     },
     {
-      icon: <Target className="h-8 w-8 text-[#2C5F7C]" />,
+      icon: <Target className="h-8 w-8 text-primary" />,
       title: "Marknadsposition",
       description: "Stärkt marknadsposition med genomsnittlig ökning av marknadsandelar på 15-25%",
       cases: "10 turnarounds"
     },
     {
-      icon: <Zap className="h-8 w-8 text-[#2C5F7C]" />,
+      icon: <Zap className="h-8 w-8 text-primary" />,
       title: "Digital Transformation",
       description: "Framgångsrik digitalisering med 100%+ tillväxt av digital omsättning inom 12-18 månader",
       cases: "6 digitaliseringar"
@@ -136,10 +136,10 @@ export default function CaseStudiesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <BlurFade delay={0.1}>
             <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-                Bevisade <span className="text-[#2C5F7C]">Resultat</span>
+              <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
+                Bevisade <span className="text-primary">Resultat</span>
               </h1>
-              <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
                 Verkliga transformationshistorier från 30+ år av framgångsrikt ledarskap 
                 inom retail, FMCG och konsumentbranschen.
               </p>
@@ -149,28 +149,28 @@ export default function CaseStudiesPage() {
           <BlurFade delay={0.3}>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-[#2C5F7C] mb-2">
+                <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
                   <NumberTicker value={30} />+
                 </div>
-                <p className="text-gray-600 font-medium">Framgångsrika Cases</p>
+                <p className="text-muted-foreground font-medium">Framgångsrika Cases</p>
               </div>
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-[#2C5F7C] mb-2">
+                <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
                   <NumberTicker value={40} />%+
                 </div>
-                <p className="text-gray-600 font-medium">Genomsnittlig Tillväxt</p>
+                <p className="text-muted-foreground font-medium">Genomsnittlig Tillväxt</p>
               </div>
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-[#2C5F7C] mb-2">
+                <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
                   <NumberTicker value={15} />
                 </div>
-                <p className="text-gray-600 font-medium">Procentenheter EBITDA</p>
+                <p className="text-muted-foreground font-medium">Procentenheter EBITDA</p>
               </div>
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-[#2C5F7C] mb-2">
+                <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
                   <NumberTicker value={18} />
                 </div>
-                <p className="text-gray-600 font-medium">Månaders Medianvaraktighet</p>
+                <p className="text-muted-foreground font-medium">Månaders Medianvaraktighet</p>
               </div>
             </div>
           </BlurFade>
@@ -178,14 +178,14 @@ export default function CaseStudiesPage() {
       </section>
 
       {/* Case Studies */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-muted/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <BlurFade delay={0.1}>
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
                 Utvalda Transformationshistorier
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                 Djupgående case studies som visar konkreta resultat och beprövade metoder 
                 för framgångsrik affärstransformation.
               </p>
@@ -200,24 +200,24 @@ export default function CaseStudiesPage() {
                   <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
                     <div className="lg:col-span-2">
                       <div className="flex items-center gap-4 mb-4">
-                        <span className="bg-[#2C5F7C] text-white px-3 py-1 rounded-full text-sm font-medium">
+                        <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">
                           {caseStudy.industry}
                         </span>
-                        <span className="text-gray-500 text-sm">{caseStudy.duration}</span>
+                        <span className="text-muted-foreground text-sm">{caseStudy.duration}</span>
                       </div>
-                      <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                      <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
                         {caseStudy.title}
                       </h3>
-                      <p className="text-lg text-gray-600 leading-relaxed">
+                      <p className="text-lg text-muted-foreground leading-relaxed">
                         {caseStudy.challenge}
                       </p>
                     </div>
                     <div className="lg:text-right">
-                      <div className="inline-flex items-center px-4 py-2 bg-[#D4A574] text-white rounded-full text-sm font-medium mb-4">
+                      <div className="inline-flex items-center px-4 py-2 bg-accent text-accent-foreground rounded-full text-sm font-medium mb-4">
                         <Building className="h-4 w-4 mr-2" />
                         {caseStudy.role}
                       </div>
-                      <div className="text-2xl font-bold text-gray-900">{caseStudy.company}</div>
+                      <div className="text-2xl font-bold text-foreground">{caseStudy.company}</div>
                     </div>
                   </div>
 
@@ -225,12 +225,12 @@ export default function CaseStudiesPage() {
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
                     {/* Solution */}
                     <div>
-                      <h4 className="text-xl font-bold text-gray-900 mb-4">Lösning & Åtgärder</h4>
+                      <h4 className="text-xl font-bold text-foreground mb-4">Lösning & Åtgärder</h4>
                       <ul className="space-y-3">
                         {caseStudy.solution.map((item, itemIndex) => (
                           <li key={itemIndex} className="flex items-start">
-                            <CheckCircle className="h-5 w-5 text-[#2C5F7C] mr-3 mt-0.5 flex-shrink-0" />
-                            <span className="text-gray-600 leading-relaxed">{item}</span>
+                            <CheckCircle className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                            <span className="text-muted-foreground leading-relaxed">{item}</span>
                           </li>
                         ))}
                       </ul>
@@ -238,17 +238,17 @@ export default function CaseStudiesPage() {
 
                     {/* Results */}
                     <div>
-                      <h4 className="text-xl font-bold text-gray-900 mb-4">Nyckelresultat</h4>
+                      <h4 className="text-xl font-bold text-foreground mb-4">Nyckelresultat</h4>
                       <div className="grid grid-cols-2 gap-4">
                         {caseStudy.results.map((result, resultIndex) => (
-                          <div key={resultIndex} className="bg-gray-50 rounded-xl p-4 text-center">
-                            <div className="text-2xl font-bold text-[#2C5F7C] mb-1">
+                          <div key={resultIndex} className="bg-muted/50 rounded-xl p-4 text-center">
+                            <div className="text-2xl font-bold text-primary mb-1">
                               {result.value}
                             </div>
-                            <div className="text-xs font-medium text-gray-900 mb-1">
+                            <div className="text-xs font-medium text-foreground mb-1">
                               {result.metric}
                             </div>
-                            <div className="text-xs text-gray-500">
+                            <div className="text-xs text-muted-foreground">
                               {result.description}
                             </div>
                           </div>
@@ -258,11 +258,11 @@ export default function CaseStudiesPage() {
                   </div>
 
                   {/* Testimonial */}
-                  <div className="border-t border-gray-100 pt-8">
-                    <blockquote className="text-lg text-gray-600 italic leading-relaxed mb-4">
+                  <div className="border-t border-border pt-8">
+                    <blockquote className="text-lg text-muted-foreground italic leading-relaxed mb-4">
                       &ldquo;{caseStudy.testimonial}&rdquo;
                     </blockquote>
-                    <div className="text-[#2C5F7C] font-semibold">— {caseStudy.author}</div>
+                    <div className="text-primary font-semibold">— {caseStudy.author}</div>
                   </div>
                 </div>
               </BlurFade>
@@ -276,10 +276,10 @@ export default function CaseStudiesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <BlurFade delay={0.1}>
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
                 Bevisad Impact inom Nyckelområden
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                 Konsekvent leverans av mätbara resultat inom de områden som är 
                 kritiska för framgångsrik affärstransformation.
               </p>
@@ -289,15 +289,15 @@ export default function CaseStudiesPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {impactAreas.map((area, index) => (
               <BlurFade key={index} delay={0.2 + index * 0.1}>
-                <div className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300">
+                <div className="bg-muted/50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300">
                   <div className="flex items-start justify-between mb-6">
                     <div>{area.icon}</div>
-                    <span className="bg-[#2C5F7C] text-white px-3 py-1 rounded-full text-sm font-medium">
+                    <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">
                       {area.cases}
                     </span>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">{area.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{area.description}</p>
+                  <h3 className="text-xl font-bold text-foreground mb-4">{area.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{area.description}</p>
                 </div>
               </BlurFade>
             ))}
@@ -306,7 +306,7 @@ export default function CaseStudiesPage() {
       </section>
 
       {/* Industry Experience */}
-      <section className="py-20 bg-gradient-to-br from-[#2C5F7C] to-[#1a4a5c] text-white">
+      <section className="py-20 bg-gradient-to-br from-primary to-primary/80 text-primary-foreground">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <BlurFade delay={0.1}>
             <div className="text-center mb-16">
@@ -338,17 +338,17 @@ export default function CaseStudiesPage() {
             <div className="mt-16 text-center">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
-                  <BarChart3 className="h-12 w-12 text-[#D4A574] mx-auto mb-4" />
+                  <BarChart3 className="h-12 w-12 text-accent mx-auto mb-4" />
                   <div className="text-2xl font-bold mb-2">100%</div>
                   <p className="text-blue-100">Av cases uppnådde målsättningar</p>
                 </div>
                 <div>
-                  <Award className="h-12 w-12 text-[#D4A574] mx-auto mb-4" />
+                  <Award className="h-12 w-12 text-accent mx-auto mb-4" />
                   <div className="text-2xl font-bold mb-2">4.9/5</div>
                   <p className="text-blue-100">Genomsnittligt kundbetyg</p>
                 </div>
                 <div>
-                  <Users className="h-12 w-12 text-[#D4A574] mx-auto mb-4" />
+                  <Users className="h-12 w-12 text-accent mx-auto mb-4" />
                   <div className="text-2xl font-bold mb-2">95%</div>
                   <p className="text-blue-100">Skulle anlita igen</p>
                 </div>
@@ -359,14 +359,14 @@ export default function CaseStudiesPage() {
       </section>
 
       {/* Methodology */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-muted/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <BlurFade delay={0.1}>
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
                 Beprövad Transformationsmetodik
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                 En strukturerad approach utvecklad genom 30+ år av framgångsrik 
                 ledning av komplexa förändringsprocesser.
               </p>
@@ -399,18 +399,18 @@ export default function CaseStudiesPage() {
               <BlurFade key={index} delay={0.2 + index * 0.1}>
                 <div className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all duration-300">
                   <div className="text-center mb-6">
-                    <div className="inline-flex items-center justify-center w-12 h-12 bg-[#2C5F7C] text-white rounded-xl font-bold text-lg mb-4">
+                    <div className="inline-flex items-center justify-center w-12 h-12 bg-primary text-primary-foreground rounded-xl font-bold text-lg mb-4">
                       {index + 1}
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{phase.phase}</h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">{phase.description}</p>
+                    <h3 className="text-xl font-bold text-foreground mb-2">{phase.phase}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{phase.description}</p>
                   </div>
                   
                   <ul className="space-y-2">
                     {phase.tools.map((tool, toolIndex) => (
                       <li key={toolIndex} className="flex items-start text-sm">
-                        <CheckCircle className="h-4 w-4 text-[#D4A574] mr-2 mt-0.5 flex-shrink-0" />
-                        <span className="text-gray-600">{tool}</span>
+                        <CheckCircle className="h-4 w-4 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                        <span className="text-muted-foreground">{tool}</span>
                       </li>
                     ))}
                   </ul>
@@ -428,7 +428,7 @@ export default function CaseStudiesPage() {
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Redo för Er Nästa Transformation?
             </h2>
-            <p className="text-xl text-gray-300 mb-10 leading-relaxed">
+            <p className="text-xl text-primary-foreground/80 mb-10 leading-relaxed">
               Låt oss diskutera hur mina beprövade metoder och erfarenheter kan 
               accelerera er transformation och skapa hållbara resultat.
             </p>
@@ -440,7 +440,7 @@ export default function CaseStudiesPage() {
               </Link>
               <Link 
                 href="/tjanster"
-                className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-gray-900 transition-all duration-300"
+                className="inline-flex items-center justify-center px-8 py-4 border-2 border-primary-foreground text-primary-foreground font-semibold rounded-full hover:bg-primary-foreground hover:text-primary transition-all duration-300"
               >
                 Se Alla Tjänster
                 <ArrowRight className="ml-2 h-5 w-5" />
