@@ -20,6 +20,16 @@ npm run start        # Start production server
 npm run lint         # Run ESLint
 ```
 
+### UI Components
+```bash
+npx shadcn@latest add <component>  # Add new shadcn/ui component
+```
+
+### Testing
+```bash
+# No test framework configured yet - add when needed
+```
+
 ## Architecture
 
 This is a professional website for Yvonne Magnusson, a transformation leadership expert. Built with Next.js 15.5.0 and modern tooling.
@@ -76,6 +86,12 @@ The website targets Swedish executive market with Swedish-first content and prof
 - SEO optimized with comprehensive metadata
 - Client-side components separated from server-side metadata (layout.tsx pattern)
 - Static content embedded in components for immediate deployment
+- Site configuration centralized in `/lib/site-config.ts` (contact info, social links)
+
+### Form Validation Pattern
+- All forms use React Hook Form with Zod schemas for validation
+- Form components should follow the established pattern in contact forms
+- Error handling and user feedback integrated with UI components
 
 ### Key Business Requirements
 - **Target Audience:** Board members, C-suite executives, investors, event organizers
@@ -92,8 +108,53 @@ The website targets Swedish executive market with Swedish-first content and prof
 - **Animations:** Magic UI components for premium feel, avoid overuse
 - **Responsive:** Tailwind CSS classes with mobile-first approach
 
+### Styling Guidelines - CRITICAL
+- **NEVER hardcode colors** in pages or components
+- **ALWAYS use shadcn/ui CSS variables** for consistent theming
+- Use Tailwind utility classes that reference CSS variables:
+  - `bg-background` / `text-foreground` (main colors)
+  - `bg-card` / `text-card-foreground` (card backgrounds)
+  - `bg-primary` / `text-primary-foreground` (primary actions)
+  - `bg-secondary` / `text-secondary-foreground` (secondary elements)
+  - `bg-muted` / `text-muted-foreground` (subtle backgrounds)
+  - `bg-accent` / `text-accent-foreground` (accent colors)
+  - `border-border` (consistent borders)
+  - `ring-ring` (focus rings)
+- **CSS Variable System:** All colors defined in `globals.css` with light/dark variants
+- **Component Styling:** Use `cn()` utility to merge Tailwind classes conditionally
+
 ### Path Aliases
 - `@/components` - All React components
 - `@/components/ui` - Base UI components (shadcn/ui)
 - `@/components/magicui` - Premium animated components
 - `@/lib/utils` - Utility functions including `cn()` for className merging
+- `@/lib` - Library functions and site configuration
+
+### Image Handling
+- Images stored in `/public/images/` directory
+- Always use Next.js Image component for optimization
+- Lazy loading and responsive images are handled automatically
+
+### Configuration Files
+- **components.json** - Shadcn/ui configuration with "new-york" style and CSS variables enabled
+- **tsconfig.json** - TypeScript configuration with strict mode
+- **postcss.config.mjs** - Tailwind CSS PostCSS integration
+- **globals.css** - CSS variables for theming (light/dark mode support built-in)
+
+### Color System Examples
+❌ **WRONG** - Never hardcode colors:
+```tsx
+<div className="bg-blue-600 text-white">
+<div style={{backgroundColor: '#2C5F7C'}}>
+```
+
+✅ **CORRECT** - Always use CSS variables:
+```tsx
+<div className="bg-primary text-primary-foreground">
+<div className="bg-card text-card-foreground border border-border">
+```
+
+### Deployment
+- Optimized for Vercel deployment with Turbopack
+- Production builds use `npm run build` with automatic optimization
+- Static generation for pages where possible for better performance
