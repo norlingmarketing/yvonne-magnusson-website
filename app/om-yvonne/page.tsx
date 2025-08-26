@@ -128,15 +128,15 @@ export default function AboutPage() {
   return (
     <>
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
+        <section className="py-20 bg-gradient-to-br from-muted/50 to-background">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <BlurFade delay={0.2}>
                 <div>
-                  <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                  <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
                     Om Yvonne Magnusson
                   </h1>
-                  <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+                  <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
                     En ledare med djup erfarenhet av transformation inom retail och FMCG. 
                     Specialist på att skapa lönsam tillväxt genom strategisk förändring, 
                     kulturell utveckling och internationell expansion.
@@ -144,28 +144,28 @@ export default function AboutPage() {
                   
                   <div className="flex flex-wrap gap-4 mb-8">
                     <div className="flex items-center gap-2">
-                      <NumberTicker value={30} className="text-2xl font-bold text-[#2C5F7C]" />
-                      <span className="text-2xl font-bold text-[#2C5F7C]">+</span>
-                      <span className="text-gray-600">års erfarenhet</span>
+                      <NumberTicker value={30} className="text-2xl font-bold text-primary" />
+                      <span className="text-2xl font-bold text-primary">+</span>
+                      <span className="text-muted-foreground">års erfarenhet</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <NumberTicker value={18} className="text-2xl font-bold text-[#2C5F7C]" />
-                      <span className="text-gray-600">år som VD</span>
+                      <NumberTicker value={18} className="text-2xl font-bold text-primary" />
+                      <span className="text-muted-foreground">år som VD</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <NumberTicker value={4} className="text-2xl font-bold text-[#2C5F7C]" />
-                      <span className="text-gray-600">turnarounds</span>
+                      <NumberTicker value={4} className="text-2xl font-bold text-primary" />
+                      <span className="text-muted-foreground">turnarounds</span>
                     </div>
                   </div>
                   
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <Button asChild size="lg" className="bg-[#2C5F7C] hover:bg-[#2C5F7C]/90">
+                    <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
                       <Link href="/kontakt" className="flex items-center gap-2">
                         Diskutera samarbete
                         <ArrowRight className="h-5 w-5" />
                       </Link>
                     </Button>
-                    <Button variant="outline" size="lg" className="border-[#2C5F7C] text-[#2C5F7C] hover:bg-[#2C5F7C] hover:text-white">
+                    <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
                       <Download className="h-5 w-5 mr-2" />
                       Ladda ner CV
                     </Button>
@@ -175,13 +175,13 @@ export default function AboutPage() {
               
               <BlurFade delay={0.4}>
                 <div className="relative">
-                  <div className="aspect-[4/5] bg-gradient-to-br from-[#2C5F7C]/10 to-[#D4A574]/10 rounded-2xl"></div>
+                  <div className="aspect-[4/5] bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl"></div>
                   <div className="absolute inset-4 bg-white rounded-xl shadow-xl flex items-center justify-center">
                     <div className="text-center">
-                      <div className="w-24 h-24 bg-[#2C5F7C]/10 rounded-full mx-auto mb-4 flex items-center justify-center">
-                        <Users className="h-12 w-12 text-[#2C5F7C]" />
+                      <div className="w-24 h-24 bg-primary/10 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <Users className="h-12 w-12 text-primary" />
                       </div>
-                      <p className="text-gray-600 italic">
+                      <p className="text-muted-foreground italic">
                         &ldquo;Transformation genom ledarskap&rdquo;
                       </p>
                     </div>
@@ -193,14 +193,14 @@ export default function AboutPage() {
         </section>
 
         {/* Current Roles */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-background">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <BlurFade delay={0.2}>
               <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                   Nuvarande roller
                 </h2>
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                   Aktiv inom styrelser och rådgivning för att driva strategisk utveckling
                 </p>
               </div>
@@ -213,13 +213,13 @@ export default function AboutPage() {
                   <BlurFade key={index} delay={0.4 + index * 0.1}>
                     <Card className="h-full hover:shadow-lg transition-shadow">
                       <CardContent className="p-6 text-center">
-                        <div className="inline-flex items-center justify-center w-16 h-16 bg-[#2C5F7C]/10 rounded-full mb-4">
-                          <Icon className="h-8 w-8 text-[#2C5F7C]" />
+                        <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
+                          <Icon className="h-8 w-8 text-primary" />
                         </div>
-                        <h3 className="text-xl font-bold text-gray-900 mb-4">{role.title}</h3>
+                        <h3 className="text-xl font-bold text-foreground mb-4">{role.title}</h3>
                         <ul className="space-y-2">
                           {role.companies.map((company, companyIndex) => (
-                            <li key={companyIndex} className="text-gray-600">
+                            <li key={companyIndex} className="text-muted-foreground">
                               {company}
                             </li>
                           ))}
@@ -234,14 +234,14 @@ export default function AboutPage() {
         </section>
 
         {/* Career Timeline */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-20 bg-muted/50">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <BlurFade delay={0.2}>
               <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                   Karriärresa
                 </h2>
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                   En översikt över nyckelroller och framgångar genom åren
                 </p>
               </div>
@@ -254,12 +254,12 @@ export default function AboutPage() {
         </section>
 
         {/* Expertise & Education */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-background">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12">
               <BlurFade delay={0.2}>
                 <div>
-                  <h2 className="text-3xl font-bold text-gray-900 mb-8">
+                  <h2 className="text-3xl font-bold text-foreground mb-8">
                     Expertområden
                   </h2>
                   <div className="flex flex-wrap gap-3">
@@ -267,7 +267,7 @@ export default function AboutPage() {
                       <Badge 
                         key={skill} 
                         variant="secondary"
-                        className="px-4 py-2 text-sm bg-[#2C5F7C]/10 border border-[#2C5F7C]/20 text-[#2C5F7C] hover:bg-[#2C5F7C]/20"
+                        className="px-4 py-2 text-sm bg-primary/10 border border-primary/20 text-primary hover:bg-primary/20"
                       >
                         {skill}
                       </Badge>
@@ -278,17 +278,17 @@ export default function AboutPage() {
 
               <BlurFade delay={0.4}>
                 <div>
-                  <h2 className="text-3xl font-bold text-gray-900 mb-8">
+                  <h2 className="text-3xl font-bold text-foreground mb-8">
                     Utbildning & Språk
                   </h2>
                   
                   <div className="space-y-6">
                     <div>
-                      <h3 className="text-lg font-semibold text-gray-900 mb-3 flex items-center gap-2">
-                        <GraduationCap className="h-5 w-5 text-[#2C5F7C]" />
+                      <h3 className="text-lg font-semibold text-foreground mb-3 flex items-center gap-2">
+                        <GraduationCap className="h-5 w-5 text-primary" />
                         Utbildning
                       </h3>
-                      <ul className="space-y-2 text-gray-600">
+                      <ul className="space-y-2 text-muted-foreground">
                         <li>Civilekonom, Mittuniversitetet, Sverige</li>
                         <li>Internationella studier, Julius-Maximilians-Universität, Tyskland</li>
                         <li>Masterstudier, University of Warwick</li>
@@ -297,15 +297,15 @@ export default function AboutPage() {
                     </div>
                     
                     <div>
-                      <h3 className="text-lg font-semibold text-gray-900 mb-3 flex items-center gap-2">
-                        <Globe className="h-5 w-5 text-[#2C5F7C]" />
+                      <h3 className="text-lg font-semibold text-foreground mb-3 flex items-center gap-2">
+                        <Globe className="h-5 w-5 text-primary" />
                         Språk
                       </h3>
                       <div className="space-y-2">
                         {languages.map((lang, index) => (
                           <div key={index} className="flex justify-between">
-                            <span className="text-gray-900">{lang.lang}</span>
-                            <span className="text-gray-600">{lang.level}</span>
+                            <span className="text-foreground">{lang.lang}</span>
+                            <span className="text-muted-foreground">{lang.level}</span>
                           </div>
                         ))}
                       </div>
@@ -318,17 +318,17 @@ export default function AboutPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-br from-[#2C5F7C] to-[#1e4a5f] text-white">
+        <section className="py-20 bg-gradient-to-br from-primary to-primary/80 text-primary-foreground">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <BlurFade delay={0.2}>
               <div className="text-center">
                 <h2 className="text-3xl md:text-4xl font-bold mb-4">
                   Redo att diskutera ert nästa steg?
                 </h2>
-                <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
+                <p className="text-xl text-primary-foreground/80 max-w-3xl mx-auto mb-8">
                   Låt oss utforska hur min erfarenhet kan bidra till er transformation och tillväxt.
                 </p>
-                <Button asChild size="lg" className="bg-white text-[#2C5F7C] hover:bg-gray-50">
+                <Button asChild size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90">
                   <Link href="/kontakt" className="flex items-center gap-2">
                     Boka introduktionssamtal
                     <ArrowRight className="h-5 w-5" />

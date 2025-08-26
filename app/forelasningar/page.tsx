@@ -153,45 +153,45 @@ export default function SpeakingPage() {
   return (
     <main className="min-h-screen">
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
+        <section className="py-20 bg-gradient-to-br from-muted/50 to-background">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <BlurFade delay={0.2}>
                 <div>
-                  <div className="inline-flex items-center gap-2 bg-[#2C5F7C]/10 rounded-full px-4 py-2 mb-6">
-                    <Star className="h-4 w-4 text-[#2C5F7C]" />
-                    <span className="text-[#2C5F7C] font-medium">Keynote Speaker</span>
+                  <div className="inline-flex items-center gap-2 bg-primary/10 rounded-full px-4 py-2 mb-6">
+                    <Star className="h-4 w-4 text-primary" />
+                    <span className="text-primary font-medium">Keynote Speaker</span>
                   </div>
                   
-                  <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                  <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
                     Föreläsningar som inspirerar till handling
                   </h1>
-                  <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+                  <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
                     Praktiska insights från 30+ års ledarskap inom transformation, internationalisering 
                     och retail excellence. Föreläsningar som ger verktyg, inte bara inspiration.
                   </p>
                   
                   <div className="flex flex-wrap gap-3 mb-8">
-                    <Badge variant="secondary" className="px-4 py-2 bg-[#2C5F7C]/10 text-[#2C5F7C] border-[#2C5F7C]/20">
+                    <Badge variant="secondary" className="px-4 py-2 bg-primary/10 text-primary border-primary/20">
                       Svenska, Engelska, Tyska
                     </Badge>
-                    <Badge variant="secondary" className="px-4 py-2 bg-[#2C5F7C]/10 text-[#2C5F7C] border-[#2C5F7C]/20">
+                    <Badge variant="secondary" className="px-4 py-2 bg-primary/10 text-primary border-primary/20">
                       30-240 minuter
                     </Badge>
-                    <Badge variant="secondary" className="px-4 py-2 bg-[#2C5F7C]/10 text-[#2C5F7C] border-[#2C5F7C]/20">
+                    <Badge variant="secondary" className="px-4 py-2 bg-primary/10 text-primary border-primary/20">
                       Live & Digital
                     </Badge>
                   </div>
                   
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <Button asChild size="lg" className="bg-[#2C5F7C] hover:bg-[#2C5F7C]/90">
+                    <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
                       <Link href="/kontakt" className="flex items-center gap-2">
                         <Calendar className="h-5 w-5" />
                         Boka föreläsning
                         <ArrowRight className="h-5 w-5" />
                       </Link>
                     </Button>
-                    <Button variant="outline" size="lg" className="border-[#2C5F7C] text-[#2C5F7C] hover:bg-[#2C5F7C] hover:text-white">
+                    <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
                       <Download className="h-5 w-5 mr-2" />
                       Speaker Kit
                     </Button>
@@ -204,17 +204,17 @@ export default function SpeakingPage() {
                   <Dialog>
                     <DialogTrigger asChild>
                       <div className="relative cursor-pointer group">
-                        <div className="aspect-video bg-gradient-to-br from-[#2C5F7C]/20 to-[#D4A574]/20 rounded-2xl overflow-hidden">
-                          <div className="w-full h-full flex items-center justify-center bg-gray-900/50 hover:bg-gray-900/40 transition-colors">
-                            <div className="w-20 h-20 bg-white/90 rounded-full flex items-center justify-center group-hover:bg-white group-hover:scale-110 transition-all">
-                              <Play className="h-10 w-10 text-[#2C5F7C] ml-1" />
+                        <div className="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl overflow-hidden">
+                          <div className="w-full h-full flex items-center justify-center bg-foreground/50 hover:bg-foreground/40 transition-colors">
+                            <div className="w-20 h-20 bg-background/90 rounded-full flex items-center justify-center group-hover:bg-background group-hover:scale-110 transition-all">
+                              <Play className="h-10 w-10 text-primary ml-1" />
                             </div>
                           </div>
                         </div>
                         <div className="absolute bottom-4 left-4 right-4">
-                          <div className="bg-white/95 backdrop-blur-sm rounded-lg p-4">
-                            <h3 className="font-semibold text-gray-900">Transformation i den digitala eran</h3>
-                            <p className="text-sm text-gray-600 mt-1">Fashion Industry Summit 2025 - 3 min preview</p>
+                          <div className="bg-background/95 backdrop-blur-sm rounded-lg p-4">
+                            <h3 className="font-semibold text-foreground">Transformation i den digitala eran</h3>
+                            <p className="text-sm text-muted-foreground mt-1">Fashion Industry Summit 2025 - 3 min preview</p>
                           </div>
                         </div>
                       </div>
@@ -232,14 +232,14 @@ export default function SpeakingPage() {
         </section>
 
         {/* Speaking Topics */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-background">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <BlurFade delay={0.2}>
               <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                   Föreläsningsteman
                 </h2>
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                   Tre huvudteman som kan anpassas och kombineras baserat på er målgrupp och era utmaningar.
                 </p>
               </div>
@@ -254,10 +254,10 @@ export default function SpeakingPage() {
                         <CardHeader className="pb-4">
                           <div className="flex items-start justify-between mb-4">
                             <div>
-                              <CardTitle className="text-2xl text-gray-900 mb-2">
+                              <CardTitle className="text-2xl text-foreground mb-2">
                                 {topic.title}
                               </CardTitle>
-                              <p className="text-lg text-[#D4A574] font-medium">
+                              <p className="text-lg text-accent font-medium">
                                 {topic.subtitle}
                               </p>
                             </div>
@@ -282,10 +282,10 @@ export default function SpeakingPage() {
                         
                         <CardContent className="grid md:grid-cols-2 gap-6">
                           <div>
-                            <h4 className="font-semibold text-gray-900 mb-3">Huvudpunkter:</h4>
+                            <h4 className="font-semibold text-foreground mb-3">Huvudpunkter:</h4>
                             <ul className="space-y-2">
                               {topic.keyPoints.map((point, pointIndex) => (
-                                <li key={pointIndex} className="flex items-start text-sm text-gray-600">
+                                <li key={pointIndex} className="flex items-start text-sm text-muted-foreground">
                                   <CheckCircle className="w-4 h-4 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
                                   {point}
                                 </li>
@@ -294,26 +294,26 @@ export default function SpeakingPage() {
                           </div>
                           
                           <div>
-                            <h4 className="font-semibold text-gray-900 mb-3">Målgrupp:</h4>
+                            <h4 className="font-semibold text-foreground mb-3">Målgrupp:</h4>
                             <div className="flex flex-wrap gap-2">
                               {topic.audience.map((aud, audIndex) => (
                                 <Badge 
                                   key={audIndex}
                                   variant="outline" 
-                                  className="text-xs border-gray-300 text-gray-600"
+                                  className="text-xs border-border text-muted-foreground"
                                 >
                                   {aud}
                                 </Badge>
                               ))}
                             </div>
                             
-                            <div className="mt-4 space-y-2 text-sm text-gray-600">
+                            <div className="mt-4 space-y-2 text-sm text-muted-foreground">
                               <div className="flex items-center gap-2">
-                                <Clock className="h-4 w-4 text-[#2C5F7C]" />
+                                <Clock className="h-4 w-4 text-primary" />
                                 {topic.duration}
                               </div>
                               <div className="flex items-center gap-2">
-                                <Users className="h-4 w-4 text-[#2C5F7C]" />
+                                <Users className="h-4 w-4 text-primary" />
                                 {topic.format.join(", ")}
                               </div>
                             </div>
@@ -321,14 +321,14 @@ export default function SpeakingPage() {
                         </CardContent>
                       </div>
                       
-                      <div className="bg-gray-50 p-6 flex flex-col justify-center">
-                        <div className="bg-white rounded-lg p-4 border border-gray-200">
-                          <blockquote className="text-sm text-gray-700 italic mb-3">
+                      <div className="bg-muted/50 p-6 flex flex-col justify-center">
+                        <div className="bg-background rounded-lg p-4 border border-border">
+                          <blockquote className="text-sm text-muted-foreground italic mb-3">
                             &ldquo;{topic.testimonial.quote}&rdquo;
                           </blockquote>
                           <div className="text-xs">
-                            <div className="font-medium text-gray-900">{topic.testimonial.author}</div>
-                            <div className="text-gray-600">{topic.testimonial.company}</div>
+                            <div className="font-medium text-foreground">{topic.testimonial.author}</div>
+                            <div className="text-muted-foreground">{topic.testimonial.company}</div>
                           </div>
                         </div>
                       </div>
@@ -341,14 +341,14 @@ export default function SpeakingPage() {
         </section>
 
         {/* Speaking Formats */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-20 bg-muted/50">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <BlurFade delay={0.2}>
               <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                   Format och upplägg
                 </h2>
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                   Flexibla format som anpassas efter er målgrupp, tidsram och mål med evenemanget.
                 </p>
               </div>
@@ -359,7 +359,7 @@ export default function SpeakingPage() {
                 <BlurFade key={index} delay={0.4 + index * 0.1}>
                   <Card className="h-full hover:shadow-lg transition-shadow">
                     <CardHeader>
-                      <CardTitle className="text-xl text-[#2C5F7C]">{format.format}</CardTitle>
+                      <CardTitle className="text-xl text-primary">{format.format}</CardTitle>
                       <CardDescription>
                         <span className="font-medium">{format.duration}</span>
                         <br />
@@ -368,15 +368,15 @@ export default function SpeakingPage() {
                     </CardHeader>
                     <CardContent>
                       <div className="space-y-4">
-                        <div className="text-lg font-semibold text-gray-900">
+                        <div className="text-lg font-semibold text-foreground">
                           {format.pricing}
                         </div>
                         
                         <div>
-                          <h4 className="font-medium text-gray-900 mb-2">Inkluderat:</h4>
+                          <h4 className="font-medium text-foreground mb-2">Inkluderat:</h4>
                           <ul className="space-y-1">
                             {format.includes.map((include, includeIndex) => (
-                              <li key={includeIndex} className="flex items-center text-sm text-gray-600">
+                              <li key={includeIndex} className="flex items-center text-sm text-muted-foreground">
                                 <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
                                 {include}
                               </li>
@@ -393,14 +393,14 @@ export default function SpeakingPage() {
         </section>
 
         {/* Past Events */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-background">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <BlurFade delay={0.2}>
               <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                   Senaste uppdrag
                 </h2>
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                   Ett urval av events där jag delat insights om transformation och ledarskap.
                 </p>
               </div>
@@ -424,7 +424,7 @@ export default function SpeakingPage() {
                       </CardDescription>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-sm font-medium text-[#2C5F7C]">
+                      <p className="text-sm font-medium text-primary">
                         {event.topic}
                       </p>
                     </CardContent>
@@ -436,26 +436,26 @@ export default function SpeakingPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-br from-[#2C5F7C] to-[#1e4a5f] text-white">
+        <section className="py-20 bg-gradient-to-br from-primary to-primary/80 text-primary-foreground">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <BlurFade delay={0.2}>
               <div className="text-center">
                 <h2 className="text-3xl md:text-4xl font-bold mb-4">
                   Skapa en minnesvärd upplevelse för er målgrupp
                 </h2>
-                <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
+                <p className="text-xl text-primary-foreground/80 max-w-3xl mx-auto mb-8">
                   Låt oss diskutera hur vi kan skräddarsy innehåll och format 
                   för att maximera värdet för era deltagare.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button asChild size="lg" className="bg-white text-[#2C5F7C] hover:bg-gray-50">
+                  <Button asChild size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90">
                     <Link href="/kontakt" className="flex items-center gap-2">
                       <Calendar className="h-5 w-5" />
                       Boka föreläsning
                       <ArrowRight className="h-5 w-5" />
                     </Link>
                   </Button>
-                  <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-[#2C5F7C]">
+                  <Button asChild variant="outline" size="lg" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
                     <Link href="#" className="flex items-center gap-2">
                       <Download className="h-5 w-5" />
                       Ladda ner Speaker Kit
@@ -464,7 +464,7 @@ export default function SpeakingPage() {
                 </div>
                 
                 <div className="mt-8 text-center">
-                  <p className="text-blue-100 mb-2">Eller ring direkt:</p>
+                  <p className="text-primary-foreground/80 mb-2">Eller ring direkt:</p>
                   <a href="tel:+46739853260" className="text-2xl font-semibold hover:underline">
                     +46 73 985 32 60
                   </a>
