@@ -129,7 +129,7 @@ export default function BoardWorkPage() {
               <div className="mb-8">
                 <Link 
                   href="/tjanster" 
-                  className="inline-flex items-center text-[#2C5F7C] hover:text-[#2C5F7C]/80 transition-colors"
+                  className="inline-flex items-center text-primary hover:text-primary/80 transition-colors"
                 >
                   <ArrowLeft className="h-4 w-4 mr-2" />
                   Tillbaka till tjänster
@@ -144,10 +144,10 @@ export default function BoardWorkPage() {
                     <Users className="h-8 w-8 text-blue-600" />
                   </div>
                   
-                  <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                  <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
                     Styrelsearbete
                   </h1>
-                  <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+                  <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
                     Kommersiell skärpa och strategiskt fokus för styrelser som driver transformation, 
                     internationalisering och hållbar tillväxt inom retail och FMCG.
                   </p>
@@ -164,7 +164,7 @@ export default function BoardWorkPage() {
                     </Badge>
                   </div>
                   
-                  <Button asChild size="lg" className="bg-[#2C5F7C] hover:bg-[#2C5F7C]/90">
+                  <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
                     <Link href="/kontakt" className="flex items-center gap-2">
                       Diskutera styrelsesamarbete
                       <ArrowRight className="h-5 w-5" />
@@ -200,14 +200,14 @@ export default function BoardWorkPage() {
         </section>
 
         {/* Core Competencies */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-background">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <BlurFade delay={0.2}>
               <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                   Kärnkompetenser i styrelsearbetet
                 </h2>
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                   Djup expertis inom de områden som är kritiska för framgångsrik styrning av retail- och FMCG-företag.
                 </p>
               </div>
@@ -233,7 +233,7 @@ export default function BoardWorkPage() {
                       <CardContent>
                         <ul className="space-y-2">
                           {competency.details.map((detail, detailIndex) => (
-                            <li key={detailIndex} className="flex items-center text-sm text-gray-600">
+                            <li key={detailIndex} className="flex items-center text-sm text-muted-foreground">
                               <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
                               {detail}
                             </li>
@@ -249,14 +249,14 @@ export default function BoardWorkPage() {
         </section>
 
         {/* Ideal Situations */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-20 bg-muted/50">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <BlurFade delay={0.2}>
               <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                   När mitt styrelseengagemang skapar störst värde
                 </h2>
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                   Situationer där djup branschexpertis och praktisk erfarenhet gör verklig skillnad för bolagets utveckling.
                 </p>
               </div>
@@ -267,20 +267,20 @@ export default function BoardWorkPage() {
                 <BlurFade key={index} delay={0.4 + index * 0.1}>
                   <Card className="h-full">
                     <CardHeader>
-                      <CardTitle className="text-xl text-[#2C5F7C]">{situation.title}</CardTitle>
+                      <CardTitle className="text-xl text-primary">{situation.title}</CardTitle>
                       <CardDescription className="text-base leading-relaxed">
                         {situation.description}
                       </CardDescription>
                     </CardHeader>
                     <CardContent>
                       <div className="space-y-2">
-                        <h4 className="font-medium text-gray-900">Exempel på fokusområden:</h4>
+                        <h4 className="font-medium text-foreground">Exempel på fokusområden:</h4>
                         <div className="flex flex-wrap gap-2">
                           {situation.examples.map((example, exampleIndex) => (
                             <Badge 
                               key={exampleIndex}
                               variant="outline" 
-                              className="text-xs border-[#2C5F7C]/30 text-[#2C5F7C]"
+                              className="text-xs border-primary/30 text-primary"
                             >
                               {example}
                             </Badge>
@@ -296,14 +296,14 @@ export default function BoardWorkPage() {
         </section>
 
         {/* Value Creation */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-background">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <BlurFade delay={0.2}>
               <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                   Värdeskapande för er organisation
                 </h2>
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                   Konkret bidrag som stärker bolagets strategiska position och genomförandeförmåga.
                 </p>
               </div>
@@ -313,15 +313,15 @@ export default function BoardWorkPage() {
               {valueCreation.map((value, index) => (
                 <BlurFade key={index} delay={0.4 + index * 0.1}>
                   <div className="text-center">
-                    <div className="w-16 h-16 bg-[#2C5F7C]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <div className="w-8 h-8 bg-[#2C5F7C] rounded-full flex items-center justify-center text-white font-bold">
+                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white font-bold">
                         {index + 1}
                       </div>
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    <h3 className="text-xl font-bold text-foreground mb-3">
                       {value.area}
                     </h3>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-muted-foreground leading-relaxed">
                       {value.impact}
                     </p>
                   </div>
@@ -332,7 +332,7 @@ export default function BoardWorkPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-br from-[#2C5F7C] to-[#1e4a5f] text-white">
+        <section className="py-20 bg-gradient-to-br from-[hsl(var(--primary))] to-[#1e4a5f] text-white">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <BlurFade delay={0.2}>
               <div className="text-center">
@@ -343,13 +343,13 @@ export default function BoardWorkPage() {
                   Låt oss diskutera hur jag kan bidra till er styrelse och stödja er strategiska utveckling.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button asChild size="lg" className="bg-white text-[#2C5F7C] hover:bg-gray-50">
+                  <Button asChild size="lg" className="bg-background text-primary hover:bg-muted/50">
                     <Link href="/kontakt" className="flex items-center gap-2">
                       Diskutera styrelseroll
                       <ArrowRight className="h-5 w-5" />
                     </Link>
                   </Button>
-                  <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-[#2C5F7C]">
+                  <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-background hover:text-primary">
                     <Link href="/om-yvonne" className="flex items-center gap-2">
                       Se bakgrund & erfarenhet
                       <Users className="h-5 w-5" />
