@@ -4,6 +4,7 @@ import Link from "next/link";
 import { AnimatedGradientText } from "@/components/magicui/animated-gradient-text";
 import { BlurFade } from "@/components/magicui/blur-fade";
 import { Button } from "@/components/ui/button";
+import { ShimmerButton } from "@/components/magicui/shimmer-button";
 import { ArrowRight, Play } from "lucide-react";
 import { FlickeringGrid } from "@/components/magicui/flickering-grid";
 import { Ripple } from "@/components/magicui/ripple";
@@ -57,12 +58,16 @@ export function HeroSection() {
 
         <BlurFade delay={0.8}>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button className="px-8 py-3 text-lg" asChild>
+            <ShimmerButton
+              className="px-8 py-3 text-lg"
+              shimmerColor="hsl(var(--accent))"
+              background="hsl(var(--primary))"
+            >
               <Link href="/kontakt" className="flex items-center gap-2">
                 Boka intro-samtal
                 <ArrowRight className="h-5 w-5" />
               </Link>
-            </Button>
+            </ShimmerButton>
             
             <Button variant="outline" className="px-8 py-3 text-lg" asChild>
               <Link href="/forelasningar" className="flex items-center gap-2">

@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { ShimmerButton } from "@/components/magicui/shimmer-button";
 import Link from "next/link";
 
 const BUTTONS = [
@@ -24,22 +25,24 @@ export function CTASection() {
             och skapa hållbar tillväxt för framtiden.
           </p>
           <div className="mt-6 flex flex-col justify-center gap-4 sm:flex-row">
-            {BUTTONS.map((button, index) => (
-              <Button 
-                key={index} 
-                variant={button.variant} 
-                asChild
-                className={
-                  button.variant === "default" 
-                    ? "bg-background text-foreground hover:bg-background/90 px-8 py-4 text-lg font-semibold" 
-                    : "border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary px-8 py-4 text-lg font-semibold bg-transparent"
-                }
-              >
-                <Link href={button.href} prefetch={false}>
-                  {button.text}
-                </Link>
-              </Button>
-            ))}
+            <ShimmerButton
+              className="px-8 py-4 text-lg font-semibold"
+              shimmerColor="hsl(var(--primary-foreground))"
+              background="hsl(var(--background))"
+            >
+              <Link href="/kontakt" prefetch={false} className="text-foreground">
+                Boka intro-samtal
+              </Link>
+            </ShimmerButton>
+            <Button 
+              variant="outline"
+              asChild
+              className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary px-8 py-4 text-lg font-semibold bg-transparent"
+            >
+              <Link href="/tjanster" prefetch={false}>
+                Läs mer om tjänster
+              </Link>
+            </Button>
           </div>
         </div>
       </div>
