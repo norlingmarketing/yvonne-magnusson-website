@@ -2,10 +2,6 @@ import { Button } from "@/components/ui/button";
 import { ShimmerButton } from "@/components/magicui/shimmer-button";
 import Link from "next/link";
 
-const BUTTONS = [
-  { text: "Boka intro-samtal", href: "/kontakt", variant: "default" as const },
-  { text: "Läs mer om tjänster", href: "/tjanster", variant: "outline" as const },
-];
 
 export function CTASection() {
   return (
