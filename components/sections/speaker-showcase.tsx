@@ -31,14 +31,14 @@ const speakingHighlights = [
 
 export function SpeakerShowcase() {
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50">
+    <section className="py-20 bg-gradient-to-br from-muted/50 via-background to-muted/50">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <BlurFade delay={0.2}>
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               Inspirerande föreläsare & paneldeltagare
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Med passion för transformation och förändringsledning delar jag insikter från 30+ års erfarenhet
             </p>
           </div>
@@ -69,13 +69,13 @@ export function SpeakerShowcase() {
               {speakingHighlights.map((highlight, index) => (
                 <div key={index} className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-gradient-to-br from-[#2C5F7C] to-[#D4A574] rounded-xl flex items-center justify-center text-white">
+                    <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center text-primary-foreground">
                       <highlight.icon className="h-6 w-6" />
                     </div>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">{highlight.title}</h3>
-                    <p className="text-gray-600">{highlight.description}</p>
+                    <h3 className="font-semibold text-foreground mb-1">{highlight.title}</h3>
+                    <p className="text-muted-foreground">{highlight.description}</p>
                   </div>
                 </div>
               ))}
@@ -96,23 +96,23 @@ export function SpeakerShowcase() {
 
         {/* Recent Speaking Engagements */}
         <BlurFade delay={0.8}>
-          <div className="bg-white rounded-2xl shadow-lg p-8">
-            <h3 className="text-xl font-bold text-gray-900 mb-6">Senaste föreläsningar & paneler</h3>
+          <div className="bg-background rounded-2xl shadow-lg p-8">
+            <h3 className="text-xl font-bold text-foreground mb-6">Senaste föreläsningar & paneler</h3>
             <div className="grid md:grid-cols-3 gap-6">
-              <div className="border-l-4 border-[#2C5F7C] pl-4">
-                <p className="font-semibold text-gray-900">Leaders of Trade</p>
-                <p className="text-sm text-gray-600">Copenhagen, September 2025</p>
-                <p className="text-xs text-gray-500 mt-1">Business Transformation</p>
+              <div className="border-l-4 border-primary pl-4">
+                <p className="font-semibold text-foreground">Leaders of Trade</p>
+                <p className="text-sm text-muted-foreground">Copenhagen, September 2025</p>
+                <p className="text-xs text-muted-foreground mt-1">Business Transformation</p>
               </div>
-              <div className="border-l-4 border-[#D4A574] pl-4">
-                <p className="font-semibold text-gray-900">Fashion Industry Summit</p>
-                <p className="text-sm text-gray-600">Stockholm, 2025</p>
-                <p className="text-xs text-gray-500 mt-1">Panel: Future of Retail</p>
+              <div className="border-l-4 border-accent pl-4">
+                <p className="font-semibold text-foreground">Fashion Industry Summit</p>
+                <p className="text-sm text-muted-foreground">Stockholm, 2025</p>
+                <p className="text-xs text-muted-foreground mt-1">Panel: Future of Retail</p>
               </div>
-              <div className="border-l-4 border-[#2C5F7C] pl-4">
-                <p className="font-semibold text-gray-900">Retail Tech Conference</p>
-                <p className="text-sm text-gray-600">Nordic Region, 2024</p>
-                <p className="text-xs text-gray-500 mt-1">Digital Transformation</p>
+              <div className="border-l-4 border-primary pl-4">
+                <p className="font-semibold text-foreground">Retail Tech Conference</p>
+                <p className="text-sm text-muted-foreground">Nordic Region, 2024</p>
+                <p className="text-xs text-muted-foreground mt-1">Digital Transformation</p>
               </div>
             </div>
           </div>

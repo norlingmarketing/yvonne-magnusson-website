@@ -28,13 +28,13 @@ const navigation = {
 
 export function Footer() {
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-foreground text-background">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="lg:col-span-1">
             <h3 className="text-xl font-bold font-serif mb-4">{siteConfig.company.name}</h3>
-            <p className="text-gray-300 text-sm leading-relaxed mb-6">
+            <p className="text-muted-foreground text-sm leading-relaxed mb-6">
               {siteConfig.company.description}
             </p>
             <div className="flex space-x-4">
@@ -44,7 +44,7 @@ export function Footer() {
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-muted-foreground hover:text-background transition-colors"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -63,7 +63,7 @@ export function Footer() {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-gray-300 hover:text-white transition-colors text-sm"
+                    className="text-muted-foreground hover:text-background transition-colors text-sm"
                   >
                     {item.name}
                   </Link>
@@ -80,7 +80,7 @@ export function Footer() {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-gray-300 hover:text-white transition-colors text-sm"
+                    className="text-muted-foreground hover:text-background transition-colors text-sm"
                   >
                     {item.name}
                   </Link>
@@ -93,19 +93,19 @@ export function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Kontakt</h3>
             <div className="space-y-3">
-              <div className="flex items-center space-x-3 text-sm text-gray-300">
+              <div className="flex items-center space-x-3 text-sm text-muted-foreground">
                 <Mail className="h-4 w-4 flex-shrink-0" />
-                <a href={`mailto:${siteConfig.contact.email}`} className="hover:text-white transition-colors">
+                <a href={`mailto:${siteConfig.contact.email}`} className="hover:text-background transition-colors">
                   {siteConfig.contact.email}
                 </a>
               </div>
-              <div className="flex items-center space-x-3 text-sm text-gray-300">
+              <div className="flex items-center space-x-3 text-sm text-muted-foreground">
                 <Phone className="h-4 w-4 flex-shrink-0" />
-                <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`} className="hover:text-white transition-colors">
+                <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`} className="hover:text-background transition-colors">
                   {siteConfig.contact.phoneDisplay}
                 </a>
               </div>
-              <div className="flex items-center space-x-3 text-sm text-gray-300">
+              <div className="flex items-center space-x-3 text-sm text-muted-foreground">
                 <MapPin className="h-4 w-4 flex-shrink-0" />
                 <span>{siteConfig.contact.location}</span>
               </div>
@@ -113,15 +113,15 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8">
+        <div className="border-t border-border mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-sm text-gray-400">
+            <p className="text-sm text-muted-foreground">
               © {new Date().getFullYear()} Yvonne Magnusson. Alla rättigheter förbehållna.
             </p>
             <div className="mt-4 md:mt-0">
               <Link
                 href="/kontakt"
-                className="text-sm text-gray-400 hover:text-white transition-colors"
+                className="text-sm text-muted-foreground hover:text-background transition-colors"
               >
                 Integritetspolicy
               </Link>
