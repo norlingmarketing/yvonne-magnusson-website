@@ -58,18 +58,17 @@ export function HeroSection() {
 
         <BlurFade delay={0.8}>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <ShimmerButton
-              className="px-8 py-3 text-lg"
-              shimmerColor="hsl(var(--accent))"
-              background="hsl(var(--primary))"
+            <Button 
+              asChild 
+              className="px-8 py-3 text-lg bg-primary hover:bg-primary/90 text-primary-foreground"
             >
               <Link href="/kontakt" className="flex items-center gap-2">
                 Boka intro-samtal
                 <ArrowRight className="h-5 w-5" />
               </Link>
-            </ShimmerButton>
+            </Button>
             
-            <Button variant="outline" className="px-8 py-3 text-lg" asChild>
+            <Button variant="outline" className="px-8 py-3 text-lg border-primary text-primary hover:bg-primary hover:text-primary-foreground" asChild>
               <Link href="/forelasningar" className="flex items-center gap-2">
                 <Play className="h-5 w-5" />
                 Se föreläsningar

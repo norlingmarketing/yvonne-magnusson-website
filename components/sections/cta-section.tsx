@@ -6,36 +6,33 @@ import Link from "next/link";
 export function CTASection() {
   return (
     <section className="py-20 bg-primary text-primary-foreground">
-      <div className="container px-4 py-12 md:px-6 md:py-24 lg:py-32">
-        <div className="mx-auto space-y-4 py-6 text-center">
-          <h2 className="font-mono text-sm font-medium tracking-tight text-accent-foreground">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="text-center space-y-6">
+          <h2 className="font-mono text-sm font-medium tracking-tight text-primary-foreground/80">
             REDO ATT BÖRJA?
           </h2>
-          <h4 className="mx-auto mb-2 max-w-3xl text-balance text-5xl font-medium tracking-tighter">
+          <h4 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
             Accelerera er transformation idag
           </h4>
-        </div>
-        <div className="space-y-4 text-center">
-          <p className="mx-auto max-w-[700px] text-balance text-primary-foreground/80 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+          <p className="text-xl text-primary-foreground/80 max-w-3xl mx-auto mb-8 leading-relaxed">
             Låt oss diskutera hur min expertis kan hjälpa er navigera genom förändring 
             och skapa hållbar tillväxt för framtiden.
           </p>
-          <div className="mt-6 flex flex-col justify-center gap-4 sm:flex-row">
-            <ShimmerButton
-              className="px-8 py-4 text-lg font-semibold"
-              shimmerColor="hsl(var(--primary-foreground))"
-              background="hsl(var(--background))"
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Button 
+              asChild 
+              className="px-8 py-3 text-lg bg-background hover:bg-background/90 text-foreground"
             >
-              <Link href="/kontakt" prefetch={false} className="text-foreground">
+              <Link href="/kontakt">
                 Boka intro-samtal
               </Link>
-            </ShimmerButton>
+            </Button>
             <Button 
               variant="outline"
               asChild
-              className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary px-8 py-4 text-lg font-semibold bg-transparent"
+              className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary px-8 py-3 text-lg bg-transparent"
             >
-              <Link href="/tjanster" prefetch={false}>
+              <Link href="/tjanster">
                 Läs mer om tjänster
               </Link>
             </Button>
