@@ -1,14 +1,14 @@
 import Image from "next/image";
 
 const clientLogos = [
-  "Indiska",
-  "Insula", 
-  "NK",
-  "Kesko",
-  "Cervera",
-  "VilleroyBoch",
-  "Unilever",
-  "Gallerix"
+  { name: "Indiska", description: "Fashion & Interior Retail" },
+  { name: "Insula", description: "Investment & Property" },
+  { name: "NK", description: "Department Store" },
+  { name: "Kesko", description: "Finnish Retail Group" },
+  { name: "Cervera", description: "Home & Tableware" },
+  { name: "Villeroy & Boch", description: "Premium Tableware" },
+  { name: "Unilever", description: "Consumer Goods" },
+  { name: "Gallerix", description: "Art & Framing" }
 ];
 
 export function LogoCloudSection() {
@@ -19,20 +19,24 @@ export function LogoCloudSection() {
           FÖRTROENDET FRÅN LEDANDE FÖRETAG
         </h3>
         <div className="relative">
-          <div className="grid grid-cols-2 place-items-center gap-2 md:gap-4 lg:grid-cols-4 xl:gap-x-6 2xl:grid-cols-8">
-            {clientLogos.map((logo, idx) => (
-              <Image
+          <div className="grid grid-cols-2 place-items-center gap-4 md:gap-6 lg:grid-cols-4 xl:gap-x-8 2xl:grid-cols-8">
+            {clientLogos.map((client, idx) => (
+              <div
                 key={idx}
-                src={`https://cdn.magicui.design/companies/${logo}.svg`}
-                width={160}
-                height={40}
-                className="h-10 w-40 px-2 brightness-0 opacity-60 hover:opacity-100 transition-opacity duration-300"
-                alt={`${logo} logo`}
-              />
+                className="group text-center px-2 py-3 transition-all duration-300 hover:scale-105"
+                title={client.description}
+              >
+                <div className="text-lg font-bold text-muted-foreground/60 group-hover:text-muted-foreground transition-colors duration-300 tracking-wider">
+                  {client.name}
+                </div>
+                <div className="text-xs text-muted-foreground/40 mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  {client.description}
+                </div>
+              </div>
             ))}
           </div>
-          <div className="pointer-events-none absolute inset-y-0 left-0 h-full w-1/3 bg-gradient-to-r from-background"></div>
-          <div className="pointer-events-none absolute inset-y-0 right-0 h-full w-1/3 bg-gradient-to-l from-background"></div>
+          <div className="pointer-events-none absolute inset-y-0 left-0 h-full w-1/4 bg-gradient-to-r from-background"></div>
+          <div className="pointer-events-none absolute inset-y-0 right-0 h-full w-1/4 bg-gradient-to-l from-background"></div>
         </div>
       </div>
     </section>
