@@ -111,10 +111,10 @@ export default function ContactPage() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <BlurFade delay={0.2}>
               <div className="text-center mb-16">
-                <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
                   Låt oss börja samtalet
                 </h1>
-                <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8 leading-relaxed">
+                <p className="text-xl text-muted-foreground max-w-4xl mx-auto mb-8 leading-relaxed">
                   Är ni redo att accelerera er transformation? Jag hjälper gärna till att diskutera 
                   era utmaningar och möjligheter för att hitta den bästa vägen framåt.
                 </p>
@@ -123,10 +123,10 @@ export default function ContactPage() {
                   {responsePromises.map((promise, index) => {
                     const Icon = promise.icon;
                     return (
-                      <div key={index} className="flex items-center gap-2 text-[#2C5F7C]">
+                      <div key={index} className="flex items-center gap-2 text-primary">
                         <Icon className="h-5 w-5" />
                         <span className="font-semibold">{promise.title}</span>
-                        <span className="text-gray-600">- {promise.description}</span>
+                        <span className="text-muted-foreground">- {promise.description}</span>
                       </div>
                     );
                   })}
@@ -193,9 +193,9 @@ export default function ContactPage() {
                                   type="checkbox" 
                                   name="services" 
                                   value={service.id}
-                                  className="rounded border-gray-300 text-[#2C5F7C] focus:ring-[#2C5F7C]"
+                                  className="rounded border-input text-primary focus:ring-primary"
                                 />
-                                <Icon className="h-4 w-4 text-[#2C5F7C]" />
+                                <Icon className="h-4 w-4 text-primary" />
                                 <span className="text-sm">{service.title}</span>
                               </Label>
                             );
@@ -219,11 +219,11 @@ export default function ContactPage() {
                         <Input id="timeline" name="timeline" placeholder="T.ex. 'Akut behov', '3-6 månader', 'Långsiktig relation'" />
                       </div>
                       
-                      <Button type="submit" size="lg" className="w-full bg-[#2C5F7C] hover:bg-[#2C5F7C]/90">
+                      <Button type="submit" size="lg" className="w-full">
                         Skicka förfrågan
                       </Button>
                       
-                      <p className="text-sm text-gray-500 text-center">
+                      <p className="text-sm text-muted-foreground text-center">
                         * Obligatoriska fält. Jag behandlar era uppgifter konfidentiellt och återkommer inom 24 timmar.
                       </p>
                     </form>
@@ -238,7 +238,7 @@ export default function ContactPage() {
                   <Card>
                     <CardHeader>
                       <CardTitle className="flex items-center gap-2">
-                        <Phone className="h-5 w-5 text-[#2C5F7C]" />
+                        <Phone className="h-5 w-5 text-primary" />
                         Direktkontakt
                       </CardTitle>
                       <CardDescription>
@@ -250,24 +250,24 @@ export default function ContactPage() {
                         const Icon = method.icon;
                         return (
                           <div key={index} className="flex items-center gap-4">
-                            <div className="w-10 h-10 bg-[#2C5F7C]/10 rounded-lg flex items-center justify-center">
-                              <Icon className="h-5 w-5 text-[#2C5F7C]" />
+                            <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                              <Icon className="h-5 w-5 text-primary" />
                             </div>
                             <div>
                               <div className="font-medium">{method.title}</div>
                               {method.href ? (
                                 <a 
                                   href={method.href} 
-                                  className="text-[#2C5F7C] hover:text-[#2C5F7C]/80 transition-colors"
+                                  className="text-primary hover:text-primary/80 transition-colors"
                                   target={method.href.startsWith('http') ? '_blank' : undefined}
                                   rel={method.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                                 >
                                   {method.value}
                                 </a>
                               ) : (
-                                <span className="text-gray-600">{method.value}</span>
+                                <span className="text-muted-foreground">{method.value}</span>
                               )}
-                              <div className="text-sm text-gray-500">{method.description}</div>
+                              <div className="text-sm text-muted-foreground">{method.description}</div>
                             </div>
                           </div>
                         );
@@ -281,7 +281,7 @@ export default function ContactPage() {
                   <Card>
                     <CardHeader>
                       <CardTitle className="flex items-center gap-2">
-                        <Briefcase className="h-5 w-5 text-[#2C5F7C]" />
+                        <Briefcase className="h-5 w-5 text-primary" />
                         Vad kan vi diskutera?
                       </CardTitle>
                       <CardDescription>
@@ -292,11 +292,11 @@ export default function ContactPage() {
                       {serviceTypes.map((service, index) => {
                         const Icon = service.icon;
                         return (
-                          <div key={index} className="flex items-start gap-3 p-3 rounded-lg border border-gray-100 hover:border-[#2C5F7C]/20 transition-colors">
-                            <Icon className="h-5 w-5 text-[#2C5F7C] mt-0.5" />
+                          <div key={index} className="flex items-start gap-3 p-3 rounded-lg border border-border hover:border-primary/20 transition-colors">
+                            <Icon className="h-5 w-5 text-primary mt-0.5" />
                             <div>
-                              <div className="font-medium text-gray-900">{service.title}</div>
-                              <div className="text-sm text-gray-600">{service.description}</div>
+                              <div className="font-medium text-foreground">{service.title}</div>
+                              <div className="text-sm text-muted-foreground">{service.description}</div>
                             </div>
                           </div>
                         );
@@ -307,9 +307,9 @@ export default function ContactPage() {
 
                 {/* Availability */}
                 <BlurFade delay={0.6}>
-                  <Card className="bg-gradient-to-br from-[#2C5F7C]/5 to-[#2C5F7C]/10 border-[#2C5F7C]/20">
+                  <Card className="bg-gradient-to-br from-primary/5 to-primary/10 border-primary/20">
                     <CardHeader>
-                      <CardTitle className="text-[#2C5F7C]">Tillgänglighet</CardTitle>
+                      <CardTitle className="text-primary">Tillgänglighet</CardTitle>
                     </CardHeader>
                     <CardContent className="space-y-3">
                       <div className="flex items-center gap-2">
@@ -318,7 +318,7 @@ export default function ContactPage() {
                         </Badge>
                         <span className="text-sm">för nya uppdrag 2025</span>
                       </div>
-                      <div className="text-sm text-gray-600">
+                      <div className="text-sm text-muted-foreground">
                         <p>• Styrelseuppdrag: Selektiv för rätt match</p>
                         <p>• Interim roller: 3-18 månaders uppdrag</p>
                         <p>• Advisory: Begränsat antal kunder</p>
@@ -333,14 +333,14 @@ export default function ContactPage() {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-20 bg-muted/50">
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
             <BlurFade delay={0.2}>
               <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                   Vanliga frågor
                 </h2>
-                <p className="text-xl text-gray-600">
+                <p className="text-xl text-muted-foreground">
                   Svar på det som ofta kommer upp i första samtalen
                 </p>
               </div>
@@ -353,7 +353,7 @@ export default function ContactPage() {
                     <CardTitle className="text-lg">Hur snabbt kan ni starta ett samarbete?</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-gray-600">
+                    <p className="text-muted-foreground">
                       För styrelseuppdrag och advisory-roller kan jag normalt starta inom 2-4 veckor. 
                       Interim VD-roller kan påbörjas akut vid behov, ofta inom 1-2 veckor. 
                       Föreläsningar kan bokas med kort varsel.
@@ -368,7 +368,7 @@ export default function ContactPage() {
                     <CardTitle className="text-lg">Vilka branscher fokuserar ni på?</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-gray-600">
+                    <p className="text-muted-foreground">
                       Primärt retail och FMCG där jag har djupast expertis. Men min erfarenhet av 
                       transformation, internationalisering och turnarounds är applicerbar på många 
                       B2C-branscher och tillväxtföretag.
@@ -383,7 +383,7 @@ export default function ContactPage() {
                     <CardTitle className="text-lg">Arbetar ni internationellt?</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-gray-600">
+                    <p className="text-muted-foreground">
                       Ja, främst inom Norden och Europa. Jag har bred erfarenhet av internationell 
                       expansion och kulturell transformation. Föreläsningar kan hållas på svenska, 
                       engelska eller tyska.
@@ -398,7 +398,7 @@ export default function ContactPage() {
                     <CardTitle className="text-lg">Vad kostar en första träff?</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-gray-600">
+                    <p className="text-muted-foreground">
                       Det första introduktionssamtalet är alltid kostnadsfritt, oavsett typ av 
                       samarbete. Vi diskuterar era behov, min bakgrund och om det finns en 
                       naturlig match innan vi pratar om konkreta upplägg.
@@ -411,7 +411,7 @@ export default function ContactPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-br from-[#2C5F7C] to-[#1e4a5f] text-white">
+        <section className="py-20 bg-gradient-to-br from-primary to-primary/80 text-primary-foreground">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <BlurFade delay={0.2}>
               <div className="text-center">
