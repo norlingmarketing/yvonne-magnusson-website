@@ -191,9 +191,11 @@ export default function SpeakingPage() {
                         <ArrowRight className="h-5 w-5" />
                       </Link>
                     </Button>
-                    <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                      <Download className="h-5 w-5 mr-2" />
-                      Speaker Kit
+                    <Button asChild variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+                      <a href="/downloads/yvonne-magnusson-speaker-kit.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center">
+                        <Download className="h-5 w-5 mr-2" />
+                        Speaker Kit
+                      </a>
                     </Button>
                   </div>
                 </div>
@@ -456,10 +458,10 @@ export default function SpeakingPage() {
                     </Link>
                   </Button>
                   <Button asChild variant="outline" size="lg" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                    <Link href="#" className="flex items-center gap-2">
+                    <a href="/downloads/yvonne-magnusson-speaker-kit.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                       <Download className="h-5 w-5" />
                       Ladda ner Speaker Kit
-                    </Link>
+                    </a>
                   </Button>
                 </div>
                 

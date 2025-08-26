@@ -165,9 +165,11 @@ export default function AboutPage() {
                         <ArrowRight className="h-5 w-5" />
                       </Link>
                     </Button>
-                    <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                      <Download className="h-5 w-5 mr-2" />
-                      Ladda ner CV
+                    <Button asChild variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+                      <a href="/downloads/yvonne-magnusson-cv.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center">
+                        <Download className="h-5 w-5 mr-2" />
+                        Ladda ner CV
+                      </a>
                     </Button>
                   </div>
                 </div>
