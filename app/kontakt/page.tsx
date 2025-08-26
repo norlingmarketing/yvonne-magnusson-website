@@ -188,15 +188,15 @@ export default function ContactPage() {
                           {serviceTypes.map((service) => {
                             const Icon = service.icon;
                             return (
-                              <Label key={service.id} className="flex items-center space-x-2 cursor-pointer">
+                              <Label key={service.id} className="flex items-center space-x-2 cursor-pointer p-3 rounded-lg border border-transparent hover:border-border hover:bg-muted/50 transition-all">
                                 <input 
                                   type="checkbox" 
                                   name="services" 
                                   value={service.id}
-                                  className="rounded border-input text-primary focus:ring-primary"
+                                  className="h-4 w-4 rounded border-input text-primary focus:ring-primary focus:ring-2"
                                 />
-                                <Icon className="h-4 w-4 text-primary" />
-                                <span className="text-sm">{service.title}</span>
+                                <Icon className="h-4 w-4 text-primary flex-shrink-0" />
+                                <span className="text-sm font-medium">{service.title}</span>
                               </Label>
                             );
                           })}
