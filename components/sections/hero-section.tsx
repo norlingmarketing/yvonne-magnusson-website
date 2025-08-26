@@ -12,7 +12,7 @@ import { Ripple } from "@/components/magicui/ripple";
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-muted/50 to-background overflow-hidden">
+    <section className="relative py-16 md:py-24 lg:py-32 flex items-center justify-center bg-gradient-to-br from-muted/50 to-background overflow-hidden">
       {/* Animated Background Grid */}
       <FlickeringGrid
         className="absolute inset-0 z-0 [mask-image:radial-gradient(50vw_circle_at_center,white,transparent)]"
@@ -33,13 +33,13 @@ export function HeroSection() {
       
       <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
         <BlurFade delay={0.2}>
-          <AnimatedGradientText className="mb-6">
+          <AnimatedGradientText className="mb-4">
             🌟 Transformation Leadership
           </AnimatedGradientText>
         </BlurFade>
 
         <BlurFade delay={0.4}>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-4 leading-tight">
             Ledarskap för{" "}
             <span className="text-primary">
               lönsam tillväxt
@@ -50,14 +50,14 @@ export function HeroSection() {
         </BlurFade>
 
         <BlurFade delay={0.6}>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-muted-foreground mb-6 max-w-3xl mx-auto leading-relaxed">
             Med 30+ års erfarenhet från ledande roller i retail och FMCG hjälper jag företag och styrelser 
             navigera genom digitalisering, kulturförflyttning och internationalisering.
           </p>
         </BlurFade>
 
         <BlurFade delay={0.8}>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
               asChild 
               className="px-8 py-3 text-lg bg-primary hover:bg-primary/90 text-primary-foreground"
