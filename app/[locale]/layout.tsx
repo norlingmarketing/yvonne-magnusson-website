@@ -1,13 +1,14 @@
 import { ReactNode } from 'react';
 import { getDictionary } from '@/lib/dictionaries';
 import { isValidLocale } from '@/lib/i18n';
-import { LocaleSwitcher } from '@/components/locale-switcher';
+import { LocalizedNav } from '@/components/navigation/localized-nav';
+import { LocalizedFooter } from '@/components/layout/localized-footer';
 
 interface LocaleLayoutProps {
   children: ReactNode;
-  params: {
+  params: Promise<{
     locale: string;
-  };
+  }>;
 }
 
 export async function generateStaticParams() {
@@ -21,7 +22,7 @@ export default async function LocaleLayout({
   children,
   params,
 }: LocaleLayoutProps) {
-  const locale = params.locale;
+  const { locale } = await params;
   
   if (!isValidLocale(locale)) {
     throw new Error(`Invalid locale: ${locale}`);
@@ -31,15 +32,11 @@ export default async function LocaleLayout({
 
   return (
     <div className="min-h-screen">
-      <header className="border-b">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <h1 className="text-xl font-bold">Yvonne Magnusson</h1>
-          <LocaleSwitcher currentLocale={locale} />
-        </div>
-      </header>
+      <LocalizedNav dictionary={dictionary} locale={locale} />
       <main>
         {children}
       </main>
+      <LocalizedFooter dictionary={dictionary} locale={locale} />
     </div>
   );
 }

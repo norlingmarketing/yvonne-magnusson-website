@@ -2,13 +2,13 @@ import { getDictionary } from '@/lib/dictionaries';
 import { isValidLocale } from '@/lib/i18n';
 
 interface ContactPageProps {
-  params: {
+  params: Promise<{
     locale: string;
-  };
+  }>;
 }
 
 export default async function ContactPage({ params }: ContactPageProps) {
-  const locale = params.locale;
+  const { locale } = await params;
   
   if (!isValidLocale(locale)) {
     throw new Error(`Invalid locale: ${locale}`);
