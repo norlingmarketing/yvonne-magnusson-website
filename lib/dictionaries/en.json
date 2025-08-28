@@ -1,0 +1,115 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "caseStudies": "Case Studies",
+    "insights": "Insights",
+    "lectures": "Lectures",
+    "media": "Media",
+    "contact": "Contact",
+    "contactMe": "Contact Me",
+    "bookIntroCall": "Book Intro Call",
+    "seeLectures": "See Lectures"
+  },
+  "common": {
+    "readMore": "Read More",
+    "learnMore": "Learn More",
+    "getInTouch": "Get in Touch",
+    "submit": "Submit",
+    "send": "Send",
+    "cancel": "Cancel",
+    "close": "Close",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "allRightsReserved": "All rights reserved",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service"
+  },
+  "home": {
+    "title": "Welcome to Yvonne Magnusson",
+    "subtitle": "Professional services and insights",
+    "description": "Discover our range of services and professional expertise",
+    "hero": {
+      "title": "Leadership for",
+      "titleHighlight": "profitable growth",
+      "titleEnd": "and transformation",
+      "subtitle": "With 30+ years of experience from leading roles in retail and FMCG, I help companies and boards navigate through digitalization, cultural shifts, and internationalization.",
+      "ctaPrimary": "Book intro call",
+      "ctaSecondary": "See lectures"
+    }
+  },
+  "about": {
+    "title": "About Yvonne",
+    "description": "Learn more about our professional background and expertise",
+    "pageTitle": "About Yvonne",
+    "pageDescription": "Transformation specialist with 30+ years of experience from retail and FMCG. Helping companies and boards navigate through change."
+  },
+  "services": {
+    "title": "Our Services",
+    "description": "Explore the range of professional services we offer",
+    "boardWork": "Board Work",
+    "seniorAdvisor": "Senior Advisor",
+    "interimLeader": "Interim Leader",
+    "workshops": "Workshops"
+  },
+  "company": {
+    "name": "Yvonne Magnusson",
+    "description": "Transformation specialist with 30+ years of experience from retail and FMCG. Helping companies and boards navigate through change.",
+    "companySection": "Company"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "Get in touch with us for more information",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "phone": "Phone"
+    },
+    "contactSection": "Contact",
+    "email": "info@yvonnemagnusson.com",
+    "phone": "+46 73 985 32 60",
+    "location": "Stockholm, Sweden"
+  },
+  "footer": {
+    "copyright": "© 2024 Yvonne Magnusson. All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "services": "Services",
+    "company": "Company"
+  },
+  "hero": {
+    "gradientText": "🌟 Transformation Leadership",
+    "title": "Leadership for",
+    "titleHighlight": "profitable growth",
+    "titleEnd": "and transformation",
+    "subtitle": "With 30+ years of experience from leading roles in retail and FMCG, I help companies and boards navigate through digitalization, cultural shifts, and internationalization.",
+    "ctaPrimary": "Book intro call",
+    "ctaSecondary": "See lectures"
+  },
+  "sections": {
+    "credentials": {
+      "title": "Credentials & Experience",
+      "description": "Proven track record in transformation leadership"
+    },
+    "stats": {
+      "title": "Key Statistics",
+      "description": "Numbers that speak for themselves"
+    },
+    "testimonials": {
+      "title": "What People Say",
+      "description": "Feedback from clients and colleagues"
+    },
+    "cta": {
+      "title": "Ready to Transform?",
+      "description": "Let's discuss how we can work together",
+      "button": "Get Started"
+    },
+    "logoCloud": {
+      "title": "Trusted By",
+      "description": "Companies that have benefited from our expertise"
+    }
+  }
+}

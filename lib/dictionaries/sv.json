@@ -1,0 +1,115 @@
+{
+  "navigation": {
+    "home": "Hem",
+    "about": "Om",
+    "services": "Tjänster",
+    "caseStudies": "Case-referenser",
+    "insights": "Insikter",
+    "lectures": "Föreläsningar",
+    "media": "Media",
+    "contact": "Kontakt",
+    "contactMe": "Kontakta mig",
+    "bookIntroCall": "Boka intro-samtal",
+    "seeLectures": "Se föreläsningar"
+  },
+  "common": {
+    "readMore": "Läs mer",
+    "learnMore": "Läs mer",
+    "getInTouch": "Kontakta oss",
+    "submit": "Skicka",
+    "send": "Skicka",
+    "cancel": "Avbryt",
+    "close": "Stäng",
+    "loading": "Laddar...",
+    "error": "Fel",
+    "success": "Framgång",
+    "allRightsReserved": "Alla rättigheter förbehållna",
+    "privacyPolicy": "Integritetspolicy",
+    "termsOfService": "Användarvillkor"
+  },
+  "home": {
+    "title": "Välkommen till Yvonne Magnusson",
+    "subtitle": "Professionella tjänster och insikter",
+    "description": "Upptäck vårt utbud av tjänster och professionell expertis",
+    "hero": {
+      "title": "Ledarskap för",
+      "titleHighlight": "lönsam tillväxt",
+      "titleEnd": "och transformation",
+      "subtitle": "Med 30+ års erfarenhet från ledande roller i retail och FMCG hjälper jag företag och styrelser navigera genom digitalisering, kulturförflyttning och internationalisering.",
+      "ctaPrimary": "Boka intro-samtal",
+      "ctaSecondary": "Se föreläsningar"
+    }
+  },
+  "about": {
+    "title": "Om Yvonne",
+    "description": "Läs mer om vår professionella bakgrund och expertis",
+    "pageTitle": "Om Yvonne",
+    "pageDescription": "Transformation specialist med 30+ års erfarenhet från retail och FMCG. Hjälper företag och styrelser navigera genom förändring."
+  },
+  "services": {
+    "title": "Våra Tjänster",
+    "description": "Utforska utbudet av professionella tjänster vi erbjuder",
+    "boardWork": "Styrelsearbete",
+    "seniorAdvisor": "Senior Advisor",
+    "interimLeader": "Interimledare",
+    "workshops": "Workshops"
+  },
+  "company": {
+    "name": "Yvonne Magnusson",
+    "description": "Transformation specialist med 30+ års erfarenhet från retail och FMCG. Hjälper företag och styrelser navigera genom förändring.",
+    "companySection": "Företag"
+  },
+  "contact": {
+    "title": "Kontakta Oss",
+    "description": "Kontakta oss för mer information",
+    "form": {
+      "name": "Namn",
+      "email": "E-post",
+      "message": "Meddelande",
+      "phone": "Telefon"
+    },
+    "contactSection": "Kontakt",
+    "email": "info@yvonnemagnusson.com",
+    "phone": "+46 73 985 32 60",
+    "location": "Stockholm, Sverige"
+  },
+  "footer": {
+    "copyright": "© 2024 Yvonne Magnusson. Alla rättigheter förbehållna.",
+    "privacyPolicy": "Integritetspolicy",
+    "termsOfService": "Användarvillkor",
+    "services": "Tjänster",
+    "company": "Företag"
+  },
+  "hero": {
+    "gradientText": "🌟 Transformation Leadership",
+    "title": "Ledarskap för",
+    "titleHighlight": "lönsam tillväxt",
+    "titleEnd": "och transformation",
+    "subtitle": "Med 30+ års erfarenhet från ledande roller i retail och FMCG hjälper jag företag och styrelser navigera genom digitalisering, kulturförflyttning och internationalisering.",
+    "ctaPrimary": "Boka intro-samtal",
+    "ctaSecondary": "Se föreläsningar"
+  },
+  "sections": {
+    "credentials": {
+      "title": "Meriter & Erfarenhet",
+      "description": "Beprövad erfarenhet inom transformationsledning"
+    },
+    "stats": {
+      "title": "Viktiga Statistik",
+      "description": "Siffror som talar för sig själva"
+    },
+    "testimonials": {
+      "title": "Vad Folk Säger",
+      "description": "Feedback från klienter och kollegor"
+    },
+    "cta": {
+      "title": "Redo att Transformera?",
+      "description": "Låt oss diskutera hur vi kan arbeta tillsammans",
+      "button": "Kom Igång"
+    },
+    "logoCloud": {
+      "title": "Betrodd Av",
+      "description": "Företag som har dragit nytta av vår expertis"
+    }
+  }
+}
