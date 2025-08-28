@@ -1,0 +1,52 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "caseStudies": "Case Studies",
+    "insights": "Insights",
+    "lectures": "Lectures",
+    "media": "Media",
+    "contact": "Contact"
+  },
+  "common": {
+    "readMore": "Read More",
+    "learnMore": "Learn More",
+    "getInTouch": "Get in Touch",
+    "submit": "Submit",
+    "send": "Send",
+    "cancel": "Cancel",
+    "close": "Close",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success"
+  },
+  "home": {
+    "title": "Welcome to Yvonne Magnusson",
+    "subtitle": "Professional services and insights",
+    "description": "Discover our range of services and professional expertise"
+  },
+  "about": {
+    "title": "About Yvonne",
+    "description": "Learn more about our professional background and expertise"
+  },
+  "services": {
+    "title": "Our Services",
+    "description": "Explore the range of professional services we offer"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "Get in touch with us for more information",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "phone": "Phone"
+    }
+  },
+  "footer": {
+    "copyright": "© 2024 Yvonne Magnusson. All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service"
+  }
+}

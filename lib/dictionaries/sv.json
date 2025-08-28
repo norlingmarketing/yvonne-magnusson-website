@@ -1,0 +1,52 @@
+{
+  "navigation": {
+    "home": "Hem",
+    "about": "Om",
+    "services": "Tjänster",
+    "caseStudies": "Case-referenser",
+    "insights": "Insikter",
+    "lectures": "Föreläsningar",
+    "media": "Media",
+    "contact": "Kontakt"
+  },
+  "common": {
+    "readMore": "Läs mer",
+    "learnMore": "Läs mer",
+    "getInTouch": "Kontakta oss",
+    "submit": "Skicka",
+    "send": "Skicka",
+    "cancel": "Avbryt",
+    "close": "Stäng",
+    "loading": "Laddar...",
+    "error": "Fel",
+    "success": "Framgång"
+  },
+  "home": {
+    "title": "Välkommen till Yvonne Magnusson",
+    "subtitle": "Professionella tjänster och insikter",
+    "description": "Upptäck vårt utbud av tjänster och professionell expertis"
+  },
+  "about": {
+    "title": "Om Yvonne",
+    "description": "Läs mer om vår professionella bakgrund och expertis"
+  },
+  "services": {
+    "title": "Våra Tjänster",
+    "description": "Utforska utbudet av professionella tjänster vi erbjuder"
+  },
+  "contact": {
+    "title": "Kontakta Oss",
+    "description": "Kontakta oss för mer information",
+    "form": {
+      "name": "Namn",
+      "email": "E-post",
+      "message": "Meddelande",
+      "phone": "Telefon"
+    }
+  },
+  "footer": {
+    "copyright": "© 2024 Yvonne Magnusson. Alla rättigheter förbehållna.",
+    "privacyPolicy": "Integritetspolicy",
+    "termsOfService": "Användarvillkor"
+  }
+}
