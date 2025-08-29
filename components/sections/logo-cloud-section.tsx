@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Marquee } from "@/components/magicui/marquee";
 
 const clientLogos = [
