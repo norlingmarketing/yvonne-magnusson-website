@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { BlurFade } from "@/components/magicui/blur-fade";
-import { ShimmerButton } from "@/components/magicui/shimmer-button";
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Award, Globe, Mic, Users } from "lucide-react";
 
@@ -85,14 +85,11 @@ export function SpeakerShowcase() {
               ))}
               
               <div className="pt-6">
-                <ShimmerButton
-                  className="text-white bg-[#2C5F7C] hover:bg-[#2C5F7C]/90"
-                  shimmerColor="#D4A574"
-                >
+                <Button asChild size="lg">
                   <Link href="/forelasningar" className="px-6 py-2">
                     Se föreläsningsämnen
                   </Link>
-                </ShimmerButton>
+                </Button>
               </div>
             </div>
           </BlurFade>

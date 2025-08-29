@@ -6,7 +6,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { ArrowRight, Users, Briefcase, TrendingUp, Presentation } from "lucide-react";
 import { AnimatedGridPattern } from "@/components/magicui/animated-grid-pattern";
 import { Button } from "@/components/ui/button";
-import { ShinyButton } from "@/components/magicui/shiny-button";
 import { cn } from "@/lib/utils";
 
 const services = [
@@ -134,12 +133,12 @@ export function ServicesSection() {
 
         <BlurFade delay={0.8}>
           <div className="text-center">
-            <ShinyButton className="px-8 py-3 text-lg">
+            <Button asChild size="lg" className="px-8 py-3 text-lg">
               <Link href="/tjanster" className="flex items-center gap-2">
                 Se alla tjänster
                 <ArrowRight className="h-5 w-5" />
               </Link>
-            </ShinyButton>
+            </Button>
           </div>
         </BlurFade>
       </div>

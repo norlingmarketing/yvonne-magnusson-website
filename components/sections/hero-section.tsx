@@ -4,8 +4,7 @@ import Link from "next/link";
 import { AnimatedGradientText } from "@/components/magicui/animated-gradient-text";
 import { AuroraText } from "@/components/magicui/aurora-text";
 import { BlurFade } from "@/components/magicui/blur-fade";
-import { ShimmerButton } from "@/components/magicui/shimmer-button";
-import { ShinyButton } from "@/components/magicui/shiny-button";
+import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
 import { FlickeringGrid } from "@/components/magicui/flickering-grid";
 import { Ripple } from "@/components/magicui/ripple";
@@ -62,19 +61,19 @@ export function HeroSection() {
 
         <BlurFade delay={0.8}>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link href="/kontakt">
-              <ShimmerButton className="px-8 py-3 text-lg flex items-center gap-2">
+            <Button asChild size="lg" className="px-8 py-3 text-lg">
+              <Link href="/kontakt" className="flex items-center gap-2">
                 Boka intro-samtal
                 <ArrowRight className="h-5 w-5" />
-              </ShimmerButton>
-            </Link>
+              </Link>
+            </Button>
             
-            <Link href="/forelasningar">
-              <ShinyButton className="px-8 py-3 text-lg flex items-center gap-2">
+            <Button asChild variant="outline" size="lg" className="px-8 py-3 text-lg">
+              <Link href="/forelasningar" className="flex items-center gap-2">
                 <Play className="h-5 w-5" />
                 Se föreläsningar
-              </ShinyButton>
-            </Link>
+              </Link>
+            </Button>
           </div>
         </BlurFade>
 
