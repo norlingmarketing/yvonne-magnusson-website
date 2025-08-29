@@ -134,11 +134,13 @@ export function TestimonialsSection() {
               {/* Dots Indicator */}
               <div className="flex space-x-2">
                 {testimonials.map((_, index) => (
-                  <button
+                  <Button
                     key={index}
+                    variant="ghost"
+                    size="icon"
                     onClick={() => goToTestimonial(index)}
-                    className={`w-2 h-2 rounded-full transition-colors duration-200 ${
-                      index === currentIndex ? 'bg-primary' : 'bg-muted-foreground/30'
+                    className={`w-3 h-3 p-0 rounded-full hover:bg-primary/20 ${
+                      index === currentIndex ? 'bg-primary hover:bg-primary/90' : 'bg-muted-foreground/30'
                     }`}
                   />
                 ))}
