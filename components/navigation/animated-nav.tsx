@@ -4,6 +4,7 @@ import { AnimatePresence, motion, MotionConfig } from "motion/react";
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 export function useScrollY() {
   const [scrollY, setScrollY] = useState(0);
@@ -132,13 +133,14 @@ export function AnimatedNav() {
 
         {/* Desktop CTA Button */}
         <motion.div
-          className="z-[999] hidden items-center gap-x-5 md:flex"
+          className="z-[999] hidden items-center gap-x-3 md:flex"
           animate={{
             y: scrollY >= 120 ? -50 : 0,
             opacity: scrollY >= 120 ? 0 : 1,
           }}
           transition={{ duration: 0.15 }}
         >
+          <ThemeToggle />
           <Link 
             href="/kontakt"
             className="bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-medium hover:bg-primary/90 transition-colors"
@@ -225,6 +227,10 @@ export function AnimatedNav() {
                   </li>
                 ))}
                 <li className="pt-2 border-t border-border">
+                  <div className="flex items-center gap-2 mb-2">
+                    <ThemeToggle />
+                    <span className="text-sm text-muted-foreground">Växla tema</span>
+                  </div>
                   <Link
                     href="/kontakt"
                     onClick={() => setActive(false)}
