@@ -88,7 +88,7 @@ export function ServicesSection() {
             const Icon = service.icon;
             return (
               <BlurFade key={index} delay={0.4 + index * 0.1}>
-                <Card className="relative h-full hover:shadow-2xl transition-all duration-500 group border-0 bg-card/80 backdrop-blur-sm hover:bg-card overflow-hidden flex flex-col">
+                <Card className="relative h-full hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group border-0 bg-card/80 backdrop-blur-sm hover:bg-card overflow-hidden flex flex-col hover:border-primary/20">
                   {/* Card background pattern */}
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                     <AnimatedGridPattern
@@ -100,8 +100,8 @@ export function ServicesSection() {
                     />
                   </div>
                   <CardHeader className="pb-4">
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                      <Icon className="h-8 w-8 text-primary" />
+                    <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-xl mb-4 group-hover:scale-110 group-hover:bg-primary/20 group-hover:rotate-3 transition-all duration-300">
+                      <Icon className="h-8 w-8 text-primary group-hover:scale-110 transition-transform duration-300" />
                     </div>
                     <CardTitle className="text-xl text-foreground group-hover:text-primary transition-colors">
                       {service.title}
@@ -113,8 +113,8 @@ export function ServicesSection() {
                   <CardContent className="pt-0 flex flex-col flex-1">
                     <ul className="space-y-2 mb-6 flex-1">
                       {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-sm text-muted-foreground">
-                          <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3 flex-shrink-0"></div>
+                        <li key={featureIndex} className="flex items-center text-sm text-muted-foreground group-hover:translate-x-1 transition-transform duration-300" style={{ transitionDelay: `${featureIndex * 50}ms` }}>
+                          <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3 flex-shrink-0 group-hover:scale-125 transition-transform duration-300"></div>
                           {feature}
                         </li>
                       ))}
