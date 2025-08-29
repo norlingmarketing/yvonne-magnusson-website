@@ -4,7 +4,7 @@ import { CaseStudyCards } from "@/components/page-components/case-study-cards";
 import { ImpactAreas } from "@/components/page-components/impact-areas";
 import { caseStudies, impactAreasData, overallStats } from "@/lib/data/case-studies";
 import { NumberTicker } from "@/components/magicui/number-ticker";
-import { ShimmerButton } from "@/components/magicui/shimmer-button";
+import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
@@ -131,12 +131,12 @@ export default function CaseReferenserPage() {
                 kan accelerera er transformation och tillväxtresa.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <ShimmerButton asChild>
-                  <Link href="/kontakt" className="inline-flex items-center">
+                <Button asChild size="lg" className="inline-flex items-center">
+                  <Link href="/kontakt">
                     Boka kostnadsfritt strategisamtal
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
-                </ShimmerButton>
+                </Button>
                 <Link 
                   href="/om-yvonne" 
                   className="text-primary hover:text-primary/80 font-medium transition-colors"

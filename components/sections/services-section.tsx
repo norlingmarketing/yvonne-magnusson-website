@@ -4,14 +4,14 @@ import Link from "next/link";
 import { BlurFade } from "@/components/magicui/blur-fade";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
-import { getIcon } from "@/lib/utils/icon-map";
+import { getIcon, IconName } from "@/lib/utils/icon-map";
 import { AnimatedGridPattern } from "@/components/magicui/animated-grid-pattern";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 const services = [
   {
-    icon: "Users",
+    icon: "Users" as IconName,
     title: "Styrelsearbete",
     description: "Kommersiell skärpa och strategiskt fokus för styrelser i transformationsresor.",
     features: [
@@ -22,7 +22,7 @@ const services = [
     href: "/tjanster/styrelsearbete",
   },
   {
-    icon: "Briefcase",
+    icon: "Briefcase" as IconName,
     title: "Senior Advisor",
     description: "Löpande rådgivning för ledningsgrupper och ägare inom retail och consumer.",
     features: [
@@ -33,7 +33,7 @@ const services = [
     href: "/tjanster/senior-advisor",
   },
   {
-    icon: "TrendingUp",
+    icon: "TrendingUp" as IconName,
     title: "Interimledare",
     description: "VD/CCO roller vid behov av förändring, turnaround eller tillväxtresa.",
     features: [
@@ -44,7 +44,7 @@ const services = [
     href: "/tjanster/interim-ledare",
   },
   {
-    icon: "Presentation",
+    icon: "Presentation" as IconName,
     title: "Workshops",
     description: "Skräddarsydda workshops för strategisk utveckling och transformation.",
     features: [

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { siteConfig } from "@/lib/site-config";
-import { getIcon } from "@/lib/utils/icon-map";
+import { getIcon, IconName } from "@/lib/utils/icon-map";
 
 const navigation = {
   services: [
@@ -21,7 +21,7 @@ const navigation = {
     {
       name: "LinkedIn",
       href: siteConfig.social.linkedin.url,
-      icon: "Linkedin",
+      icon: "Linkedin" as IconName,
     },
   ],
 };

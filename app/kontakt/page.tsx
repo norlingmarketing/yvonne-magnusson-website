@@ -3,6 +3,7 @@ import { PageHero } from "@/components/page-components/page-hero";
 import { ContactForm } from "@/components/page-components/contact-form";
 import { ContactMethods } from "@/components/page-components/contact-methods";
 import { contactMethods, serviceTypes, responsePromises } from "@/lib/data/contact";
+import { getIcon } from "@/lib/utils/icon-map";
 
 export const metadata: Metadata = {
   title: "Kontakt - Yvonne Magnusson | Boka introduktionssamtal",
@@ -16,11 +17,14 @@ export default function ContactPage() {
       <PageHero
         title="Låt oss börja samtalet"
         description="Är ni redo att accelerera er transformation? Jag hjälper gärna till att diskutera era utmaningar och möjligheter för att hitta den bästa vägen framåt."
-        features={responsePromises.map(promise => ({
-          icon: <promise.icon className="h-5 w-5" />,
-          title: promise.title,
-          description: promise.description
-        }))}
+        features={responsePromises.map(promise => {
+          const Icon = getIcon(promise.icon);
+          return {
+            icon: <Icon className="h-5 w-5" />,
+            title: promise.title,
+            description: promise.description
+          };
+        })}
       />
 
       {/* Contact Form & Info */}
