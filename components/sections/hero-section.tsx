@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { AnimatedGradientText } from "@/components/magicui/animated-gradient-text";
+import { AuroraText } from "@/components/magicui/aurora-text";
 import { BlurFade } from "@/components/magicui/blur-fade";
 import { ShimmerButton } from "@/components/magicui/shimmer-button";
 import { ShinyButton } from "@/components/magicui/shiny-button";
@@ -39,13 +40,16 @@ export function HeroSection() {
         </BlurFade>
 
         <BlurFade delay={0.4}>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-4 leading-tight">
-            Ledarskap för{" "}
-            <span className="text-primary">
-              lönsam tillväxt
-            </span>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 leading-tight">
+            <AuroraText 
+              colors={["#2C5F7C", "#D4A574", "#1e40af", "#06b6d4", "#2C5F7C"]}
+              speed={0.8}
+              className="inline-block"
+            >
+              Ledarskap för lönsam tillväxt
+            </AuroraText>
             <br />
-            och transformation
+            <span className="text-foreground">och transformation</span>
           </h1>
         </BlurFade>
 
