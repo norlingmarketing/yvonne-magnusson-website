@@ -49,8 +49,7 @@ export function HeroSection() {
             >
               lönsam tillväxt
             </AuroraText>
-            <br />
-            <span className="text-foreground">och transformation</span>
+            <span className="text-foreground"> och transformation</span>
           </h1>
         </BlurFade>
 
