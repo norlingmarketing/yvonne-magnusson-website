@@ -3,14 +3,15 @@
 import Link from "next/link";
 import { BlurFade } from "@/components/magicui/blur-fade";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowRight, Users, Briefcase, TrendingUp, Presentation } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { getIcon } from "@/lib/utils/icon-map";
 import { AnimatedGridPattern } from "@/components/magicui/animated-grid-pattern";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 const services = [
   {
-    icon: Users,
+    icon: "Users",
     title: "Styrelsearbete",
     description: "Kommersiell skärpa och strategiskt fokus för styrelser i transformationsresor.",
     features: [
@@ -21,7 +22,7 @@ const services = [
     href: "/tjanster/styrelsearbete",
   },
   {
-    icon: Briefcase,
+    icon: "Briefcase",
     title: "Senior Advisor",
     description: "Löpande rådgivning för ledningsgrupper och ägare inom retail och consumer.",
     features: [
@@ -32,7 +33,7 @@ const services = [
     href: "/tjanster/senior-advisor",
   },
   {
-    icon: TrendingUp,
+    icon: "TrendingUp",
     title: "Interimledare",
     description: "VD/CCO roller vid behov av förändring, turnaround eller tillväxtresa.",
     features: [
@@ -43,7 +44,7 @@ const services = [
     href: "/tjanster/interim-ledare",
   },
   {
-    icon: Presentation,
+    icon: "Presentation",
     title: "Workshops",
     description: "Skräddarsydda workshops för strategisk utveckling och transformation.",
     features: [
@@ -84,7 +85,7 @@ export function ServicesSection() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-12">
           {services.map((service, index) => {
-            const Icon = service.icon;
+            const Icon = getIcon(service.icon);
             return (
               <BlurFade key={index} delay={0.4 + index * 0.1}>
                 <Card className="relative h-full hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group border-0 bg-card/80 backdrop-blur-sm hover:bg-card overflow-hidden flex flex-col hover:border-primary/20">

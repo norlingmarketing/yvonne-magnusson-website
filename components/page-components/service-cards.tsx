@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import { Service } from "@/lib/types";
+import { getIcon } from "@/lib/utils/icon-map";
 
 interface ServiceCardsProps {
   services: Service[];
@@ -14,7 +15,7 @@ export function ServiceCards({ services }: ServiceCardsProps) {
   return (
     <div className="grid lg:grid-cols-2 gap-8">
       {services.map((service, index) => {
-        const Icon = service.icon;
+        const Icon = getIcon(service.icon);
         return (
           <BlurFade key={service.id} delay={0.3 + index * 0.1}>
             <Card className="h-full hover:shadow-xl transition-all duration-300 group">

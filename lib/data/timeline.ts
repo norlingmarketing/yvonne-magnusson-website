@@ -1,4 +1,3 @@
-import { Users, Briefcase, Globe } from "lucide-react";
 import { TimelineItem, CurrentRole } from "@/lib/types";
 
 export const timelineData: TimelineItem[] = [
@@ -76,17 +75,17 @@ export const timelineData: TimelineItem[] = [
 
 export const currentRoles: CurrentRole[] = [
   {
-    icon: Users,
+    icon: "Users",
     title: "Styrelseordförande",
     companies: ["MAIA Universe", "Waynes Coffee Sweden AB", "IWF"],
   },
   {
-    icon: Briefcase,
+    icon: "Briefcase",
     title: "Styrelseledamot",
     companies: ["Bio-Restore", "DI Close"],
   },
   {
-    icon: Globe,
+    icon: "Globe",
     title: "Senior Advisor",
     companies: ["IAMRUNBOX"],
   }

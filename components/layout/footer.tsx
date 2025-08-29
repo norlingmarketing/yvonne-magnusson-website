@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { Mail, Phone, MapPin, Linkedin } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
+import { getIcon } from "@/lib/utils/icon-map";
 
 const navigation = {
   services: [
@@ -21,7 +21,7 @@ const navigation = {
     {
       name: "LinkedIn",
       href: siteConfig.social.linkedin.url,
-      icon: Linkedin,
+      icon: "Linkedin",
     },
   ],
 };
@@ -39,7 +39,7 @@ export function Footer() {
             </p>
             <div className="flex space-x-4">
               {navigation.social.map((item) => {
-                const Icon = item.icon;
+                const Icon = getIcon(item.icon);
                 return (
                   <Link
                     key={item.name}
@@ -94,19 +94,19 @@ export function Footer() {
             <h3 className="text-lg font-semibold mb-4">Kontakt</h3>
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-sm text-muted-foreground">
-                <Mail className="h-4 w-4 flex-shrink-0" />
+                {(() => { const MailIcon = getIcon("Mail"); return <MailIcon className="h-4 w-4 flex-shrink-0" />; })()}
                 <a href={`mailto:${siteConfig.contact.email}`} className="hover:text-background transition-colors">
                   {siteConfig.contact.email}
                 </a>
               </div>
               <div className="flex items-center space-x-3 text-sm text-muted-foreground">
-                <Phone className="h-4 w-4 flex-shrink-0" />
+                {(() => { const PhoneIcon = getIcon("Phone"); return <PhoneIcon className="h-4 w-4 flex-shrink-0" />; })()}
                 <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`} className="hover:text-background transition-colors">
                   {siteConfig.contact.phoneDisplay}
                 </a>
               </div>
               <div className="flex items-center space-x-3 text-sm text-muted-foreground">
-                <MapPin className="h-4 w-4 flex-shrink-0" />
+                {(() => { const MapPinIcon = getIcon("MapPin"); return <MapPinIcon className="h-4 w-4 flex-shrink-0" />; })()}
                 <span>{siteConfig.contact.location}</span>
               </div>
             </div>

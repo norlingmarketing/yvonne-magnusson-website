@@ -1,10 +1,9 @@
-import { Users, Briefcase, TrendingUp, Presentation } from "lucide-react";
 import { Service, ProcessStep } from "@/lib/types";
 
 export const services: Service[] = [
   {
     id: "styrelsearbete",
-    icon: Users,
+    icon: "Users",
     title: "Styrelsearbete",
     description: "Kommersiell skärpa och strategiskt fokus för styrelser i transformationsresor och internationalisering.",
     features: [
@@ -28,7 +27,7 @@ export const services: Service[] = [
   },
   {
     id: "senior-advisor",
-    icon: Briefcase,
+    icon: "Briefcase",
     title: "Senior Advisor",
     description: "Löpande rådgivning för ledningsgrupper och ägare inom retail och consumer markets.",
     features: [
@@ -52,7 +51,7 @@ export const services: Service[] = [
   },
   {
     id: "interim-ledare",
-    icon: TrendingUp,
+    icon: "TrendingUp",
     title: "Interimledare",
     description: "VD/CCO roller vid behov av förändring, turnaround eller tillväxtresa med fokus på snabba resultat.",
     features: [
@@ -76,7 +75,7 @@ export const services: Service[] = [
   },
   {
     id: "workshops",
-    icon: Presentation,
+    icon: "Presentation",
     title: "Workshops",
     description: "Skräddarsydda workshops för strategisk utveckling och transformation med konkreta utfall.",
     features: [

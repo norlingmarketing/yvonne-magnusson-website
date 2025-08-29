@@ -1,6 +1,7 @@
 import { BlurFade } from "@/components/magicui/blur-fade";
 import { Card, CardContent } from "@/components/ui/card";
 import { CurrentRole } from "@/lib/types";
+import { getIcon } from "@/lib/utils/icon-map";
 
 interface CurrentRolesProps {
   currentRoles: CurrentRole[];
@@ -29,7 +30,7 @@ export function CurrentRoles({
 
         <div className="grid md:grid-cols-3 gap-8">
           {currentRoles.map((role, index) => {
-            const Icon = role.icon;
+            const Icon = getIcon(role.icon);
             return (
               <BlurFade key={index} delay={0.4 + index * 0.1}>
                 <Card className="h-full hover:shadow-lg transition-shadow">

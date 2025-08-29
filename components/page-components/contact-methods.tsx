@@ -1,6 +1,7 @@
 import { BlurFade } from "@/components/magicui/blur-fade";
 import { Card, CardContent } from "@/components/ui/card";
 import { ContactMethod } from "@/lib/types";
+import { getIcon } from "@/lib/utils/icon-map";
 
 interface ContactMethodsProps {
   contactMethods: ContactMethod[];
@@ -22,7 +23,7 @@ export function ContactMethods({ contactMethods }: ContactMethodsProps) {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {contactMethods.map((method, index) => {
-          const Icon = method.icon;
+          const Icon = getIcon(method.icon);
           const isClickable = method.href && method.href.length > 0;
           
           const content = (

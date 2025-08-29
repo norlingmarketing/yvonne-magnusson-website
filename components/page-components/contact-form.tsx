@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useState } from "react";
 import { ServiceType } from "@/lib/types";
+import { getIcon } from "@/lib/utils/icon-map";
 
 interface ContactFormProps {
   serviceTypes: ServiceType[];
@@ -51,7 +52,7 @@ export function ContactForm({ serviceTypes }: ContactFormProps) {
             </Label>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {serviceTypes.map((service) => {
-                const Icon = service.icon;
+                const Icon = getIcon(service.icon);
                 return (
                   <div
                     key={service.id}

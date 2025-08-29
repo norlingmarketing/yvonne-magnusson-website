@@ -1,8 +1,9 @@
 import { LucideIcon } from "lucide-react";
+import { IconName } from "@/lib/utils/icon-map";
 
 export interface Service {
   id: string;
-  icon: LucideIcon;
+  icon: IconName;
   title: string;
   description: string;
   features: string[];
@@ -29,13 +30,13 @@ export interface TimelineItem {
 }
 
 export interface CurrentRole {
-  icon: LucideIcon;
+  icon: IconName;
   title: string;
   companies: string[];
 }
 
 export interface ContactMethod {
-  icon: LucideIcon;
+  icon: IconName;
   title: string;
   value: string;
   href: string;
@@ -44,13 +45,13 @@ export interface ContactMethod {
 
 export interface ServiceType {
   id: string;
-  icon: LucideIcon;
+  icon: IconName;
   title: string;
   description: string;
 }
 
 export interface ResponsePromise {
-  icon: LucideIcon;
+  icon: IconName;
   title: string;
   description: string;
 }
