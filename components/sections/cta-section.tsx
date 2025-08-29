@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button";
 import { ShimmerButton } from "@/components/magicui/shimmer-button";
+import { ShinyButton } from "@/components/magicui/shiny-button";
 import Link from "next/link";
 
 
@@ -19,23 +19,20 @@ export function CTASection() {
             och skapa hållbar tillväxt för framtiden.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button 
-              asChild 
-              className="px-8 py-3 text-lg bg-background hover:bg-background/90 text-foreground"
-            >
-              <Link href="/kontakt">
+            <Link href="/kontakt">
+              <ShimmerButton 
+                className="px-8 py-3 text-lg"
+                background="rgba(255, 255, 255, 1)"
+                shimmerColor="hsl(var(--primary))"
+              >
                 Boka intro-samtal
-              </Link>
-            </Button>
-            <Button 
-              variant="outline"
-              asChild
-              className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary px-8 py-3 text-lg bg-transparent"
-            >
-              <Link href="/tjanster">
+              </ShimmerButton>
+            </Link>
+            <Link href="/tjanster">
+              <ShinyButton className="px-8 py-3 text-lg border border-primary-foreground text-primary-foreground">
                 Läs mer om tjänster
-              </Link>
-            </Button>
+              </ShinyButton>
+            </Link>
           </div>
         </div>
       </div>

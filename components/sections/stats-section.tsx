@@ -7,7 +7,6 @@ const stats = [
   { value: 30, label: "År av ledarskapsexpertis", suffix: "+" },
   { value: 18, label: "År som VD och ledare", suffix: "" },
   { value: 8, label: "Styrelseuppdrag genomförda", suffix: "+" },
-  { value: 5000, label: "Medarbetare ledda genom förändringar", suffix: "K+" },
   { value: 4, label: "Framgångsrika turnarounds", suffix: "" },
   { value: 6, label: "Lönsamma tillväxtresor", suffix: "" },
 ];
