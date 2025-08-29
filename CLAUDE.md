@@ -129,6 +129,7 @@ The website targets Swedish executive market with Swedish-first content and prof
 - `@/components/magicui` - Premium animated components
 - `@/lib/utils` - Utility functions including `cn()` for className merging
 - `@/lib` - Library functions and site configuration
+- `@/hooks` - Custom React hooks
 
 ### Image Handling
 - Images stored in `/public/images/` directory
@@ -136,10 +137,11 @@ The website targets Swedish executive market with Swedish-first content and prof
 - Lazy loading and responsive images are handled automatically
 
 ### Configuration Files
-- **components.json** - Shadcn/ui configuration with "new-york" style and CSS variables enabled
-- **tsconfig.json** - TypeScript configuration with strict mode
+- **components.json** - Shadcn/ui configuration with "new-york" style, CSS variables enabled, stone base color
+- **tsconfig.json** - TypeScript configuration with strict mode and path aliases
 - **postcss.config.mjs** - Tailwind CSS PostCSS integration
 - **globals.css** - CSS variables for theming (light/dark mode support built-in)
+- **lib/site-config.ts** - Centralized site configuration (contact info, social links, company details)
 
 ### Color System Examples
 ❌ **WRONG** - Never hardcode colors:
