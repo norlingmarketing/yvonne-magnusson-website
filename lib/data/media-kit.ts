@@ -1,0 +1,148 @@
+export interface PressRelease {
+  title: string;
+  date: string;
+  summary: string;
+  category: string;
+  downloadUrl: string;
+}
+
+export interface MediaKitItem {
+  type: string;
+  iconName: string;
+  description: string;
+  items: Array<{
+    name: string;
+    size: string;
+  }>;
+  downloadUrl: string;
+}
+
+export interface MediaAppearance {
+  outlet: string;
+  type: string;
+  topic: string;
+  date: string;
+  link: string;
+  image: string;
+}
+
+export const pressReleases: PressRelease[] = [
+  {
+    title: "Yvonne Magnusson Utsedd till Årets Transformationsledare 2024",
+    date: "2024-01-20",
+    summary: "Erkännande för framgångsrik turnaround av nordisk retailkedja med 47% omsättningstillväxt.",
+    category: "Utmärkelse",
+    downloadUrl: "/media/press-release-2024-01.pdf"
+  },
+  {
+    title: "Ny Studie: Digital Transformation inom Retail - Kritiska Framgångsfaktorer",
+    date: "2023-12-15", 
+    summary: "Omfattande undersökning av 50+ transformationsprojekt avslöjar nyckelfaktorer för framgång.",
+    category: "Forskningsrapport",
+    downloadUrl: "/media/digital-transformation-study-2023.pdf"
+  },
+  {
+    title: "Yvonne Magnusson Blir Styrelseordförande för RetailTech Innovation Hub",
+    date: "2023-11-08",
+    summary: "Strategisk satsning på att accelerera innovation och digital transformation inom retail.",
+    category: "Utnämning", 
+    downloadUrl: "/media/press-release-2023-11.pdf"
+  }
+];
+
+export const mediaKit: MediaKitItem[] = [
+  {
+    type: "Högupplösta Bilder",
+    iconName: "ImageIcon",
+    description: "Professionella profilbilder och presentationsfoton",
+    items: [
+      { name: "Yvonne_Magnusson_Portrait_HighRes.jpg", size: "3.2 MB" },
+      { name: "Yvonne_Magnusson_Speaking_Event.jpg", size: "2.8 MB" },
+      { name: "Yvonne_Magnusson_Boardroom.jpg", size: "2.1 MB" }
+    ],
+    downloadUrl: "/media/images-package.zip"
+  },
+  {
+    type: "Biografi & CV",
+    iconName: "FileText",
+    description: "Detaljerad bakgrund och karriärhistorik",
+    items: [
+      { name: "Yvonne_Magnusson_Biografi_SV.pdf", size: "245 KB" },
+      { name: "Yvonne_Magnusson_Biography_EN.pdf", size: "231 KB" },
+      { name: "Executive_Summary_CV.pdf", size: "156 KB" }
+    ],
+    downloadUrl: "/media/biography-package.zip"
+  },
+  {
+    type: "Videomaterial",
+    iconName: "Video",
+    description: "Keynote-klipp och intervjumaterial",
+    items: [
+      { name: "Keynote_Transformation_Leadership.mp4", size: "125 MB" },
+      { name: "Interview_Retail_Future.mp4", size: "89 MB" },
+      { name: "Quick_Intro_Video.mp4", size: "45 MB" }
+    ],
+    downloadUrl: "/media/video-package.zip"
+  }
+];
+
+export const mediaAppearances: MediaAppearance[] = [
+  {
+    outlet: "SVT Aktuellt",
+    type: "TV-intervju",
+    topic: "Framtidens Retail efter Pandemin",
+    date: "2024-01-15",
+    link: "https://www.svtplay.se/video/123456",
+    image: "/api/placeholder/200/120"
+  },
+  {
+    outlet: "Dagens Industri",
+    type: "Expertkommentar", 
+    topic: "Digital Transformation - Hur Lyckas Man?",
+    date: "2023-12-20",
+    link: "https://www.di.se/artikel/digital-transformation",
+    image: "/api/placeholder/200/120"
+  },
+  {
+    outlet: "Retail & Detail Podcast",
+    type: "Podcast-intervju",
+    topic: "Internationalisering för Svenska Retailer",
+    date: "2023-12-10",
+    link: "https://retaildetail.se/podcast/internationalisering",
+    image: "/api/placeholder/200/120"
+  },
+  {
+    outlet: "Breakit",
+    type: "Feature-artikel",
+    topic: "Hon Räddar Svenska Företag från Konkurs",
+    date: "2023-11-25",
+    link: "https://www.breakit.se/artikel/transformation-expert",
+    image: "/api/placeholder/200/120"
+  }
+];
+
+export const expertTopics = [
+  "Digital Transformation inom Retail",
+  "Internationalisering och Marknadsetablering", 
+  "Turnaround Management och Krishantering",
+  "Styrelsearbete och Corporate Governance",
+  "Organisationskultur och Change Management",
+  "E-handel och Omnichannel-strategier",
+  "FMCG och Consumer Market Trends",
+  "Kvinnligt Ledarskap och Diversity"
+];
+
+export const contactInfo = {
+  mediaContact: {
+    name: "Yvonne Magnusson",
+    email: "press@yvonnemagnusson.se",
+    phone: "+46 70 XXX XX XX",
+    response: "Svarar inom 2-4 timmar vardagar"
+  },
+  availability: {
+    interviews: "Tillgänglig för TV, radio och podcast-intervjuer",
+    commentary: "Expertkommentarer inom 24 timmar",
+    speaking: "Keynotes och paneldiskussioner",
+    articles: "Gastskribent och thought leadership"
+  }
+};

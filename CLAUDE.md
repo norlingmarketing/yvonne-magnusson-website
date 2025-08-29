@@ -77,8 +77,38 @@ The website targets Swedish executive market with Swedish-first content and prof
 ├── /layout - Footer and structural components
 ├── /magicui - Premium animated components (gradient text, number tickers, shimmer buttons)
 ├── /navigation - Main navigation with mobile menu
+├── /page-components - Reusable page section components (NEW)
+│   ├── page-hero.tsx - Standardized hero sections across pages
+│   ├── service-cards.tsx - Service offering displays
+│   ├── process-steps.tsx - Workflow visualization components
+│   ├── contact-form.tsx - Contact forms with validation
+│   ├── contact-methods.tsx - Contact information display
+│   ├── career-timeline.tsx - Professional timeline component
+│   ├── current-roles.tsx - Active board/advisory roles
+│   ├── case-study-cards.tsx - Detailed case study presentation
+│   ├── impact-areas.tsx - Results and impact visualization
+│   ├── speaking-topics.tsx - Speaking engagement topics
+│   ├── article-cards.tsx - Blog/insights article display
+│   └── media-kit.tsx - Press and media resources
 ├── /sections - Homepage sections (hero, credentials, services, testimonials, CTA)
+├── /seo - SEO components (structured data)
 └── /ui - Base UI components (shadcn/ui based)
+```
+
+### Data Architecture
+```
+/lib
+├── /data - Centralized data files (NEW)
+│   ├── services.ts - Service offerings and process steps
+│   ├── case-studies.ts - Case studies and impact data
+│   ├── contact.ts - Contact methods and service types
+│   ├── timeline.ts - Career timeline and current roles
+│   ├── speaking-topics.ts - Speaking topics and formats
+│   ├── insights-articles.ts - Blog articles and categories
+│   └── media-kit.ts - Press releases and media resources
+├── /types - TypeScript interfaces for all data structures
+├── site-config.ts - Site configuration
+└── utils.ts - Utility functions
 ```
 
 ### Content Management Approach
@@ -109,19 +139,33 @@ The website targets Swedish executive market with Swedish-first content and prof
 - **Responsive:** Tailwind CSS classes with mobile-first approach
 
 ### Styling Guidelines - CRITICAL
-- **NEVER hardcode colors** in pages or components
-- **ALWAYS use shadcn/ui CSS variables** for consistent theming
-- Use Tailwind utility classes that reference CSS variables:
-  - `bg-background` / `text-foreground` (main colors)
-  - `bg-card` / `text-card-foreground` (card backgrounds)
-  - `bg-primary` / `text-primary-foreground` (primary actions)
-  - `bg-secondary` / `text-secondary-foreground` (secondary elements)
-  - `bg-muted` / `text-muted-foreground` (subtle backgrounds)
-  - `bg-accent` / `text-accent-foreground` (accent colors)
-  - `border-border` (consistent borders)
-  - `ring-ring` (focus rings)
-- **CSS Variable System:** All colors defined in `globals.css` with light/dark variants
-- **Component Styling:** Use `cn()` utility to merge Tailwind classes conditionally
+
+#### Light/Dark Mode Theming Rules
+
+**NEVER use hardcoded colors:**
+❌ `bg-blue-600`, `text-green-500`, `bg-white`, `bg-gray-50`, `text-gray-600`
+❌ `border-gray-200`, `hover:bg-blue-700`, `text-red-500`
+
+**ALWAYS use shadcn CSS variables:**
+✅ `bg-primary` / `text-primary-foreground` - Primary brand colors
+✅ `bg-secondary` / `text-secondary-foreground` - Secondary elements  
+✅ `bg-muted` / `text-muted-foreground` - Subtle backgrounds and secondary text
+✅ `bg-card` / `text-card-foreground` - Card backgrounds (replaces bg-white)
+✅ `bg-background` / `text-foreground` - Main page background and text
+✅ `border-border` - All borders
+✅ `ring-ring` - Focus rings and outlines
+
+**Hover and Interactive States:**
+✅ `hover:bg-primary/90` - Use opacity modifiers
+✅ `hover:bg-muted/50` - Subtle hover effects
+✅ `focus:ring-ring` - Consistent focus styles
+
+**Gradient and Special Effects:**
+✅ `from-primary/10 to-secondary/10` - Gradients with opacity
+✅ `bg-gradient-to-br from-muted/50 to-background` - Page backgrounds
+
+**CSS Variable System:** All colors defined in `globals.css` with light/dark variants
+**Component Styling:** Use `cn()` utility to merge Tailwind classes conditionally
 
 ### Path Aliases
 - `@/components` - All React components
