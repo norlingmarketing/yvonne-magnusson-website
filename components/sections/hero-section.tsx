@@ -46,10 +46,8 @@ export function HeroSection() {
               speed={0.8}
               className="inline-block"
             >
-              Ledarskap för lönsam tillväxt
+              Ledarskap för lönsam tillväxt och transformation
             </AuroraText>
-            <br />
-            <span className="text-foreground">och transformation</span>
           </h1>
         </BlurFade>
 
