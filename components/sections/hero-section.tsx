@@ -41,13 +41,16 @@ export function HeroSection() {
 
         <BlurFade delay={0.4}>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 leading-tight">
+            <span className="text-foreground">Ledarskap för </span>
             <AuroraText 
               colors={["#2C5F7C", "#D4A574", "#1e40af", "#06b6d4", "#2C5F7C"]}
               speed={0.8}
               className="inline-block"
             >
-              Ledarskap för lönsam tillväxt och transformation
+              lönsam tillväxt
             </AuroraText>
+            <br />
+            <span className="text-foreground">och transformation</span>
           </h1>
         </BlurFade>
 
