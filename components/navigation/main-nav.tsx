@@ -13,6 +13,9 @@ const navigation = [
   { name: "Om Yvonne", href: "/om-yvonne" },
   { name: "Tjänster", href: "/tjanster" },
   { name: "Föreläsningar", href: "/forelasningar" },
+  { name: "Case Referenser", href: "/case-referenser" },
+  { name: "Insikter", href: "/insikter" },
+  { name: "Media", href: "/media" },
   { name: "Kontakt", href: "/kontakt" },
 ];
 
@@ -65,12 +68,6 @@ export function MainNav() {
             </div>
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
-            <Button className="px-4 py-2 text-sm" asChild>
-              <Link href="/kontakt">Kontakta mig</Link>
-            </Button>
-          </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden">
@@ -107,13 +104,6 @@ export function MainNav() {
                   {item.name}
                 </Link>
               ))}
-              <div className="pt-2">
-                <Button className="w-full px-4 py-2 text-sm" asChild>
-                  <Link href="/kontakt" onClick={() => setMobileMenuOpen(false)}>
-                    Kontakta mig
-                  </Link>
-                </Button>
-              </div>
             </div>
           </div>
         )}

@@ -34,7 +34,10 @@ export function AnimatedNav() {
       { id: 2, label: "Om Yvonne", link: "/om-yvonne" },
       { id: 3, label: "Tjänster", link: "/tjanster" },
       { id: 4, label: "Föreläsningar", link: "/forelasningar" },
-      { id: 5, label: "Kontakt", link: "/kontakt" },
+      { id: 5, label: "Case Referenser", link: "/case-referenser" },
+      { id: 6, label: "Insikter", link: "/insikter" },
+      { id: 7, label: "Media", link: "/media" },
+      { id: 8, label: "Kontakt", link: "/kontakt" },
     ],
     [],
   );
