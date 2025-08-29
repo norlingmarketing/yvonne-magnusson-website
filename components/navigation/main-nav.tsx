@@ -23,7 +23,7 @@ export function useScrollY() {
   return scrollY;
 }
 
-export function AnimatedNav() {
+export function MainNav() {
   const scrollY = useScrollY();
   const pathname = usePathname();
   const [active, setActive] = useState(false);
@@ -66,7 +66,7 @@ export function AnimatedNav() {
             animate={{
               boxShadow:
                 scrollY >= 120
-                  ? "0 0 0 1px rgba(44,95,124,.08), 0 1px 2px -1px rgba(44,95,124,.08), 0 2px 4px rgba(44,95,124,.04)"
+                  ? "0 0 0 1px hsl(var(--border)), 0 1px 2px -1px hsl(var(--border)), 0 2px 4px hsl(var(--muted))"
                   : "none",
             }}
             transition={{
@@ -74,7 +74,7 @@ export function AnimatedNav() {
               duration: 0.05,
               delay: 0.05,
             }}
-            className="flex h-12 w-auto items-center justify-center overflow-hidden rounded-full px-6 py-2.5 transition-all bg-white/90 backdrop-blur-sm md:p-1.5 md:py-2 border border-gray-200/50"
+            className="flex h-12 w-auto items-center justify-center overflow-hidden rounded-full px-6 py-2.5 transition-all bg-background/90 backdrop-blur-sm md:p-1.5 md:py-2 border border-border"
           >
             <nav className="relative h-full items-center justify-between gap-x-3.5 md:flex">
               <ul className="flex h-full flex-col justify-center gap-6 md:flex-row md:justify-start md:gap-0 lg:gap-1">
@@ -85,11 +85,12 @@ export function AnimatedNav() {
                   >
                     <Link 
                       href={navItem.link}
-                      className={`text-sm font-medium transition-colors hover:text-primary ${
+                      className={cn(
+                        "text-sm font-medium transition-colors hover:text-primary",
                         pathname === navItem.link 
-                          ? 'text-primary' 
-                          : 'text-foreground'
-                      }`}
+                          ? "text-primary" 
+                          : "text-foreground"
+                      )}
                     >
                       {navItem.label}
                     </Link>
@@ -223,11 +224,12 @@ export function AnimatedNav() {
                     <Link
                       href={navItem.link}
                       onClick={() => setActive(false)}
-                      className={`block px-4 py-2 text-sm font-medium transition-colors hover:text-primary hover:bg-muted rounded-lg ${
+                      className={cn(
+                        "block px-4 py-2 text-sm font-medium transition-colors hover:text-primary hover:bg-muted rounded-lg",
                         pathname === navItem.link 
-                          ? 'text-primary bg-muted' 
-                          : 'text-foreground'
-                      }`}
+                          ? "text-primary bg-muted" 
+                          : "text-foreground"
+                      )}
                     >
                       {navItem.label}
                     </Link>

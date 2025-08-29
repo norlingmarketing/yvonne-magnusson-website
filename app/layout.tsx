@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { AnimatedNav } from "@/components/navigation/animated-nav";
+import { MainNav } from "@/components/navigation/main-nav";
 import { Footer } from "@/components/layout/footer";
 import { ThemeProvider } from "@/components/theme-provider";
 
@@ -85,7 +85,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <AnimatedNav />
+          <MainNav />
           <main>
             {children}
           </main>

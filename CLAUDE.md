@@ -30,6 +30,20 @@ npx shadcn@latest add <component>  # Add new shadcn/ui component
 # No test framework configured yet - add when needed
 ```
 
+### Git Workflow - CRITICAL REQUIREMENT
+```bash
+git add .                # Stage changes
+git commit -m "message"  # Commit regularly and often
+git push                 # Push when requested
+```
+
+**IMPORTANT:** Commit changes regularly and frequently during all work. This is a critical requirement:
+- Commit after completing each major task or component
+- Commit before starting risky operations
+- Use descriptive commit messages that explain the change
+- Always commit working code, never broken code
+- When in doubt, commit more frequently rather than less
+
 ## Architecture
 
 This is a professional website for Yvonne Magnusson, a transformation leadership expert. Built with Next.js 15.5.0 and modern tooling.
