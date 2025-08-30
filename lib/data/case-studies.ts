@@ -102,3 +102,12 @@ export const overallStats = [
   { value: 15, label: "EBITDA-förbättring", suffix: " pp" },
   { value: 2.5, label: "Miljarder SEK transformerat värde", suffix: " Mdr" }
 ];
+
+export const industries = [
+  { name: "Fashion & Lifestyle", cases: 8, icon: "👔" },
+  { name: "Food & Beverage", cases: 6, icon: "🍽️" },
+  { name: "Home & Garden", cases: 4, icon: "🏠" },
+  { name: "Electronics & Tech", cases: 3, icon: "💻" },
+  { name: "Health & Beauty", cases: 5, icon: "💄" },
+  { name: "Sports & Outdoor", cases: 4, icon: "⛷️" }
+];

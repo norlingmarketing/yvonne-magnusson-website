@@ -130,9 +130,9 @@ export default function CaseStudiesPage() {
   ];
 
   return (
-    <div className="bg-gradient-to-b from-gray-50 to-white">
+    <div className="bg-gradient-to-b from-muted/50 to-background">
       {/* Hero Section */}
-      <section className="py-20 lg:py-32 bg-white">
+      <section className="py-20 lg:py-32 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <BlurFade delay={0.1}>
             <div className="text-center mb-16">
@@ -195,7 +195,7 @@ export default function CaseStudiesPage() {
           <div className="space-y-16">
             {caseStudies.map((caseStudy, index) => (
               <BlurFade key={index} delay={0.2 + index * 0.1}>
-                <div className="bg-white rounded-3xl p-8 lg:p-12 shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="bg-card rounded-3xl p-8 lg:p-12 shadow-lg hover:shadow-xl transition-all duration-300">
                   {/* Header */}
                   <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
                     <div className="lg:col-span-2">
@@ -272,7 +272,7 @@ export default function CaseStudiesPage() {
       </section>
 
       {/* Impact Areas */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <BlurFade delay={0.1}>
             <div className="text-center mb-16">
@@ -313,7 +313,7 @@ export default function CaseStudiesPage() {
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Branschexpertis & Erfarenhet
               </h2>
-              <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+              <p className="text-xl text-primary-foreground/90 max-w-3xl mx-auto">
                 Djup förståelse och beprövade resultat inom flera branscher ger 
                 unikt perspektiv på transformation och tillväxt.
               </p>
@@ -326,7 +326,7 @@ export default function CaseStudiesPage() {
                 <div className="bg-white/10 rounded-2xl p-6 text-center backdrop-blur-sm hover:bg-white/20 transition-all duration-300">
                   <div className="text-3xl mb-3">{industry.icon}</div>
                   <h3 className="text-lg font-bold mb-2">{industry.name}</h3>
-                  <p className="text-blue-100 text-sm">
+                  <p className="text-primary-foreground/90 text-sm">
                     {industry.cases} framgångsrika cases
                   </p>
                 </div>
@@ -340,17 +340,17 @@ export default function CaseStudiesPage() {
                 <div>
                   <BarChart3 className="h-12 w-12 text-accent mx-auto mb-4" />
                   <div className="text-2xl font-bold mb-2">100%</div>
-                  <p className="text-blue-100">Av cases uppnådde målsättningar</p>
+                  <p className="text-primary-foreground/90">Av cases uppnådde målsättningar</p>
                 </div>
                 <div>
                   <Award className="h-12 w-12 text-accent mx-auto mb-4" />
                   <div className="text-2xl font-bold mb-2">4.9/5</div>
-                  <p className="text-blue-100">Genomsnittligt kundbetyg</p>
+                  <p className="text-primary-foreground/90">Genomsnittligt kundbetyg</p>
                 </div>
                 <div>
                   <Users className="h-12 w-12 text-accent mx-auto mb-4" />
                   <div className="text-2xl font-bold mb-2">95%</div>
-                  <p className="text-blue-100">Skulle anlita igen</p>
+                  <p className="text-primary-foreground/90">Skulle anlita igen</p>
                 </div>
               </div>
             </div>
@@ -397,7 +397,7 @@ export default function CaseStudiesPage() {
               }
             ].map((phase, index) => (
               <BlurFade key={index} delay={0.2 + index * 0.1}>
-                <div className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all duration-300">
+                <div className="bg-card rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all duration-300">
                   <div className="text-center mb-6">
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-primary text-primary-foreground rounded-xl font-bold text-lg mb-4">
                       {index + 1}
@@ -422,7 +422,7 @@ export default function CaseStudiesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
+      <section className="py-20 bg-gradient-to-br from-primary to-primary/80 text-primary-foreground">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <BlurFade delay={0.1}>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">

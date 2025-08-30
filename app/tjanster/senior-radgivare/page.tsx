@@ -165,7 +165,7 @@ export default function SeniorAdvisorPage() {
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Varför Välja Yvonne som Senior Rådgivare?
               </h2>
-              <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+              <p className="text-xl text-primary-foreground/90 max-w-3xl mx-auto">
                 Kombinationen av djup branschexpertis, praktisk erfarenhet och beprövade resultat 
                 skapar unikt värde för dina affärsutmaningar.
               </p>
@@ -180,7 +180,7 @@ export default function SeniorAdvisorPage() {
                     {prop.icon}
                   </div>
                   <h3 className="text-xl font-bold mb-4">{prop.title}</h3>
-                  <p className="text-blue-100 leading-relaxed">{prop.description}</p>
+                  <p className="text-primary-foreground/90 leading-relaxed">{prop.description}</p>
                 </div>
               </BlurFade>
             ))}

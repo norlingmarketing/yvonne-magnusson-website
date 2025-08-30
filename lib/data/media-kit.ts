@@ -146,3 +146,26 @@ export const contactInfo = {
     articles: "Gastskribent och thought leadership"
   }
 };
+
+export const credentials = [
+  {
+    icon: "Users",
+    label: "Expertområden",
+    value: "Transformation, Retail, FMCG, Digital, Styrelsearbete, Internationalisering"
+  },
+  {
+    icon: "Camera",
+    label: "Medieerfarenhet",
+    value: "50+ TV, radio och podcast-intervjuer i nationella och internationella medier"
+  },
+  {
+    icon: "Star",
+    label: "Språk",
+    value: "Flyt i svenska, engelska och tyska för internationella medier"
+  },
+  {
+    icon: "Award",
+    label: "Trovärdighet",
+    value: "30+ års praktisk erfarenhet med dokumenterade resultat inom transformation"
+  }
+];

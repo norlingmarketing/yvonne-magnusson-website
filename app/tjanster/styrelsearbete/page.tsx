@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import { ArrowRight, Users, Globe, TrendingUp, Target, CheckCircle, ArrowLeft } from "lucide-react";
+import { boardCompetencies, boardPositions, boardIdealSituations, boardValueCreation } from "@/lib/data/services";
 
 export const metadata: Metadata = {
   title: "Styrelsearbete - Yvonne Magnusson | Transformation och Internationalisering",
@@ -12,118 +13,15 @@ export const metadata: Metadata = {
   keywords: "styrelseledamot, styrelseordförande, retail, FMCG, transformation, internationalisering, digitalisering",
 };
 
-const competencies = [
-  {
-    icon: Globe,
-    title: "Internationalisering",
-    description: "Djup erfarenhet av expansion till nordiska och globala marknader",
-    details: [
-      "Marknadsetablering i nya länder",
-      "Kulturell anpassning och lokalisering", 
-      "Partnerskap och joint ventures",
-      "Regulatory compliance internationellt"
-    ]
-  },
-  {
-    icon: TrendingUp,
-    title: "Digital Transformation",
-    description: "Proven track record av digital omställning och teknisk utveckling",
-    details: [
-      "E-handel och omnikanal-strategier",
-      "Digital infrastruktur och system",
-      "Data-driven beslutsfattande",
-      "Teknisk innovation och automation"
-    ]
-  },
-  {
-    icon: Target,
-    title: "Strategisk Utveckling",
-    description: "Långsiktig strategiutveckling med fokus på hållbar tillväxt",
-    details: [
-      "Affärsmodells-innovation",
-      "Marknadsstrategi och positioning",
-      "M&A och tillväxtinitiativ",
-      "Risk- och möjlighetsanalys"
-    ]
-  },
-  {
-    icon: Users,
-    title: "Kulturell Transformation",
-    description: "Ledarskap i organisatorisk förändring och kulturutveckling",
-    details: [
-      "Change management processer",
-      "Ledarskaps- och teamutveckling",
-      "Kommunikation och förankring",
-      "Performance management"
-    ]
-  }
-];
 
-const currentPositions = [
-  {
-    role: "Styrelseordförande",
-    companies: [
-      { name: "MAIA Universe", description: "Tech startup inom AI och hållbarhet" },
-      { name: "Waynes Coffee Sweden AB", description: "Ledande kaffekedja i Sverige" },
-      { name: "IWF", description: "International Women's Forum" }
-    ]
-  },
-  {
-    role: "Styrelseledamot", 
-    companies: [
-      { name: "Bio-Restore", description: "Bioteknikföretag inom miljölösningar" },
-      { name: "DI Close", description: "Nätverk för kvinnliga ledare" }
-    ]
-  }
-];
 
-const idealSituations = [
-  {
-    title: "Transformationsresor",
-    description: "Företag som genomgår större förändringar inom digitalisering, affärsmodell eller marknadsstrategi.",
-    examples: ["Digital transformation", "Affärsmodells-innovation", "Kulturförändring"]
-  },
-  {
-    title: "Internationell expansion", 
-    description: "Bolag som planerar eller genomför etablering på nya marknader, särskilt inom Norden.",
-    examples: ["Marknadsetablering", "Joint ventures", "Kulturell anpassning"]
-  },
-  {
-    title: "Tillväxt och skalning",
-    description: "Företag i tillväxtfas som behöver erfaren ledning för att hantera komplexitet och risk.",
-    examples: ["Skalning av verksamhet", "Systemuppbyggnad", "Teamutveckling"]
-  },
-  {
-    title: "Krissituationer",
-    description: "Bolag som behöver erfaren krishantering och turnaround-expertis för att vända utvecklingen.",
-    examples: ["Turnaround management", "Stakeholder management", "Operativ effektivisering"]
-  }
-];
 
-const valueCreation = [
-  {
-    area: "Strategisk riktning",
-    impact: "Tydlig långsiktig strategi med konkreta milstolpar och mätbara mål"
-  },
-  {
-    area: "Risk management",
-    impact: "Strukturerad riskanalys och förebyggande åtgärder baserat på praktisk erfarenhet"
-  },
-  {
-    area: "Branschexpertis",
-    impact: "Djup förståelse för retail och FMCG med nätverk och marknadskännedom"
-  },
-  {
-    area: "Genomförandekraft",
-    impact: "Praktisk erfarenhet av att omsätta strategi till handling och resultat"
-  }
-];
 
 export default function BoardWorkPage() {
   return (
     <main className="min-h-screen">
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
+        <section className="py-20 bg-gradient-to-br from-muted/50 to-background">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <BlurFade delay={0.2}>
               <div className="mb-8">
@@ -140,8 +38,8 @@ export default function BoardWorkPage() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <BlurFade delay={0.3}>
                 <div>
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl mb-6">
-                    <Users className="h-8 w-8 text-blue-600" />
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-primary/10 to-primary/20 rounded-xl mb-6">
+                    <Users className="h-8 w-8 text-primary" />
                   </div>
                   
                   <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
@@ -153,13 +51,13 @@ export default function BoardWorkPage() {
                   </p>
                   
                   <div className="flex flex-wrap gap-3 mb-8">
-                    <Badge variant="secondary" className="px-4 py-2 bg-blue-50 text-blue-700 border-blue-200">
+                    <Badge variant="secondary" className="px-4 py-2 bg-primary/10 text-primary border-primary/20">
                       5+ aktiva styrelseuppdrag
                     </Badge>
-                    <Badge variant="secondary" className="px-4 py-2 bg-blue-50 text-blue-700 border-blue-200">
+                    <Badge variant="secondary" className="px-4 py-2 bg-primary/10 text-primary border-primary/20">
                       30+ års VD-erfarenhet
                     </Badge>
-                    <Badge variant="secondary" className="px-4 py-2 bg-blue-50 text-blue-700 border-blue-200">
+                    <Badge variant="secondary" className="px-4 py-2 bg-primary/10 text-primary border-primary/20">
                       Certifierad styrelseledamot
                     </Badge>
                   </div>
@@ -174,19 +72,19 @@ export default function BoardWorkPage() {
               </BlurFade>
               
               <BlurFade delay={0.5}>
-                <Card className="p-8 bg-gradient-to-br from-blue-50 to-blue-100 border-blue-200">
+                <Card className="p-8 bg-gradient-to-br from-primary/5 to-primary/10 border-primary/20">
                   <CardHeader className="p-0 mb-6">
-                    <CardTitle className="text-blue-900">Nuvarande styrelseroller</CardTitle>
+                    <CardTitle className="text-foreground">Nuvarande styrelseroller</CardTitle>
                   </CardHeader>
                   <CardContent className="p-0 space-y-6">
-                    {currentPositions.map((position, index) => (
+                    {boardPositions.map((position, index) => (
                       <div key={index}>
-                        <h3 className="font-semibold text-blue-800 mb-3">{position.role}:</h3>
+                        <h3 className="font-semibold text-foreground mb-3">{position.role}:</h3>
                         <ul className="space-y-2">
                           {position.companies.map((company, companyIndex) => (
-                            <li key={companyIndex} className="text-blue-700">
+                            <li key={companyIndex} className="text-foreground">
                               <span className="font-medium">{company.name}</span>
-                              <span className="text-blue-600 text-sm block">{company.description}</span>
+                              <span className="text-muted-foreground text-sm block">{company.description}</span>
                             </li>
                           ))}
                         </ul>
@@ -214,15 +112,15 @@ export default function BoardWorkPage() {
             </BlurFade>
 
             <div className="grid md:grid-cols-2 gap-8">
-              {competencies.map((competency, index) => {
-                const Icon = competency.icon;
+              {boardCompetencies.map((competency, index) => {
+                const IconComponent = competency.icon === "Globe" ? Globe : competency.icon === "TrendingUp" ? TrendingUp : competency.icon === "Target" ? Target : Users;
                 return (
                   <BlurFade key={index} delay={0.4 + index * 0.1}>
                     <Card className="h-full hover:shadow-lg transition-shadow">
                       <CardHeader>
                         <div className="flex items-center gap-4 mb-4">
-                          <div className="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center">
-                            <Icon className="h-6 w-6 text-blue-600" />
+                          <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                            <IconComponent className="h-6 w-6 text-primary" />
                           </div>
                           <CardTitle className="text-xl">{competency.title}</CardTitle>
                         </div>
@@ -263,7 +161,7 @@ export default function BoardWorkPage() {
             </BlurFade>
 
             <div className="grid md:grid-cols-2 gap-8">
-              {idealSituations.map((situation, index) => (
+              {boardIdealSituations.map((situation, index) => (
                 <BlurFade key={index} delay={0.4 + index * 0.1}>
                   <Card className="h-full">
                     <CardHeader>
@@ -310,7 +208,7 @@ export default function BoardWorkPage() {
             </BlurFade>
 
             <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              {valueCreation.map((value, index) => (
+              {boardValueCreation.map((value, index) => (
                 <BlurFade key={index} delay={0.4 + index * 0.1}>
                   <div className="text-center">
                     <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -339,7 +237,7 @@ export default function BoardWorkPage() {
                 <h2 className="text-3xl md:text-4xl font-bold mb-4">
                   Stärk er styrelse med branschexpertis
                 </h2>
-                <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
+                <p className="text-xl text-primary-foreground/90 max-w-3xl mx-auto mb-8">
                   Låt oss diskutera hur jag kan bidra till er styrelse och stödja er strategiska utveckling.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">

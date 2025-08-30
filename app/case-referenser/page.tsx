@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { BlurFade } from "@/components/magicui/blur-fade";
 import { CaseStudyCards } from "@/components/page-components/case-study-cards";
 import { ImpactAreas } from "@/components/page-components/impact-areas";
-import { caseStudies, impactAreasData, overallStats } from "@/lib/data/case-studies";
+import { caseStudies, impactAreasData, overallStats, industries } from "@/lib/data/case-studies";
 import { NumberTicker } from "@/components/magicui/number-ticker";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
@@ -26,19 +26,11 @@ export const metadata: Metadata = {
 };
 
 export default function CaseReferenserPage() {
-  const industries = [
-    { name: "Fashion & Lifestyle", cases: 8, icon: "👔" },
-    { name: "Food & Beverage", cases: 6, icon: "🍽️" },
-    { name: "Home & Garden", cases: 4, icon: "🏠" },
-    { name: "Electronics & Tech", cases: 3, icon: "💻" },
-    { name: "Health & Beauty", cases: 5, icon: "💄" },
-    { name: "Sports & Outdoor", cases: 4, icon: "⛷️" }
-  ];
 
   return (
-    <div className="bg-gradient-to-b from-gray-50 to-white">
+    <div className="bg-gradient-to-b from-muted/50 to-background">
       {/* Hero Section */}
-      <section className="py-20 lg:py-32 bg-white">
+      <section className="py-20 lg:py-32 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <BlurFade delay={0.1}>
             <div className="text-center mb-16">
@@ -107,7 +99,7 @@ export default function CaseReferenserPage() {
           <BlurFade delay={0.3}>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
               {industries.map((industry, index) => (
-                <div key={index} className="bg-white rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-300">
+                <div key={index} className="bg-card rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-300">
                   <div className="text-3xl mb-3">{industry.icon}</div>
                   <h3 className="text-sm font-bold text-foreground mb-2">{industry.name}</h3>
                   <p className="text-xs text-muted-foreground">{industry.cases} cases</p>
@@ -119,7 +111,7 @@ export default function CaseReferenserPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 lg:py-32 bg-white">
+      <section className="py-20 lg:py-32 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <BlurFade delay={0.2}>
             <div className="text-center">

@@ -70,7 +70,7 @@ export default function SeniorAdvisorPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-muted/50 to-background">
       {/* Breadcrumbs */}
       <div className="border-b border-border bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -158,14 +158,14 @@ export default function SeniorAdvisorPage() {
       </section>
 
       {/* Value Proposition */}
-      <section className="py-20 bg-gradient-to-br from-[hsl(var(--primary))] to-[#1a4a5c] text-white">
+      <section className="py-20 bg-gradient-to-br from-primary to-primary/80 text-primary-foreground">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <BlurFade delay={0.1}>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Varför Välja Yvonne som Senior Rådgivare?
               </h2>
-              <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+              <p className="text-xl text-primary-foreground/90 max-w-3xl mx-auto">
                 Kombinationen av djup branschexpertis, praktisk erfarenhet och beprövade resultat 
                 skapar unikt värde för dina affärsutmaningar.
               </p>
@@ -180,7 +180,7 @@ export default function SeniorAdvisorPage() {
                     {prop.icon}
                   </div>
                   <h3 className="text-xl font-bold mb-4">{prop.title}</h3>
-                  <p className="text-blue-100 leading-relaxed">{prop.description}</p>
+                  <p className="text-primary-foreground/90 leading-relaxed">{prop.description}</p>
                 </div>
               </BlurFade>
             ))}

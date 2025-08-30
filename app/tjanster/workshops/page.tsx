@@ -167,7 +167,7 @@ export default function WorkshopsPage() {
       </section>
 
       {/* Workshop Types */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-card">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <BlurFade delay={0.1}>
             <div className="text-center mb-16">
@@ -229,15 +229,15 @@ export default function WorkshopsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {formats.map((format, index) => (
               <BlurFade key={index} delay={0.2 + index * 0.1}>
-                <div className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300">
-                  <h3 className="text-lg font-bold text-gray-900 mb-3">{format.title}</h3>
-                  <p className="text-gray-600 mb-4 text-sm leading-relaxed">{format.description}</p>
+                <div className="bg-card rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300">
+                  <h3 className="text-lg font-bold text-foreground mb-3">{format.title}</h3>
+                  <p className="text-muted-foreground mb-4 text-sm leading-relaxed">{format.description}</p>
                   
                   <ul className="space-y-2">
                     {format.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="flex items-start text-sm">
-                        <CheckCircle className="h-4 w-4 text-[#2C5F7C] mr-2 mt-0.5 flex-shrink-0" />
-                        <span className="text-gray-600">{benefit}</span>
+                        <CheckCircle className="h-4 w-4 text-primary mr-2 mt-0.5 flex-shrink-0" />
+                        <span className="text-muted-foreground">{benefit}</span>
                       </li>
                     ))}
                   </ul>
@@ -249,7 +249,7 @@ export default function WorkshopsPage() {
       </section>
 
       {/* Methodology */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-card">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <BlurFade delay={0.1}>
             <div className="text-center mb-16">
@@ -267,21 +267,21 @@ export default function WorkshopsPage() {
             {methodology.map((phase, index) => (
               <BlurFade key={index} delay={0.2 + index * 0.1}>
                 <div className="text-center relative">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-[#2C5F7C] text-white rounded-2xl font-bold text-xl mb-6">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-primary text-primary-foreground rounded-2xl font-bold text-xl mb-6">
                     {String(index + 1).padStart(2, '0')}
                   </div>
                   {index < 2 && (
-                    <ArrowRight className="hidden md:block absolute top-8 -right-4 h-6 w-6 text-gray-300" />
+                    <ArrowRight className="hidden md:block absolute top-8 -right-4 h-6 w-6 text-muted-foreground" />
                   )}
                   
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">{phase.phase}</h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">{phase.description}</p>
+                  <h3 className="text-xl font-bold text-foreground mb-4">{phase.phase}</h3>
+                  <p className="text-muted-foreground mb-6 leading-relaxed">{phase.description}</p>
                   
                   <ul className="space-y-2 text-left">
                     {phase.details.map((detail, detailIndex) => (
                       <li key={detailIndex} className="flex items-start text-sm">
                         <CheckCircle className="h-4 w-4 text-[#D4A574] mr-2 mt-0.5 flex-shrink-0" />
-                        <span className="text-gray-600">{detail}</span>
+                        <span className="text-muted-foreground">{detail}</span>
                       </li>
                     ))}
                   </ul>
@@ -293,14 +293,14 @@ export default function WorkshopsPage() {
       </section>
 
       {/* Learning Outcomes */}
-      <section className="py-20 bg-gradient-to-br from-[#2C5F7C] to-[#1a4a5c] text-white">
+      <section className="py-20 bg-gradient-to-br from-primary to-primary/80 text-primary-foreground">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <BlurFade delay={0.1}>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Vad Deltagarna Får Med Sig
               </h2>
-              <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+              <p className="text-xl text-primary-foreground/90 max-w-3xl mx-auto">
                 Konkreta verktyg, praktiska metoder och personliga insikter som kan 
                 implementeras direkt i den dagliga verksamheten.
               </p>
@@ -312,7 +312,7 @@ export default function WorkshopsPage() {
               <BlurFade key={index} delay={0.2 + index * 0.1}>
                 <div className="flex items-start">
                   <Award className="h-6 w-6 text-[#D4A574] mr-4 mt-1 flex-shrink-0" />
-                  <span className="text-blue-100 leading-relaxed">{outcome}</span>
+                  <span className="text-primary-foreground/90 leading-relaxed">{outcome}</span>
                 </div>
               </BlurFade>
             ))}
@@ -334,21 +334,21 @@ export default function WorkshopsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {testimonials.map((testimonial, index) => (
               <BlurFade key={index} delay={0.2 + index * 0.1}>
-                <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300">
+                <div className="bg-card rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300">
                   <div className="flex mb-4">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                      <Star key={i} className="h-5 w-5 text-warning fill-current" />
                     ))}
                   </div>
                   
-                  <blockquote className="text-gray-600 mb-6 leading-relaxed italic">
+                  <blockquote className="text-muted-foreground mb-6 leading-relaxed italic">
                     &ldquo;{testimonial.quote}&rdquo;
                   </blockquote>
                   
-                  <div className="border-t border-gray-100 pt-4">
-                    <div className="font-semibold text-gray-900">{testimonial.author}</div>
-                    <div className="text-[#2C5F7C] font-medium">{testimonial.role}</div>
-                    <div className="text-gray-500 text-sm">{testimonial.company}</div>
+                  <div className="border-t border-border pt-4">
+                    <div className="font-semibold text-foreground">{testimonial.author}</div>
+                    <div className="text-primary font-medium">{testimonial.role}</div>
+                    <div className="text-muted-foreground text-sm">{testimonial.company}</div>
                   </div>
                 </div>
               </BlurFade>
@@ -358,14 +358,14 @@ export default function WorkshopsPage() {
       </section>
 
       {/* Investment & Booking */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-card">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <BlurFade delay={0.1}>
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
                 Investering & Bokning
               </h2>
-              <p className="text-xl text-gray-600 leading-relaxed">
+              <p className="text-xl text-muted-foreground leading-relaxed">
                 Workshops prissätts baserat på format, varaktighet och antal deltagare. 
                 Kontakta mig för en skräddarsydd offert anpassad efter era specifika behov.
               </p>
@@ -374,20 +374,20 @@ export default function WorkshopsPage() {
 
           <BlurFade delay={0.3}>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              <div className="text-center p-6 bg-gray-50 rounded-2xl">
-                <Shield className="h-8 w-8 text-[#2C5F7C] mx-auto mb-4" />
-                <h3 className="font-bold text-gray-900 mb-2">Kvalitetsgaranti</h3>
-                <p className="text-gray-600 text-sm">100% nöjdhetsgaranti eller full återbetalning</p>
+              <div className="text-center p-6 bg-muted rounded-2xl">
+                <Shield className="h-8 w-8 text-primary mx-auto mb-4" />
+                <h3 className="font-bold text-foreground mb-2">Kvalitetsgaranti</h3>
+                <p className="text-muted-foreground text-sm">100% nöjdhetsgaranti eller full återbetalning</p>
               </div>
-              <div className="text-center p-6 bg-gray-50 rounded-2xl">
-                <Users className="h-8 w-8 text-[#2C5F7C] mx-auto mb-4" />
-                <h3 className="font-bold text-gray-900 mb-2">Flexibel Leverans</h3>
-                <p className="text-gray-600 text-sm">På plats, virtuellt eller hybridformat</p>
+              <div className="text-center p-6 bg-muted rounded-2xl">
+                <Users className="h-8 w-8 text-primary mx-auto mb-4" />
+                <h3 className="font-bold text-foreground mb-2">Flexibel Leverans</h3>
+                <p className="text-muted-foreground text-sm">På plats, virtuellt eller hybridformat</p>
               </div>
-              <div className="text-center p-6 bg-gray-50 rounded-2xl">
-                <Clock className="h-8 w-8 text-[#2C5F7C] mx-auto mb-4" />
-                <h3 className="font-bold text-gray-900 mb-2">Snabb Uppstart</h3>
-                <p className="text-gray-600 text-sm">Kan levereras inom 2-3 veckor</p>
+              <div className="text-center p-6 bg-muted rounded-2xl">
+                <Clock className="h-8 w-8 text-primary mx-auto mb-4" />
+                <h3 className="font-bold text-foreground mb-2">Snabb Uppstart</h3>
+                <p className="text-muted-foreground text-sm">Kan levereras inom 2-3 veckor</p>
               </div>
             </div>
           </BlurFade>
@@ -395,13 +395,13 @@ export default function WorkshopsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
+      <section className="py-20 bg-gradient-to-br from-primary to-primary/80 text-primary-foreground">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <BlurFade delay={0.1}>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Redo att Utveckla Era Ledare?
             </h2>
-            <p className="text-xl text-gray-300 mb-10 leading-relaxed">
+            <p className="text-xl text-primary-foreground/90 mb-10 leading-relaxed">
               Låt oss diskutera hur en skräddarsydd workshop kan accelerera er 
               ledarskaps- och organisationsutveckling. Boka ett kostnadsfritt samtal idag.
             </p>
@@ -413,7 +413,7 @@ export default function WorkshopsPage() {
               </Link>
               <Link 
                 href="/forelasningar"
-                className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-gray-900 transition-all duration-300"
+                className="inline-flex items-center justify-center px-8 py-4 border-2 border-primary-foreground text-primary-foreground font-semibold rounded-full hover:bg-card hover:text-foreground transition-all duration-300"
               >
                 Se Föreläsningar
               </Link>

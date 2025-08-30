@@ -9,7 +9,8 @@ import {
   pressReleases, 
   mediaKit, 
   mediaAppearances, 
-  expertTopics 
+  expertTopics,
+  credentials
 } from "@/lib/data/media-kit";
 import { Badge } from "@/components/ui/badge";
 import { Camera, Users, Award, Star } from "lucide-react";
@@ -31,28 +32,6 @@ export const metadata: Metadata = {
   ],
 };
 
-const credentials = [
-  {
-    icon: Users,
-    label: "Expertområden",
-    value: "Transformation, Retail, FMCG, Digital, Styrelsearbete, Internationalisering"
-  },
-  {
-    icon: Camera,
-    label: "Medieerfarenhet",
-    value: "50+ TV, radio och podcast-intervjuer i nationella och internationella medier"
-  },
-  {
-    icon: Star,
-    label: "Språk",
-    value: "Flyt i svenska, engelska och tyska för internationella medier"
-  },
-  {
-    icon: Award,
-    label: "Trovärdighet",
-    value: "30+ års praktisk erfarenhet med dokumenterade resultat inom transformation"
-  }
-];
 
 export default function MediaPage() {
   return (
@@ -163,17 +142,22 @@ export default function MediaPage() {
           </BlurFade>
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
-            {credentials.map((credential, index) => (
-              <BlurFade key={index} delay={0.2 + index * 0.1}>
-                <div className="bg-white/10 rounded-2xl p-6 backdrop-blur-sm">
-                  <div className="flex items-center gap-4 mb-4">
-                    <credential.icon className="h-8 w-8 text-accent" />
-                    <h3 className="text-lg font-bold">{credential.label}</h3>
+            {credentials.map((credential, index) => {
+              const IconComponent = credential.icon === "Users" ? Users : 
+                                  credential.icon === "Camera" ? Camera :
+                                  credential.icon === "Star" ? Star : Award;
+              return (
+                <BlurFade key={index} delay={0.2 + index * 0.1}>
+                  <div className="bg-primary-foreground/10 rounded-2xl p-6 backdrop-blur-sm">
+                    <div className="flex items-center gap-4 mb-4">
+                      <IconComponent className="h-8 w-8 text-accent" />
+                      <h3 className="text-lg font-bold">{credential.label}</h3>
+                    </div>
+                    <p className="text-primary-foreground/90 leading-relaxed">{credential.value}</p>
                   </div>
-                  <p className="text-primary-foreground/90 leading-relaxed">{credential.value}</p>
-                </div>
-              </BlurFade>
-            ))}
+                </BlurFade>
+              );
+            })}
           </div>
 
           <BlurFade delay={0.5}>

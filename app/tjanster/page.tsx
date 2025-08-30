@@ -60,7 +60,7 @@ export default function ServicesPage() {
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
                 Vilken tjänst passar er bäst?
               </h2>
-              <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
+              <p className="text-xl text-primary-foreground/90 max-w-3xl mx-auto mb-8">
                 Låt oss diskutera era utmaningar och hitta den mest lämpliga lösningen 
                 för er transformation.
               </p>

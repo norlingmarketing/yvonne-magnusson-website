@@ -4,7 +4,7 @@ import { NumberTicker } from "@/components/magicui/number-ticker";
 import { Button } from "@/components/ui/button";
 import { CareerTimeline } from "@/components/page-components/career-timeline";
 import { CurrentRoles } from "@/components/page-components/current-roles";
-import { timelineData, currentRoles, expertise, languages } from "@/lib/data/timeline";
+import { timelineData, currentRoles, expertise, languages, educationData } from "@/lib/data/timeline";
 import Link from "next/link";
 import { ArrowRight, Download, Users, GraduationCap, Globe } from "lucide-react";
 
@@ -15,12 +15,6 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage() {
-  const educationData = [
-    "Civilekonom, Mittuniversitetet, Sverige",
-    "Internationella studier, Julius-Maximilians-Universität, Tyskland",
-    "Masterstudier, University of Warwick",
-    "Styrelsecertifiering \"Rätt fokus i styrelsearbetet\", Styrelseakademien"
-  ];
 
   return (
     <main className="min-h-screen">

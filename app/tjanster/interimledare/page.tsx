@@ -204,7 +204,7 @@ export default function InterimExecutivePage() {
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Interimledarskap som Levererar
               </h2>
-              <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+              <p className="text-xl text-primary-foreground/90 max-w-3xl mx-auto">
                 30+ års operativ erfarenhet kombinerat med beprövade resultat inom 
                 transformation och tillväxt.
               </p>
@@ -219,7 +219,7 @@ export default function InterimExecutivePage() {
                     <CheckCircle className="h-6 w-6 text-accent mr-3" />
                     <h3 className="text-lg font-bold">{capability.title}</h3>
                   </div>
-                  <p className="text-blue-100 leading-relaxed">{capability.description}</p>
+                  <p className="text-primary-foreground/90 leading-relaxed">{capability.description}</p>
                 </div>
               </BlurFade>
             ))}
@@ -246,7 +246,7 @@ export default function InterimExecutivePage() {
               <BlurFade key={index} delay={0.2 + index * 0.1}>
                 <div className="bg-background rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300">
                   <div className="flex items-center mb-6">
-                    <div className="p-3 bg-blue-50 rounded-xl mr-4">
+                    <div className="p-3 bg-primary/10 rounded-xl mr-4">
                       {phase.icon}
                     </div>
                     <h3 className="text-xl font-bold text-foreground">{phase.phase}</h3>

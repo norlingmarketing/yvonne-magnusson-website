@@ -49,14 +49,16 @@ git push                 # Push when requested
 This is a professional website for Yvonne Magnusson, a transformation leadership expert. Built with Next.js 15.5.0 and modern tooling.
 
 ### Framework & Technology Stack
-- **Next.js 15.5.0** with App Router and TypeScript
-- **React 19.1.0** with strict mode enabled
+- **Next.js 15.5.2** with App Router and TypeScript
+- **React 19.1.1** with strict mode enabled
 - **Tailwind CSS 4** for styling with PostCSS integration
 - **Turbopack** for optimized development and builds
-- **Magic UI** for premium animations and components
-- **Shadcn/ui** for base UI components
+- **Individual Magic UI components** for premium animations (not full library)
+- **Shadcn/ui** for base UI components with "new-york" style
 - **Framer Motion** for smooth animations
 - **React Hook Form + Zod** for form validation
+- **Next Themes** for light/dark mode support
+- **Lucide React** for consistent iconography
 
 ### Site Structure & Content Strategy
 The website targets Swedish executive market with Swedish-first content and professional positioning:
@@ -91,9 +93,10 @@ The website targets Swedish executive market with Swedish-first content and prof
 ├── /layout - Footer and structural components
 ├── /magicui - Premium animated components (gradient text, number tickers, shimmer buttons)
 ├── /navigation - Main navigation with mobile menu
-├── /page-components - Reusable page section components (NEW)
+├── /page-components - Reusable page section components
 │   ├── page-hero.tsx - Standardized hero sections across pages
 │   ├── service-cards.tsx - Service offering displays
+│   ├── service-detail-hero.tsx - Service detail page headers
 │   ├── process-steps.tsx - Workflow visualization components
 │   ├── contact-form.tsx - Contact forms with validation
 │   ├── contact-methods.tsx - Contact information display
@@ -103,7 +106,12 @@ The website targets Swedish executive market with Swedish-first content and prof
 │   ├── impact-areas.tsx - Results and impact visualization
 │   ├── speaking-topics.tsx - Speaking engagement topics
 │   ├── article-cards.tsx - Blog/insights article display
-│   └── media-kit.tsx - Press and media resources
+│   ├── expert-topics.tsx - Expertise area displays
+│   ├── expertise-section.tsx - Professional expertise sections
+│   ├── media-appearances.tsx - Media and speaking appearances
+│   ├── media-contact-info.tsx - Press contact information
+│   ├── media-kit-downloads.tsx - Downloadable media resources
+│   └── press-releases.tsx - Press release content
 ├── /sections - Homepage sections (hero, credentials, services, testimonials, CTA)
 ├── /seo - SEO components (structured data)
 └── /ui - Base UI components (shadcn/ui based)
@@ -132,6 +140,69 @@ The website targets Swedish executive market with Swedish-first content and prof
 - Static content embedded in components for immediate deployment
 - Site configuration centralized in `/lib/site-config.ts` (contact info, social links)
 
+### Component Reuse Guidelines - CRITICAL
+
+**NEVER hardcode content directly in pages:**
+❌ **WRONG** - Hardcoding content in page files:
+```tsx
+// In app/services/page.tsx
+export default function ServicesPage() {
+  const services = [
+    { title: "Board Work", description: "..." },
+    { title: "Advisory", description: "..." }
+  ];
+  
+  return (
+    <div>
+      <h1>Our Services</h1>
+      {services.map(service => (
+        <div key={service.title}>
+          <h2>{service.title}</h2>
+          <p>{service.description}</p>
+        </div>
+      ))}
+    </div>
+  );
+}
+```
+
+**ALWAYS use reusable components with centralized data:**
+✅ **CORRECT** - Use page-components with centralized data:
+```tsx
+// In app/services/page.tsx
+import { ServiceCards } from '@/components/page-components/service-cards';
+import { services } from '@/lib/data/services';
+
+export default function ServicesPage() {
+  return <ServiceCards services={services} />;
+}
+```
+
+**Component Usage Patterns:**
+- **Page Components** (`@/components/page-components/`) - Reusable sections for pages
+- **Section Components** (`@/components/sections/`) - Homepage-specific sections  
+- **Data Files** (`@/lib/data/`) - Centralized content that feeds components
+- **Type Definitions** (`@/lib/types/`) - TypeScript interfaces for all data structures
+
+**Data Centralization Examples:**
+- `educationData` → `/lib/data/timeline.ts`
+- `industries` → `/lib/data/case-studies.ts`
+- `credentials` → `/lib/data/media-kit.ts`
+- `boardCompetencies` → `/lib/data/services.ts`
+
+**Critical Requirements:**
+- ALL content arrays must be in data files, not in page components
+- Import data from centralized files and pass as props to components
+- Never define content arrays inline in page files
+- Use TypeScript interfaces to ensure data consistency
+
+**Benefits of this approach:**
+- Content updates only require changing data files
+- Components can be reused across multiple pages
+- Type safety ensures consistency
+- Easier to maintain and update content
+- Single source of truth for all content
+
 ### Form Validation Pattern
 - All forms use React Hook Form with Zod schemas for validation
 - Form components should follow the established pattern in contact forms
@@ -149,16 +220,20 @@ The website targets Swedish executive market with Swedish-first content and prof
 - **Client Components:** "use client" for interactive components with hooks/state
 - **Forms:** React Hook Form with Zod validation
 - **Navigation:** Dynamic active states based on pathname
-- **Animations:** Magic UI components for premium feel, avoid overuse
+- **Animations:** Individual Magic UI components for premium feel, avoid overuse
 - **Responsive:** Tailwind CSS classes with mobile-first approach
+- **Icons:** Lucide React icons with icon mapping utility (`@/lib/utils/icon-map.ts`)
+- **Theme Support:** Next Themes provider with system, light, dark modes
 
 ### Styling Guidelines - CRITICAL
 
 #### Light/Dark Mode Theming Rules
 
-**NEVER use hardcoded colors:**
+**NEVER use hardcoded colors - THIS BREAKS DARK MODE:**
 ❌ `bg-blue-600`, `text-green-500`, `bg-white`, `bg-gray-50`, `text-gray-600`
 ❌ `border-gray-200`, `hover:bg-blue-700`, `text-red-500`
+❌ `text-blue-100`, `bg-blue-50`, `from-gray-50 to-white`
+❌ `text-yellow-400`, `bg-gradient-to-br from-gray-900`
 
 **ALWAYS use shadcn CSS variables:**
 ✅ `bg-primary` / `text-primary-foreground` - Primary brand colors
@@ -169,6 +244,15 @@ The website targets Swedish executive market with Swedish-first content and prof
 ✅ `border-border` - All borders
 ✅ `ring-ring` - Focus rings and outlines
 
+**Common Replacements:**
+✅ `bg-white` → `bg-card` or `bg-background`
+✅ `text-gray-600` → `text-muted-foreground`
+✅ `bg-gray-50` → `bg-muted`
+✅ `text-blue-100` → `text-primary-foreground/90`
+✅ `bg-blue-50` → `bg-primary/10`
+✅ `text-blue-600` → `text-primary`
+✅ `from-gray-50 to-white` → `from-muted/50 to-background`
+
 **Hover and Interactive States:**
 ✅ `hover:bg-primary/90` - Use opacity modifiers
 ✅ `hover:bg-muted/50` - Subtle hover effects
@@ -177,8 +261,11 @@ The website targets Swedish executive market with Swedish-first content and prof
 **Gradient and Special Effects:**
 ✅ `from-primary/10 to-secondary/10` - Gradients with opacity
 ✅ `bg-gradient-to-br from-muted/50 to-background` - Page backgrounds
+✅ `bg-gradient-to-br from-primary to-primary/80` - Primary gradients
 
-**CSS Variable System:** All colors defined in `globals.css` with light/dark variants
+**WARNING:** Using hardcoded colors will break the site's dark mode functionality completely.
+
+**CSS Variable System:** All colors defined in `globals.css` with OKLCH color space and light/dark variants
 **Component Styling:** Use `cn()` utility to merge Tailwind classes conditionally
 
 ### Path Aliases
@@ -196,9 +283,11 @@ The website targets Swedish executive market with Swedish-first content and prof
 
 ### Configuration Files
 - **components.json** - Shadcn/ui configuration with "new-york" style, CSS variables enabled, stone base color
-- **tsconfig.json** - TypeScript configuration with strict mode and path aliases
-- **postcss.config.mjs** - Tailwind CSS PostCSS integration
-- **globals.css** - CSS variables for theming (light/dark mode support built-in)
+- **tsconfig.json** - TypeScript configuration with strict mode and path aliases  
+- **postcss.config.mjs** - Tailwind CSS 4 PostCSS integration
+- **eslint.config.mjs** - ESLint configuration with Next.js and TypeScript rules
+- **next.config.ts** - Next.js configuration (minimal setup)
+- **globals.css** - CSS variables for theming with OKLCH color space, light/dark mode support
 - **lib/site-config.ts** - Centralized site configuration (contact info, social links, company details)
 
 ### Color System Examples

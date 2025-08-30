@@ -109,3 +109,10 @@ export const languages = [
   { lang: "Engelska", level: "Flytande" },
   { lang: "Tyska", level: "Goda kunskaper" }
 ];
+
+export const educationData = [
+  "Civilekonom, Mittuniversitetet, Sverige",
+  "Internationella studier, Julius-Maximilians-Universität, Tyskland",
+  "Masterstudier, University of Warwick",
+  "Styrelsecertifiering \"Rätt fokus i styrelsearbetet\", Styrelseakademien"
+];
