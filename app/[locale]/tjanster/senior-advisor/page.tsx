@@ -32,14 +32,6 @@ export default async function SeniorAdvisorPage({
   const { locale } = await params;
   const dict = await getDictionary(locale as 'en' | 'sv');
 
-  const iconMap = {
-    TrendingUp,
-    Users,
-    Target,
-    Lightbulb,
-    Shield,
-    Award,
-  };
 
   return (
     <main className="min-h-screen">

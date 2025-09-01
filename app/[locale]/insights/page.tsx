@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ArticleCards } from "@/components/page-components/article-cards";
 import { getArticles, getCategories } from "@/lib/data/insights-articles";
 import { CTASection } from "@/components/sections/cta-section";
-import { TrendingUp, Users, Target, Lightbulb, BookOpen, ArrowRight, Mail } from "lucide-react";
+import { TrendingUp, Users, Target, Lightbulb, BookOpen, Mail } from "lucide-react";
 import Link from "next/link";
 import { getDictionary } from "@/lib/dictionaries";
 
@@ -23,12 +23,6 @@ export async function generateMetadata({
   };
 }
 
-const iconMap = {
-  TrendingUp,
-  Users,
-  Target,
-  Lightbulb
-};
 
 export default async function InsightsPage({
   params,

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { BlurFade } from "@/components/magicui/blur-fade";
 import { NumberTicker } from "@/components/magicui/number-ticker";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { LocalizedLink } from "@/components/localized-link";
 import { type Locale } from "@/lib/routes";
 import { ArrowLeft, Users, Target, Clock, Star, CheckCircle, ArrowRight, Lightbulb, TrendingUp, Shield, Award } from "lucide-react";

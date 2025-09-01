@@ -19,7 +19,7 @@ export interface Dictionary {
   };
   hero: {
     badge: string;
-    titleStart: string;
+    personalIntro: string;
     titleHighlight: string;
     titleEnd: string;
     subtitle: string;
