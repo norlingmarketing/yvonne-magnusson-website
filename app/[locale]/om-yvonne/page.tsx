@@ -7,14 +7,30 @@ import { CurrentRoles } from "@/components/page-components/current-roles";
 import { timelineData, currentRoles, expertise, languages, educationData } from "@/lib/data/timeline";
 import Link from "next/link";
 import { ArrowRight, Download, Users, GraduationCap, Globe } from "lucide-react";
+import { getDictionary } from "@/lib/dictionaries";
 
-export const metadata: Metadata = {
-  title: "Om Yvonne Magnusson - Transformation Leadership Expert",
-  description: "30+ års erfarenhet från ledande roller inom retail och FMCG. 18 år som VD med genomförda turnarounds och internationell expansion.",
-  keywords: "Yvonne Magnusson, transformation leader, retail expert, VD, styrelseledamot, FMCG",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const dict = await getDictionary(locale as 'en' | 'sv');
+  
+  return {
+    title: `${dict.about.title} - Transformation Leadership Expert`,
+    description: dict.about.subtitle,
+    keywords: "Yvonne Magnusson, transformation leader, retail expert, CEO, board member, FMCG",
+  };
+}
 
-export default function AboutPage() {
+export default async function AboutPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const dict = await getDictionary(locale as 'en' | 'sv');
 
   return (
     <main className="min-h-screen">
@@ -25,41 +41,39 @@ export default function AboutPage() {
             <BlurFade delay={0.2}>
               <div>
                 <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-                  Om Yvonne Magnusson
+                  {dict.about.title}
                 </h1>
                 <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                  En ledare med djup erfarenhet av transformation inom retail och FMCG. 
-                  Specialist på att skapa lönsam tillväxt genom strategisk förändring, 
-                  kulturell utveckling och internationell expansion.
+                  {dict.about.subtitle}
                 </p>
                 
                 <div className="flex flex-wrap gap-4 mb-8">
                   <div className="flex items-center gap-2">
                     <NumberTicker value={30} className="text-2xl font-bold text-primary" />
                     <span className="text-2xl font-bold text-primary">+</span>
-                    <span className="text-muted-foreground">års erfarenhet</span>
+                    <span className="text-muted-foreground">{dict.about.experienceYears}</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <NumberTicker value={18} className="text-2xl font-bold text-primary" />
-                    <span className="text-muted-foreground">år som VD</span>
+                    <span className="text-muted-foreground">{dict.about.ceoYears}</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <NumberTicker value={4} className="text-2xl font-bold text-primary" />
-                    <span className="text-muted-foreground">turnarounds</span>
+                    <span className="text-muted-foreground">{dict.about.turnarounds}</span>
                   </div>
                 </div>
                 
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
-                    <Link href="/kontakt" className="flex items-center gap-2">
-                      Diskutera samarbete
+                    <Link href={`/${locale}/kontakt`} className="flex items-center gap-2">
+                      {dict.about.discussCollaboration}
                       <ArrowRight className="h-5 w-5" />
                     </Link>
                   </Button>
                   <Button asChild variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
                     <a href="/downloads/yvonne-magnusson-cv.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center">
                       <Download className="h-5 w-5 mr-2" />
-                      Ladda ner CV
+                      {dict.about.downloadCV}
                     </a>
                   </Button>
                 </div>
@@ -75,7 +89,7 @@ export default function AboutPage() {
                       <Users className="h-12 w-12 text-primary" />
                     </div>
                     <p className="text-muted-foreground italic">
-                      &ldquo;Transformation genom ledarskap&rdquo;
+                      &ldquo;{dict.about.transformationQuote}&rdquo;
                     </p>
                   </div>
                 </div>
@@ -96,7 +110,7 @@ export default function AboutPage() {
             <BlurFade delay={0.2}>
               <div>
                 <h2 className="text-3xl font-bold text-foreground mb-8">
-                  Expertområden
+                  {dict.about.expertiseTitle}
                 </h2>
                 <div className="flex flex-wrap gap-3">
                   {expertise.map((skill) => (
@@ -114,14 +128,14 @@ export default function AboutPage() {
             <BlurFade delay={0.4}>
               <div>
                 <h2 className="text-3xl font-bold text-foreground mb-8">
-                  Utbildning & Språk
+                  {dict.about.educationLanguagesTitle}
                 </h2>
                 
                 <div className="space-y-6">
                   <div>
                     <h3 className="text-lg font-semibold text-foreground mb-3 flex items-center gap-2">
                       <GraduationCap className="h-5 w-5 text-primary" />
-                      Utbildning
+                      {dict.about.educationSubtitle}
                     </h3>
                     <ul className="space-y-2 text-muted-foreground">
                       {educationData.map((education, index) => (
@@ -133,7 +147,7 @@ export default function AboutPage() {
                   <div>
                     <h3 className="text-lg font-semibold text-foreground mb-3 flex items-center gap-2">
                       <Globe className="h-5 w-5 text-primary" />
-                      Språk
+                      {dict.about.languagesSubtitle}
                     </h3>
                     <div className="space-y-2">
                       {languages.map((lang, index) => (
@@ -157,14 +171,14 @@ export default function AboutPage() {
           <BlurFade delay={0.2}>
             <div className="text-center">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Redo att diskutera ert nästa steg?
+                {dict.about.ctaTitle}
               </h2>
               <p className="text-xl text-primary-foreground/80 max-w-3xl mx-auto mb-8">
-                Låt oss utforska hur min erfarenhet kan bidra till er transformation och tillväxt.
+                {dict.about.ctaSubtitle}
               </p>
               <Button asChild size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90">
-                <Link href="/kontakt" className="flex items-center gap-2">
-                  Boka introduktionssamtal
+                <Link href={`/${locale}/kontakt`} className="flex items-center gap-2">
+                  {dict.about.ctaButton}
                   <ArrowRight className="h-5 w-5" />
                 </Link>
               </Button>

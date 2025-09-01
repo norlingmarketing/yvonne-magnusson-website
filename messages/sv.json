@@ -102,6 +102,23 @@
       }
     ]
   },
+  "about": {
+    "title": "Om Yvonne Magnusson",
+    "subtitle": "En ledare med djup erfarenhet av transformation inom retail och FMCG. Specialist på att skapa lönsam tillväxt genom strategisk förändring, kulturell utveckling och internationell expansion.",
+    "experienceYears": "års erfarenhet",
+    "ceoYears": "år som VD",
+    "turnarounds": "turnarounds",
+    "discussCollaboration": "Diskutera samarbete",
+    "downloadCV": "Ladda ner CV",
+    "transformationQuote": "Transformation genom ledarskap",
+    "expertiseTitle": "Expertområden",
+    "educationLanguagesTitle": "Utbildning & Språk",
+    "educationSubtitle": "Utbildning",
+    "languagesSubtitle": "Språk",
+    "ctaTitle": "Redo att diskutera ert nästa steg?",
+    "ctaSubtitle": "Låt oss utforska hur min erfarenhet kan bidra till er transformation och tillväxt.",
+    "ctaButton": "Boka introduktionssamtal"
+  },
   "cta": {
     "subtitle": "REDO ATT BÖRJA?",
     "title": "Accelerera er transformation idag",

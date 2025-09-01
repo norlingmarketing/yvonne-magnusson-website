@@ -65,6 +65,23 @@ export interface Dictionary {
       role: string;
     }>;
   };
+  about: {
+    title: string;
+    subtitle: string;
+    experienceYears: string;
+    ceoYears: string;
+    turnarounds: string;
+    discussCollaboration: string;
+    downloadCV: string;
+    transformationQuote: string;
+    expertiseTitle: string;
+    educationLanguagesTitle: string;
+    educationSubtitle: string;
+    languagesSubtitle: string;
+    ctaTitle: string;
+    ctaSubtitle: string;
+    ctaButton: string;
+  };
   cta: {
     subtitle: string;
     title: string;

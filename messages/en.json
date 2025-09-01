@@ -102,6 +102,23 @@
       }
     ]
   },
+  "about": {
+    "title": "About Yvonne Magnusson",
+    "subtitle": "A leader with deep experience in transformation within retail and FMCG. Specialist in creating profitable growth through strategic change, cultural development and international expansion.",
+    "experienceYears": "years of experience",
+    "ceoYears": "years as CEO",
+    "turnarounds": "turnarounds",
+    "discussCollaboration": "Discuss collaboration",
+    "downloadCV": "Download CV",
+    "transformationQuote": "Transformation through leadership",
+    "expertiseTitle": "Areas of Expertise",
+    "educationLanguagesTitle": "Education & Languages",
+    "educationSubtitle": "Education",
+    "languagesSubtitle": "Languages",
+    "ctaTitle": "Ready to discuss your next step?",
+    "ctaSubtitle": "Let's explore how my experience can contribute to your transformation and growth.",
+    "ctaButton": "Book introductory meeting"
+  },
   "cta": {
     "subtitle": "READY TO BEGIN?",
     "title": "Accelerate your transformation today",
