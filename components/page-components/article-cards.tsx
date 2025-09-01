@@ -17,11 +17,11 @@ interface ArticleCardsProps {
 }
 
 export function ArticleCards({ articles, categories, showFeaturedFirst = true, dict }: ArticleCardsProps) {
-  const [selectedCategory, setSelectedCategory] = useState("Alla");
+  const [selectedCategory, setSelectedCategory] = useState(categories[0]); // Use first category (Alla/All)
   const [showAll, setShowAll] = useState(false);
 
   // Filter articles based on selected category
-  const filteredArticles = selectedCategory === "Alla" 
+  const filteredArticles = (selectedCategory === "Alla" || selectedCategory === "All") 
     ? articles 
     : articles.filter(article => article.category === selectedCategory);
 

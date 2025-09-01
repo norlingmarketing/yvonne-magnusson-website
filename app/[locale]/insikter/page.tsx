@@ -3,7 +3,8 @@ import { BlurFade } from "@/components/magicui/blur-fade";
 import { Button } from "@/components/ui/button";
 import { ArticleCards } from "@/components/page-components/article-cards";
 import { getArticles, getCategories } from "@/lib/data/insights-articles";
-import { TrendingUp, Users, Target, Lightbulb, BookOpen, ArrowRight } from "lucide-react";
+import { CTASection } from "@/components/sections/cta-section";
+import { TrendingUp, Users, Target, Lightbulb, BookOpen, ArrowRight, Mail } from "lucide-react";
 import Link from "next/link";
 import { getDictionary } from "@/lib/dictionaries";
 
@@ -102,26 +103,17 @@ export default async function InsightsPage({
       </section>
 
       {/* Newsletter CTA */}
-      <section className="py-20 bg-gradient-to-br from-primary to-primary/80 text-primary-foreground">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <BlurFade delay={0.1}>
-            <BookOpen className="h-16 w-16 text-accent mx-auto mb-8" />
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              {dict.insights.newsletterTitle}
-            </h2>
-            <p className="text-xl text-primary-foreground/90 mb-10 leading-relaxed">
-              {dict.insights.newsletterSubtitle}
-            </p>
-            
-            <Button asChild size="lg" variant="secondary">
-              <Link href={`/${locale}/kontakt`}>
-                <ArrowRight className="h-5 w-5 mr-2" />
-                {dict.insights.newsletterButton}
-              </Link>
-            </Button>
-          </BlurFade>
-        </div>
-      </section>
+      <CTASection
+        locale={locale}
+        dict={dict}
+        customTitle={dict.insights.newsletterTitle}
+        customDescription={dict.insights.newsletterSubtitle}
+        primaryButtonText={dict.insights.newsletterButton}
+        primaryButtonIcon={<Mail className="h-5 w-5 ml-2" />}
+        primaryButtonHref={`/${locale}/kontakt`}
+        secondaryButtonText={dict.common.viewAll}
+        secondaryButtonHref={`/${locale}/tjanster`}
+      />
 
       {/* Featured Topics */}
       <section className="py-20 bg-muted/50">
