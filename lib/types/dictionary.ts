@@ -110,6 +110,28 @@ export interface Dictionary {
         finalCtaSubtitle: string;
         finalCtaButton: string;
         finalCtaSecondary: string;
+        boardCompetencies: Array<{
+          icon: string;
+          title: string;
+          description: string;
+          details: string[];
+        }>;
+        boardPositions: Array<{
+          role: string;
+          companies: Array<{
+            name: string;
+            description: string;
+          }>;
+        }>;
+        boardIdealSituations: Array<{
+          title: string;
+          description: string;
+          examples: string[];
+        }>;
+        boardValueCreation: Array<{
+          area: string;
+          impact: string;
+        }>;
       };
     };
   };

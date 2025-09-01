@@ -63,113 +63,11 @@ export const getProcessSteps = (dict: Dictionary): ProcessStep[] =>
     description: step.description
   }));
 
-// Board work specific data
-export const boardCompetencies = [
-  {
-    icon: "Globe",
-    title: "Internationalisering",
-    description: "Djup erfarenhet av expansion till nordiska och globala marknader",
-    details: [
-      "Marknadsetablering i nya länder",
-      "Kulturell anpassning och lokalisering", 
-      "Partnerskap och joint ventures",
-      "Regulatory compliance internationellt"
-    ]
-  },
-  {
-    icon: "TrendingUp",
-    title: "Digital Transformation",
-    description: "Proven track record av digital omställning och teknisk utveckling",
-    details: [
-      "E-handel och omnikanal-strategier",
-      "Digital infrastruktur och system",
-      "Data-driven beslutsfattande",
-      "Teknisk innovation och automation"
-    ]
-  },
-  {
-    icon: "Target",
-    title: "Strategisk Utveckling",
-    description: "Långsiktig strategiutveckling med fokus på hållbar tillväxt",
-    details: [
-      "Affärsmodells-innovation",
-      "Marknadsstrategi och positioning",
-      "M&A och tillväxtinitiativ",
-      "Risk- och möjlighetsanalys"
-    ]
-  },
-  {
-    icon: "Users",
-    title: "Kulturell Transformation",
-    description: "Ledarskap i organisatorisk förändring och kulturutveckling",
-    details: [
-      "Change management processer",
-      "Ledarskaps- och teamutveckling",
-      "Kommunikation och förankring",
-      "Performance management"
-    ]
-  }
-];
-
-export const boardPositions = [
-  {
-    role: "Styrelseordförande",
-    companies: [
-      { name: "MAIA Universe", description: "Tech startup inom AI och hållbarhet" },
-      { name: "Waynes Coffee Sweden AB", description: "Ledande kaffekedja i Sverige" },
-      { name: "IWF", description: "International Women's Forum" }
-    ]
-  },
-  {
-    role: "Styrelseledamot", 
-    companies: [
-      { name: "Bio-Restore", description: "Bioteknikföretag inom miljölösningar" },
-      { name: "DI Close", description: "Nätverk för kvinnliga ledare" }
-    ]
-  }
-];
-
-export const boardIdealSituations = [
-  {
-    title: "Transformationsresor",
-    description: "Företag som genomgår större förändringar inom digitalisering, affärsmodell eller marknadsstrategi.",
-    examples: ["Digital transformation", "Affärsmodells-innovation", "Kulturförändring"]
-  },
-  {
-    title: "Internationell expansion", 
-    description: "Bolag som planerar eller genomför etablering på nya marknader, särskilt inom Norden.",
-    examples: ["Marknadsetablering", "Joint ventures", "Kulturell anpassning"]
-  },
-  {
-    title: "Tillväxt och skalning",
-    description: "Företag i tillväxtfas som behöver erfaren ledning för att hantera komplexitet och risk.",
-    examples: ["Skalning av verksamhet", "Systemuppbyggnad", "Teamutveckling"]
-  },
-  {
-    title: "Krissituationer",
-    description: "Bolag som behöver erfaren krishantering och turnaround-expertis för att vända utvecklingen.",
-    examples: ["Turnaround management", "Stakeholder management", "Operativ effektivisering"]
-  }
-];
-
-export const boardValueCreation = [
-  {
-    area: "Strategisk riktning",
-    impact: "Tydlig långsiktig strategi med konkreta milstolpar och mätbara mål"
-  },
-  {
-    area: "Risk management",
-    impact: "Strukturerad riskanalys och förebyggande åtgärder baserat på praktisk erfarenhet"
-  },
-  {
-    area: "Branschexpertis",
-    impact: "Djup förståelse för retail och FMCG med nätverk och marknadskännedom"
-  },
-  {
-    area: "Genomförandekraft",
-    impact: "Praktisk erfarenhet av att omsätta strategi till handling och resultat"
-  }
-];
+// Board work specific data - dynamic functions
+export const getBoardCompetencies = (dict: Dictionary) => dict.pages.services.boardWork.boardCompetencies;
+export const getBoardPositions = (dict: Dictionary) => dict.pages.services.boardWork.boardPositions;
+export const getBoardIdealSituations = (dict: Dictionary) => dict.pages.services.boardWork.boardIdealSituations;
+export const getBoardValueCreation = (dict: Dictionary) => dict.pages.services.boardWork.boardValueCreation;
 
 // Senior advisor specific data
 export const seniorAdvisorExpertise = [

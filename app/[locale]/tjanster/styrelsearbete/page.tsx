@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import { ArrowRight, Users, Globe, TrendingUp, Target, CheckCircle, ArrowLeft } from "lucide-react";
-import { boardCompetencies, boardPositions, boardIdealSituations, boardValueCreation } from "@/lib/data/services";
+import { getBoardCompetencies, getBoardPositions, getBoardIdealSituations, getBoardValueCreation } from "@/lib/data/services";
 import { getDictionary } from "@/lib/dictionaries";
 
 export async function generateMetadata({
@@ -34,6 +34,13 @@ export default async function BoardWorkPage({
 }) {
   const { locale } = await params;
   const dict = await getDictionary(locale as 'en' | 'sv');
+  
+  // Get dynamic data based on dictionary
+  const boardCompetencies = getBoardCompetencies(dict);
+  const boardPositions = getBoardPositions(dict);
+  const boardIdealSituations = getBoardIdealSituations(dict);
+  const boardValueCreation = getBoardValueCreation(dict);
+  
   return (
     <main className="min-h-screen">
         {/* Hero Section */}

@@ -162,7 +162,110 @@
         "finalCtaTitle": "Strengthen your board with industry expertise",
         "finalCtaSubtitle": "Let's discuss how I can contribute to your board and support your strategic development.",
         "finalCtaButton": "Discuss board role",
-        "finalCtaSecondary": "View background & experience"
+        "finalCtaSecondary": "View background & experience",
+        "boardCompetencies": [
+          {
+            "icon": "Globe",
+            "title": "Internationalization",
+            "description": "Deep experience in expansion to Nordic and global markets",
+            "details": [
+              "Market establishment in new countries",
+              "Cultural adaptation and localization", 
+              "Partnerships and joint ventures",
+              "International regulatory compliance"
+            ]
+          },
+          {
+            "icon": "TrendingUp",
+            "title": "Digital Transformation",
+            "description": "Proven track record in digital transformation and technical development",
+            "details": [
+              "E-commerce and omnichannel strategies",
+              "Digital infrastructure and systems",
+              "Data-driven decision making",
+              "Technical innovation and automation"
+            ]
+          },
+          {
+            "icon": "Target",
+            "title": "Strategic Development",
+            "description": "Long-term strategy development with focus on sustainable growth",
+            "details": [
+              "Business model innovation",
+              "Market strategy and positioning",
+              "M&A and growth initiatives",
+              "Risk and opportunity analysis"
+            ]
+          },
+          {
+            "icon": "Users",
+            "title": "Cultural Transformation",
+            "description": "Leadership in organizational change and cultural development",
+            "details": [
+              "Change management processes",
+              "Leadership and team development",
+              "Communication and anchoring",
+              "Performance management"
+            ]
+          }
+        ],
+        "boardPositions": [
+          {
+            "role": "Chairman of the Board",
+            "companies": [
+              { "name": "MAIA Universe", "description": "Tech startup in AI and sustainability" },
+              { "name": "Waynes Coffee Sweden AB", "description": "Leading coffee chain in Sweden" },
+              { "name": "IWF", "description": "International Women's Forum" }
+            ]
+          },
+          {
+            "role": "Board Member", 
+            "companies": [
+              { "name": "Bio-Restore", "description": "Biotech company in environmental solutions" },
+              { "name": "DI Close", "description": "Network for female leaders" }
+            ]
+          }
+        ],
+        "boardIdealSituations": [
+          {
+            "title": "Transformation journeys",
+            "description": "Companies undergoing major changes in digitalization, business model or market strategy.",
+            "examples": ["Digital transformation", "Business model innovation", "Cultural change"]
+          },
+          {
+            "title": "International expansion", 
+            "description": "Companies planning or implementing establishment in new markets, especially within the Nordics.",
+            "examples": ["Market establishment", "Joint ventures", "Cultural adaptation"]
+          },
+          {
+            "title": "Growth and scaling",
+            "description": "Companies in growth phase needing experienced leadership to handle complexity and risk.",
+            "examples": ["Business scaling", "System development", "Team development"]
+          },
+          {
+            "title": "Crisis situations",
+            "description": "Companies needing experienced crisis management and turnaround expertise to turn around development.",
+            "examples": ["Turnaround management", "Stakeholder management", "Operational efficiency"]
+          }
+        ],
+        "boardValueCreation": [
+          {
+            "area": "Strategic direction",
+            "impact": "Clear long-term strategy with concrete milestones and measurable goals"
+          },
+          {
+            "area": "Risk management",
+            "impact": "Structured risk analysis and preventive measures based on practical experience"
+          },
+          {
+            "area": "Industry expertise",
+            "impact": "Deep understanding of retail and FMCG with network and market knowledge"
+          },
+          {
+            "area": "Execution capability",
+            "impact": "Practical experience in translating strategy into action and results"
+          }
+        ]
       }
     }
   },
