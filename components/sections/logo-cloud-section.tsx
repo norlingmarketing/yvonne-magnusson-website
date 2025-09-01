@@ -31,7 +31,7 @@ interface LogoCloudSectionProps {
   dict: Dictionary;
 }
 
-export function LogoCloudSection({ locale, dict }: LogoCloudSectionProps) {
+export function LogoCloudSection({ locale: _locale, dict: _dict }: LogoCloudSectionProps) {
   return (
     <section className="py-14">
       <div className="container mx-auto px-4 md:px-8">

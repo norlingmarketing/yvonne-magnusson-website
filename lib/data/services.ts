@@ -2,7 +2,7 @@ import { Service, ProcessStep } from "@/lib/types";
 import { Dictionary } from "@/lib/types/dictionary";
 import { type RouteKey } from "@/lib/routes";
 
-export const getServices = (dict: Dictionary, locale: string): Service[] => [
+export const getServices = (dict: Dictionary, _locale: string): Service[] => [
   {
     id: "styrelsearbete",
     icon: "Users",

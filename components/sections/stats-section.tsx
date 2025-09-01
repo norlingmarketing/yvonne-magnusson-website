@@ -16,7 +16,7 @@ interface StatsSectionProps {
   dict: Dictionary;
 }
 
-export function StatsSection({ locale, dict }: StatsSectionProps) {
+export function StatsSection({ locale: _locale, dict: _dict }: StatsSectionProps) {
   return (
     <section className="py-16 md:py-24 bg-gradient-to-b from-muted/50 to-background">
       <div className="container mx-auto px-4">

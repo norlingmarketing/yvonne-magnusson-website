@@ -36,7 +36,7 @@ interface SpeakerShowcaseProps {
   dict: Dictionary;
 }
 
-export function SpeakerShowcase({ locale, dict }: SpeakerShowcaseProps) {
+export function SpeakerShowcase({ locale, dict: _dict }: SpeakerShowcaseProps) {
   return (
     <section className="py-20 bg-gradient-to-br from-muted/50 via-background to-muted/50">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

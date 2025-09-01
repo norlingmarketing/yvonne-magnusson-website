@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { LocalizedLink } from "@/components/localized-link";
 import { Dictionary } from "@/lib/types/dictionary";
 import { ReactNode } from "react";
-import { type Locale } from "@/lib/routes";
+import { type Locale, type RouteKey, routes } from "@/lib/routes";
 
 interface CTASectionProps {
   locale: string;
@@ -48,6 +48,11 @@ export function CTASection({
   const primaryHref = primaryButtonHref || "contact";
   const secondaryHref = secondaryButtonHref || "services";
 
+  // Helper function to check if a string is a valid route key
+  const isValidRouteKey = (key: string): key is RouteKey => {
+    return key in routes;
+  };
+
   return (
     <section className={sectionClass}>
       <div className={`mx-auto ${containerClass} px-4 sm:px-6 lg:px-8`}>
@@ -70,8 +75,13 @@ export function CTASection({
                   {primaryText}
                   {primaryButtonIcon}
                 </a>
+              ) : isValidRouteKey(primaryHref) ? (
+                <LocalizedLink route={primaryHref} locale={locale as Locale} className="flex items-center gap-2">
+                  {primaryText}
+                  {primaryButtonIcon}
+                </LocalizedLink>
               ) : (
-                <LocalizedLink route={primaryHref as keyof import('@/lib/routes').RouteMap} locale={locale as Locale} className="flex items-center gap-2">
+                <LocalizedLink href={`/${locale}/${primaryHref}`} className="flex items-center gap-2">
                   {primaryText}
                   {primaryButtonIcon}
                 </LocalizedLink>
@@ -91,8 +101,13 @@ export function CTASection({
                   {secondaryText}
                   {secondaryButtonIcon}
                 </a>
+              ) : isValidRouteKey(secondaryHref) ? (
+                <LocalizedLink route={secondaryHref} locale={locale as Locale} className="flex items-center gap-2">
+                  {secondaryText}
+                  {secondaryButtonIcon}
+                </LocalizedLink>
               ) : (
-                <LocalizedLink route={secondaryHref as keyof import('@/lib/routes').RouteMap} locale={locale as Locale} className="flex items-center gap-2">
+                <LocalizedLink href={`/${locale}/${secondaryHref}`} className="flex items-center gap-2">
                   {secondaryText}
                   {secondaryButtonIcon}
                 </LocalizedLink>
