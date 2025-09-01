@@ -1,7 +1,7 @@
 import { BlurFade } from "@/components/magicui/blur-fade";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { contactInfo } from "@/lib/data/media-kit";
+import { getContactInfo } from "@/lib/data/media-kit";
 import { Phone, Mail, Clock, MessageCircle, Tv, PenTool, Users } from "lucide-react";
 import Link from "next/link";
 
@@ -18,6 +18,7 @@ interface MediaContactInfoProps {
 }
 
 export function MediaContactInfo({ locale, dict }: MediaContactInfoProps) {
+  const contactInfo = getContactInfo(locale);
   return (
     <div className="grid md:grid-cols-2 gap-8">
       {/* Contact Information */}
