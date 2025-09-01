@@ -2,12 +2,10 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/page-components/page-hero";
 import { ServiceCards } from "@/components/page-components/service-cards";
 import { ProcessSteps } from "@/components/page-components/process-steps";
+import { CTASection } from "@/components/sections/cta-section";
 import { BlurFade } from "@/components/magicui/blur-fade";
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { getServices, getProcessSteps } from "@/lib/data/services";
-import { LocalizedLink } from "@/components/localized-link";
-import { type Locale } from "@/lib/routes";
 import { ArrowRight, Presentation } from "lucide-react";
 import { getDictionary } from "@/lib/dictionaries";
 
@@ -71,35 +69,18 @@ export default async function ServicesPage({
         description={dict.services.page.processDescription}
       />
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-primary to-primary/80 text-primary-foreground">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <BlurFade delay={0.2}>
-            <div className="text-center">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                {dict.services.page.finalCtaTitle}
-              </h2>
-              <p className="text-xl text-primary-foreground/90 max-w-3xl mx-auto mb-8">
-                {dict.services.page.finalCtaDescription}
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90">
-                  <LocalizedLink route="contact" locale={locale as Locale} className="flex items-center gap-2">
-                    {dict.services.page.finalCtaButton}
-                    <ArrowRight className="h-5 w-5" />
-                  </LocalizedLink>
-                </Button>
-                <Button asChild variant="outline" size="lg" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                  <LocalizedLink route="speaking" locale={locale as Locale} className="flex items-center gap-2">
-                    {dict.services.page.finalCtaSecondary}
-                    <Presentation className="h-5 w-5" />
-                  </LocalizedLink>
-                </Button>
-              </div>
-            </div>
-          </BlurFade>
-        </div>
-      </section>
+      <CTASection
+        locale={locale}
+        dict={dict}
+        customTitle={dict.services.page.finalCtaTitle}
+        customDescription={dict.services.page.finalCtaDescription}
+        primaryButtonText={dict.services.page.finalCtaButton}
+        secondaryButtonText={dict.services.page.finalCtaSecondary}
+        primaryButtonHref="contact"
+        secondaryButtonHref="speaking"
+        primaryButtonIcon={<ArrowRight className="h-5 w-5" />}
+        secondaryButtonIcon={<Presentation className="h-5 w-5" />}
+      />
     </main>
   );
 }
