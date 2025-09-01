@@ -1,0 +1,25 @@
+{
+  "common": {
+    "readMore": "Läs mer",
+    "contactUs": "Kontakta oss",
+    "getInTouch": "Kom i kontakt",
+    "learnMore": "Läs mer",
+    "viewAll": "Visa alla",
+    "backToTop": "Tillbaka till toppen"
+  },
+  "navigation": {
+    "home": "Hem",
+    "about": "Om Yvonne",
+    "services": "Tjänster",
+    "speaking": "Föreläsningar",
+    "cases": "Case & Referenser", 
+    "insights": "Insikter",
+    "media": "Media",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "title": "Transformation börjar med rätt ledarskap",
+    "subtitle": "Erfaren styrelseledamot och interimledare med 30+ års erfarenhet av att leda företag genom kritiska förändringar och tillväxtresor.",
+    "cta": "Kom i kontakt"
+  }
+}

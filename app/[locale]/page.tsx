@@ -7,19 +7,17 @@ import { CTASection } from "@/components/sections/cta-section";
 import { LogoCloudSection } from "@/components/sections/logo-cloud-section";
 import { StatsSection } from "@/components/sections/stats-section";
 import { StructuredData } from "@/components/seo/structured-data";
+import { locales } from "@/lib/locale-config";
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
 
 export default function Home() {
   return (
-    <>
-      <StructuredData />
-      <HeroSection />
-      <LogoCloudSection />
-      <StatsSection />
-      <CredentialsSection />
-      <SpeakerShowcase />
-      <ServicesSection />
-      <TestimonialsSection />
-      <CTASection />
-    </>
+    <div className="container mx-auto px-4 py-8">
+      <h1 className="text-4xl font-bold mb-4">Welcome to Yvonne Magnusson</h1>
+      <p className="text-lg">This is a test page to verify internationalization is working.</p>
+    </div>
   );
 }

@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { MainNav } from "@/components/navigation/main-nav";
-import { Footer } from "@/components/layout/footer";
 import { ThemeProvider } from "@/components/theme-provider";
+import { locales } from "@/lib/locale-config";
 
 export const metadata: Metadata = {
   title: {
@@ -71,13 +70,14 @@ export const metadata: Metadata = {
   },
 };
 
+
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="sv" className="scroll-smooth" suppressHydrationWarning>
+    <html className="scroll-smooth" suppressHydrationWarning>
       <body className="min-h-screen bg-background text-foreground antialiased">
         <ThemeProvider
           attribute="class"
@@ -85,11 +85,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <MainNav />
-          <main>
-            {children}
-          </main>
-          <Footer />
+          {children}
         </ThemeProvider>
       </body>
     </html>

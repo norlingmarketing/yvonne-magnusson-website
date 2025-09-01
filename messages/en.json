@@ -1,0 +1,25 @@
+{
+  "common": {
+    "readMore": "Read more",
+    "contactUs": "Contact us",
+    "getInTouch": "Get in touch",
+    "learnMore": "Learn more",
+    "viewAll": "View all",
+    "backToTop": "Back to top"
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About Yvonne",
+    "services": "Services",
+    "speaking": "Speaking",
+    "cases": "Cases & References", 
+    "insights": "Insights",
+    "media": "Media",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Transformation starts with the right leadership",
+    "subtitle": "Experienced board member and interim executive with 30+ years of experience leading companies through critical changes and growth journeys.",
+    "cta": "Get in touch"
+  }
+}
