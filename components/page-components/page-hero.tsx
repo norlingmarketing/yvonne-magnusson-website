@@ -27,7 +27,7 @@ export function PageHero({
   ctaHref,
   secondaryCtaText,
   secondaryCtaHref,
-  backgroundClassName = "bg-gradient-to-br from-gray-50 to-white",
+  backgroundClassName = "bg-gradient-to-br from-muted/50 to-background",
   children
 }: PageHeroProps) {
   return (
