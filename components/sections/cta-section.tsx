@@ -71,7 +71,7 @@ export function CTASection({
                   {primaryButtonIcon}
                 </a>
               ) : (
-                <LocalizedLink route={primaryHref as any} locale={locale as Locale} className="flex items-center gap-2">
+                <LocalizedLink route={primaryHref as keyof import('@/lib/routes').RouteMap} locale={locale as Locale} className="flex items-center gap-2">
                   {primaryText}
                   {primaryButtonIcon}
                 </LocalizedLink>
@@ -92,7 +92,7 @@ export function CTASection({
                   {secondaryButtonIcon}
                 </a>
               ) : (
-                <LocalizedLink route={secondaryHref as any} locale={locale as Locale} className="flex items-center gap-2">
+                <LocalizedLink route={secondaryHref as keyof import('@/lib/routes').RouteMap} locale={locale as Locale} className="flex items-center gap-2">
                   {secondaryText}
                   {secondaryButtonIcon}
                 </LocalizedLink>

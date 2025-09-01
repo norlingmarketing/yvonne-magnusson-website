@@ -2,6 +2,7 @@
 
 import { NumberTicker } from "@/components/magicui/number-ticker";
 import { BlurFade } from "@/components/magicui/blur-fade";
+import { Dictionary } from "@/lib/types/dictionary";
 
 const stats = [
   { value: 30, label: "År av ledarskapsexpertis", suffix: "+" },
@@ -12,7 +13,7 @@ const stats = [
 
 interface StatsSectionProps {
   locale: string;
-  dict: any;
+  dict: Dictionary;
 }
 
 export function StatsSection({ locale, dict }: StatsSectionProps) {

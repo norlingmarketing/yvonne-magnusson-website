@@ -1,4 +1,5 @@
 import { Marquee } from "@/components/magicui/marquee";
+import { Dictionary } from "@/lib/types/dictionary";
 
 const clientLogos = [
   { name: "Indiska", description: "Fashion & Interior Retail" },
@@ -27,7 +28,7 @@ const LogoCard = ({ client }: { client: { name: string; description: string } })
 
 interface LogoCloudSectionProps {
   locale: string;
-  dict: any;
+  dict: Dictionary;
 }
 
 export function LogoCloudSection({ locale, dict }: LogoCloudSectionProps) {

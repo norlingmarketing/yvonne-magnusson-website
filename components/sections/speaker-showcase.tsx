@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { LocalizedLink } from "@/components/localized-link";
 import { Award, Globe, Mic, Users } from "lucide-react";
 import { type Locale } from "@/lib/routes";
+import { Dictionary } from "@/lib/types/dictionary";
 
 const speakingHighlights = [
   {
@@ -32,7 +33,7 @@ const speakingHighlights = [
 
 interface SpeakerShowcaseProps {
   locale: string;
-  dict: any;
+  dict: Dictionary;
 }
 
 export function SpeakerShowcase({ locale, dict }: SpeakerShowcaseProps) {
