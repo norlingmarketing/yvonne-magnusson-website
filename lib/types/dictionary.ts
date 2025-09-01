@@ -49,6 +49,45 @@ export interface Dictionary {
     interimExecutiveFeatures: string[];
     workshopsDescription: string;
     workshopsFeatures: string[];
+    page: {
+      title: string;
+      description: string;
+      ctaText: string;
+      badge1: string;
+      badge2: string;
+      badge3: string;
+      processTitle: string;
+      processDescription: string;
+      finalCtaTitle: string;
+      finalCtaDescription: string;
+      finalCtaButton: string;
+      finalCtaSecondary: string;
+    };
+  };
+  pages: {
+    services: {
+      boardWork: {
+        backToServices: string;
+        title: string;
+        subtitle: string;
+        badge1: string;
+        badge2: string;
+        badge3: string;
+        ctaButton: string;
+        currentRolesTitle: string;
+        competenciesTitle: string;
+        competenciesSubtitle: string;
+        idealSituationsTitle: string;
+        idealSituationsSubtitle: string;
+        exampleFocusAreas: string;
+        valueCreationTitle: string;
+        valueCreationSubtitle: string;
+        finalCtaTitle: string;
+        finalCtaSubtitle: string;
+        finalCtaButton: string;
+        finalCtaSecondary: string;
+      };
+    };
   };
   credentials: {
     title: string;

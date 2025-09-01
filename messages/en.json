@@ -64,7 +64,46 @@
       "Retail Experience Sprint",
       "International Readiness",
       "Business Model Innovation"
-    ]
+    ],
+    "page": {
+      "title": "Professional Services",
+      "description": "Four focused service areas to drive transformation and growth in retail and consumer markets. All built on 30+ years of experience and proven methods.",
+      "ctaText": "Discuss your needs",
+      "badge1": "30+ years of experience",
+      "badge2": "4 completed turnarounds",
+      "badge3": "International experience",
+      "processTitle": "How we work together",
+      "processDescription": "A structured process that ensures we create maximum value for your organization.",
+      "finalCtaTitle": "Which service suits you best?",
+      "finalCtaDescription": "Let's discuss your challenges and find the most suitable solution for your transformation.",
+      "finalCtaButton": "Book free consultation",
+      "finalCtaSecondary": "View speaking"
+    }
+  },
+  "pages": {
+    "services": {
+      "boardWork": {
+        "backToServices": "Back to services",
+        "title": "Board Work",
+        "subtitle": "Commercial acumen and strategic focus for boards driving transformation, internationalization and sustainable growth in retail and FMCG.",
+        "badge1": "5+ active board assignments",
+        "badge2": "30+ years CEO experience",
+        "badge3": "Certified board member",
+        "ctaButton": "Discuss board collaboration",
+        "currentRolesTitle": "Current board roles",
+        "competenciesTitle": "Core competencies in board work",
+        "competenciesSubtitle": "Deep expertise in areas critical for successful governance of retail and FMCG companies.",
+        "idealSituationsTitle": "When my board engagement creates the most value",
+        "idealSituationsSubtitle": "Situations where deep industry expertise and practical experience make a real difference for company development.",
+        "exampleFocusAreas": "Example focus areas:",
+        "valueCreationTitle": "Value creation for your organization",
+        "valueCreationSubtitle": "Concrete contributions that strengthen the company's strategic position and execution capability.",
+        "finalCtaTitle": "Strengthen your board with industry expertise",
+        "finalCtaSubtitle": "Let's discuss how I can contribute to your board and support your strategic development.",
+        "finalCtaButton": "Discuss board role",
+        "finalCtaSecondary": "View background & experience"
+      }
+    }
   },
   "credentials": {
     "title": "Core Competencies",

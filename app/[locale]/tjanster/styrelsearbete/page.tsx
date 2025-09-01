@@ -6,18 +6,34 @@ import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import { ArrowRight, Users, Globe, TrendingUp, Target, CheckCircle, ArrowLeft } from "lucide-react";
 import { boardCompetencies, boardPositions, boardIdealSituations, boardValueCreation } from "@/lib/data/services";
+import { getDictionary } from "@/lib/dictionaries";
 
-export const metadata: Metadata = {
-  title: "Styrelsearbete - Yvonne Magnusson | Transformation och Internationalisering",
-  description: "Erfaren styrelseledamot med kommersiell skärpa. Specialist på transformation, internationalisering och digitalisering inom retail och FMCG.",
-  keywords: "styrelseledamot, styrelseordförande, retail, FMCG, transformation, internationalisering, digitalisering",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const dict = await getDictionary(locale as 'en' | 'sv');
+  
+  return {
+    title: `${dict.pages.services.boardWork.title} - Yvonne Magnusson`,
+    description: dict.pages.services.boardWork.subtitle,
+    keywords: "board member, chairman, retail, FMCG, transformation, internationalization, digitalization",
+  };
+}
 
 
 
 
 
-export default function BoardWorkPage() {
+export default async function BoardWorkPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const dict = await getDictionary(locale as 'en' | 'sv');
   return (
     <main className="min-h-screen">
         {/* Hero Section */}
@@ -26,11 +42,11 @@ export default function BoardWorkPage() {
             <BlurFade delay={0.2}>
               <div className="mb-8">
                 <Link 
-                  href="/tjanster" 
+                  href={`/${locale}/tjanster`} 
                   className="inline-flex items-center text-primary hover:text-primary/80 transition-colors"
                 >
                   <ArrowLeft className="h-4 w-4 mr-2" />
-                  Tillbaka till tjänster
+                  {dict.pages.services.boardWork.backToServices}
                 </Link>
               </div>
             </BlurFade>
@@ -43,28 +59,27 @@ export default function BoardWorkPage() {
                   </div>
                   
                   <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-                    Styrelsearbete
+                    {dict.pages.services.boardWork.title}
                   </h1>
                   <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                    Kommersiell skärpa och strategiskt fokus för styrelser som driver transformation, 
-                    internationalisering och hållbar tillväxt inom retail och FMCG.
+                    {dict.pages.services.boardWork.subtitle}
                   </p>
                   
                   <div className="flex flex-wrap gap-3 mb-8">
                     <Badge variant="secondary" className="px-4 py-2 bg-primary/10 text-primary border-primary/20">
-                      5+ aktiva styrelseuppdrag
+                      {dict.pages.services.boardWork.badge1}
                     </Badge>
                     <Badge variant="secondary" className="px-4 py-2 bg-primary/10 text-primary border-primary/20">
-                      30+ års VD-erfarenhet
+                      {dict.pages.services.boardWork.badge2}
                     </Badge>
                     <Badge variant="secondary" className="px-4 py-2 bg-primary/10 text-primary border-primary/20">
-                      Certifierad styrelseledamot
+                      {dict.pages.services.boardWork.badge3}
                     </Badge>
                   </div>
                   
                   <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
-                    <Link href="/kontakt" className="flex items-center gap-2">
-                      Diskutera styrelsesamarbete
+                    <Link href={`/${locale}/kontakt`} className="flex items-center gap-2">
+                      {dict.pages.services.boardWork.ctaButton}
                       <ArrowRight className="h-5 w-5" />
                     </Link>
                   </Button>
@@ -74,7 +89,7 @@ export default function BoardWorkPage() {
               <BlurFade delay={0.5}>
                 <Card className="p-8 bg-gradient-to-br from-primary/5 to-primary/10 border-primary/20">
                   <CardHeader className="p-0 mb-6">
-                    <CardTitle className="text-foreground">Nuvarande styrelseroller</CardTitle>
+                    <CardTitle className="text-foreground">{dict.pages.services.boardWork.currentRolesTitle}</CardTitle>
                   </CardHeader>
                   <CardContent className="p-0 space-y-6">
                     {boardPositions.map((position, index) => (
@@ -103,10 +118,10 @@ export default function BoardWorkPage() {
             <BlurFade delay={0.2}>
               <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                  Kärnkompetenser i styrelsearbetet
+                  {dict.pages.services.boardWork.competenciesTitle}
                 </h2>
                 <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                  Djup expertis inom de områden som är kritiska för framgångsrik styrning av retail- och FMCG-företag.
+                  {dict.pages.services.boardWork.competenciesSubtitle}
                 </p>
               </div>
             </BlurFade>
@@ -152,10 +167,10 @@ export default function BoardWorkPage() {
             <BlurFade delay={0.2}>
               <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                  När mitt styrelseengagemang skapar störst värde
+                  {dict.pages.services.boardWork.idealSituationsTitle}
                 </h2>
                 <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                  Situationer där djup branschexpertis och praktisk erfarenhet gör verklig skillnad för bolagets utveckling.
+                  {dict.pages.services.boardWork.idealSituationsSubtitle}
                 </p>
               </div>
             </BlurFade>
@@ -172,7 +187,7 @@ export default function BoardWorkPage() {
                     </CardHeader>
                     <CardContent>
                       <div className="space-y-2">
-                        <h4 className="font-medium text-foreground">Exempel på fokusområden:</h4>
+                        <h4 className="font-medium text-foreground">{dict.pages.services.boardWork.exampleFocusAreas}</h4>
                         <div className="flex flex-wrap gap-2">
                           {situation.examples.map((example, exampleIndex) => (
                             <Badge 
@@ -199,10 +214,10 @@ export default function BoardWorkPage() {
             <BlurFade delay={0.2}>
               <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                  Värdeskapande för er organisation
+                  {dict.pages.services.boardWork.valueCreationTitle}
                 </h2>
                 <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                  Konkret bidrag som stärker bolagets strategiska position och genomförandeförmåga.
+                  {dict.pages.services.boardWork.valueCreationSubtitle}
                 </p>
               </div>
             </BlurFade>
@@ -235,21 +250,21 @@ export default function BoardWorkPage() {
             <BlurFade delay={0.2}>
               <div className="text-center">
                 <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                  Stärk er styrelse med branschexpertis
+                  {dict.pages.services.boardWork.finalCtaTitle}
                 </h2>
                 <p className="text-xl text-primary-foreground/90 max-w-3xl mx-auto mb-8">
-                  Låt oss diskutera hur jag kan bidra till er styrelse och stödja er strategiska utveckling.
+                  {dict.pages.services.boardWork.finalCtaSubtitle}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button asChild size="lg" className="bg-background text-primary hover:bg-muted/50">
-                    <Link href="/kontakt" className="flex items-center gap-2">
-                      Diskutera styrelseroll
+                    <Link href={`/${locale}/kontakt`} className="flex items-center gap-2">
+                      {dict.pages.services.boardWork.finalCtaButton}
                       <ArrowRight className="h-5 w-5" />
                     </Link>
                   </Button>
                   <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-background hover:text-primary">
-                    <Link href="/om-yvonne" className="flex items-center gap-2">
-                      Se bakgrund & erfarenhet
+                    <Link href={`/${locale}/om-yvonne`} className="flex items-center gap-2">
+                      {dict.pages.services.boardWork.finalCtaSecondary}
                       <Users className="h-5 w-5" />
                     </Link>
                   </Button>

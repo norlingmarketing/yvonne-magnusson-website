@@ -64,7 +64,46 @@
       "Retail Experience Sprint",
       "International Readiness",
       "Business Model Innovation"
-    ]
+    ],
+    "page": {
+      "title": "Professionella tjänster",
+      "description": "Fyra fokuserade tjänsteområden för att driva transformation och tillväxt inom retail och consumer markets. Alla byggda på 30+ års erfarenhet och beprövade metoder.",
+      "ctaText": "Diskutera era behov",
+      "badge1": "30+ års erfarenhet",
+      "badge2": "4 genomförda turnarounds",
+      "badge3": "Internationell erfarenhet",
+      "processTitle": "Så arbetar vi tillsammans",
+      "processDescription": "En strukturerad process som säkerställer att vi skapar maximal värde för er organisation.",
+      "finalCtaTitle": "Vilken tjänst passar er bäst?",
+      "finalCtaDescription": "Låt oss diskutera era utmaningar och hitta den mest lämpliga lösningen för er transformation.",
+      "finalCtaButton": "Boka kostnadsfritt samtal",
+      "finalCtaSecondary": "Se föreläsningar"
+    }
+  },
+  "pages": {
+    "services": {
+      "boardWork": {
+        "backToServices": "Tillbaka till tjänster",
+        "title": "Styrelsearbete",
+        "subtitle": "Kommersiell skärpa och strategiskt fokus för styrelser som driver transformation, internationalisering och hållbar tillväxt inom retail och FMCG.",
+        "badge1": "5+ aktiva styrelseuppdrag",
+        "badge2": "30+ års VD-erfarenhet",
+        "badge3": "Certifierad styrelseledamot",
+        "ctaButton": "Diskutera styrelsesamarbete",
+        "currentRolesTitle": "Nuvarande styrelseroller",
+        "competenciesTitle": "Kärnkompetenser i styrelsearbetet",
+        "competenciesSubtitle": "Djup expertis inom de områden som är kritiska för framgångsrik styrning av retail- och FMCG-företag.",
+        "idealSituationsTitle": "När mitt styrelseengagemang skapar störst värde",
+        "idealSituationsSubtitle": "Situationer där djup branschexpertis och praktisk erfarenhet gör verklig skillnad för bolagets utveckling.",
+        "exampleFocusAreas": "Exempel på fokusområden:",
+        "valueCreationTitle": "Värdeskapande för er organisation",
+        "valueCreationSubtitle": "Konkret bidrag som stärker bolagets strategiska position och genomförandeförmåga.",
+        "finalCtaTitle": "Stärk er styrelse med branschexpertis",
+        "finalCtaSubtitle": "Låt oss diskutera hur jag kan bidra till er styrelse och stödja er strategiska utveckling.",
+        "finalCtaButton": "Diskutera styrelseroll",
+        "finalCtaSecondary": "Se bakgrund & erfarenhet"
+      }
+    }
   },
   "credentials": {
     "title": "Kärnkompetenser",
