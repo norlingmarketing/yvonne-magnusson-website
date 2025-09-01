@@ -133,11 +133,121 @@ The website targets Swedish executive market with Swedish-first content and prof
 └── utils.ts - Utility functions
 ```
 
+### Internationalization (i18n) Implementation
+
+**Technical Architecture:**
+This site uses **native Next.js i18n** (not next-intl) with a server-side dictionary pattern for bilingual support (English/Swedish).
+
+**Directory Structure:**
+```
+app/
+├── [locale]/              # Dynamic route segment for locale
+│   ├── layout.tsx        # Locale-aware layout with nav/footer
+│   ├── page.tsx          # Homepage with locale support
+│   └── ...               # All pages under locale routing
+middleware.ts              # Locale detection and routing
+lib/
+├── dictionaries.ts       # Server-side dictionary loader
+messages/
+├── en.json              # English translations 
+└── sv.json              # Swedish translations
+```
+
+**Key Files:**
+
+1. **middleware.ts** - Locale routing and detection:
+```typescript
+import createMiddleware from 'next-intl/middleware';
+export default createMiddleware({
+  locales: ['en', 'sv'],
+  defaultLocale: 'en'  // English is default
+});
+```
+
+2. **lib/dictionaries.ts** - Server-side dictionary loading:
+```typescript
+import 'server-only';
+const dictionaries = {
+  en: () => import('@/messages/en.json').then((module) => module.default),
+  sv: () => import('@/messages/sv.json').then((module) => module.default),
+} as const;
+export const getDictionary = async (locale: keyof typeof dictionaries) => {
+  return dictionaries[locale]?.() ?? dictionaries.en();
+};
+```
+
+3. **app/[locale]/layout.tsx** - Locale-aware layout:
+```typescript
+export default async function LocaleLayout({
+  children,
+  params,
+}: {
+  children: React.ReactNode;
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const dict = await getDictionary(locale as 'en' | 'sv');
+  return (
+    <div className="flex min-h-screen flex-col">
+      <MainNav locale={locale} dict={dict} />
+      <main className="flex-1">{children}</main>
+      <Footer locale={locale} dict={dict} />
+    </div>
+  );
+}
+```
+
+**Component Pattern:**
+All components receive `locale` and `dict` as props (NO hooks or client providers):
+
+```typescript
+interface ComponentProps {
+  locale: string;
+  dict: any;
+}
+
+export function MyComponent({ locale, dict }: ComponentProps) {
+  return (
+    <div>
+      <h1>{dict.section.title}</h1>
+      <Link href={`/${locale}/contact`}>{dict.common.contact}</Link>
+    </div>
+  );
+}
+```
+
+**Translation Files:**
+- **messages/en.json** - Complete English translations
+- **messages/sv.json** - Complete Swedish translations
+- Structure: Nested objects matching component hierarchy
+- No fallback text in components (translations must be complete)
+
+**Critical Rules:**
+- ❌ NEVER use hardcoded text in components
+- ❌ NEVER use translation hooks (useTranslations, etc.)
+- ❌ NEVER add fallback text (`dict.title || "fallback"`)
+- ✅ ALWAYS pass dict via props from server components
+- ✅ ALWAYS use server-side dictionary loading
+- ✅ ALWAYS ensure complete translations in both languages
+- ✅ ALWAYS use locale in internal links: `/${locale}/page`
+
+**URL Structure:**
+- Default: `/` → `/en` (English default)
+- Swedish: `/sv` → `/sv`
+- All pages: `/en/contact`, `/sv/kontakt`
+
+**Why Native Next.js Approach:**
+- Server-side rendering compatible
+- No client-side hydration issues
+- Better performance (no client-side translation loading)
+- Simpler debugging and maintenance
+- Full TypeScript support
+
 ### Content Management Approach
-- Swedish-first content with professional terminology
+- English-first content with Swedish translations
 - SEO optimized with comprehensive metadata
-- Client-side components separated from server-side metadata (layout.tsx pattern)
-- Static content embedded in components for immediate deployment
+- Client-side components separated from server-side metadata (layout.tsx pattern)  
+- All content managed through translation files in `/messages/`
 - Site configuration centralized in `/lib/site-config.ts` (contact info, social links)
 
 ### Component Reuse Guidelines - CRITICAL
