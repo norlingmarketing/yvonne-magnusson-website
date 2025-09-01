@@ -16,8 +16,8 @@ export function generateStaticParams() {
 export default function Home() {
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold mb-4">Welcome to Yvonne Magnusson</h1>
-      <p className="text-lg">This is a test page to verify internationalization is working.</p>
+      <h1 className="text-4xl font-bold mb-4">Testing Basic Page</h1>
+      <p className="text-lg">If you see this, the basic routing works.</p>
     </div>
   );
 }

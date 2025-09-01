@@ -4,6 +4,7 @@ import { AnimatePresence, motion, MotionConfig } from "motion/react";
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useTranslations, useLocale } from 'next-intl';
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -27,19 +28,21 @@ export function MainNav() {
   const scrollY = useScrollY();
   const pathname = usePathname();
   const [active, setActive] = useState(false);
+  const t = useTranslations('navigation');
+  const locale = useLocale();
 
   const navLinks = useMemo(
     () => [
-      { id: 1, label: "Hem", link: "/" },
-      { id: 2, label: "Om Yvonne", link: "/om-yvonne" },
-      { id: 3, label: "Tjänster", link: "/tjanster" },
-      { id: 4, label: "Föreläsningar", link: "/forelasningar" },
-      { id: 5, label: "Case Referenser", link: "/case-referenser" },
-      { id: 6, label: "Insikter", link: "/insikter" },
-      { id: 7, label: "Media", link: "/media" },
-      { id: 8, label: "Kontakt", link: "/kontakt" },
+      { id: 1, label: t('home'), link: `/${locale}` },
+      { id: 2, label: t('about'), link: `/${locale}/om-yvonne` },
+      { id: 3, label: t('services'), link: `/${locale}/tjanster` },
+      { id: 4, label: t('speaking'), link: `/${locale}/forelasningar` },
+      { id: 5, label: t('cases'), link: `/${locale}/case-referenser` },
+      { id: 6, label: t('insights'), link: `/${locale}/insikter` },
+      { id: 7, label: t('media'), link: `/${locale}/media` },
+      { id: 8, label: t('contact'), link: `/${locale}/kontakt` },
     ],
-    [],
+    [t, locale],
   );
 
   return (
@@ -54,7 +57,7 @@ export function MainNav() {
           }}
           transition={{ duration: 0.15 }}
         >
-          <Link href="/" className="text-2xl font-bold text-primary">
+          <Link href={`/${locale}`} className="text-2xl font-bold text-primary">
             Yvonne Magnusson
           </Link>
         </motion.div>
@@ -124,10 +127,10 @@ export function MainNav() {
                   >
                     <li>
                       <Link
-                        href="/kontakt"
+                        href={`/${locale}/kontakt`}
                         className="relative inline-flex w-fit items-center justify-center gap-x-1.5 overflow-hidden rounded-full bg-primary px-3 py-1.5 text-primary-foreground outline-none hover:bg-primary/90 transition-colors text-sm"
                       >
-                        Kontakta mig
+                        {t('contact')}
                       </Link>
                     </li>
                   </motion.ul>
@@ -148,8 +151,8 @@ export function MainNav() {
         >
           <ThemeToggle />
           <Button asChild size="sm" className="rounded-full">
-            <Link href="/kontakt">
-              Kontakta mig
+            <Link href={`/${locale}/kontakt`}>
+              {t('contact')}
             </Link>
           </Button>
         </motion.div>
@@ -238,14 +241,14 @@ export function MainNav() {
                 <li className="pt-2 border-t border-border">
                   <div className="flex items-center gap-2 mb-2">
                     <ThemeToggle />
-                    <span className="text-sm text-muted-foreground">Växla tema</span>
+                    <span className="text-sm text-muted-foreground">{locale === 'sv' ? 'Växla tema' : 'Toggle theme'}</span>
                   </div>
                   <Button asChild className="w-full">
                     <Link
-                      href="/kontakt"
+                      href={`/${locale}/kontakt`}
                       onClick={() => setActive(false)}
                     >
-                      Kontakta mig
+                      {t('contact')}
                     </Link>
                   </Button>
                 </li>

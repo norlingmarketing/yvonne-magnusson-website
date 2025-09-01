@@ -18,8 +18,25 @@
     "contact": "Contact"
   },
   "hero": {
-    "title": "Transformation starts with the right leadership",
-    "subtitle": "Experienced board member and interim executive with 30+ years of experience leading companies through critical changes and growth journeys.",
-    "cta": "Get in touch"
+    "badge": "🌟 Transformation Leadership",
+    "titleStart": "Leadership for ",
+    "titleHighlight": "profitable growth",
+    "titleEnd": " and transformation",
+    "subtitle": "With 30+ years of experience from leading roles in retail and FMCG, I help companies and boards navigate through digitalization, cultural transformation and internationalization.",
+    "ctaPrimary": "Book intro meeting",
+    "ctaSecondary": "View speaking"
+  },
+  "footer": {
+    "services": "Services",
+    "company": "Company",
+    "contact": "Contact",
+    "copyright": "All rights reserved.",
+    "privacyPolicy": "Privacy Policy"
+  },
+  "services": {
+    "boardWork": "Board Work",
+    "seniorAdvisor": "Senior Advisor",
+    "interimExecutive": "Interim Executive", 
+    "workshops": "Workshops"
   }
 }

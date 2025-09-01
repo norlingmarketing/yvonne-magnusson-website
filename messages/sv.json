@@ -18,8 +18,25 @@
     "contact": "Kontakt"
   },
   "hero": {
-    "title": "Transformation börjar med rätt ledarskap",
-    "subtitle": "Erfaren styrelseledamot och interimledare med 30+ års erfarenhet av att leda företag genom kritiska förändringar och tillväxtresor.",
-    "cta": "Kom i kontakt"
+    "badge": "🌟 Transformation Leadership",
+    "titleStart": "Ledarskap för ",
+    "titleHighlight": "lönsam tillväxt",
+    "titleEnd": " och transformation",
+    "subtitle": "Med 30+ års erfarenhet från ledande roller i retail och FMCG hjälper jag företag och styrelser navigera genom digitalisering, kulturförflyttning och internationalisering.",
+    "ctaPrimary": "Boka intro-samtal",
+    "ctaSecondary": "Se föreläsningar"
+  },
+  "footer": {
+    "services": "Tjänster",
+    "company": "Företag",
+    "contact": "Kontakt",
+    "copyright": "Alla rättigheter förbehållna.",
+    "privacyPolicy": "Integritetspolicy"
+  },
+  "services": {
+    "boardWork": "Styrelsearbete",
+    "seniorAdvisor": "Senior Advisor", 
+    "interimExecutive": "Interimledare",
+    "workshops": "Workshops"
   }
 }

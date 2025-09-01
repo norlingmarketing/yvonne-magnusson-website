@@ -1,32 +1,38 @@
 "use client";
 
 import Link from "next/link";
+import { useTranslations, useLocale } from 'next-intl';
 import { siteConfig } from "@/lib/site-config";
 import { getIcon, IconName } from "@/lib/utils/icon-map";
 
-const navigation = {
-  services: [
-    { name: "Styrelsearbete", href: "/tjanster/styrelsearbete" },
-    { name: "Senior Advisor", href: "/tjanster/senior-advisor" },
-    { name: "Interimledare", href: "/tjanster/interim-ledare" },
-    { name: "Workshops", href: "/tjanster/workshops" },
-  ],
-  company: [
-    { name: "Om Yvonne", href: "/om-yvonne" },
-    { name: "Föreläsningar", href: "/forelasningar" },
-    { name: "Case & Referenser", href: "/case-referenser" },
-    { name: "Insikter", href: "/insikter" },
-  ],
-  social: [
-    {
-      name: "LinkedIn",
-      href: siteConfig.social.linkedin.url,
-      icon: "Linkedin" as IconName,
-    },
-  ],
-};
-
 export function Footer() {
+  const t = useTranslations();
+  const tFooter = useTranslations('footer');
+  const tServices = useTranslations('services');
+  const tNav = useTranslations('navigation');
+  const locale = useLocale();
+
+  const navigation = {
+    services: [
+      { name: tServices('boardWork'), href: `/${locale}/tjanster/styrelsearbete` },
+      { name: tServices('seniorAdvisor'), href: `/${locale}/tjanster/senior-advisor` },
+      { name: tServices('interimExecutive'), href: `/${locale}/tjanster/interim-ledare` },
+      { name: tServices('workshops'), href: `/${locale}/tjanster/workshops` },
+    ],
+    company: [
+      { name: tNav('about'), href: `/${locale}/om-yvonne` },
+      { name: tNav('speaking'), href: `/${locale}/forelasningar` },
+      { name: tNav('cases'), href: `/${locale}/case-referenser` },
+      { name: tNav('insights'), href: `/${locale}/insikter` },
+    ],
+    social: [
+      {
+        name: "LinkedIn",
+        href: siteConfig.social.linkedin.url,
+        icon: "Linkedin" as IconName,
+      },
+    ],
+  };
   return (
     <footer className="bg-foreground text-background">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
@@ -57,7 +63,7 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Tjänster</h3>
+            <h3 className="text-lg font-semibold mb-4">{tFooter('services')}</h3>
             <ul className="space-y-3">
               {navigation.services.map((item) => (
                 <li key={item.name}>
@@ -74,7 +80,7 @@ export function Footer() {
 
           {/* Company */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Företag</h3>
+            <h3 className="text-lg font-semibold mb-4">{tFooter('company')}</h3>
             <ul className="space-y-3">
               {navigation.company.map((item) => (
                 <li key={item.name}>
@@ -91,7 +97,7 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Kontakt</h3>
+            <h3 className="text-lg font-semibold mb-4">{tFooter('contact')}</h3>
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-sm text-muted-foreground">
                 {(() => { const MailIcon = getIcon("Mail"); return <MailIcon className="h-4 w-4 flex-shrink-0" />; })()}
@@ -116,14 +122,14 @@ export function Footer() {
         <div className="border-t border-border mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} Yvonne Magnusson. Alla rättigheter förbehållna.
+              © {new Date().getFullYear()} Yvonne Magnusson. {tFooter('copyright')}
             </p>
             <div className="mt-4 md:mt-0">
               <Link
-                href="/kontakt"
+                href={`/${locale}/kontakt`}
                 className="text-sm text-muted-foreground hover:text-background transition-colors"
               >
-                Integritetspolicy
+                {tFooter('privacyPolicy')}
               </Link>
             </div>
           </div>
