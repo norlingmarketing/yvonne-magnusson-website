@@ -1,22 +1,23 @@
-import type { Metadata } from "next";
 import { PageHero } from "@/components/page-components/page-hero";
 import { ContactForm } from "@/components/page-components/contact-form";
 import { ContactMethods } from "@/components/page-components/contact-methods";
-import { contactMethods, serviceTypes, responsePromises } from "@/lib/data/contact";
+import { getContactData } from "@/lib/data/contact";
+import { getDictionary } from "@/lib/dictionaries";
 import { getIcon } from "@/lib/utils/icon-map";
 
-export const metadata: Metadata = {
-  title: "Kontakt - Yvonne Magnusson | Boka introduktionssamtal",
-  description: "Kontakta Yvonne Magnusson för styrelseuppdrag, interim VD-roller, senior advisory eller föreläsningar. Kostnadsfritt introduktionssamtal.",
-  keywords: "kontakt, Yvonne Magnusson, styrelseledamot, interim VD, senior advisor, föreläsningar, retail transformation",
-};
-
-export default function ContactPage() {
+export default async function ContactPage({ 
+  params 
+}: { 
+  params: Promise<{ locale: string }> 
+}) {
+  const { locale } = await params;
+  const dict = await getDictionary(locale as 'en' | 'sv');
+  const { contactMethods, serviceTypes, responsePromises } = getContactData(locale);
   return (
     <main className="min-h-screen">
       <PageHero
-        title="Låt oss börja samtalet"
-        description="Är ni redo att accelerera er transformation? Jag hjälper gärna till att diskutera era utmaningar och möjligheter för att hitta den bästa vägen framåt."
+        title={dict.contact.hero.title}
+        description={dict.contact.hero.description}
         features={responsePromises.map(promise => {
           const Icon = getIcon(promise.icon);
           return {
@@ -33,12 +34,12 @@ export default function ContactPage() {
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Contact Form */}
             <div>
-              <ContactForm serviceTypes={serviceTypes} />
+              <ContactForm serviceTypes={serviceTypes} locale={locale} dict={dict} />
             </div>
 
             {/* Contact Methods */}
             <div>
-              <ContactMethods contactMethods={contactMethods} />
+              <ContactMethods contactMethods={contactMethods} locale={locale} dict={dict} />
             </div>
           </div>
         </div>

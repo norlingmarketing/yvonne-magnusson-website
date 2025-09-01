@@ -5,18 +5,20 @@ import { getIcon } from "@/lib/utils/icon-map";
 
 interface ContactMethodsProps {
   contactMethods: ContactMethod[];
+  locale: string;
+  dict: any;
 }
 
-export function ContactMethods({ contactMethods }: ContactMethodsProps) {
+export function ContactMethods({ contactMethods, locale, dict }: ContactMethodsProps) {
   return (
     <div className="space-y-6">
       <BlurFade delay={0.3}>
         <div>
           <h3 className="text-2xl font-bold text-foreground mb-4">
-            Kontakta mig direkt
+            {dict.contact.methods.title}
           </h3>
           <p className="text-muted-foreground mb-6">
-            Välj det sätt som passar dig bäst. Jag svarar alltid inom 24 timmar.
+            {dict.contact.methods.description}
           </p>
         </div>
       </BlurFade>

@@ -882,6 +882,37 @@
       }
     }
   },
+  "contact": {
+    "metadata": {
+      "title": "Kontakt - Yvonne Magnusson | Boka introduktionssamtal",
+      "description": "Kontakta Yvonne Magnusson för styrelseuppdrag, interim VD-roller, senior advisory eller föreläsningar. Kostnadsfritt introduktionssamtal.",
+      "keywords": "kontakt, Yvonne Magnusson, styrelseledamot, interim VD, senior advisor, föreläsningar, retail transformation"
+    },
+    "hero": {
+      "title": "Låt oss börja samtalet",
+      "description": "Är ni redo att accelerera er transformation? Jag hjälper gärna till att diskutera era utmaningar och möjligheter för att hitta den bästa vägen framåt."
+    },
+    "form": {
+      "title": "Skicka meddelande",
+      "description": "Berätta om era behov så återkommer jag snarast för att boka ett introduktionssamtal.",
+      "serviceQuestion": "Vad kan jag hjälpa er med?",
+      "fields": {
+        "name": "Namn",
+        "email": "E-post",
+        "phone": "Telefon",
+        "company": "Företag",
+        "message": "Meddelande",
+        "messagePlaceholder": "Berätta kort om era utmaningar och vad ni söker hjälp med..."
+      },
+      "submitButton": "Skicka meddelande",
+      "privacyText": "Genom att skicka formuläret godkänner du vår",
+      "privacyLink": "integritetspolicy"
+    },
+    "methods": {
+      "title": "Kontakta mig direkt",
+      "description": "Välj det sätt som passar dig bäst. Jag svarar alltid inom 24 timmar."
+    }
+  },
   "cta": {
     "subtitle": "REDO ATT BÖRJA?",
     "title": "Accelerera er transformation idag",

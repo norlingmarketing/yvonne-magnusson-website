@@ -882,6 +882,37 @@
       }
     }
   },
+  "contact": {
+    "metadata": {
+      "title": "Contact - Yvonne Magnusson | Book Introductory Meeting",
+      "description": "Contact Yvonne Magnusson for board positions, interim CEO roles, senior advisory or speaking engagements. Free introductory consultation.",
+      "keywords": "contact, Yvonne Magnusson, board member, interim CEO, senior advisor, speaking, retail transformation"
+    },
+    "hero": {
+      "title": "Let's start the conversation",
+      "description": "Ready to accelerate your transformation? I'm happy to help discuss your challenges and opportunities to find the best path forward."
+    },
+    "form": {
+      "title": "Send message",
+      "description": "Tell us about your needs and I'll get back to you shortly to book an introductory meeting.",
+      "serviceQuestion": "How can I help you?",
+      "fields": {
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone",
+        "company": "Company",
+        "message": "Message",
+        "messagePlaceholder": "Tell us briefly about your challenges and what you're seeking help with..."
+      },
+      "submitButton": "Send message",
+      "privacyText": "By submitting the form, you accept our",
+      "privacyLink": "privacy policy"
+    },
+    "methods": {
+      "title": "Contact me directly",
+      "description": "Choose the method that suits you best. I always respond within 24 hours."
+    }
+  },
   "cta": {
     "subtitle": "READY TO BEGIN?",
     "title": "Accelerate your transformation today",

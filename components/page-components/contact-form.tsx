@@ -12,9 +12,11 @@ import { getIcon } from "@/lib/utils/icon-map";
 
 interface ContactFormProps {
   serviceTypes: ServiceType[];
+  locale: string;
+  dict: any;
 }
 
-export function ContactForm({ serviceTypes }: ContactFormProps) {
+export function ContactForm({ serviceTypes, locale, dict }: ContactFormProps) {
   const [selectedService, setSelectedService] = useState<string>("");
   const [formData, setFormData] = useState({
     name: "",
@@ -38,9 +40,9 @@ export function ContactForm({ serviceTypes }: ContactFormProps) {
   return (
     <Card className="shadow-lg">
       <CardHeader>
-        <CardTitle className="text-2xl">Skicka meddelande</CardTitle>
+        <CardTitle className="text-2xl">{dict.contact.form.title}</CardTitle>
         <CardDescription className="text-base">
-          Berätta om era behov så återkommer jag snarast för att boka ett introduktionssamtal.
+          {dict.contact.form.description}
         </CardDescription>
       </CardHeader>
       
@@ -49,7 +51,7 @@ export function ContactForm({ serviceTypes }: ContactFormProps) {
           {/* Service Type Selection */}
           <div>
             <Label className="text-base font-semibold mb-3 block">
-              Vad kan jag hjälpa er med?
+              {dict.contact.form.serviceQuestion}
             </Label>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {serviceTypes.map((service) => {
@@ -88,7 +90,7 @@ export function ContactForm({ serviceTypes }: ContactFormProps) {
           {/* Contact Details */}
           <div className="grid md:grid-cols-2 gap-4">
             <div>
-              <Label htmlFor="name">Namn *</Label>
+              <Label htmlFor="name">{dict.contact.form.fields.name} *</Label>
               <Input
                 id="name"
                 name="name"
@@ -99,7 +101,7 @@ export function ContactForm({ serviceTypes }: ContactFormProps) {
               />
             </div>
             <div>
-              <Label htmlFor="email">E-post *</Label>
+              <Label htmlFor="email">{dict.contact.form.fields.email} *</Label>
               <Input
                 id="email"
                 name="email"
@@ -114,7 +116,7 @@ export function ContactForm({ serviceTypes }: ContactFormProps) {
 
           <div className="grid md:grid-cols-2 gap-4">
             <div>
-              <Label htmlFor="phone">Telefon</Label>
+              <Label htmlFor="phone">{dict.contact.form.fields.phone}</Label>
               <Input
                 id="phone"
                 name="phone"
@@ -125,7 +127,7 @@ export function ContactForm({ serviceTypes }: ContactFormProps) {
               />
             </div>
             <div>
-              <Label htmlFor="company">Företag</Label>
+              <Label htmlFor="company">{dict.contact.form.fields.company}</Label>
               <Input
                 id="company"
                 name="company"
@@ -137,7 +139,7 @@ export function ContactForm({ serviceTypes }: ContactFormProps) {
           </div>
 
           <div>
-            <Label htmlFor="message">Meddelande *</Label>
+            <Label htmlFor="message">{dict.contact.form.fields.message} *</Label>
             <Textarea
               id="message"
               name="message"
@@ -146,18 +148,18 @@ export function ContactForm({ serviceTypes }: ContactFormProps) {
               required
               rows={5}
               className="mt-1"
-              placeholder="Berätta kort om era utmaningar och vad ni söker hjälp med..."
+              placeholder={dict.contact.form.fields.messagePlaceholder}
             />
           </div>
 
           <Button type="submit" size="lg" className="w-full">
-            Skicka meddelande
+            {dict.contact.form.submitButton}
           </Button>
 
           <p className="text-sm text-muted-foreground text-center">
-            Genom att skicka formuläret godkänner du vår{" "}
-            <Link href="/integritetspolicy" className="text-primary hover:underline">
-              integritetspolicy
+            {dict.contact.form.privacyText}{" "}
+            <Link href={`/${locale}/integritetspolicy`} className="text-primary hover:underline">
+              {dict.contact.form.privacyLink}
             </Link>
           </p>
         </form>
