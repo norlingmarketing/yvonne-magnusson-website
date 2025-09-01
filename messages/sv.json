@@ -800,6 +800,43 @@
       "description": "Genomförda transformationer med mätbara framgångar"
     }
   },
+  "insights": {
+    "badge": "Insights & Perspektiv",
+    "title": "Lär av transformation i praktiken",
+    "subtitle": "Djupgående analyser och strategiska perspektiv från verkligheten. 30+ års erfarenhet av att leda transformation inom retail och FMCG.",
+    "articlesTitle": "Senaste insikter",
+    "articlesSubtitle": "Praktiska lärdomar och strategiska perspektiv från verkligheten av transformation och ledarskap.",
+    "newsletterTitle": "Få nya insikter direkt",
+    "newsletterSubtitle": "Prenumerera på mitt nyhetsbrev och få tillgång till exklusiva analyser, case studies och strategiska perspektiv direkt i inkorgen.",
+    "newsletterButton": "Prenumerera på nyhetsbrev",
+    "topicsTitle": "Mest lästa områden",
+    "topicsSubtitle": "Upptäck de ämnen som engagerar ledare mest inom transformation och organisationsförändring.",
+    "stats": [
+      {
+        "label": "Artiklar publicerade",
+        "value": "50+"
+      },
+      {
+        "label": "Läsare per månad",
+        "value": "15,000+"
+      },
+      {
+        "label": "Praktiska case studies",
+        "value": "25+"
+      },
+      {
+        "label": "År av erfarenhet",
+        "value": "30+"
+      }
+    ],
+    "articleLabels": {
+      "featured": "Utvald",
+      "readArticle": "Läs artikel",
+      "showMore": "Visa fler artiklar",
+      "articlesRemaining": "till",
+      "imagePlaceholder": "Artikelbild"
+    }
+  },
   "cta": {
     "subtitle": "REDO ATT BÖRJA?",
     "title": "Accelerera er transformation idag",

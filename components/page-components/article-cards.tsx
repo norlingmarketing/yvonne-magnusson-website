@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Article } from "@/lib/types";
+import { Dictionary } from "@/lib/types/dictionary";
 import { Calendar, Clock, ArrowRight, Bookmark } from "lucide-react";
 import { useState } from "react";
 
@@ -12,9 +13,10 @@ interface ArticleCardsProps {
   articles: Article[];
   categories: string[];
   showFeaturedFirst?: boolean;
+  dict: Dictionary;
 }
 
-export function ArticleCards({ articles, categories, showFeaturedFirst = true }: ArticleCardsProps) {
+export function ArticleCards({ articles, categories, showFeaturedFirst = true, dict }: ArticleCardsProps) {
   const [selectedCategory, setSelectedCategory] = useState("Alla");
   const [showAll, setShowAll] = useState(false);
 
@@ -72,7 +74,7 @@ export function ArticleCards({ articles, categories, showFeaturedFirst = true }:
                   <div className="absolute top-3 left-3">
                     <Badge className="bg-primary text-primary-foreground">
                       <Bookmark className="h-3 w-3 mr-1" />
-                      Utvald
+                      {dict.insights.articleLabels.featured}
                     </Badge>
                   </div>
                 )}
@@ -83,7 +85,7 @@ export function ArticleCards({ articles, categories, showFeaturedFirst = true }:
                 </div>
                 {/* Placeholder for actual image */}
                 <div className="w-full h-full bg-muted flex items-center justify-center">
-                  <span className="text-muted-foreground text-sm">Artikelbild</span>
+                  <span className="text-muted-foreground text-sm">{dict.insights.articleLabels.imagePlaceholder}</span>
                 </div>
               </div>
 
@@ -121,7 +123,7 @@ export function ArticleCards({ articles, categories, showFeaturedFirst = true }:
                 {/* Read More Button */}
                 <div className="mt-auto">
                   <Button variant="ghost" size="sm" className="w-full justify-between">
-                    Läs artikel
+                    {dict.insights.articleLabels.readArticle}
                     <ArrowRight className="h-4 w-4" />
                   </Button>
                 </div>
@@ -139,7 +141,7 @@ export function ArticleCards({ articles, categories, showFeaturedFirst = true }:
             onClick={() => setShowAll(true)}
             className="px-8"
           >
-            Visa fler artiklar ({sortedArticles.length - 6} till)
+            {dict.insights.articleLabels.showMore} ({sortedArticles.length - 6} {dict.insights.articleLabels.articlesRemaining})
           </Button>
         </div>
       )}

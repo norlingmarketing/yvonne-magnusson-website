@@ -1,23 +1,153 @@
 import type { Metadata } from "next";
-import InsightsContent from "./insights-content";
+import { BlurFade } from "@/components/magicui/blur-fade";
+import { Button } from "@/components/ui/button";
+import { ArticleCards } from "@/components/page-components/article-cards";
+import { getArticles, getCategories } from "@/lib/data/insights-articles";
+import { TrendingUp, Users, Target, Lightbulb, BookOpen, ArrowRight } from "lucide-react";
+import Link from "next/link";
+import { getDictionary } from "@/lib/dictionaries";
 
-export const metadata: Metadata = {
-  title: "Insights & Perspektiv - Transformation Leadership",
-  description: "Djupgående analyser och strategiska perspektiv från 30+ år av transformation inom retail och FMCG. Praktiska råd för ledarskap och organisationsförändring.",
-  keywords: [
-    "transformation insights",
-    "ledarskap artiklar", 
-    "retail strategi",
-    "digital transformation",
-    "organisationsförändring",
-    "business insights",
-    "transformation tips",
-    "leadership articles",
-    "retail trends",
-    "FMCG insights"
-  ],
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const dict = await getDictionary(locale as 'en' | 'sv');
+  
+  return {
+    title: `${dict.insights.badge} - Yvonne Magnusson`,
+    description: dict.insights.subtitle,
+    keywords: "transformation insights, leadership articles, retail strategy, digital transformation, organizational change, business insights",
+  };
+}
+
+const iconMap = {
+  TrendingUp,
+  Users,
+  Target,
+  Lightbulb
 };
 
-export default function InsightsPage() {
-  return <InsightsContent />;
+export default async function InsightsPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const dict = await getDictionary(locale as 'en' | 'sv');
+  const articles = getArticles(locale);
+  const categories = getCategories(locale);
+
+  return (
+    <main className="min-h-screen">
+      {/* Hero Section */}
+      <section className="py-20 bg-gradient-to-br from-muted/50 to-background">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <BlurFade delay={0.1}>
+              <div className="inline-flex items-center gap-2 bg-primary/10 rounded-full px-4 py-2 mb-6">
+                <BookOpen className="h-4 w-4 text-primary" />
+                <span className="text-primary font-medium">{dict.insights.badge}</span>
+              </div>
+              
+              <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+                {dict.insights.title}
+              </h1>
+              <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
+                {dict.insights.subtitle}
+              </p>
+            </BlurFade>
+            
+            <BlurFade delay={0.2}>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+                {dict.insights.stats.map((stat, index) => {
+                  const icons = [TrendingUp, Users, Target, Lightbulb];
+                  const IconComponent = icons[index];
+                  return (
+                    <div key={index} className="text-center">
+                      <IconComponent className="h-8 w-8 text-primary mx-auto mb-2" />
+                      <div className="text-2xl font-bold text-foreground mb-1">{stat.value}</div>
+                      <p className="text-muted-foreground text-sm">{stat.label}</p>
+                    </div>
+                  );
+                })}
+              </div>
+            </BlurFade>
+          </div>
+        </div>
+      </section>
+
+      {/* Articles Section */}
+      <section className="py-20 bg-background">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <BlurFade delay={0.1}>
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                {dict.insights.articlesTitle}
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                {dict.insights.articlesSubtitle}
+              </p>
+            </div>
+          </BlurFade>
+
+          <ArticleCards 
+            articles={articles} 
+            categories={categories} 
+            showFeaturedFirst={true} 
+            dict={dict}
+          />
+        </div>
+      </section>
+
+      {/* Newsletter CTA */}
+      <section className="py-20 bg-gradient-to-br from-primary to-primary/80 text-primary-foreground">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <BlurFade delay={0.1}>
+            <BookOpen className="h-16 w-16 text-accent mx-auto mb-8" />
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              {dict.insights.newsletterTitle}
+            </h2>
+            <p className="text-xl text-primary-foreground/90 mb-10 leading-relaxed">
+              {dict.insights.newsletterSubtitle}
+            </p>
+            
+            <Button asChild size="lg" variant="secondary">
+              <Link href={`/${locale}/kontakt`}>
+                <ArrowRight className="h-5 w-5 mr-2" />
+                {dict.insights.newsletterButton}
+              </Link>
+            </Button>
+          </BlurFade>
+        </div>
+      </section>
+
+      {/* Featured Topics */}
+      <section className="py-20 bg-muted/50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <BlurFade delay={0.1}>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+              {dict.insights.topicsTitle}
+            </h2>
+            <p className="text-xl text-muted-foreground mb-10 leading-relaxed">
+              {dict.insights.topicsSubtitle}
+            </p>
+            
+            <div className="flex flex-wrap justify-center gap-4">
+              {categories.filter(cat => cat !== "Alla" && cat !== "All").map((category, index) => (
+                <BlurFade key={category} delay={0.2 + index * 0.1}>
+                  <Button variant="outline" size="lg" asChild>
+                    <Link href={`#articles-${category.toLowerCase()}`}>
+                      {category}
+                    </Link>
+                  </Button>
+                </BlurFade>
+              ))}
+            </div>
+          </BlurFade>
+        </div>
+      </section>
+    </main>
+  );
 }

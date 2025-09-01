@@ -800,6 +800,43 @@
       "description": "Completed transformations with measurable success"
     }
   },
+  "insights": {
+    "badge": "Insights & Perspectives",
+    "title": "Learn from transformation in practice",
+    "subtitle": "In-depth analyses and strategic perspectives from reality. 30+ years of experience leading transformation in retail and FMCG.",
+    "articlesTitle": "Latest insights",
+    "articlesSubtitle": "Practical learnings and strategic perspectives from the reality of transformation and leadership.",
+    "newsletterTitle": "Get new insights directly",
+    "newsletterSubtitle": "Subscribe to my newsletter and get access to exclusive analyses, case studies, and strategic perspectives directly in your inbox.",
+    "newsletterButton": "Subscribe to newsletter",
+    "topicsTitle": "Most read areas",
+    "topicsSubtitle": "Discover the topics that engage leaders most in transformation and organizational change.",
+    "stats": [
+      {
+        "label": "Articles published",
+        "value": "50+"
+      },
+      {
+        "label": "Readers per month",
+        "value": "15,000+"
+      },
+      {
+        "label": "Practical case studies",
+        "value": "25+"
+      },
+      {
+        "label": "Years of experience",
+        "value": "30+"
+      }
+    ],
+    "articleLabels": {
+      "featured": "Featured",
+      "readArticle": "Read article",
+      "showMore": "Show more articles",
+      "articlesRemaining": "more",
+      "imagePlaceholder": "Article image"
+    }
+  },
   "cta": {
     "subtitle": "READY TO BEGIN?",
     "title": "Accelerate your transformation today",

@@ -327,6 +327,29 @@ export interface Dictionary {
       description: string;
     };
   };
+  insights: {
+    badge: string;
+    title: string;
+    subtitle: string;
+    articlesTitle: string;
+    articlesSubtitle: string;
+    newsletterTitle: string;
+    newsletterSubtitle: string;
+    newsletterButton: string;
+    topicsTitle: string;
+    topicsSubtitle: string;
+    stats: Array<{
+      label: string;
+      value: string;
+    }>;
+    articleLabels: {
+      featured: string;
+      readArticle: string;
+      showMore: string;
+      articlesRemaining: string;
+      imagePlaceholder: string;
+    };
+  };
   credentials: {
     title: string;
     subtitle: string;
