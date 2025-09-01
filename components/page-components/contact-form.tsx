@@ -13,7 +13,26 @@ import { getIcon } from "@/lib/utils/icon-map";
 interface ContactFormProps {
   serviceTypes: ServiceType[];
   locale: string;
-  dict: any;
+  dict: {
+    contact: {
+      form: {
+        title: string;
+        description: string;
+        serviceQuestion: string;
+        fields: {
+          name: string;
+          email: string;
+          phone: string;
+          company: string;
+          message: string;
+          messagePlaceholder: string;
+        };
+        submitButton: string;
+        privacyText: string;
+        privacyLink: string;
+      };
+    };
+  };
 }
 
 export function ContactForm({ serviceTypes, locale, dict }: ContactFormProps) {

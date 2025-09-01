@@ -39,7 +39,7 @@ export default async function ContactPage({
 
             {/* Contact Methods */}
             <div>
-              <ContactMethods contactMethods={contactMethods} locale={locale} dict={dict} />
+              <ContactMethods contactMethods={contactMethods} dict={dict} />
             </div>
           </div>
         </div>

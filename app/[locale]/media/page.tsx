@@ -112,7 +112,7 @@ export default async function MediaPage({
             </div>
           </BlurFade>
 
-          <MediaKitDownloads items={mediaKit} locale={locale} dict={dict} />
+          <MediaKitDownloads items={mediaKit} dict={dict} />
         </div>
       </section>
 

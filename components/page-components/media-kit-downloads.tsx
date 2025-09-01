@@ -6,8 +6,16 @@ import { Download, FileText, Image, Video } from "lucide-react";
 
 interface MediaKitDownloadsProps {
   items: MediaKitItem[];
-  locale: string;
-  dict: any;
+  dict: {
+    media: {
+      components: {
+        mediaKit: {
+          content: string;
+          downloadPackage: string;
+        };
+      };
+    };
+  };
 }
 
 const iconMap = {
@@ -16,7 +24,7 @@ const iconMap = {
   "Video": Video,
 };
 
-export function MediaKitDownloads({ items, locale, dict }: MediaKitDownloadsProps) {
+export function MediaKitDownloads({ items, dict }: MediaKitDownloadsProps) {
   return (
     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
       {items.map((item, index) => {

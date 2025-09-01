@@ -14,7 +14,21 @@ const availabilityIcons = {
 
 interface MediaContactInfoProps {
   locale: string;
-  dict: any;
+  dict: {
+    media: {
+      components: {
+        contact: {
+          mediaContact: string;
+          availability: string;
+          sendMediaRequest: string;
+          interviews: string;
+          commentary: string;
+          speaking: string;
+          articles: string;
+        };
+      };
+    };
+  };
 }
 
 export function MediaContactInfo({ locale, dict }: MediaContactInfoProps) {

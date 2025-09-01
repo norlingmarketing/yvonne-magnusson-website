@@ -5,6 +5,7 @@ import {
   Calendar,
   Clock,
   MessageSquare,
+  MessageCircle,
   Users,
   Briefcase,
   TrendingUp,
@@ -30,6 +31,7 @@ export type IconName =
   | "Calendar"
   | "Clock"
   | "MessageSquare"
+  | "MessageCircle"
   | "Users"
   | "Briefcase"
   | "TrendingUp"
@@ -53,6 +55,7 @@ export const iconMap: Record<IconName, LucideIcon> = {
   Calendar,
   Clock,
   MessageSquare,
+  MessageCircle,
   Users,
   Briefcase,
   TrendingUp,

@@ -7,7 +7,17 @@ import Link from "next/link";
 interface ExpertTopicsProps {
   topics: string[];
   locale: string;
-  dict: any;
+  dict: {
+    media: {
+      components: {
+        expertTopics: {
+          title: string;
+          subtitle: string;
+          contactButton: string;
+        };
+      };
+    };
+  };
 }
 
 export function ExpertTopics({ topics, locale, dict }: ExpertTopicsProps) {

@@ -56,7 +56,19 @@ const serviceTypesSv: ServiceType[] = [
     id: "speaking",
     icon: "Presentation",
     title: "Föreläsningar",
-    description: "Keynotes och workshops"
+    description: "Keynote-presentationer"
+  },
+  {
+    id: "workshops",
+    icon: "GraduationCap",
+    title: "Workshops",
+    description: "Utbildningar och workshopsessioner"
+  },
+  {
+    id: "other",
+    icon: "MessageCircle",
+    title: "Övrigt",
+    description: "Andra frågor eller samarbeten"
   }
 ];
 
@@ -133,7 +145,19 @@ const serviceTypesEn: ServiceType[] = [
     id: "speaking",
     icon: "Presentation",
     title: "Speaking",
-    description: "Keynotes and workshops"
+    description: "Keynote presentations"
+  },
+  {
+    id: "workshops",
+    icon: "GraduationCap",
+    title: "Workshops",
+    description: "Training and workshop sessions"
+  },
+  {
+    id: "other",
+    icon: "MessageCircle",
+    title: "Other",
+    description: "Other questions or collaborations"
   }
 ];
 

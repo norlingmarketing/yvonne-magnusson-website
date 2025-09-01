@@ -5,11 +5,17 @@ import { getIcon } from "@/lib/utils/icon-map";
 
 interface ContactMethodsProps {
   contactMethods: ContactMethod[];
-  locale: string;
-  dict: any;
+  dict: {
+    contact: {
+      methods: {
+        title: string;
+        description: string;
+      };
+    };
+  };
 }
 
-export function ContactMethods({ contactMethods, locale, dict }: ContactMethodsProps) {
+export function ContactMethods({ contactMethods, dict }: ContactMethodsProps) {
   return (
     <div className="space-y-6">
       <BlurFade delay={0.3}>
