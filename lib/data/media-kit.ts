@@ -243,7 +243,7 @@ export const contactInfoSv = {
   mediaContact: {
     name: "Yvonne Magnusson",
     email: "press@yvonnemagnusson.se",
-    phone: "+46 70 XXX XX XX",
+    phone: "+46 73 985 32 60",
     response: "Svarar inom 2-4 timmar vardagar"
   },
   availability: {
@@ -258,7 +258,7 @@ export const contactInfoEn = {
   mediaContact: {
     name: "Yvonne Magnusson",
     email: "press@yvonnemagnusson.se",
-    phone: "+46 70 XXX XX XX",
+    phone: "+46 73 985 32 60",
     response: "Responds within 2-4 hours on weekdays"
   },
   availability: {
