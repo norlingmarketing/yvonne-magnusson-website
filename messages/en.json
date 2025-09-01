@@ -266,7 +266,207 @@
             "impact": "Practical experience in translating strategy into action and results"
           }
         ]
+      },
+      "seniorAdvisor": {
+        "backToServices": "Back to services",
+        "title": "Senior Advisor",
+        "subtitle": "Strategic expertise and practical guidance for management teams navigating complex business challenges and transformations.",
+        "badge1": "30+ years of leadership expertise",
+        "badge2": "4 successful turnarounds",
+        "badge3": "18 years as CEO",
+        "ctaButton": "Book strategy session",
+        "expertiseTitle": "Areas of Expertise",
+        "expertiseSubtitle": "Deep knowledge and practical experience in areas critical for successful business transformation.",
+        "whyChooseTitle": "Why Choose Yvonne as Senior Advisor?",
+        "whyChooseSubtitle": "The combination of deep industry expertise, practical experience and proven results creates unique value for your business challenges.",
+        "engagementTitle": "Engagement Formats",
+        "engagementSubtitle": "Flexible advisory formats tailored to your specific needs and challenges.",
+        "processTitle": "How We Work Together",
+        "processSubtitle": "A structured approach that ensures concrete results and lasting change.",
+        "finalCtaTitle": "Ready to Accelerate Your Transformation?",
+        "finalCtaSubtitle": "Let's discuss how my expertise can contribute to your strategic goals and business results. Book a free strategy session today.",
+        "finalCtaButton": "Book Strategy Session",
+        "finalCtaSecondary": "Learn More About Yvonne",
+        "durationLabel": "Duration:",
+        "formatLabel": "Format:",
+        "expertiseAreas": [
+          {
+            "icon": "TrendingUp",
+            "title": "Transformation & Growth",
+            "description": "Strategic guidance for organizational changes and growth initiatives based on 30+ years of industry expertise."
+          },
+          {
+            "icon": "Users",
+            "title": "Leadership & Organizational Development", 
+            "description": "Develop leadership capacity and build high-performing teams through proven methods and practical experience."
+          },
+          {
+            "icon": "Target",
+            "title": "Strategy & Execution",
+            "description": "From strategy to results - ensure successful implementation of business-critical initiatives."
+          },
+          {
+            "icon": "Lightbulb",
+            "title": "Innovation & Digitalization",
+            "description": "Navigate digital transformation and create innovative business models for future challenges."
+          }
+        ],
+        "valueProp": [
+          {
+            "icon": "Shield",
+            "title": "Proven Expertise",
+            "description": "30+ years of successful leadership in retail and FMCG, including 18 years as CEO."
+          },
+          {
+            "icon": "Award",
+            "title": "Results Focus",
+            "description": "Documented track record of successful transformations and business improvements."
+          },
+          {
+            "icon": "Users",
+            "title": "Practical Approach",
+            "description": "Hands-on advisory based on real industry expertise and operational experience."
+          }
+        ],
+        "engagementTypes": [
+          {
+            "title": "Strategic Advisory",
+            "description": "Ongoing strategic support for CEO and management team",
+            "duration": "3-12 months",
+            "format": "Monthly workshops and ad-hoc consultations"
+          },
+          {
+            "title": "Project-Specific Advisory",
+            "description": "Expertise for specific transformation projects",
+            "duration": "1-6 months", 
+            "format": "Weekly sessions and milestone reviews"
+          },
+          {
+            "title": "Board Advisory",
+            "description": "Advisory to board and board chairman",
+            "duration": "6-24 months",
+            "format": "Board meetings and strategy sessions"
+          }
+        ],
+        "processSteps": [
+          {
+            "step": "01",
+            "title": "Analysis & Mapping",
+            "description": "In-depth analysis of current situation, challenges and opportunities."
+          },
+          {
+            "step": "02", 
+            "title": "Strategic Planning",
+            "description": "Development of clear roadmap and prioritized focus areas."
+          },
+          {
+            "step": "03",
+            "title": "Implementation",
+            "description": "Hands-on support and guidance through the change process."
+          },
+          {
+            "step": "04",
+            "title": "Follow-up",
+            "description": "Continuous evaluation and adjustments for optimal results."
+          }
+        ]
       }
+    },
+    "seniorAdvisor": {
+      "title": "Senior Advisor",
+      "subtitle": "Strategic expertise and practical guidance for management teams navigating complex business challenges and transformations.",
+      "backToServices": "Back to services",
+      "yearsStat": "Years of Leadership Expertise",
+      "turnaroundsStat": "Successful Turnarounds",
+      "ceoYearsStat": "Years as CEO",
+      "expertiseTitle": "Areas of Expertise",
+      "expertiseSubtitle": "Deep knowledge and practical experience in areas critical for successful business transformation.",
+      "expertiseAreas": [
+        {
+          "title": "Transformation & Growth",
+          "description": "Strategic guidance for organizational changes and growth initiatives based on 30+ years of industry expertise."
+        },
+        {
+          "title": "Leadership & Organizational Development",
+          "description": "Develop leadership capabilities and build high-performing teams through proven methods and practical experience."
+        },
+        {
+          "title": "Strategy & Execution",
+          "description": "From strategy to results - ensure successful implementation of business-critical initiatives."
+        },
+        {
+          "title": "Innovation & Digitalization",
+          "description": "Navigate digital transformation and create innovative business models for future challenges."
+        }
+      ],
+      "valueTitle": "Why Choose Yvonne as Senior Advisor?",
+      "valueSubtitle": "The combination of deep industry expertise, practical experience and proven results creates unique value for your business challenges.",
+      "valueProp": [
+        {
+          "title": "Proven Expertise",
+          "description": "30+ years of successful leadership in retail and FMCG, including 18 years as CEO."
+        },
+        {
+          "title": "Results Focus",
+          "description": "Documented track record of successful transformations and business improvements."
+        },
+        {
+          "title": "Practical Approach",
+          "description": "Hands-on advisory based on real industry expertise and operational experience."
+        }
+      ],
+      "engagementTitle": "Engagement Formats",
+      "engagementSubtitle": "Flexible advisory formats tailored to your specific needs and challenges.",
+      "engagementTypes": [
+        {
+          "title": "Strategic Advisory",
+          "description": "Ongoing strategic support for CEO and management team",
+          "duration": "3-12 months",
+          "format": "Monthly workshops and ad-hoc consultations"
+        },
+        {
+          "title": "Project-Specific Advisory",
+          "description": "Expertise for specific transformation projects",
+          "duration": "1-6 months",
+          "format": "Weekly sessions and milestone reviews"
+        },
+        {
+          "title": "Board Advisory",
+          "description": "Advisory to board and board chairman",
+          "duration": "6-24 months",
+          "format": "Board meetings and strategy sessions"
+        }
+      ],
+      "processTitle": "How We Work Together",
+      "processSubtitle": "A structured approach that ensures concrete results and lasting change.",
+      "processSteps": [
+        {
+          "step": "01",
+          "title": "Analysis & Assessment",
+          "description": "In-depth analysis of current situation, challenges and opportunities."
+        },
+        {
+          "step": "02",
+          "title": "Strategic Planning",
+          "description": "Development of clear roadmap and prioritized focus areas."
+        },
+        {
+          "step": "03",
+          "title": "Implementation",
+          "description": "Hands-on support and guidance through the change process."
+        },
+        {
+          "step": "04",
+          "title": "Follow-up",
+          "description": "Continuous evaluation and adjustments for optimal results."
+        }
+      ],
+      "ctaTitle": "Ready to Accelerate Your Transformation?",
+      "ctaSubtitle": "Let's discuss how my expertise can contribute to your strategic goals and business results. Book a free strategy consultation today.",
+      "ctaButton": "Book Strategy Call",
+      "ctaSecondary": "Learn More About Yvonne",
+      "durationLabel": "Duration:",
+      "formatLabel": "Format:"
     }
   },
   "credentials": {

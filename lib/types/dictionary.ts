@@ -133,6 +133,47 @@ export interface Dictionary {
           impact: string;
         }>;
       };
+      seniorAdvisor: {
+        title: string;
+        subtitle: string;
+        backToServices: string;
+        yearsStat: string;
+        turnaroundsStat: string;
+        ceoYearsStat: string;
+        expertiseTitle: string;
+        expertiseSubtitle: string;
+        expertiseAreas: Array<{
+          title: string;
+          description: string;
+        }>;
+        valueTitle: string;
+        valueSubtitle: string;
+        valueProp: Array<{
+          title: string;
+          description: string;
+        }>;
+        engagementTitle: string;
+        engagementSubtitle: string;
+        engagementTypes: Array<{
+          title: string;
+          description: string;
+          duration: string;
+          format: string;
+        }>;
+        processTitle: string;
+        processSubtitle: string;
+        processSteps: Array<{
+          step: string;
+          title: string;
+          description: string;
+        }>;
+        ctaTitle: string;
+        ctaSubtitle: string;
+        ctaButton: string;
+        ctaSecondary: string;
+        durationLabel: string;
+        formatLabel: string;
+      };
     };
   };
   credentials: {

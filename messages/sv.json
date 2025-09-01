@@ -266,7 +266,207 @@
             "impact": "Praktisk erfarenhet av att omsätta strategi till handling och resultat"
           }
         ]
+      },
+      "seniorAdvisor": {
+        "backToServices": "Tillbaka till tjänster",
+        "title": "Senior Rådgivare",
+        "subtitle": "Strategisk expertis och praktisk vägledning för ledningsgrupper som navigerar komplexa affärsutmaningar och transformationer.",
+        "badge1": "30+ år av ledarskapsexpertis",
+        "badge2": "4 framgångsrika turnarounds", 
+        "badge3": "18 år som VD",
+        "ctaButton": "Boka strategisamtal",
+        "expertiseTitle": "Expertområden",
+        "expertiseSubtitle": "Djup kunskap och praktisk erfarenhet inom de områden som är kritiska för framgångsrik affärstransformation.",
+        "whyChooseTitle": "Varför Välja Yvonne som Senior Rådgivare?",
+        "whyChooseSubtitle": "Kombinationen av djup branschexpertis, praktisk erfarenhet och beprövade resultat skapar unikt värde för dina affärsutmaningar.",
+        "engagementTitle": "Uppdragsformat",
+        "engagementSubtitle": "Flexibla rådgivningsformat anpassade efter dina specifika behov och utmaningar.",
+        "processTitle": "Så Arbetar Vi Tillsammans", 
+        "processSubtitle": "En strukturerad approach som säkerställer konkreta resultat och varaktig förändring.",
+        "finalCtaTitle": "Redo att Accelerera Din Transformation?",
+        "finalCtaSubtitle": "Låt oss diskutera hur min expertis kan bidra till era strategiska mål och affärsresultat. Boka ett kostnadsfritt strategisamtal idag.",
+        "finalCtaButton": "Boka Strategisamtal",
+        "finalCtaSecondary": "Läs Mer Om Yvonne",
+        "durationLabel": "Varaktighet:",
+        "formatLabel": "Format:",
+        "expertiseAreas": [
+          {
+            "icon": "TrendingUp",
+            "title": "Transformation & Tillväxt",
+            "description": "Strategisk vägledning för organisationsförändringar och tillväxtinitiativ baserat på 30+ års branschexpertis."
+          },
+          {
+            "icon": "Users",
+            "title": "Ledarskaps- & Organisationsutveckling", 
+            "description": "Utveckla ledarskapskraft och bygga högpresterande team genom beprövade metoder och praktisk erfarenhet."
+          },
+          {
+            "icon": "Target",
+            "title": "Strategi & Verkställighet",
+            "description": "Från strategi till resultat - säkerställ framgångsrik implementering av affärskritiska initiativ."
+          },
+          {
+            "icon": "Lightbulb",
+            "title": "Innovation & Digitalisering",
+            "description": "Navigera den digitala transformationen och skapa innovativa affärsmodeller för framtidens utmaningar."
+          }
+        ],
+        "valueProp": [
+          {
+            "icon": "Shield",
+            "title": "Beprövad Expertis",
+            "description": "30+ år av framgångsrik ledarskap inom retail och FMCG, inklusive 18 år som VD."
+          },
+          {
+            "icon": "Award",
+            "title": "Resultatfokus",
+            "description": "Dokumenterad track record av framgångsrika transformationer och verksamhetsförbättringar."
+          },
+          {
+            "icon": "Users",
+            "title": "Praktisk Approach",
+            "description": "Hands-on rådgivning baserad på verklig branschexpertis och operativ erfarenhet."
+          }
+        ],
+        "engagementTypes": [
+          {
+            "title": "Strategisk Rådgivning",
+            "description": "Löpande strategisk support för VD och ledningsgrupp",
+            "duration": "3-12 månader",
+            "format": "Månatliga workshops och ad-hoc konsultationer"
+          },
+          {
+            "title": "Projektspecifik Rådgivning",
+            "description": "Expertis för specifika transformationsprojekt",
+            "duration": "1-6 månader", 
+            "format": "Veckovisa sessioner och milstolpsgenomgångar"
+          },
+          {
+            "title": "Board Advisory",
+            "description": "Rådgivning till styrelse och styrelseordförande",
+            "duration": "6-24 månader",
+            "format": "Styrelsemöten och strategisessioner"
+          }
+        ],
+        "processSteps": [
+          {
+            "step": "01",
+            "title": "Analys & Kartläggning",
+            "description": "Djupgående analys av nuläge, utmaningar och möjligheter."
+          },
+          {
+            "step": "02", 
+            "title": "Strategisk Planering",
+            "description": "Utveckling av tydlig roadmap och prioriterade insatsområden."
+          },
+          {
+            "step": "03",
+            "title": "Implementering",
+            "description": "Hands-on support och vägledning genom förändringsprocessen."
+          },
+          {
+            "step": "04",
+            "title": "Uppföljning",
+            "description": "Kontinuerlig utvärdering och justeringar för optimala resultat."
+          }
+        ]
       }
+    },
+    "seniorAdvisor": {
+      "title": "Senior Rådgivare",
+      "subtitle": "Strategisk expertis och praktisk vägledning för ledningsgrupper som navigerar komplexa affärsutmaningar och transformationer.",
+      "backToServices": "Tillbaka till tjänster",
+      "yearsStat": "År av Ledarskapsexpertis",
+      "turnaroundsStat": "Framgångsrika Turnarounds",
+      "ceoYearsStat": "År som VD",
+      "expertiseTitle": "Expertområden",
+      "expertiseSubtitle": "Djup kunskap och praktisk erfarenhet inom de områden som är kritiska för framgångsrik affärstransformation.",
+      "expertiseAreas": [
+        {
+          "title": "Transformation & Tillväxt",
+          "description": "Strategisk vägledning för organisationsförändringar och tillväxtinitiativ baserat på 30+ års branschexpertis."
+        },
+        {
+          "title": "Ledarskaps- & Organisationsutveckling",
+          "description": "Utveckla ledarskapskraft och bygga högpresterande team genom beprövade metoder och praktisk erfarenhet."
+        },
+        {
+          "title": "Strategi & Verkställighet",
+          "description": "Från strategi till resultat - säkerställ framgångsrik implementering av affärskritiska initiativ."
+        },
+        {
+          "title": "Innovation & Digitalisering",
+          "description": "Navigera den digitala transformationen och skapa innovativa affärsmodeller för framtidens utmaningar."
+        }
+      ],
+      "valueTitle": "Varför Välja Yvonne som Senior Rådgivare?",
+      "valueSubtitle": "Kombinationen av djup branschexpertis, praktisk erfarenhet och beprövade resultat skapar unikt värde för dina affärsutmaningar.",
+      "valueProp": [
+        {
+          "title": "Beprövad Expertis",
+          "description": "30+ år av framgångsrik ledarskap inom retail och FMCG, inklusive 18 år som VD."
+        },
+        {
+          "title": "Resultatfokus",
+          "description": "Dokumenterad track record av framgångsrika transformationer och verksamhetsförbättringar."
+        },
+        {
+          "title": "Praktisk Approach",
+          "description": "Hands-on rådgivning baserad på verklig branschexpertis och operativ erfarenhet."
+        }
+      ],
+      "engagementTitle": "Uppdragsformat",
+      "engagementSubtitle": "Flexibla rådgivningsformat anpassade efter dina specifika behov och utmaningar.",
+      "engagementTypes": [
+        {
+          "title": "Strategisk Rådgivning",
+          "description": "Löpande strategisk support för VD och ledningsgrupp",
+          "duration": "3-12 månader",
+          "format": "Månatliga workshops och ad-hoc konsultationer"
+        },
+        {
+          "title": "Projektspecifik Rådgivning",
+          "description": "Expertis för specifika transformationsprojekt",
+          "duration": "1-6 månader",
+          "format": "Veckovisa sessioner och milstolpsgenomgångar"
+        },
+        {
+          "title": "Board Advisory",
+          "description": "Rådgivning till styrelse och styrelseordförande",
+          "duration": "6-24 månader",
+          "format": "Styrelsemöten och strategisessioner"
+        }
+      ],
+      "processTitle": "Så Arbetar Vi Tillsammans",
+      "processSubtitle": "En strukturerad approach som säkerställer konkreta resultat och varaktig förändring.",
+      "processSteps": [
+        {
+          "step": "01",
+          "title": "Analys & Kartläggning",
+          "description": "Djupgående analys av nuläge, utmaningar och möjligheter."
+        },
+        {
+          "step": "02",
+          "title": "Strategisk Planering",
+          "description": "Utveckling av tydlig roadmap och prioriterade insatsområden."
+        },
+        {
+          "step": "03",
+          "title": "Implementering",
+          "description": "Hands-on support och vägledning genom förändringsprocessen."
+        },
+        {
+          "step": "04",
+          "title": "Uppföljning",
+          "description": "Kontinuerlig utvärdering och justeringar för optimala resultat."
+        }
+      ],
+      "ctaTitle": "Redo att Accelerera Din Transformation?",
+      "ctaSubtitle": "Låt oss diskutera hur min expertis kan bidra till era strategiska mål och affärsresultat. Boka ett kostnadsfritt strategisamtal idag.",
+      "ctaButton": "Boka Strategisamtal",
+      "ctaSecondary": "Läs Mer Om Yvonne",
+      "durationLabel": "Varaktighet:",
+      "formatLabel": "Format:"
     }
   },
   "credentials": {
