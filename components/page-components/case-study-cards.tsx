@@ -4,12 +4,14 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CaseStudy } from "@/lib/types";
 import { ArrowRight, Building, Clock, User } from "lucide-react";
+import { Dictionary } from "@/lib/types/dictionary";
 
 interface CaseStudyCardsProps {
   caseStudies: CaseStudy[];
+  dict: Dictionary;
 }
 
-export function CaseStudyCards({ caseStudies }: CaseStudyCardsProps) {
+export function CaseStudyCards({ caseStudies, dict }: CaseStudyCardsProps) {
   return (
     <div className="space-y-12">
       {caseStudies.map((caseStudy, index) => (
@@ -48,7 +50,7 @@ export function CaseStudyCards({ caseStudies }: CaseStudyCardsProps) {
                 <div className="lg:col-span-2 space-y-6">
                   <div>
                     <h4 className="text-lg font-semibold text-foreground mb-3">
-                      Utmaning
+                      {dict.cases.caseStudyLabels.challenge}
                     </h4>
                     <p className="text-muted-foreground leading-relaxed">
                       {caseStudy.challenge}
@@ -57,7 +59,7 @@ export function CaseStudyCards({ caseStudies }: CaseStudyCardsProps) {
                   
                   <div>
                     <h4 className="text-lg font-semibold text-foreground mb-3">
-                      Lösning & Genomförande
+                      {dict.cases.caseStudyLabels.solution}
                     </h4>
                     <ul className="space-y-2">
                       {caseStudy.solution.map((item, solutionIndex) => (
@@ -83,7 +85,7 @@ export function CaseStudyCards({ caseStudies }: CaseStudyCardsProps) {
                 {/* Results */}
                 <div className="space-y-4">
                   <h4 className="text-lg font-semibold text-foreground">
-                    Resultat
+                    {dict.cases.caseStudyLabels.results}
                   </h4>
                   <div className="grid grid-cols-1 gap-4">
                     {caseStudy.results.map((result, resultIndex) => (

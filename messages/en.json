@@ -271,22 +271,21 @@
         "backToServices": "Back to services",
         "title": "Senior Advisor",
         "subtitle": "Strategic expertise and practical guidance for management teams navigating complex business challenges and transformations.",
-        "badge1": "30+ years of leadership expertise",
-        "badge2": "4 successful turnarounds",
-        "badge3": "18 years as CEO",
+        "yearsStat": "Years of Leadership Expertise",
+        "turnaroundsStat": "Successful Turnarounds",
+        "ceoYearsStat": "Years as CEO",
         "ctaButton": "Book strategy session",
         "expertiseTitle": "Areas of Expertise",
         "expertiseSubtitle": "Deep knowledge and practical experience in areas critical for successful business transformation.",
-        "whyChooseTitle": "Why Choose Yvonne as Senior Advisor?",
-        "whyChooseSubtitle": "The combination of deep industry expertise, practical experience and proven results creates unique value for your business challenges.",
+        "valueTitle": "Why Choose Yvonne as Senior Advisor?",
+        "valueSubtitle": "The combination of deep industry expertise, practical experience and proven results creates unique value for your business challenges.",
         "engagementTitle": "Engagement Formats",
         "engagementSubtitle": "Flexible advisory formats tailored to your specific needs and challenges.",
         "processTitle": "How We Work Together",
         "processSubtitle": "A structured approach that ensures concrete results and lasting change.",
-        "finalCtaTitle": "Ready to Accelerate Your Transformation?",
-        "finalCtaSubtitle": "Let's discuss how my expertise can contribute to your strategic goals and business results. Book a free strategy session today.",
-        "finalCtaButton": "Book Strategy Session",
-        "finalCtaSecondary": "Learn More About Yvonne",
+        "ctaTitle": "Ready to Accelerate Your Transformation?",
+        "ctaSubtitle": "Let's discuss how my expertise can contribute to your strategic goals and business results. Book a free strategy session today.",
+        "ctaSecondary": "Learn More About Yvonne",
         "durationLabel": "Duration:",
         "formatLabel": "Format:",
         "expertiseAreas": [
@@ -370,104 +369,359 @@
             "description": "Continuous evaluation and adjustments for optimal results."
           }
         ]
+      },
+      "interimExecutive": {
+        "backToServices": "Back to services",
+        "title": "Interim Executive",
+        "subtitle": "Immediate leadership capacity for critical situations. From acute leadership needs to strategic transformations.",
+        "turnaroundsStat": "Successful Turnarounds",
+        "ceoYearsStat": "Years as CEO/Interim Leader",
+        "startupDaysStat": "Days to Start",
+        "situationsTitle": "When Is an Interim Executive Needed?",
+        "situationsSubtitle": "Situations that require immediate, experienced leadership to ensure continuity and drive necessary changes.",
+        "capabilitiesTitle": "Interim Leadership That Delivers",
+        "capabilitiesSubtitle": "30+ years of operational experience combined with proven results in transformation and growth.",
+        "deliverablesTitle": "What You Can Expect",
+        "deliverablesSubtitle": "A structured approach with clear milestones and deliverables from day one.",
+        "industryTitle": "Industry Expertise",
+        "industrySubtitle": "Deep understanding of the complexity within retail, FMCG and consumer industries gives me the prerequisites to quickly identify challenges and opportunities.",
+        "mobilizationTitle": "Rapid Mobilization",
+        "mobilizationSubtitle": "When time is critical, I can mobilize within 7 days. A structured process ensures smooth transition and immediate impact.",
+        "availabilityTitle": "Immediate Availability",
+        "availabilitySubtitle": "Flexible start within 7 days",
+        "ctaTitle": "Need Immediate Leadership Reinforcement?",
+        "ctaSubtitle": "Contact me for a confidential discussion about your acute leadership needs. I can mobilize within a week.",
+        "ctaButton": "Contact for Urgent Need",
+        "ctaSecondary": "View All Services",
+        "situations": [
+          {
+            "title": "Acute Leadership",
+            "description": "Rapid intervention when CEO or management team needs immediate replacement",
+            "urgency": "Immediate"
+          },
+          {
+            "title": "Transformation",
+            "description": "Execute comprehensive organizational changes or turnarounds",
+            "urgency": "3-18 months"
+          },
+          {
+            "title": "Growth Phases",
+            "description": "Lead the organization through rapid expansion or new markets",
+            "urgency": "6-24 months"
+          },
+          {
+            "title": "Critical Projects",
+            "description": "Ensure success of business-critical initiatives and implementations",
+            "urgency": "3-12 months"
+          }
+        ],
+        "capabilities": [
+          {
+            "title": "Immediate Action Power",
+            "description": "Step in on day 1 with full operational capacity and start delivering results directly"
+          },
+          {
+            "title": "Change Leadership",
+            "description": "Proven track record of successfully executing complex transformations"
+          },
+          {
+            "title": "Crisis Management",
+            "description": "Experienced in navigating challenging situations and turning negative trends"
+          },
+          {
+            "title": "Team Building",
+            "description": "Quickly identify and develop key talents and build high-performing teams"
+          },
+          {
+            "title": "Stakeholder Management",
+            "description": "Manage complex relationships with board, investors, customers and suppliers"
+          },
+          {
+            "title": "Results Focus",
+            "description": "Deliver measurable improvements within defined timeframes and budgets"
+          }
+        ],
+        "deliverables": [
+          {
+            "phase": "First 30 Days",
+            "items": [
+              "In-depth organizational analysis and gap identification",
+              "Stakeholder mapping and relationship establishment",
+              "Quick wins and short-term improvements",
+              "Team evaluation and key recruitments"
+            ]
+          },
+          {
+            "phase": "90-Day Goals",
+            "items": [
+              "Strategic roadmap and action plan",
+              "Organizational structure and process optimization",
+              "KPI framework and monitoring system",
+              "Cultural change and engagement program"
+            ]
+          },
+          {
+            "phase": "Long-term Impact",
+            "items": [
+              "Sustainable growth and improved profitability",
+              "Strengthened market position and competitive advantages",
+              "Developed organizational capacity",
+              "Smooth handover to permanent leadership"
+            ]
+          }
+        ],
+        "industries": [
+          "Retail & E-commerce",
+          "FMCG & Consumer Goods",
+          "Fashion & Lifestyle",
+          "Food & Beverage",
+          "Distribution & Logistics",
+          "Technology & Digital"
+        ],
+        "mobilizationSteps": [
+          {
+            "day": "Day 1-2",
+            "task": "Initial evaluation and stakeholder meetings"
+          },
+          {
+            "day": "Day 3-5",
+            "task": "Organizational analysis and prioritization"
+          },
+          {
+            "day": "Day 6-7",
+            "task": "Action plan and communication strategy"
+          },
+          {
+            "day": "Week 2",
+            "task": "Full operational activity and delivery"
+          }
+        ]
+      },
+      "workshops": {
+        "backToServices": "Back to services",
+        "title": "Workshops",
+        "subtitle": "Develop your leaders and teams through interactive workshops based on 30+ years of practical experience from transformation and growth.",
+        "trainedLeadersStat": "Trained Leaders",
+        "averageRatingStat": "Average Rating (5.0)",
+        "recommendationStat": "Would Recommend",
+        "typesTitle": "Popular Workshop Areas",
+        "typesSubtitle": "Our most requested workshops cover the critical areas that drive successful transformation and leadership development.",
+        "formatsTitle": "Flexible Workshop Formats",
+        "formatsSubtitle": "Different formats to suit your specific needs, timeframes and objectives.",
+        "methodologyTitle": "Our Approach",
+        "methodologySubtitle": "A proven methodology that ensures the workshop creates lasting change and concrete results for your organization.",
+        "outcomesTitle": "What Participants Take Away",
+        "outcomesSubtitle": "Concrete tools, practical methods and personal insights that can be implemented directly in daily operations.",
+        "testimonialsTitle": "What Participants Say",
+        "investmentTitle": "Investment & Booking",
+        "investmentSubtitle": "Workshops are priced based on format, duration and number of participants. Contact me for a customized quote tailored to your specific needs.",
+        "ctaTitle": "Ready to Develop Your Leaders?",
+        "ctaSubtitle": "Let's discuss how a customized workshop can accelerate your leadership and organizational development. Book a free consultation today.",
+        "ctaButton": "Discuss Workshop Needs",
+        "ctaSecondary": "View Speaking",
+        "workshopTypes": [
+          {
+            "title": "Transformation Leadership",
+            "description": "Develop your ability to lead successful organizational changes",
+            "duration": "1-2 days",
+            "participants": "8-15 participants",
+            "focus": "Leadership & Change"
+          },
+          {
+            "title": "Team Development",
+            "description": "Build high-performing teams through practical tools and methods",
+            "duration": "1 day",
+            "participants": "5-12 participants",
+            "focus": "Team & Collaboration"
+          },
+          {
+            "title": "Strategic Execution",
+            "description": "From strategy to results - ensure successful implementation",
+            "duration": "1-2 days",
+            "participants": "6-20 participants",
+            "focus": "Strategy & Execution"
+          },
+          {
+            "title": "Innovation & Digitalization",
+            "description": "Navigate digital transformation and create innovative solutions",
+            "duration": "1 day",
+            "participants": "10-25 participants",
+            "focus": "Innovation & Digital"
+          }
+        ],
+        "formats": [
+          {
+            "title": "Intensive Workshops",
+            "description": "In-depth 1-2 day programs with practical tools and case studies",
+            "benefits": ["Directly applicable tools", "Interactive exercises", "Personal development plan"]
+          },
+          {
+            "title": "Half-Day Format",
+            "description": "Focused 4-hour sessions for specific challenges",
+            "benefits": ["Time-efficient solution", "Targeted knowledge", "Concrete next steps"]
+          },
+          {
+            "title": "Workshop Series",
+            "description": "Multiple connected sessions for deeper transformation",
+            "benefits": ["Sustainable change", "Continuous follow-up", "Gradual implementation"]
+          },
+          {
+            "title": "Customized Programs",
+            "description": "Completely tailored workshop programs for your specific needs",
+            "benefits": ["100% relevant content", "Your real challenges", "Flexible delivery"]
+          }
+        ],
+        "methodology": [
+          {
+            "phase": "Preparation",
+            "description": "Pre-analysis of needs, goals and participant group",
+            "details": ["Stakeholder interviews", "Current state analysis", "Goal setting", "Content adaptation"]
+          },
+          {
+            "phase": "Implementation",
+            "description": "Interactive workshop with practical tools",
+            "details": ["Theoretical foundation", "Practical exercises", "Case studies", "Group work"]
+          },
+          {
+            "phase": "Follow-up",
+            "description": "Ensure implementation and results",
+            "details": ["Action plan", "30-day check-in", "Materials & tools", "Continuous support"]
+          }
+        ],
+        "learningOutcomes": [
+          "Practical tools for change leadership",
+          "Strategies for handling resistance and creating engagement",
+          "Methods for building high-performing teams",
+          "Framework for strategic execution",
+          "Techniques for innovation and problem-solving",
+          "Personal development plan with concrete steps"
+        ],
+        "testimonials": [
+          {
+            "quote": "Yvonne's transformation leadership workshop gave us concrete tools we use daily. Her practical approach and real examples made the difference.",
+            "author": "Maria Andersson",
+            "role": "CEO, RetailTech AB",
+            "company": "RetailTech AB"
+          },
+          {
+            "quote": "Incredibly engaged and knowledgeable. The team development workshop resulted in noticeable improvement in our collaboration and performance.",
+            "author": "Erik Johansson",
+            "role": "HR Manager, Nordic Fashion Group",
+            "company": "Nordic Fashion Group"
+          }
+        ],
+        "guarantees": [
+          {
+            "title": "Quality Guarantee",
+            "description": "100% satisfaction guarantee or full refund"
+          },
+          {
+            "title": "Flexible Delivery",
+            "description": "On-site, virtual or hybrid format"
+          },
+          {
+            "title": "Quick Start",
+            "description": "Can be delivered within 2-3 weeks"
+          }
+        ]
       }
-    },
-    "seniorAdvisor": {
-      "title": "Senior Advisor",
-      "subtitle": "Strategic expertise and practical guidance for management teams navigating complex business challenges and transformations.",
-      "backToServices": "Back to services",
-      "yearsStat": "Years of Leadership Expertise",
-      "turnaroundsStat": "Successful Turnarounds",
-      "ceoYearsStat": "Years as CEO",
-      "expertiseTitle": "Areas of Expertise",
-      "expertiseSubtitle": "Deep knowledge and practical experience in areas critical for successful business transformation.",
-      "expertiseAreas": [
-        {
-          "title": "Transformation & Growth",
-          "description": "Strategic guidance for organizational changes and growth initiatives based on 30+ years of industry expertise."
-        },
-        {
-          "title": "Leadership & Organizational Development",
-          "description": "Develop leadership capabilities and build high-performing teams through proven methods and practical experience."
-        },
-        {
-          "title": "Strategy & Execution",
-          "description": "From strategy to results - ensure successful implementation of business-critical initiatives."
-        },
-        {
-          "title": "Innovation & Digitalization",
-          "description": "Navigate digital transformation and create innovative business models for future challenges."
-        }
-      ],
-      "valueTitle": "Why Choose Yvonne as Senior Advisor?",
-      "valueSubtitle": "The combination of deep industry expertise, practical experience and proven results creates unique value for your business challenges.",
-      "valueProp": [
-        {
-          "title": "Proven Expertise",
-          "description": "30+ years of successful leadership in retail and FMCG, including 18 years as CEO."
-        },
-        {
-          "title": "Results Focus",
-          "description": "Documented track record of successful transformations and business improvements."
-        },
-        {
-          "title": "Practical Approach",
-          "description": "Hands-on advisory based on real industry expertise and operational experience."
-        }
-      ],
-      "engagementTitle": "Engagement Formats",
-      "engagementSubtitle": "Flexible advisory formats tailored to your specific needs and challenges.",
-      "engagementTypes": [
-        {
-          "title": "Strategic Advisory",
-          "description": "Ongoing strategic support for CEO and management team",
-          "duration": "3-12 months",
-          "format": "Monthly workshops and ad-hoc consultations"
-        },
-        {
-          "title": "Project-Specific Advisory",
-          "description": "Expertise for specific transformation projects",
-          "duration": "1-6 months",
-          "format": "Weekly sessions and milestone reviews"
-        },
-        {
-          "title": "Board Advisory",
-          "description": "Advisory to board and board chairman",
-          "duration": "6-24 months",
-          "format": "Board meetings and strategy sessions"
-        }
-      ],
-      "processTitle": "How We Work Together",
-      "processSubtitle": "A structured approach that ensures concrete results and lasting change.",
-      "processSteps": [
-        {
-          "step": "01",
-          "title": "Analysis & Assessment",
-          "description": "In-depth analysis of current situation, challenges and opportunities."
-        },
-        {
-          "step": "02",
-          "title": "Strategic Planning",
-          "description": "Development of clear roadmap and prioritized focus areas."
-        },
-        {
-          "step": "03",
-          "title": "Implementation",
-          "description": "Hands-on support and guidance through the change process."
-        },
-        {
-          "step": "04",
-          "title": "Follow-up",
-          "description": "Continuous evaluation and adjustments for optimal results."
-        }
-      ],
-      "ctaTitle": "Ready to Accelerate Your Transformation?",
-      "ctaSubtitle": "Let's discuss how my expertise can contribute to your strategic goals and business results. Book a free strategy consultation today.",
-      "ctaButton": "Book Strategy Call",
-      "ctaSecondary": "Learn More About Yvonne",
-      "durationLabel": "Duration:",
-      "formatLabel": "Format:"
     }
+  },
+  "speaking": {
+    "title": "Speaking that Inspires Action",
+    "subtitle": "Practical insights from 30+ years of leadership in transformation, internationalization, and retail excellence. Speaking that provides tools, not just inspiration.",
+    "badge": "Keynote Speaker",
+    "languages": "Swedish, English, German",
+    "duration": "30-240 minutes",
+    "format": "Live & Digital",
+    "ctaButton": "Book Speaking Engagement",
+    "speakerKit": "Speaker Kit",
+    "videoTitle": "Transformation in the Digital Era",
+    "videoSubtitle": "Fashion Industry Summit 2025 - 3 min preview",
+    "videoPlaceholder": "Video content coming soon",
+    "topicsTitle": "Speaking Topics",
+    "topicsSubtitle": "Three main themes that can be adapted and combined based on your audience and challenges.",
+    "finalCtaTitle": "Transform Your Next Event Into a Breakthrough",
+    "finalCtaSubtitle": "Book an inspiring keynote that gives your audience concrete tools for transformation and growth.",
+    "finalCtaButton": "Book Free Consultation",
+    "finalCtaSecondary": "Download Speaker Kit",
+    "topics": [
+      {
+        "id": "digital-transformation",
+        "title": "Transformation in the Digital Era",
+        "subtitle": "Beyond the Buzzwords",
+        "description": "What really happens when digitalization changes everything? An honest review of challenges, opportunities and consequences rarely discussed.",
+        "duration": "30-60 minutes + Q&A",
+        "keyPoints": [
+          "The real impact of digitalization on organizations",
+          "Cultural transformation - the forgotten component",
+          "Leadership when everything changes simultaneously",
+          "Practical tools to navigate change"
+        ],
+        "audience": [
+          "CEOs and management teams",
+          "Boards driving digital transformation",
+          "HR managers and change agents",
+          "Retail and FMCG leaders"
+        ],
+        "format": ["Keynote", "Workshop", "Panel discussion"],
+        "testimonial": {
+          "quote": "Yvonne's digital transformation presentation gave us tools we still use two years later.",
+          "author": "CEO, Fashion Retail Group",
+          "company": "Nordic retail chain"
+        }
+      },
+      {
+        "id": "internationalization",
+        "title": "Internationalization",
+        "subtitle": "From Nordic Success to Global Growth",
+        "description": "Strategies, pitfalls and success factors for expansion into new markets. Based on practical experience of building operations in 8+ countries.",
+        "duration": "45-60 minutes + Q&A",
+        "keyPoints": [
+          "Market establishment - what actually works",
+          "Cultural adaptation without losing identity",
+          "Partnership vs own establishment",
+          "Building international teams and leadership"
+        ],
+        "audience": [
+          "Growth companies with expansion plans",
+          "International corporations",
+          "Investors and private equity",
+          "Export and trade organizations"
+        ],
+        "format": ["Keynote", "Masterclass", "Executive briefing"],
+        "testimonial": {
+          "quote": "Concrete and actionable insights from someone who has actually done it themselves.",
+          "author": "COO, Tech Scale-up",
+          "company": "B2C company"
+        }
+      },
+      {
+        "id": "retail-experience",
+        "title": "Retail in the Age of Experience",
+        "subtitle": "From Transaction to Transformation",
+        "description": "How do you create loyalty and relevance when consumers have endless choices? About building relationships in a transaction-driven world.",
+        "duration": "30-90 minutes (flexible)",
+        "keyPoints": [
+          "From product to experience - practical examples",
+          "Omnichannel that actually works",
+          "Data-driven personalization without losing human touch",
+          "Building community and brand loyalty"
+        ],
+        "audience": [
+          "Retail leaders and store managers",
+          "E-commerce managers and digital teams",
+          "Brand managers and marketers",
+          "Consumer goods companies"
+        ],
+        "format": ["Keynote", "Interactive session", "Case study workshop"],
+        "testimonial": {
+          "quote": "Finally someone who understands both digital and physical retail experiences.",
+          "author": "CMO, Lifestyle Brand",
+          "company": "Omnichannel retailer"
+        }
+      }
+    ]
   },
   "credentials": {
     "title": "Core Competencies",
@@ -521,6 +775,30 @@
     "ctaTitle": "Ready to discuss your next step?",
     "ctaSubtitle": "Let's explore how my experience can contribute to your transformation and growth.",
     "ctaButton": "Book introductory meeting"
+  },
+  "cases": {
+    "title": "Proven",
+    "titleHighlight": "Results",
+    "subtitle": "Real transformation stories from 30+ years of successful leadership in retail, FMCG, and consumer industries.",
+    "caseStudiesTitle": "Selected Transformation Stories",
+    "caseStudiesSubtitle": "In-depth case studies showcasing concrete results and proven methods for successful business transformation.",
+    "industryTitle": "Industry Expertise",
+    "industrySubtitle": "Deep experience and proven results across several key verticals in retail and consumer industries.",
+    "casesLabel": "cases",
+    "finalCtaTitle": "Ready to create your",
+    "finalCtaTitleHighlight": "next success story",
+    "finalCtaSubtitle": "Let's discuss your challenges and how proven methodology can accelerate your transformation and growth journey.",
+    "finalCtaButton": "Book Free Strategy Session",
+    "finalCtaSecondary": "Learn more about Yvonne's background",
+    "caseStudyLabels": {
+      "challenge": "Challenge",
+      "solution": "Solution & Implementation",
+      "results": "Results"
+    },
+    "impactAreas": {
+      "title": "Proven Results in Key Areas",
+      "description": "Completed transformations with measurable success"
+    }
   },
   "cta": {
     "subtitle": "READY TO BEGIN?",

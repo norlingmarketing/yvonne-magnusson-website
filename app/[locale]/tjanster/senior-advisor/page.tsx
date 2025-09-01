@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowRight, Users, Target, TrendingUp, Lightbulb, Shield, Award, ArrowLeft } from "lucide-react";
 import { getDictionary } from "@/lib/dictionaries";
+import { CTASection } from "@/components/sections/cta-section";
 
 export async function generateMetadata({
   params,
@@ -254,32 +255,15 @@ export default async function SeniorAdvisorPage({
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <BlurFade delay={0.2}>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              {dict.pages.services.seniorAdvisor.ctaTitle}
-            </h2>
-            <p className="text-xl text-muted-foreground mb-10 leading-relaxed">
-              {dict.pages.services.seniorAdvisor.ctaSubtitle}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
-                <Link href={`/${locale}/kontakt`} className="flex items-center gap-2">
-                  {dict.pages.services.seniorAdvisor.ctaButton}
-                  <ArrowRight className="h-5 w-5" />
-                </Link>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-background hover:text-foreground">
-                <Link href={`/${locale}/om-yvonne`} className="flex items-center gap-2">
-                  {dict.pages.services.seniorAdvisor.ctaSecondary}
-                  <Users className="h-5 w-5" />
-                </Link>
-              </Button>
-            </div>
-          </BlurFade>
-        </div>
-      </section>
+      <CTASection
+        locale={locale}
+        dict={dict}
+        customTitle={dict.pages.services.seniorAdvisor.ctaTitle}
+        customDescription={dict.pages.services.seniorAdvisor.ctaSubtitle}
+        primaryButtonText={dict.pages.services.seniorAdvisor.ctaButton}
+        secondaryButtonText={dict.pages.services.seniorAdvisor.ctaSecondary}
+        secondaryButtonHref={`/${locale}/om-yvonne`}
+      />
     </main>
   );
 }

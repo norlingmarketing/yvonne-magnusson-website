@@ -1,6 +1,7 @@
 import { BlurFade } from "@/components/magicui/blur-fade";
 import { Card, CardContent } from "@/components/ui/card";
 import { TrendingUp, Users, Target, Zap } from "lucide-react";
+import { Dictionary } from "@/lib/types/dictionary";
 
 interface ImpactAreaData {
   title: string;
@@ -11,14 +12,16 @@ interface ImpactAreaData {
 
 interface ImpactAreasProps {
   impactAreas: ImpactAreaData[];
+  dict: Dictionary;
   title?: string;
   description?: string;
 }
 
 export function ImpactAreas({ 
   impactAreas, 
-  title = "Bevisade Resultat inom Nyckelområden",
-  description = "Genomförda transformationer med mätbara framgångar"
+  dict,
+  title,
+  description
 }: ImpactAreasProps) {
   return (
     <section className="py-20 bg-muted/50">
@@ -26,10 +29,10 @@ export function ImpactAreas({
         <BlurFade delay={0.2}>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              {title}
+              {title || dict.cases.impactAreas.title}
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              {description}
+              {description || dict.cases.impactAreas.description}
             </p>
           </div>
         </BlurFade>

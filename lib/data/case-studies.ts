@@ -1,6 +1,6 @@
 import { CaseStudy } from "@/lib/types";
 
-export const caseStudies: CaseStudy[] = [
+const caseStudiesSv: CaseStudy[] = [
   {
     title: "Retailkedjan - Från Kris till Marknadsledare",
     company: "Nordisk Retailkedja",
@@ -69,7 +69,76 @@ export const caseStudies: CaseStudy[] = [
   }
 ];
 
-export const impactAreasData = [
+const caseStudiesEn: CaseStudy[] = [
+  {
+    title: "Retail Chain - From Crisis to Market Leader",
+    company: "Nordic Retail Chain",
+    industry: "Fashion Retail",
+    duration: "18 months",
+    role: "Interim CEO",
+    challenge: "Declining sales, outdated processes, and low employee engagement threatened the company's survival.",
+    solution: [
+      "Conducted comprehensive organizational analysis and cultural change program",
+      "Implemented new digital strategy and e-commerce platform",
+      "Recruited key talents and developed existing staff",
+      "Optimized supply chain and cost structure"
+    ],
+    results: [
+      { metric: "Revenue", value: "+47%", description: "Growth over 18 months" },
+      { metric: "Profitability", value: "12%", description: "EBITDA margin from -3%" },
+      { metric: "Employee Engagement", value: "+65%", description: "NPS improvement" },
+      { metric: "Market Share", value: "+8%", description: "In strategic segments" }
+    ],
+    testimonial: "Yvonne turned our entire organization around in 18 months. Her combination of strategic thinking and practical execution power was crucial to our success.",
+    author: "Chairman of the Board"
+  },
+  {
+    title: "FMCG Transformation in Northern Europe",
+    company: "European FMCG Distributor",
+    industry: "Food & Beverage",
+    duration: "24 months",
+    role: "Senior Advisor",
+    challenge: "Fragmented market position, inefficient distribution, and challenging competition from new players.",
+    solution: [
+      "Developed new go-to-market strategy for key categories",
+      "Consolidated distribution network and optimized logistics",
+      "Implemented customer-centric organization and processes",
+      "Established strategic partnerships with key customers"
+    ],
+    results: [
+      { metric: "Market Growth", value: "+23%", description: "In strategic categories" },
+      { metric: "Operational Efficiency", value: "+31%", description: "Cost reduction" },
+      { metric: "Customer Satisfaction", value: "8.7/10", description: "From 6.2/10" },
+      { metric: "ROI", value: "340%", description: "On investments" }
+    ],
+    testimonial: "Yvonne's deep understanding of the FMCG market and ability to drive complex changes helped us regain market leadership.",
+    author: "CEO"
+  },
+  {
+    title: "Digital Transformation & Growth",
+    company: "Traditional Retailer",
+    industry: "Home & Garden",
+    duration: "12 months",
+    role: "Interim Head of Digital Transformation",
+    challenge: "Need for rapid digitalization to meet changing consumer behaviors and e-commerce competition.",
+    solution: [
+      "Implemented omnichannel strategy and unified commerce",
+      "Built digital competence through recruitment and training",
+      "Launched new e-commerce platform and mobile app",
+      "Developed data-driven decision support and personalization"
+    ],
+    results: [
+      { metric: "Digital Revenue", value: "+156%", description: "Online growth" },
+      { metric: "Omnichannel Customers", value: "+89%", description: "Cross-channel engagement" },
+      { metric: "Conversion", value: "+43%", description: "E-commerce optimization" },
+      { metric: "NPS", value: "+52", description: "Customer experience improvement" }
+    ],
+    testimonial: "Yvonne led our digital transformation with impressive results. She understood both the technical and human side of change.",
+    author: "Board Member"
+  }
+];
+
+const impactAreasDataSv = [
   {
     title: "Tillväxt & Lönsamhet",
     description: "Genomsnittlig omsättningstillväxt på 40%+ och förbättrad EBITDA-marginal med 8-15 procentenheter",
@@ -96,14 +165,48 @@ export const impactAreasData = [
   }
 ];
 
-export const overallStats = [
+const impactAreasDataEn = [
+  {
+    title: "Growth & Profitability",
+    description: "Average revenue growth of 40%+ and improved EBITDA margin by 8-15 percentage points",
+    metrics: ["12 successful cases"],
+    iconName: "TrendingUp"
+  },
+  {
+    title: "Organizational Change",
+    description: "Cultural changes resulting in 50%+ improvement in employee engagement and retention",
+    metrics: ["8 transformations"],
+    iconName: "Users"
+  },
+  {
+    title: "Market Position",
+    description: "Strengthened market position with average increase in market share of 15-25%",
+    metrics: ["10 turnarounds"],
+    iconName: "Target"
+  },
+  {
+    title: "Digital Transformation",
+    description: "Successful digitalization with 100%+ growth in digital revenue within 12-18 months",
+    metrics: ["6 digitalizations"],
+    iconName: "Zap"
+  }
+];
+
+const overallStatsSv = [
   { value: 30, label: "Case studier genomförda", suffix: "+" },
   { value: 40, label: "Genomsnittlig omsättningstillväxt", suffix: "%+" },
   { value: 15, label: "EBITDA-förbättring", suffix: " pp" },
   { value: 2.5, label: "Miljarder SEK transformerat värde", suffix: " Mdr" }
 ];
 
-export const industries = [
+const overallStatsEn = [
+  { value: 30, label: "Case studies completed", suffix: "+" },
+  { value: 40, label: "Average revenue growth", suffix: "%+" },
+  { value: 15, label: "EBITDA improvement", suffix: " pp" },
+  { value: 2.5, label: "Billion SEK value transformed", suffix: " Bn" }
+];
+
+const industriesSv = [
   { name: "Fashion & Lifestyle", cases: 8, icon: "👔" },
   { name: "Food & Beverage", cases: 6, icon: "🍽️" },
   { name: "Home & Garden", cases: 4, icon: "🏠" },
@@ -111,3 +214,35 @@ export const industries = [
   { name: "Health & Beauty", cases: 5, icon: "💄" },
   { name: "Sports & Outdoor", cases: 4, icon: "⛷️" }
 ];
+
+const industriesEn = [
+  { name: "Fashion & Lifestyle", cases: 8, icon: "👔" },
+  { name: "Food & Beverage", cases: 6, icon: "🍽️" },
+  { name: "Home & Garden", cases: 4, icon: "🏠" },
+  { name: "Electronics & Tech", cases: 3, icon: "💻" },
+  { name: "Health & Beauty", cases: 5, icon: "💄" },
+  { name: "Sports & Outdoor", cases: 4, icon: "⛷️" }
+];
+
+// Export functions that return locale-aware data
+export const getCaseStudies = (locale: string) => {
+  return locale === 'sv' ? caseStudiesSv : caseStudiesEn;
+};
+
+export const getImpactAreasData = (locale: string) => {
+  return locale === 'sv' ? impactAreasDataSv : impactAreasDataEn;
+};
+
+export const getOverallStats = (locale: string) => {
+  return locale === 'sv' ? overallStatsSv : overallStatsEn;
+};
+
+export const getIndustries = (locale: string) => {
+  return locale === 'sv' ? industriesSv : industriesEn;
+};
+
+// Legacy exports for backward compatibility (defaults to Swedish)
+export const caseStudies = caseStudiesSv;
+export const impactAreasData = impactAreasDataSv;
+export const overallStats = overallStatsSv;
+export const industries = industriesSv;

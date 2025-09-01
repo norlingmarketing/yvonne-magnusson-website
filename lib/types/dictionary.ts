@@ -174,6 +174,157 @@ export interface Dictionary {
         durationLabel: string;
         formatLabel: string;
       };
+      interimExecutive: {
+        backToServices: string;
+        title: string;
+        subtitle: string;
+        turnaroundsStat: string;
+        ceoYearsStat: string;
+        startupDaysStat: string;
+        situationsTitle: string;
+        situationsSubtitle: string;
+        capabilitiesTitle: string;
+        capabilitiesSubtitle: string;
+        deliverablesTitle: string;
+        deliverablesSubtitle: string;
+        industryTitle: string;
+        industrySubtitle: string;
+        mobilizationTitle: string;
+        mobilizationSubtitle: string;
+        availabilityTitle: string;
+        availabilitySubtitle: string;
+        ctaTitle: string;
+        ctaSubtitle: string;
+        ctaButton: string;
+        ctaSecondary: string;
+        situations: Array<{
+          title: string;
+          description: string;
+          urgency: string;
+        }>;
+        capabilities: Array<{
+          title: string;
+          description: string;
+        }>;
+        deliverables: Array<{
+          phase: string;
+          items: string[];
+        }>;
+        industries: string[];
+        mobilizationSteps: Array<{
+          day: string;
+          task: string;
+        }>;
+      };
+      workshops: {
+        backToServices: string;
+        title: string;
+        subtitle: string;
+        trainedLeadersStat: string;
+        averageRatingStat: string;
+        recommendationStat: string;
+        typesTitle: string;
+        typesSubtitle: string;
+        formatsTitle: string;
+        formatsSubtitle: string;
+        methodologyTitle: string;
+        methodologySubtitle: string;
+        outcomesTitle: string;
+        outcomesSubtitle: string;
+        testimonialsTitle: string;
+        investmentTitle: string;
+        investmentSubtitle: string;
+        ctaTitle: string;
+        ctaSubtitle: string;
+        ctaButton: string;
+        ctaSecondary: string;
+        workshopTypes: Array<{
+          title: string;
+          description: string;
+          duration: string;
+          participants: string;
+          focus: string;
+        }>;
+        formats: Array<{
+          title: string;
+          description: string;
+          benefits: string[];
+        }>;
+        methodology: Array<{
+          phase: string;
+          description: string;
+          details: string[];
+        }>;
+        learningOutcomes: string[];
+        testimonials: Array<{
+          quote: string;
+          author: string;
+          role: string;
+          company: string;
+        }>;
+        guarantees: Array<{
+          title: string;
+          description: string;
+        }>;
+      };
+    };
+  };
+  speaking: {
+    title: string;
+    subtitle: string;
+    badge: string;
+    languages: string;
+    duration: string;
+    format: string;
+    ctaButton: string;
+    speakerKit: string;
+    videoTitle: string;
+    videoSubtitle: string;
+    videoPlaceholder: string;
+    topicsTitle: string;
+    topicsSubtitle: string;
+    finalCtaTitle: string;
+    finalCtaSubtitle: string;
+    finalCtaButton: string;
+    finalCtaSecondary: string;
+    topics: Array<{
+      id: string;
+      title: string;
+      subtitle: string;
+      description: string;
+      duration: string;
+      keyPoints: string[];
+      audience: string[];
+      format: string[];
+      testimonial: {
+        quote: string;
+        author: string;
+        company: string;
+      };
+    }>;
+  };
+  cases: {
+    title: string;
+    titleHighlight: string;
+    subtitle: string;
+    caseStudiesTitle: string;
+    caseStudiesSubtitle: string;
+    industryTitle: string;
+    industrySubtitle: string;
+    casesLabel: string;
+    finalCtaTitle: string;
+    finalCtaTitleHighlight: string;
+    finalCtaSubtitle: string;
+    finalCtaButton: string;
+    finalCtaSecondary: string;
+    caseStudyLabels: {
+      challenge: string;
+      solution: string;
+      results: string;
+    };
+    impactAreas: {
+      title: string;
+      description: string;
     };
   };
   credentials: {

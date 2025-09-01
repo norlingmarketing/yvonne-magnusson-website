@@ -271,22 +271,21 @@
         "backToServices": "Tillbaka till tjänster",
         "title": "Senior Rådgivare",
         "subtitle": "Strategisk expertis och praktisk vägledning för ledningsgrupper som navigerar komplexa affärsutmaningar och transformationer.",
-        "badge1": "30+ år av ledarskapsexpertis",
-        "badge2": "4 framgångsrika turnarounds", 
-        "badge3": "18 år som VD",
+        "yearsStat": "År av Ledarskapsexpertis",
+        "turnaroundsStat": "Framgångsrika Turnarounds",
+        "ceoYearsStat": "År som VD",
         "ctaButton": "Boka strategisamtal",
         "expertiseTitle": "Expertområden",
         "expertiseSubtitle": "Djup kunskap och praktisk erfarenhet inom de områden som är kritiska för framgångsrik affärstransformation.",
-        "whyChooseTitle": "Varför Välja Yvonne som Senior Rådgivare?",
-        "whyChooseSubtitle": "Kombinationen av djup branschexpertis, praktisk erfarenhet och beprövade resultat skapar unikt värde för dina affärsutmaningar.",
+        "valueTitle": "Varför Välja Yvonne som Senior Rådgivare?",
+        "valueSubtitle": "Kombinationen av djup branschexpertis, praktisk erfarenhet och beprövade resultat skapar unikt värde för dina affärsutmaningar.",
         "engagementTitle": "Uppdragsformat",
         "engagementSubtitle": "Flexibla rådgivningsformat anpassade efter dina specifika behov och utmaningar.",
         "processTitle": "Så Arbetar Vi Tillsammans", 
         "processSubtitle": "En strukturerad approach som säkerställer konkreta resultat och varaktig förändring.",
-        "finalCtaTitle": "Redo att Accelerera Din Transformation?",
-        "finalCtaSubtitle": "Låt oss diskutera hur min expertis kan bidra till era strategiska mål och affärsresultat. Boka ett kostnadsfritt strategisamtal idag.",
-        "finalCtaButton": "Boka Strategisamtal",
-        "finalCtaSecondary": "Läs Mer Om Yvonne",
+        "ctaTitle": "Redo att Accelerera Din Transformation?",
+        "ctaSubtitle": "Låt oss diskutera hur min expertis kan bidra till era strategiska mål och affärsresultat. Boka ett kostnadsfritt strategisamtal idag.",
+        "ctaSecondary": "Läs Mer Om Yvonne",
         "durationLabel": "Varaktighet:",
         "formatLabel": "Format:",
         "expertiseAreas": [
@@ -370,104 +369,359 @@
             "description": "Kontinuerlig utvärdering och justeringar för optimala resultat."
           }
         ]
+      },
+      "interimExecutive": {
+        "backToServices": "Tillbaka till tjänster",
+        "title": "Interimledare",
+        "subtitle": "Omedelbar ledarskapskapacitet för kritiska situationer. Från akuta ledarskapsbehov till strategiska transformationer.",
+        "turnaroundsStat": "Framgångsrika Turnarounds",
+        "ceoYearsStat": "År som VD/Interimchef",
+        "startupDaysStat": "Dagar till Uppstart",
+        "situationsTitle": "När Behövs en Interimledare?",
+        "situationsSubtitle": "Situationer som kräver omedelbar, erfaren ledarskap för att säkerställa kontinuitet och driva nödvändiga förändringar.",
+        "capabilitiesTitle": "Interimledarskap som Levererar",
+        "capabilitiesSubtitle": "30+ års operativ erfarenhet kombinerat med beprövade resultat inom transformation och tillväxt.",
+        "deliverablesTitle": "Vad Du Kan Förvänta Dig",
+        "deliverablesSubtitle": "En strukturerad approach med tydliga milstolpar och leveranser från dag ett.",
+        "industryTitle": "Branschexpertis",
+        "industrySubtitle": "Djup förståelse för komplexiteten inom retail, FMCG och konsumentbranschen ger mig förutsättningar att snabbt identifiera utmaningar och möjligheter.",
+        "mobilizationTitle": "Snabb Mobilisering",
+        "mobilizationSubtitle": "När tiden är kritisk kan jag mobilisera inom 7 dagar. En strukturerad process säkerställer smidig övergång och omedelbar impact.",
+        "availabilityTitle": "Omedelbar Tillgänglighet",
+        "availabilitySubtitle": "Flexibel start inom 7 dagar",
+        "ctaTitle": "Behöver Du Omedelbar Ledarskapsförstärkning?",
+        "ctaSubtitle": "Kontakta mig för en konfidentiell diskussion om dina akuta ledarskapsbehov. Jag kan mobilisera inom en vecka.",
+        "ctaButton": "Kontakta för Akut Behov",
+        "ctaSecondary": "Se Alla Tjänster",
+        "situations": [
+          {
+            "title": "Akut Ledarskap",
+            "description": "Snabb insats när VD eller ledningsgrupp behöver ersättas omedelbart",
+            "urgency": "Omedelbart"
+          },
+          {
+            "title": "Transformation",
+            "description": "Genomföra omfattande organisationsförändringar eller turnarounds",
+            "urgency": "3-18 månader"
+          },
+          {
+            "title": "Tillväxtfaser",
+            "description": "Leda organisationen genom snabb expansion eller nya marknader",
+            "urgency": "6-24 månader"
+          },
+          {
+            "title": "Kritiska Projekt",
+            "description": "Säkerställa framgång för affärskritiska initiativ och implementeringar",
+            "urgency": "3-12 månader"
+          }
+        ],
+        "capabilities": [
+          {
+            "title": "Omedelbar Handlingskraft",
+            "description": "Träder in dag 1 med full operativ kapacitet och börjar leverera resultat direkt"
+          },
+          {
+            "title": "Förändringsledarskap",
+            "description": "Beprövad track record av att genomföra komplexa transformationer framgångsrikt"
+          },
+          {
+            "title": "Krishantering",
+            "description": "Erfaren av att navigera utmanande situationer och vända negativa trender"
+          },
+          {
+            "title": "Teambyggande",
+            "description": "Snabbt identifiera och utveckla nyckeltalanger samt bygga högpresterande team"
+          },
+          {
+            "title": "Stakeholder Management",
+            "description": "Hantera komplexa relationer med styrelse, investerare, kunder och leverantörer"
+          },
+          {
+            "title": "Resultatfokus",
+            "description": "Leverera mätbara förbättringar inom definierade tidsramar och budgetar"
+          }
+        ],
+        "deliverables": [
+          {
+            "phase": "Första 30 Dagarna",
+            "items": [
+              "Djupgående organisationsanalys och gap-identifiering",
+              "Stakeholder-mapping och relationsetablering",
+              "Quick wins och kortsiktiga förbättringar",
+              "Teamutvärdering och nyckelrekryteringar"
+            ]
+          },
+          {
+            "phase": "90-Dagars Mål",
+            "items": [
+              "Strategisk roadmap och handlingsplan",
+              "Organisationsstruktur och processoptimering",
+              "KPI-ramverk och uppföljningssystem",
+              "Kulturförändring och engagemangsprogram"
+            ]
+          },
+          {
+            "phase": "Långsiktig Impact",
+            "items": [
+              "Hållbar tillväxt och förbättrad lönsamhet",
+              "Stärkt marknadsposition och konkurrensfördelar",
+              "Utvecklad organisationskapacitet",
+              "Smidig överlämning till permanent ledning"
+            ]
+          }
+        ],
+        "industries": [
+          "Retail & E-commerce",
+          "FMCG & Consumer Goods",
+          "Fashion & Lifestyle",
+          "Food & Beverage",
+          "Distribution & Logistics",
+          "Technology & Digital"
+        ],
+        "mobilizationSteps": [
+          {
+            "day": "Dag 1-2",
+            "task": "Initial utvärdering och stakeholder-möten"
+          },
+          {
+            "day": "Dag 3-5",
+            "task": "Organisationsanalys och prioritering"
+          },
+          {
+            "day": "Dag 6-7",
+            "task": "Handlingsplan och kommunikationsstrategi"
+          },
+          {
+            "day": "Vecka 2",
+            "task": "Full operativ aktivitet och leverans"
+          }
+        ]
+      },
+      "workshops": {
+        "backToServices": "Tillbaka till tjänster",
+        "title": "Workshops",
+        "subtitle": "Utveckla era ledare och team genom interaktiva workshops baserade på 30+ års praktisk erfarenhet från transformation och tillväxt.",
+        "trainedLeadersStat": "Utbildade Ledare",
+        "averageRatingStat": "Genomsnittligt Betyg (5.0)",
+        "recommendationStat": "Skulle Rekommendera",
+        "typesTitle": "Populära Workshop-områden",
+        "typesSubtitle": "Våra mest efterfrågade workshops täcker de kritiska områden som driver framgångsrik transformation och ledarskapsutveckling.",
+        "formatsTitle": "Flexibla Workshop-format",
+        "formatsSubtitle": "Olika format för att passa era specifika behov, tidsramar och målsättningar.",
+        "methodologyTitle": "Vår Approach",
+        "methodologySubtitle": "En beprövad metodik som säkerställer att workshopen skapar varaktig förändring och konkreta resultat för er organisation.",
+        "outcomesTitle": "Vad Deltagarna Får Med Sig",
+        "outcomesSubtitle": "Konkreta verktyg, praktiska metoder och personliga insikter som kan implementeras direkt i den dagliga verksamheten.",
+        "testimonialsTitle": "Vad Deltagarna Säger",
+        "investmentTitle": "Investering & Bokning",
+        "investmentSubtitle": "Workshops prissätts baserat på format, varaktighet och antal deltagare. Kontakta mig för en skräddarsydd offert anpassad efter era specifika behov.",
+        "ctaTitle": "Redo att Utveckla Era Ledare?",
+        "ctaSubtitle": "Låt oss diskutera hur en skräddarsydd workshop kan accelerera er ledarskaps- och organisationsutveckling. Boka ett kostnadsfritt samtal idag.",
+        "ctaButton": "Diskutera Workshop-behov",
+        "ctaSecondary": "Se Föreläsningar",
+        "workshopTypes": [
+          {
+            "title": "Transformationsledarskap",
+            "description": "Utveckla din förmåga att leda framgångsrika organisationsförändringar",
+            "duration": "1-2 dagar",
+            "participants": "8-15 deltagare",
+            "focus": "Ledarskap & Förändring"
+          },
+          {
+            "title": "Teamutveckling",
+            "description": "Bygga högpresterande team genom praktiska verktyg och metoder",
+            "duration": "1 dag",
+            "participants": "5-12 deltagare",
+            "focus": "Team & Samarbete"
+          },
+          {
+            "title": "Strategisk Verkställighet",
+            "description": "Från strategi till resultat - säkerställ framgångsrik implementering",
+            "duration": "1-2 dagar",
+            "participants": "6-20 deltagare",
+            "focus": "Strategi & Execution"
+          },
+          {
+            "title": "Innovation & Digitalisering",
+            "description": "Navigera digital transformation och skapa innovativa lösningar",
+            "duration": "1 dag",
+            "participants": "10-25 deltagare",
+            "focus": "Innovation & Digital"
+          }
+        ],
+        "formats": [
+          {
+            "title": "Intensivworkshops",
+            "description": "Djupgående 1-2 dagars program med praktiska verktyg och case studies",
+            "benefits": ["Direkt applicerbara verktyg", "Interaktiva övningar", "Personlig utvecklingsplan"]
+          },
+          {
+            "title": "Halvdagsformat",
+            "description": "Fokuserade 4-timmars sessioner för specifika utmaningar",
+            "benefits": ["Tidseffektiv lösning", "Målriktad kunskap", "Konkreta nästa steg"]
+          },
+          {
+            "title": "Workshopserier",
+            "description": "Flera sammankopplade sessioner för djupare transformation",
+            "benefits": ["Hållbar förändring", "Kontinuerlig uppföljning", "Gradvis implementation"]
+          },
+          {
+            "title": "Skräddarsydda Program",
+            "description": "Helt anpassade workshop-program för era specifika behov",
+            "benefits": ["100% relevant innehåll", "Era verkliga utmaningar", "Flexibel leverans"]
+          }
+        ],
+        "methodology": [
+          {
+            "phase": "Förberedelse",
+            "description": "Föranalys av behov, mål och deltagargrupp",
+            "details": ["Stakeholder-intervjuer", "Nulägesanalys", "Målsättning", "Anpassning av innehåll"]
+          },
+          {
+            "phase": "Genomförande",
+            "description": "Interaktiv workshop med praktiska verktyg",
+            "details": ["Teoretisk grund", "Praktiska övningar", "Case studies", "Grupparbeten"]
+          },
+          {
+            "phase": "Uppföljning",
+            "description": "Säkerställ implementation och resultat",
+            "details": ["Handlingsplan", "30-dagars check-in", "Material & verktyg", "Kontinuerlig support"]
+          }
+        ],
+        "learningOutcomes": [
+          "Praktiska verktyg för förändringsledarskap",
+          "Strategier för att hantera motstånd och skapa engagemang",
+          "Metoder för att bygga högpresterande team",
+          "Ramverk för strategisk verkställighet",
+          "Tekniker för innovation och problemlösning",
+          "Personlig utvecklingsplan med konkreta steg"
+        ],
+        "testimonials": [
+          {
+            "quote": "Yvonnes workshop om transformationsledarskap gav oss konkreta verktyg som vi använder dagligen. Hennes praktiska approach och verkliga exempel gjorde skillnad.",
+            "author": "Maria Andersson",
+            "role": "VD, RetailTech AB",
+            "company": "RetailTech AB"
+          },
+          {
+            "quote": "Fantastiskt engagerad och kunnig. Workshopen om teamutveckling resulterade i märkbar förbättring av vårt samarbete och prestationer.",
+            "author": "Erik Johansson",
+            "role": "HR-chef, Nordic Fashion Group",
+            "company": "Nordic Fashion Group"
+          }
+        ],
+        "guarantees": [
+          {
+            "title": "Kvalitetsgaranti",
+            "description": "100% nöjdhetsgaranti eller full återbetalning"
+          },
+          {
+            "title": "Flexibel Leverans",
+            "description": "På plats, virtuellt eller hybridformat"
+          },
+          {
+            "title": "Snabb Uppstart",
+            "description": "Kan levereras inom 2-3 veckor"
+          }
+        ]
       }
-    },
-    "seniorAdvisor": {
-      "title": "Senior Rådgivare",
-      "subtitle": "Strategisk expertis och praktisk vägledning för ledningsgrupper som navigerar komplexa affärsutmaningar och transformationer.",
-      "backToServices": "Tillbaka till tjänster",
-      "yearsStat": "År av Ledarskapsexpertis",
-      "turnaroundsStat": "Framgångsrika Turnarounds",
-      "ceoYearsStat": "År som VD",
-      "expertiseTitle": "Expertområden",
-      "expertiseSubtitle": "Djup kunskap och praktisk erfarenhet inom de områden som är kritiska för framgångsrik affärstransformation.",
-      "expertiseAreas": [
-        {
-          "title": "Transformation & Tillväxt",
-          "description": "Strategisk vägledning för organisationsförändringar och tillväxtinitiativ baserat på 30+ års branschexpertis."
-        },
-        {
-          "title": "Ledarskaps- & Organisationsutveckling",
-          "description": "Utveckla ledarskapskraft och bygga högpresterande team genom beprövade metoder och praktisk erfarenhet."
-        },
-        {
-          "title": "Strategi & Verkställighet",
-          "description": "Från strategi till resultat - säkerställ framgångsrik implementering av affärskritiska initiativ."
-        },
-        {
-          "title": "Innovation & Digitalisering",
-          "description": "Navigera den digitala transformationen och skapa innovativa affärsmodeller för framtidens utmaningar."
-        }
-      ],
-      "valueTitle": "Varför Välja Yvonne som Senior Rådgivare?",
-      "valueSubtitle": "Kombinationen av djup branschexpertis, praktisk erfarenhet och beprövade resultat skapar unikt värde för dina affärsutmaningar.",
-      "valueProp": [
-        {
-          "title": "Beprövad Expertis",
-          "description": "30+ år av framgångsrik ledarskap inom retail och FMCG, inklusive 18 år som VD."
-        },
-        {
-          "title": "Resultatfokus",
-          "description": "Dokumenterad track record av framgångsrika transformationer och verksamhetsförbättringar."
-        },
-        {
-          "title": "Praktisk Approach",
-          "description": "Hands-on rådgivning baserad på verklig branschexpertis och operativ erfarenhet."
-        }
-      ],
-      "engagementTitle": "Uppdragsformat",
-      "engagementSubtitle": "Flexibla rådgivningsformat anpassade efter dina specifika behov och utmaningar.",
-      "engagementTypes": [
-        {
-          "title": "Strategisk Rådgivning",
-          "description": "Löpande strategisk support för VD och ledningsgrupp",
-          "duration": "3-12 månader",
-          "format": "Månatliga workshops och ad-hoc konsultationer"
-        },
-        {
-          "title": "Projektspecifik Rådgivning",
-          "description": "Expertis för specifika transformationsprojekt",
-          "duration": "1-6 månader",
-          "format": "Veckovisa sessioner och milstolpsgenomgångar"
-        },
-        {
-          "title": "Board Advisory",
-          "description": "Rådgivning till styrelse och styrelseordförande",
-          "duration": "6-24 månader",
-          "format": "Styrelsemöten och strategisessioner"
-        }
-      ],
-      "processTitle": "Så Arbetar Vi Tillsammans",
-      "processSubtitle": "En strukturerad approach som säkerställer konkreta resultat och varaktig förändring.",
-      "processSteps": [
-        {
-          "step": "01",
-          "title": "Analys & Kartläggning",
-          "description": "Djupgående analys av nuläge, utmaningar och möjligheter."
-        },
-        {
-          "step": "02",
-          "title": "Strategisk Planering",
-          "description": "Utveckling av tydlig roadmap och prioriterade insatsområden."
-        },
-        {
-          "step": "03",
-          "title": "Implementering",
-          "description": "Hands-on support och vägledning genom förändringsprocessen."
-        },
-        {
-          "step": "04",
-          "title": "Uppföljning",
-          "description": "Kontinuerlig utvärdering och justeringar för optimala resultat."
-        }
-      ],
-      "ctaTitle": "Redo att Accelerera Din Transformation?",
-      "ctaSubtitle": "Låt oss diskutera hur min expertis kan bidra till era strategiska mål och affärsresultat. Boka ett kostnadsfritt strategisamtal idag.",
-      "ctaButton": "Boka Strategisamtal",
-      "ctaSecondary": "Läs Mer Om Yvonne",
-      "durationLabel": "Varaktighet:",
-      "formatLabel": "Format:"
     }
+  },
+  "speaking": {
+    "title": "Föreläsningar som inspirerar till handling",
+    "subtitle": "Praktiska insights från 30+ års ledarskap inom transformation, internationalisering och retail excellence. Föreläsningar som ger verktyg, inte bara inspiration.",
+    "badge": "Keynote Speaker",
+    "languages": "Svenska, Engelska, Tyska",
+    "duration": "30-240 minuter",
+    "format": "Live & Digital",
+    "ctaButton": "Boka föreläsning",
+    "speakerKit": "Speaker Kit",
+    "videoTitle": "Transformation i den digitala eran",
+    "videoSubtitle": "Fashion Industry Summit 2025 - 3 min preview",
+    "videoPlaceholder": "Videomaterial kommer snart",
+    "topicsTitle": "Föreläsningsteman",
+    "topicsSubtitle": "Tre huvudteman som kan anpassas och kombineras baserat på er målgrupp och era utmaningar.",
+    "finalCtaTitle": "Förvandla ert nästa event till genombrott",
+    "finalCtaSubtitle": "Boka en inspirerande keynote som ger era deltagare konkreta verktyg för transformation och tillväxt.",
+    "finalCtaButton": "Boka kostnadsfritt samtal",
+    "finalCtaSecondary": "Ladda ner Speaker Kit",
+    "topics": [
+      {
+        "id": "digital-transformation",
+        "title": "Transformation i den digitala eran",
+        "subtitle": "Beyond the Buzzwords",
+        "description": "Vad händer verkligen när digitaliseringen förändrar allt? En ärlig genomgång av utmaningar, möjligheter och konsekvenser som sällan diskuteras.",
+        "duration": "30-60 minuter + Q&A",
+        "keyPoints": [
+          "Digitaliseringens verkliga påverkan på organisationer",
+          "Kulturell transformation - den glömda komponenten",
+          "Ledarskap när allt förändras samtidigt",
+          "Praktiska verktyg för att navigera förändringen"
+        ],
+        "audience": [
+          "VD:ar och ledningsgrupper",
+          "Styrelser som driver digital transformation",
+          "HR-chefer och förändringsagenter",
+          "Retail- och FMCG-ledare"
+        ],
+        "format": ["Keynote", "Workshop", "Paneldiskussion"],
+        "testimonial": {
+          "quote": "Yvonnes föreläsning om digital transformation gav oss verktyg vi fortfarande använder två år senare.",
+          "author": "CEO, Fashion Retail Group",
+          "company": "Nordisk retailkedja"
+        }
+      },
+      {
+        "id": "internationalization",
+        "title": "Internationalisering",
+        "subtitle": "From Nordic Success to Global Growth",
+        "description": "Strategier, fallgropar och framgångsfaktorer för expansion på nya marknader. Baserat på praktisk erfarenhet av att bygga verksamhet i 8+ länder.",
+        "duration": "45-60 minuter + Q&A",
+        "keyPoints": [
+          "Marknadsetablering - vad som verkligen fungerar",
+          "Kulturell anpassning utan att förlora identitet",
+          "Partnerskap vs egen etablering",
+          "Att bygga internationella team och ledarskap"
+        ],
+        "audience": [
+          "Tillväxtföretag med expansionsplaner",
+          "Internationella koncerner",
+          "Investare och private equity",
+          "Export- och handelsorganisationer"
+        ],
+        "format": ["Keynote", "Masterclass", "Executive briefing"],
+        "testimonial": {
+          "quote": "Konkret och actionable insights från någon som verkligen har gjort det själv.",
+          "author": "COO, Tech Scale-up",
+          "company": "B2C-företag"
+        }
+      },
+      {
+        "id": "retail-experience",
+        "title": "Retail in the Age of Experience",
+        "subtitle": "From Transaction to Transformation",
+        "description": "Hur skapar man lojalitet och relevans när konsumenten har oändliga val? Om att bygga relationer i en transaktionsdriven värld.",
+        "duration": "30-90 minuter (flexibelt)",
+        "keyPoints": [
+          "Från produkt till upplevelse - praktiska exempel",
+          "Omnichannel som verkligen fungerar",
+          "Data-driven personalisering utan att tappa human touch",
+          "Byggande av community och brand loyalty"
+        ],
+        "audience": [
+          "Retail-ledare och store managers",
+          "E-handelschefer och digital teams",
+          "Brand managers och marknadsförare",
+          "Consumer goods companies"
+        ],
+        "format": ["Keynote", "Interactive session", "Case study workshop"],
+        "testimonial": {
+          "quote": "Äntligen någon som förstår både den digitala och fysiska retailupplevelsen.",
+          "author": "CMO, Lifestyle Brand",
+          "company": "Omnichannel retailer"
+        }
+      }
+    ]
   },
   "credentials": {
     "title": "Kärnkompetenser",
@@ -521,6 +775,30 @@
     "ctaTitle": "Redo att diskutera ert nästa steg?",
     "ctaSubtitle": "Låt oss utforska hur min erfarenhet kan bidra till er transformation och tillväxt.",
     "ctaButton": "Boka introduktionssamtal"
+  },
+  "cases": {
+    "title": "Bevisade",
+    "titleHighlight": "Resultat",
+    "subtitle": "Verkliga transformationshistorier från 30+ år av framgångsrikt ledarskap inom retail, FMCG och konsumentbranschen.",
+    "caseStudiesTitle": "Utvalda Transformationshistorier",
+    "caseStudiesSubtitle": "Djupgående case studies som visar konkreta resultat och beprövade metoder för framgångsrik affärstransformation.",
+    "industryTitle": "Branschexpertis",
+    "industrySubtitle": "Djup erfarenhet och beprövade resultat inom flera nyckelvertikaler inom retail och konsumentbranschen.",
+    "casesLabel": "cases",
+    "finalCtaTitle": "Redo att skapa era",
+    "finalCtaTitleHighlight": "nästa framgångshistoria",
+    "finalCtaSubtitle": "Låt oss diskutera era utmaningar och hur proven metodologi kan accelerera er transformation och tillväxtresa.",
+    "finalCtaButton": "Boka kostnadsfritt strategisamtal",
+    "finalCtaSecondary": "Läs mer om Yvonnes bakgrund",
+    "caseStudyLabels": {
+      "challenge": "Utmaning",
+      "solution": "Lösning & Genomförande",
+      "results": "Resultat"
+    },
+    "impactAreas": {
+      "title": "Bevisade Resultat inom Nyckelområden",
+      "description": "Genomförda transformationer med mätbara framgångar"
+    }
   },
   "cta": {
     "subtitle": "REDO ATT BÖRJA?",
