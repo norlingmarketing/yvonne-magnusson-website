@@ -1,6 +1,7 @@
 import { SpeakingTopic } from "@/lib/types";
 
-export const speakingTopics: SpeakingTopic[] = [
+// Swedish speaking topics
+export const speakingTopicsSv: SpeakingTopic[] = [
   {
     id: "digital-transformation",
     title: "Transformation i den digitala eran",
@@ -81,6 +82,88 @@ export const speakingTopics: SpeakingTopic[] = [
   }
 ];
 
+// English speaking topics
+export const speakingTopicsEn: SpeakingTopic[] = [
+  {
+    id: "digital-transformation",
+    title: "Transformation in the Digital Era",
+    subtitle: "Beyond the Buzzwords",
+    description: "What really happens when digitalization changes everything? An honest review of challenges, opportunities, and consequences that are rarely discussed.",
+    keyPoints: [
+      "The real impact of digitalization on organizations",
+      "Cultural transformation - the forgotten component",
+      "Leadership when everything changes at once",
+      "Practical tools for navigating change"
+    ],
+    audience: [
+      "CEOs and executive teams",
+      "Boards driving digital transformation",
+      "HR leaders and change agents",
+      "Retail and FMCG leaders"
+    ],
+    duration: "30-60 minutes + Q&A",
+    format: ["Keynote", "Workshop", "Panel discussion"],
+    videoThumbnail: "/api/placeholder/600/400",
+    testimonial: {
+      quote: "Yvonne's presentation on digital transformation gave us tools we still use two years later.",
+      author: "CEO, Fashion Retail Group",
+      company: "Nordic retail chain"
+    }
+  },
+  {
+    id: "internationalization",
+    title: "Internationalization",
+    subtitle: "From Nordic Success to Global Growth", 
+    description: "Strategies, pitfalls, and success factors for expansion into new markets. Based on practical experience of building operations in 8+ countries.",
+    keyPoints: [
+      "Market establishment - what really works",
+      "Cultural adaptation without losing identity",
+      "Partnerships vs. own establishment",
+      "Building international teams and leadership"
+    ],
+    audience: [
+      "Growth companies with expansion plans",
+      "International corporations",
+      "Investors and private equity",
+      "Export and trade organizations"
+    ],
+    duration: "45-60 minutes + Q&A",
+    format: ["Keynote", "Masterclass", "Executive briefing"],
+    videoThumbnail: "/api/placeholder/600/400",
+    testimonial: {
+      quote: "Concrete and actionable insights from someone who has actually done it themselves.",
+      author: "COO, Tech Scale-up",
+      company: "B2C company"
+    }
+  },
+  {
+    id: "retail-experience",
+    title: "Retail in the Age of Experience",
+    subtitle: "From Transaction to Transformation",
+    description: "How do you create loyalty and relevance when consumers have infinite choices? About building relationships in a transaction-driven world.",
+    keyPoints: [
+      "From product to experience - practical examples",
+      "Omnichannel that actually works",
+      "Data-driven personalization without losing human touch",
+      "Building community and brand loyalty"
+    ],
+    audience: [
+      "Retail leaders and store managers",
+      "E-commerce leaders and digital teams",
+      "Brand managers and marketers",
+      "Consumer goods companies"
+    ],
+    duration: "30-90 minutes (flexible)",
+    format: ["Keynote", "Interactive session", "Case study workshop"],
+    videoThumbnail: "/api/placeholder/600/400",
+    testimonial: {
+      quote: "Finally someone who understands both the digital and physical retail experience.",
+      author: "CMO, Lifestyle Brand",
+      company: "Omnichannel retailer"
+    }
+  }
+];
+
 export interface SpeakingFormat {
   format: string;
   duration: string;
@@ -89,7 +172,7 @@ export interface SpeakingFormat {
   includes: string[];
 }
 
-export const speakingFormats: SpeakingFormat[] = [
+export const speakingFormatsSv: SpeakingFormat[] = [
   {
     format: "Keynote",
     duration: "30-60 minuter",
@@ -113,6 +196,30 @@ export const speakingFormats: SpeakingFormat[] = [
   }
 ];
 
+export const speakingFormatsEn: SpeakingFormat[] = [
+  {
+    format: "Keynote",
+    duration: "30-60 minutes",
+    description: "Inspiring main presentations that set the tone for the event",
+    pricing: "Upon request",
+    includes: ["Pre-work with event team", "Customized content", "Q&A session", "Follow-up"]
+  },
+  {
+    format: "Workshop/Masterclass",
+    duration: "2-4 hours",
+    description: "Interactive sessions with concrete tools and exercises",
+    pricing: "Upon request",
+    includes: ["Material package", "Group exercises", "Action plan", "30-day email support"]
+  },
+  {
+    format: "Executive Briefing",
+    duration: "90 minutes",
+    description: "In-depth sessions for executive teams and boards",
+    pricing: "Upon request",
+    includes: ["Confidential discussion", "Industry-specific analysis", "Strategic insights", "Follow-up call"]
+  }
+];
+
 export interface PastEvent {
   event: string;
   location: string;
@@ -120,7 +227,28 @@ export interface PastEvent {
   topic: string;
 }
 
-export const pastEvents: PastEvent[] = [
+export const pastEventsSv: PastEvent[] = [
+  {
+    event: "Retail Tech Summit 2024",
+    location: "Stockholm",
+    audience: "300+ retail executives",
+    topic: "Digital Transformation inom Retail"
+  },
+  {
+    event: "Fashion Industry Summit 2025",
+    location: "Copenhagen",
+    audience: "200+ fashion leaders",
+    topic: "Hållbar Tillväxt Genom Innovation"
+  },
+  {
+    event: "FMCG Leaders Forum",
+    location: "Helsinki",
+    audience: "150+ FMCG executives",
+    topic: "Strategier för Marknadsexpansion"
+  }
+];
+
+export const pastEventsEn: PastEvent[] = [
   {
     event: "Retail Tech Summit 2024",
     location: "Stockholm",
@@ -140,3 +268,21 @@ export const pastEvents: PastEvent[] = [
     topic: "Market Expansion Strategies"
   }
 ];
+
+// Locale-aware export functions
+export const getSpeakingTopics = (locale: string): SpeakingTopic[] => {
+  return locale === 'sv' ? speakingTopicsSv : speakingTopicsEn;
+};
+
+export const getSpeakingFormats = (locale: string): SpeakingFormat[] => {
+  return locale === 'sv' ? speakingFormatsSv : speakingFormatsEn;
+};
+
+export const getPastEvents = (locale: string): PastEvent[] => {
+  return locale === 'sv' ? pastEventsSv : pastEventsEn;
+};
+
+// Legacy exports for backward compatibility
+export const speakingTopics = speakingTopicsSv;
+export const speakingFormats = speakingFormatsSv;
+export const pastEvents = pastEventsSv;
