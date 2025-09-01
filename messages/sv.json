@@ -65,6 +65,13 @@
       "International Readiness",
       "Business Model Innovation"
     ],
+    "serviceCard": {
+      "whatIncluded": "Vad ingår",
+      "suitableFor": "Passar för",
+      "approach": "Arbetssätt",
+      "investment": "Investering",
+      "readMore": "Läs mer"
+    },
     "page": {
       "title": "Professionella tjänster",
       "description": "Fyra fokuserade tjänsteområden för att driva transformation och tillväxt inom retail och consumer markets. Alla byggda på 30+ års erfarenhet och beprövade metoder.",

@@ -6,12 +6,14 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import { Service } from "@/lib/types";
 import { getIcon } from "@/lib/utils/icon-map";
+import { Dictionary } from "@/lib/types/dictionary";
 
 interface ServiceCardsProps {
   services: Service[];
+  dict: Dictionary;
 }
 
-export function ServiceCards({ services }: ServiceCardsProps) {
+export function ServiceCards({ services, dict }: ServiceCardsProps) {
   return (
     <div className="grid lg:grid-cols-2 gap-8">
       {services.map((service, index) => {
@@ -41,7 +43,7 @@ export function ServiceCards({ services }: ServiceCardsProps) {
                 <div className="space-y-6 flex-1">
                   {/* Key Features */}
                   <div>
-                    <h4 className="font-semibold text-foreground mb-3">Vad ingår</h4>
+                    <h4 className="font-semibold text-foreground mb-3">{dict.services.serviceCard.whatIncluded}</h4>
                     <ul className="space-y-2">
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-start gap-2">
@@ -54,7 +56,7 @@ export function ServiceCards({ services }: ServiceCardsProps) {
 
                   {/* Ideal For */}
                   <div>
-                    <h4 className="font-semibold text-foreground mb-3">Passar för</h4>
+                    <h4 className="font-semibold text-foreground mb-3">{dict.services.serviceCard.suitableFor}</h4>
                     <div className="flex flex-wrap gap-2">
                       {service.idealFor.map((target, targetIndex) => (
                         <Badge key={targetIndex} variant="secondary" className="text-sm">
@@ -66,13 +68,13 @@ export function ServiceCards({ services }: ServiceCardsProps) {
 
                   {/* Approach */}
                   <div>
-                    <h4 className="font-semibold text-foreground mb-2">Arbetssätt</h4>
+                    <h4 className="font-semibold text-foreground mb-2">{dict.services.serviceCard.approach}</h4>
                     <p className="text-muted-foreground text-sm">{service.approach}</p>
                   </div>
 
                   {/* Investment */}
                   <div>
-                    <h4 className="font-semibold text-foreground mb-2">Investering</h4>
+                    <h4 className="font-semibold text-foreground mb-2">{dict.services.serviceCard.investment}</h4>
                     <p className="text-muted-foreground text-sm">{service.investment}</p>
                   </div>
                 </div>
@@ -81,7 +83,7 @@ export function ServiceCards({ services }: ServiceCardsProps) {
                 <div className="pt-6 border-t">
                   <Button asChild className="w-full" size="lg">
                     <Link href={service.href} className="flex items-center justify-center gap-2">
-                      Läs mer
+                      {dict.services.serviceCard.readMore}
                       <ArrowRight className="h-5 w-5" />
                     </Link>
                   </Button>

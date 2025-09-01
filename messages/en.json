@@ -65,6 +65,13 @@
       "International Readiness",
       "Business Model Innovation"
     ],
+    "serviceCard": {
+      "whatIncluded": "What's included",
+      "suitableFor": "Suitable for",
+      "approach": "Approach",
+      "investment": "Investment",
+      "readMore": "Learn more"
+    },
     "page": {
       "title": "Professional Services",
       "description": "Four focused service areas to drive transformation and growth in retail and consumer markets. All built on 30+ years of experience and proven methods.",

@@ -58,7 +58,7 @@ export default async function ServicesPage({
       {/* Services Grid */}
       <section className="py-20 bg-background">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <ServiceCards services={services} />
+          <ServiceCards services={services} dict={dict} />
         </div>
       </section>
 

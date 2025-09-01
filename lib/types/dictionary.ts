@@ -49,6 +49,13 @@ export interface Dictionary {
     interimExecutiveFeatures: string[];
     workshopsDescription: string;
     workshopsFeatures: string[];
+    serviceCard: {
+      whatIncluded: string;
+      suitableFor: string;
+      approach: string;
+      investment: string;
+      readMore: string;
+    };
     page: {
       title: string;
       description: string;
