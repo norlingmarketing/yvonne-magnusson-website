@@ -65,10 +65,17 @@ export function CTASection({
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button asChild size="lg" className={isDark ? "bg-primary hover:bg-primary/90" : undefined} variant={isDark ? undefined : "secondary"}>
-              <LocalizedLink route={primaryHref as any} locale={locale as Locale} className="flex items-center gap-2">
-                {primaryText}
-                {primaryButtonIcon}
-              </LocalizedLink>
+              {primaryHref?.startsWith('/') || primaryHref?.startsWith('http') ? (
+                <a href={primaryHref} className="flex items-center gap-2" target={primaryHref?.startsWith('http') || primaryHref?.endsWith('.pdf') ? "_blank" : undefined} rel={primaryHref?.startsWith('http') || primaryHref?.endsWith('.pdf') ? "noopener noreferrer" : undefined}>
+                  {primaryText}
+                  {primaryButtonIcon}
+                </a>
+              ) : (
+                <LocalizedLink route={primaryHref as any} locale={locale as Locale} className="flex items-center gap-2">
+                  {primaryText}
+                  {primaryButtonIcon}
+                </LocalizedLink>
+              )}
             </Button>
             <Button 
               asChild 
@@ -79,10 +86,17 @@ export function CTASection({
                 : "bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
               }
             >
-              <LocalizedLink route={secondaryHref as any} locale={locale as Locale} className="flex items-center gap-2">
-                {secondaryText}
-                {secondaryButtonIcon}
-              </LocalizedLink>
+              {secondaryHref?.startsWith('/') || secondaryHref?.startsWith('http') ? (
+                <a href={secondaryHref} className="flex items-center gap-2" target={secondaryHref?.startsWith('http') || secondaryHref?.endsWith('.pdf') ? "_blank" : undefined} rel={secondaryHref?.startsWith('http') || secondaryHref?.endsWith('.pdf') ? "noopener noreferrer" : undefined}>
+                  {secondaryText}
+                  {secondaryButtonIcon}
+                </a>
+              ) : (
+                <LocalizedLink route={secondaryHref as any} locale={locale as Locale} className="flex items-center gap-2">
+                  {secondaryText}
+                  {secondaryButtonIcon}
+                </LocalizedLink>
+              )}
             </Button>
           </div>
         </div>
