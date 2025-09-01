@@ -14,26 +14,30 @@ import {
 } from "@/lib/data/media-kit";
 import { Badge } from "@/components/ui/badge";
 import { Camera, Users, Award, Star } from "lucide-react";
+import { getDictionary } from "@/lib/dictionaries";
 
-export const metadata: Metadata = {
-  title: "Media & Press - Pressresurser och Expertkommentarer",
-  description: "Presskit, mediematerial och expertkommentarer från Yvonne Magnusson. Tillgänglig för intervjuer, keynotes och expertanalys inom transformation och retail.",
-  keywords: [
-    "media kit",
-    "press resources",
-    "expert commentary",
-    "keynote speaker",
-    "media appearances",
-    "transformation expert",
-    "retail expert",
-    "press releases",
-    "speaking engagements",
-    "media interviews"
-  ],
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const dict = await getDictionary(locale as 'en' | 'sv');
+  
+  return {
+    title: `${dict.media.badge} - Yvonne Magnusson`,
+    description: dict.media.subtitle,
+    keywords: "media kit, press resources, expert commentary, keynote speaker, media appearances, transformation expert, retail expert, press releases, speaking engagements, media interviews",
+  };
+}
 
-
-export default function MediaPage() {
+export default async function MediaPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const dict = await getDictionary(locale as 'en' | 'sv');
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
@@ -43,28 +47,27 @@ export default function MediaPage() {
             <BlurFade delay={0.1}>
               <div className="inline-flex items-center gap-2 bg-primary/10 rounded-full px-4 py-2 mb-6">
                 <Camera className="h-4 w-4 text-primary" />
-                <span className="text-primary font-medium">Media & Press</span>
+                <span className="text-primary font-medium">{dict.media.badge}</span>
               </div>
               
               <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-                Pressresurser & Expertkommentarer
+                {dict.media.title}
               </h1>
               <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-                Komplett presskit med mediematerial, expertkommentarer och resurser 
-                för journalister och eventorganisatörer.
+                {dict.media.subtitle}
               </p>
             </BlurFade>
             
             <BlurFade delay={0.2}>
               <div className="flex flex-wrap justify-center gap-3 mb-8">
                 <Badge variant="secondary" className="px-4 py-2">
-                  Expertkommentarer inom 24h
+                  {dict.media.badges.expertComments}
                 </Badge>
                 <Badge variant="secondary" className="px-4 py-2">
-                  Intervjuer på svenska, engelska, tyska
+                  {dict.media.badges.languages}
                 </Badge>
                 <Badge variant="secondary" className="px-4 py-2">
-                  Live TV/Radio tillgänglig
+                  {dict.media.badges.liveTv}
                 </Badge>
               </div>
             </BlurFade>
@@ -78,10 +81,10 @@ export default function MediaPage() {
           <BlurFade delay={0.1}>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                Pressmeddelanden
+                {dict.media.pressReleasesTitle}
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Senaste nyheter och milstolpar inom transformation och business development.
+                {dict.media.pressReleasesSubtitle}
               </p>
             </div>
           </BlurFade>
@@ -96,10 +99,10 @@ export default function MediaPage() {
           <BlurFade delay={0.1}>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                Mediakit för Nedladdning
+                {dict.media.mediaKitTitle}
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Högkvalitativa bilder, biografier och videomaterial för media och event.
+                {dict.media.mediaKitSubtitle}
               </p>
             </div>
           </BlurFade>
@@ -114,10 +117,10 @@ export default function MediaPage() {
           <BlurFade delay={0.1}>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                Senaste Medieframträdanden
+                {dict.media.appearancesTitle}
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Aktuella intervjuer och expertkommentarer i nationella och internationella medier.
+                {dict.media.appearancesSubtitle}
               </p>
             </div>
           </BlurFade>
@@ -132,11 +135,10 @@ export default function MediaPage() {
           <BlurFade delay={0.1}>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Media Credentials
+                {dict.media.credentialsTitle}
               </h2>
               <p className="text-xl text-primary-foreground/90 max-w-3xl mx-auto">
-                Professionell medieexpertis med dokumenterad erfarenhet av 
-                intervjuer och kommentarer i nationella och internationella medier.
+                {dict.media.credentialsSubtitle}
               </p>
             </div>
           </BlurFade>
@@ -166,17 +168,17 @@ export default function MediaPage() {
                 <div>
                   <Star className="h-12 w-12 text-accent mx-auto mb-4" />
                   <div className="text-2xl font-bold mb-2">50+</div>
-                  <p className="text-primary-foreground/90">Medieframträdanden</p>
+                  <p className="text-primary-foreground/90">{dict.media.stats.mediaAppearances}</p>
                 </div>
                 <div>
                   <Users className="h-12 w-12 text-accent mx-auto mb-4" />
                   <div className="text-2xl font-bold mb-2">25+</div>
-                  <p className="text-primary-foreground/90">Keynote Presentations</p>
+                  <p className="text-primary-foreground/90">{dict.media.stats.keynotePresentations}</p>
                 </div>
                 <div>
                   <Award className="h-12 w-12 text-accent mx-auto mb-4" />
                   <div className="text-2xl font-bold mb-2">10+</div>
-                  <p className="text-primary-foreground/90">Branschutmärkelser</p>
+                  <p className="text-primary-foreground/90">{dict.media.stats.industryAwards}</p>
                 </div>
               </div>
             </div>
@@ -197,11 +199,10 @@ export default function MediaPage() {
           <BlurFade delay={0.1}>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                Media & Pressförfrågningar
+                {dict.media.contactTitle}
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                För intervjuförfrågningar, expertkommentarer eller talarbokningar, 
-                kontakta mig direkt eller genom min assistent.
+                {dict.media.contactSubtitle}
               </p>
             </div>
           </BlurFade>

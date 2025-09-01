@@ -382,6 +382,31 @@ export interface Dictionary {
     ctaSubtitle: string;
     ctaButton: string;
   };
+  media: {
+    badge: string;
+    title: string;
+    subtitle: string;
+    badges: {
+      expertComments: string;
+      languages: string;
+      liveTv: string;
+    };
+    pressReleasesTitle: string;
+    pressReleasesSubtitle: string;
+    mediaKitTitle: string;
+    mediaKitSubtitle: string;
+    appearancesTitle: string;
+    appearancesSubtitle: string;
+    credentialsTitle: string;
+    credentialsSubtitle: string;
+    contactTitle: string;
+    contactSubtitle: string;
+    stats: {
+      mediaAppearances: string;
+      keynotePresentations: string;
+      industryAwards: string;
+    };
+  };
   cta: {
     subtitle: string;
     title: string;

@@ -837,6 +837,31 @@
       "imagePlaceholder": "Artikelbild"
     }
   },
+  "media": {
+    "badge": "Media & Press",
+    "title": "Pressresurser & Expertkommentarer",
+    "subtitle": "Komplett presskit med mediematerial, expertkommentarer och resurser för journalister och eventorganisatörer.",
+    "badges": {
+      "expertComments": "Expertkommentarer inom 24h",
+      "languages": "Intervjuer på svenska, engelska, tyska",
+      "liveTv": "Live TV/Radio tillgänglig"
+    },
+    "pressReleasesTitle": "Pressmeddelanden",
+    "pressReleasesSubtitle": "Senaste nyheter och milstolpar inom transformation och business development.",
+    "mediaKitTitle": "Mediakit för Nedladdning",
+    "mediaKitSubtitle": "Högkvalitativa bilder, biografier och videomaterial för media och event.",
+    "appearancesTitle": "Senaste Medieframträdanden",
+    "appearancesSubtitle": "Aktuella intervjuer och expertkommentarer i nationella och internationella medier.",
+    "credentialsTitle": "Media Credentials",
+    "credentialsSubtitle": "Professionell medieexpertis med dokumenterad erfarenhet av intervjuer och kommentarer i nationella och internationella medier.",
+    "contactTitle": "Media & Pressförfrågningar",
+    "contactSubtitle": "För intervjuförfrågningar, expertkommentarer eller talarbokningar, kontakta mig direkt eller genom min assistent.",
+    "stats": {
+      "mediaAppearances": "Medieframträdanden",
+      "keynotePresentations": "Keynote Presentations", 
+      "industryAwards": "Branschutmärkelser"
+    }
+  },
   "cta": {
     "subtitle": "REDO ATT BÖRJA?",
     "title": "Accelerera er transformation idag",

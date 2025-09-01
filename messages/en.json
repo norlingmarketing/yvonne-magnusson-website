@@ -837,6 +837,31 @@
       "imagePlaceholder": "Article image"
     }
   },
+  "media": {
+    "badge": "Media & Press",
+    "title": "Press Resources & Expert Commentary",
+    "subtitle": "Complete press kit with media materials, expert commentary, and resources for journalists and event organizers.",
+    "badges": {
+      "expertComments": "Expert commentary within 24h",
+      "languages": "Interviews in Swedish, English, German",
+      "liveTv": "Live TV/Radio available"
+    },
+    "pressReleasesTitle": "Press Releases",
+    "pressReleasesSubtitle": "Latest news and milestones in transformation and business development.",
+    "mediaKitTitle": "Media Kit Downloads",
+    "mediaKitSubtitle": "High-quality images, biographies, and video materials for media and events.",
+    "appearancesTitle": "Recent Media Appearances",
+    "appearancesSubtitle": "Current interviews and expert commentary in national and international media.",
+    "credentialsTitle": "Media Credentials",
+    "credentialsSubtitle": "Professional media expertise with documented experience of interviews and commentary in national and international media.",
+    "contactTitle": "Media & Press Inquiries",
+    "contactSubtitle": "For interview requests, expert commentary, or speaker bookings, contact me directly or through my assistant.",
+    "stats": {
+      "mediaAppearances": "Media Appearances",
+      "keynotePresentations": "Keynote Presentations",
+      "industryAwards": "Industry Awards"
+    }
+  },
   "cta": {
     "subtitle": "READY TO BEGIN?",
     "title": "Accelerate your transformation today",
