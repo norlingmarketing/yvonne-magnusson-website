@@ -1,3 +1,5 @@
+import { siteConfig } from "@/lib/site-config";
+
 export interface PressRelease {
   title: string;
   date: string;
@@ -243,7 +245,7 @@ export const contactInfoSv = {
   mediaContact: {
     name: "Yvonne Magnusson",
     email: "press@yvonnemagnusson.se",
-    phone: "+46 73 985 32 60",
+    phone: siteConfig.contact.phone,
     response: "Svarar inom 2-4 timmar vardagar"
   },
   availability: {
@@ -258,7 +260,7 @@ export const contactInfoEn = {
   mediaContact: {
     name: "Yvonne Magnusson",
     email: "press@yvonnemagnusson.se",
-    phone: "+46 73 985 32 60",
+    phone: siteConfig.contact.phone,
     response: "Responds within 2-4 hours on weekdays"
   },
   availability: {
