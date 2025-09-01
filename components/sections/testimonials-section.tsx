@@ -5,13 +5,14 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Quote, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
+import { Dictionary } from "@/lib/types/dictionary";
 
 interface TestimonialsSectionProps {
   locale: string;
-  dict: any;
+  dict: Dictionary;
 }
 
-export function TestimonialsSection({ locale, dict }: TestimonialsSectionProps) {
+export function TestimonialsSection({ dict }: TestimonialsSectionProps) {
   const testimonials = dict.testimonials.items;
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlay, setIsAutoPlay] = useState(true);
@@ -24,7 +25,7 @@ export function TestimonialsSection({ locale, dict }: TestimonialsSectionProps) 
     }, 5000); // Auto-rotate every 5 seconds
 
     return () => clearInterval(interval);
-  }, [isAutoPlay]);
+  }, [isAutoPlay, testimonials.length]);
 
   const nextTestimonial = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);

@@ -3,10 +3,11 @@
 import Link from "next/link";
 import { siteConfig } from "@/lib/site-config";
 import { getIcon, IconName } from "@/lib/utils/icon-map";
+import { Dictionary } from "@/lib/types/dictionary";
 
 interface FooterProps {
   locale: string;
-  dict: any;
+  dict: Dictionary;
 }
 
 export function Footer({ locale, dict }: FooterProps) {

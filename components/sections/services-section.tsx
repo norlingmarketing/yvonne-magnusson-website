@@ -8,10 +8,11 @@ import { getIcon, IconName } from "@/lib/utils/icon-map";
 import { AnimatedGridPattern } from "@/components/magicui/animated-grid-pattern";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { Dictionary } from "@/lib/types/dictionary";
 
 interface ServicesSectionProps {
   locale: string;
-  dict: any;
+  dict: Dictionary;
 }
 
 export function ServicesSection({ locale, dict }: ServicesSectionProps) {

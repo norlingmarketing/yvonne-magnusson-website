@@ -2,13 +2,14 @@
 
 import { BlurFade } from "@/components/magicui/blur-fade";
 import { Badge } from "@/components/ui/badge";
+import { Dictionary } from "@/lib/types/dictionary";
 
 interface CredentialsSectionProps {
   locale: string;
-  dict: any;
+  dict: Dictionary;
 }
 
-export function CredentialsSection({ locale, dict }: CredentialsSectionProps) {
+export function CredentialsSection({ dict }: CredentialsSectionProps) {
   const expertise = dict.credentials.expertise;
   return (
     <section className="py-20 bg-background">

@@ -1,4 +1,3 @@
-import { LucideIcon } from "lucide-react";
 import { IconName } from "@/lib/utils/icon-map";
 
 export interface Service {

@@ -146,7 +146,7 @@ export function AnimatedGridPattern({
             transition={{
               duration,
               repeat: 1,
-              delay: index * 0.1,
+              delay: index * 0.1 + repeatDelay,
               repeatType: "reverse",
             }}
             onAnimationComplete={() => updateSquarePosition(id)}

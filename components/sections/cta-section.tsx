@@ -1,9 +1,10 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { Dictionary } from "@/lib/types/dictionary";
 
 interface CTASectionProps {
   locale: string;
-  dict: any;
+  dict: Dictionary;
 }
 
 export function CTASection({ locale, dict }: CTASectionProps) {

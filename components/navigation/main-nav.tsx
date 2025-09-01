@@ -5,8 +5,10 @@ import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { LanguageSwitcher } from "@/components/language-switcher";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { Dictionary } from "@/lib/types/dictionary";
 
 export function useScrollY() {
   const [scrollY, setScrollY] = useState(0);
@@ -25,7 +27,7 @@ export function useScrollY() {
 
 interface MainNavProps {
   locale: string;
-  dict: any;
+  dict: Dictionary;
 }
 
 export function MainNav({ locale, dict }: MainNavProps) {
@@ -42,7 +44,6 @@ export function MainNav({ locale, dict }: MainNavProps) {
       { id: 5, label: dict.navigation.cases, link: `/${locale}/case-referenser` },
       { id: 6, label: dict.navigation.insights, link: `/${locale}/insikter` },
       { id: 7, label: dict.navigation.media, link: `/${locale}/media` },
-      { id: 8, label: dict.navigation.contact, link: `/${locale}/kontakt` },
     ],
     [dict, locale],
   );
@@ -144,13 +145,14 @@ export function MainNav({ locale, dict }: MainNavProps) {
 
         {/* Desktop CTA Button */}
         <motion.div
-          className="z-[999] hidden items-center gap-x-3 md:flex"
+          className="z-[999] hidden items-center gap-x-2 md:flex"
           animate={{
             y: scrollY >= 120 ? -50 : 0,
             opacity: scrollY >= 120 ? 0 : 1,
           }}
           transition={{ duration: 0.15 }}
         >
+          <LanguageSwitcher locale={locale} />
           <ThemeToggle />
           <Button asChild size="sm" className="rounded-full">
             <Link href={`/${locale}/kontakt`}>
@@ -241,9 +243,12 @@ export function MainNav({ locale, dict }: MainNavProps) {
                   </li>
                 ))}
                 <li className="pt-2 border-t border-border">
-                  <div className="flex items-center gap-2 mb-2">
+                  <div className="flex items-center gap-2 mb-3">
+                    <LanguageSwitcher locale={locale} />
+                    <span className="text-sm text-muted-foreground">{locale === 'sv' ? 'Språk' : 'Language'}</span>
+                    <div className="ml-auto" />
                     <ThemeToggle />
-                    <span className="text-sm text-muted-foreground">{locale === 'sv' ? 'Växla tema' : 'Toggle theme'}</span>
+                    <span className="text-sm text-muted-foreground">{locale === 'sv' ? 'Tema' : 'Theme'}</span>
                   </div>
                   <Button asChild className="w-full">
                     <Link

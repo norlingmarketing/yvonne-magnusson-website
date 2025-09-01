@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -155,9 +156,9 @@ export function ContactForm({ serviceTypes }: ContactFormProps) {
 
           <p className="text-sm text-muted-foreground text-center">
             Genom att skicka formuläret godkänner du vår{" "}
-            <a href="/integritetspolicy" className="text-primary hover:underline">
+            <Link href="/integritetspolicy" className="text-primary hover:underline">
               integritetspolicy
-            </a>
+            </Link>
           </p>
         </form>
       </CardContent>

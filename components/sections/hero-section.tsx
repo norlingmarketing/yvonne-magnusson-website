@@ -8,10 +8,11 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
 import { FlickeringGrid } from "@/components/magicui/flickering-grid";
 import { Ripple } from "@/components/magicui/ripple";
+import { Dictionary } from "@/lib/types/dictionary";
 
 interface HeroSectionProps {
   locale: string;
-  dict: any;
+  dict: Dictionary;
 }
 
 export function HeroSection({ locale, dict }: HeroSectionProps) {
