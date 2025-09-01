@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { LocalizedLink } from "@/components/localized-link";
 import { BlurFade } from "@/components/magicui/blur-fade";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
@@ -9,6 +9,7 @@ import { AnimatedGridPattern } from "@/components/magicui/animated-grid-pattern"
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Dictionary } from "@/lib/types/dictionary";
+import { type Locale } from "@/lib/routes";
 
 interface ServicesSectionProps {
   locale: string;
@@ -22,28 +23,28 @@ export function ServicesSection({ locale, dict }: ServicesSectionProps) {
       title: dict.services.boardWork,
       description: dict.services.boardWorkDescription,
       features: dict.services.boardWorkFeatures,
-      href: `/${locale}/tjanster/styrelsearbete`,
+      route: 'boardWork' as const,
     },
     {
       icon: "Briefcase" as IconName,
       title: dict.services.seniorAdvisor,
       description: dict.services.seniorAdvisorDescription,
       features: dict.services.seniorAdvisorFeatures,
-      href: `/${locale}/tjanster/senior-advisor`,
+      route: 'seniorAdvisor' as const,
     },
     {
       icon: "TrendingUp" as IconName,
       title: dict.services.interimExecutive,
       description: dict.services.interimExecutiveDescription,
       features: dict.services.interimExecutiveFeatures,
-      href: `/${locale}/tjanster/interim-ledare`,
+      route: 'interimExecutive' as const,
     },
     {
       icon: "Presentation" as IconName,
       title: dict.services.workshops,
       description: dict.services.workshopsDescription,
       features: dict.services.workshopsFeatures,
-      href: `/${locale}/tjanster/workshops`,
+      route: 'workshops' as const,
     },
   ];
   return (
@@ -78,7 +79,7 @@ export function ServicesSection({ locale, dict }: ServicesSectionProps) {
               <BlurFade key={index} delay={0.4 + index * 0.1}>
                 <Card className="relative h-full hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group border-0 bg-card/80 backdrop-blur-sm hover:bg-card overflow-hidden flex flex-col hover:border-primary/20">
                   {/* Card background pattern */}
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
                     <AnimatedGridPattern
                       numSquares={15}
                       maxOpacity={0.03}
@@ -108,10 +109,10 @@ export function ServicesSection({ locale, dict }: ServicesSectionProps) {
                       ))}
                     </ul>
                     <Button variant="outline" className="w-full mt-auto" asChild>
-                      <Link href={service.href} className="flex items-center justify-center gap-2">
+                      <LocalizedLink route={service.route} locale={locale as Locale} className="flex items-center justify-center gap-2">
                         {dict.common.readMore}
                         <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                      </Link>
+                      </LocalizedLink>
                     </Button>
                   </CardContent>
                 </Card>
@@ -123,10 +124,10 @@ export function ServicesSection({ locale, dict }: ServicesSectionProps) {
         <BlurFade delay={0.8}>
           <div className="text-center">
             <Button asChild size="lg" className="px-8 py-3 text-lg">
-              <Link href={`/${locale}/tjanster`} className="flex items-center gap-2">
+              <LocalizedLink route="services" locale={locale as Locale} className="flex items-center gap-2">
                 {dict.services.viewAllServices}
                 <ArrowRight className="h-5 w-5" />
-              </Link>
+              </LocalizedLink>
             </Button>
           </div>
         </BlurFade>

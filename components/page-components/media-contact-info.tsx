@@ -1,9 +1,10 @@
 import { BlurFade } from "@/components/magicui/blur-fade";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { LocalizedLink } from "@/components/localized-link";
 import { getContactInfo } from "@/lib/data/media-kit";
 import { Phone, Mail, Clock, MessageCircle, Tv, PenTool, Users } from "lucide-react";
-import Link from "next/link";
+import { type Locale } from "@/lib/routes";
 
 const availabilityIcons = {
   "interviews": Tv,
@@ -77,9 +78,9 @@ export function MediaContactInfo({ locale, dict }: MediaContactInfoProps) {
             
             <div className="pt-4 border-t border-border">
               <Button asChild className="w-full">
-                <Link href={`/${locale}/kontakt`}>
+                <LocalizedLink route="contact" locale={locale as Locale}>
                   {dict.media.components.contact.sendMediaRequest}
-                </Link>
+                </LocalizedLink>
               </Button>
             </div>
           </CardContent>

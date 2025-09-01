@@ -264,7 +264,7 @@ export default async function SeniorAdvisorPage({
         customDescription={dict.pages.services.seniorAdvisor.ctaSubtitle}
         primaryButtonText={dict.pages.services.seniorAdvisor.ctaButton}
         secondaryButtonText={dict.pages.services.seniorAdvisor.ctaSecondary}
-        secondaryButtonHref={`/${locale}/om-yvonne`}
+        secondaryButtonHref="about"
       />
     </main>
   );

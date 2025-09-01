@@ -3,6 +3,7 @@
 import * as React from "react"
 import { Globe } from "lucide-react"
 import { usePathname, useRouter } from "next/navigation"
+import { getAlternateLanguageRoute, type Locale } from "@/lib/routes"
 
 import { Button } from "@/components/ui/button"
 import {
@@ -20,19 +21,15 @@ export function LanguageSwitcher({ locale }: LanguageSwitcherProps) {
   const pathname = usePathname()
   const router = useRouter()
 
-  const switchLanguage = (newLocale: string) => {
-    // Remove current locale from pathname
-    const pathnameWithoutLocale = pathname.replace(`/${locale}`, '') || '/'
-    
-    // Add new locale
-    const newPath = `/${newLocale}${pathnameWithoutLocale === '/' ? '' : pathnameWithoutLocale}`
-    
+  const switchLanguage = (newLocale: Locale) => {
+    // Use the route mapping system to get the correct URL for the target language
+    const newPath = getAlternateLanguageRoute(pathname, newLocale)
     router.push(newPath)
   }
 
   const languages = [
-    { code: 'en', label: 'English', flag: '🇺🇸' },
-    { code: 'sv', label: 'Svenska', flag: '🇸🇪' },
+    { code: 'en' as Locale, label: 'English', flag: '🇺🇸' },
+    { code: 'sv' as Locale, label: 'Svenska', flag: '🇸🇪' },
   ]
 
   // const currentLanguage = languages.find(lang => lang.code === locale)

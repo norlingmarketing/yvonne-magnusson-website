@@ -1,5 +1,6 @@
 import { Service, ProcessStep } from "@/lib/types";
 import { Dictionary } from "@/lib/types/dictionary";
+import { type RouteKey } from "@/lib/routes";
 
 export const getServices = (dict: Dictionary, locale: string): Service[] => [
   {
@@ -13,7 +14,7 @@ export const getServices = (dict: Dictionary, locale: string): Service[] => [
     investment: dict.services.boardWorkInvestment,
     color: "from-blue-50 to-blue-100",
     iconColor: "text-blue-600",
-    href: `/${locale}/tjanster/styrelsearbete`
+    route: "boardWork" as RouteKey
   },
   {
     id: "senior-advisor",
@@ -26,7 +27,7 @@ export const getServices = (dict: Dictionary, locale: string): Service[] => [
     investment: dict.services.seniorAdvisorInvestment,
     color: "from-emerald-50 to-emerald-100",
     iconColor: "text-emerald-600",
-    href: `/${locale}/tjanster/senior-advisor`
+    route: "seniorAdvisor" as RouteKey
   },
   {
     id: "interim-ledare",
@@ -39,7 +40,7 @@ export const getServices = (dict: Dictionary, locale: string): Service[] => [
     investment: dict.services.interimExecutiveInvestment,
     color: "from-purple-50 to-purple-100",
     iconColor: "text-purple-600",
-    href: `/${locale}/tjanster/interim-ledare`
+    route: "interimExecutive" as RouteKey
   },
   {
     id: "workshops",
@@ -52,7 +53,7 @@ export const getServices = (dict: Dictionary, locale: string): Service[] => [
     investment: dict.services.workshopsInvestment,
     color: "from-amber-50 to-amber-100",
     iconColor: "text-amber-600",
-    href: `/${locale}/tjanster/workshops`
+    route: "workshops" as RouteKey
   }
 ];
 

@@ -1,4 +1,5 @@
 import { IconName } from "@/lib/utils/icon-map";
+import { type RouteKey } from "@/lib/routes";
 
 export interface Service {
   id: string;
@@ -11,7 +12,7 @@ export interface Service {
   investment: string;
   color: string;
   iconColor: string;
-  href: string;
+  route: RouteKey;
 }
 
 export interface ProcessStep {

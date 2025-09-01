@@ -25,7 +25,12 @@ const LogoCard = ({ client }: { client: { name: string; description: string } })
   </div>
 );
 
-export function LogoCloudSection() {
+interface LogoCloudSectionProps {
+  locale: string;
+  dict: any;
+}
+
+export function LogoCloudSection({ locale, dict }: LogoCloudSectionProps) {
   return (
     <section className="py-14">
       <div className="container mx-auto px-4 md:px-8">

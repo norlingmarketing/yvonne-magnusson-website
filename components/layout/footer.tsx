@@ -1,9 +1,10 @@
 "use client";
 
-import Link from "next/link";
+import { LocalizedLink } from "@/components/localized-link";
 import { siteConfig } from "@/lib/site-config";
 import { getIcon, IconName } from "@/lib/utils/icon-map";
 import { Dictionary } from "@/lib/types/dictionary";
+import { type Locale } from "@/lib/routes";
 
 interface FooterProps {
   locale: string;
@@ -14,16 +15,16 @@ export function Footer({ locale, dict }: FooterProps) {
 
   const navigation = {
     services: [
-      { name: dict.services.boardWork, href: `/${locale}/tjanster/styrelsearbete` },
-      { name: dict.services.seniorAdvisor, href: `/${locale}/tjanster/senior-advisor` },
-      { name: dict.services.interimExecutive, href: `/${locale}/tjanster/interim-ledare` },
-      { name: dict.services.workshops, href: `/${locale}/tjanster/workshops` },
+      { name: dict.services.boardWork, route: 'boardWork' as const },
+      { name: dict.services.seniorAdvisor, route: 'seniorAdvisor' as const },
+      { name: dict.services.interimExecutive, route: 'interimExecutive' as const },
+      { name: dict.services.workshops, route: 'workshops' as const },
     ],
     company: [
-      { name: dict.navigation.about, href: `/${locale}/om-yvonne` },
-      { name: dict.navigation.speaking, href: `/${locale}/forelasningar` },
-      { name: dict.navigation.cases, href: `/${locale}/case-referenser` },
-      { name: dict.navigation.insights, href: `/${locale}/insikter` },
+      { name: dict.navigation.about, route: 'about' as const },
+      { name: dict.navigation.speaking, route: 'speaking' as const },
+      { name: dict.navigation.cases, route: 'cases' as const },
+      { name: dict.navigation.insights, route: 'insights' as const },
     ],
     social: [
       {
@@ -47,15 +48,14 @@ export function Footer({ locale, dict }: FooterProps) {
               {navigation.social.map((item) => {
                 const Icon = getIcon(item.icon);
                 return (
-                  <Link
+                  <LocalizedLink
                     key={item.name}
                     href={item.href}
                     className="text-muted-foreground hover:text-background transition-colors"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    external
                   >
                     <Icon className="h-6 w-6" />
-                  </Link>
+                  </LocalizedLink>
                 );
               })}
             </div>
@@ -67,12 +67,13 @@ export function Footer({ locale, dict }: FooterProps) {
             <ul className="space-y-3">
               {navigation.services.map((item) => (
                 <li key={item.name}>
-                  <Link
-                    href={item.href}
+                  <LocalizedLink
+                    route={item.route}
+                    locale={locale as Locale}
                     className="text-muted-foreground hover:text-background transition-colors text-sm"
                   >
                     {item.name}
-                  </Link>
+                  </LocalizedLink>
                 </li>
               ))}
             </ul>
@@ -84,12 +85,13 @@ export function Footer({ locale, dict }: FooterProps) {
             <ul className="space-y-3">
               {navigation.company.map((item) => (
                 <li key={item.name}>
-                  <Link
-                    href={item.href}
+                  <LocalizedLink
+                    route={item.route}
+                    locale={locale as Locale}
                     className="text-muted-foreground hover:text-background transition-colors text-sm"
                   >
                     {item.name}
-                  </Link>
+                  </LocalizedLink>
                 </li>
               ))}
             </ul>
@@ -125,12 +127,13 @@ export function Footer({ locale, dict }: FooterProps) {
               © {new Date().getFullYear()} Yvonne Magnusson. {dict.footer.copyright}
             </p>
             <div className="mt-4 md:mt-0">
-              <Link
-                href={`/${locale}/kontakt`}
+              <LocalizedLink
+                route="contact"
+                locale={locale as Locale}
                 className="text-sm text-muted-foreground hover:text-background transition-colors"
               >
                 {dict.footer.privacyPolicy}
-              </Link>
+              </LocalizedLink>
             </div>
           </div>
         </div>

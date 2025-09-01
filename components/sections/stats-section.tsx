@@ -7,11 +7,15 @@ const stats = [
   { value: 30, label: "År av ledarskapsexpertis", suffix: "+" },
   { value: 18, label: "År som VD och ledare", suffix: "" },
   { value: 8, label: "Styrelseuppdrag genomförda", suffix: "+" },
-  { value: 4, label: "Framgångsrika turnarounds", suffix: "" },
-  { value: 6, label: "Lönsamma tillväxtresor", suffix: "" },
+  { value: 6, label: "Framgångsrika turnarounds", suffix: "" }
 ];
 
-export function StatsSection() {
+interface StatsSectionProps {
+  locale: string;
+  dict: any;
+}
+
+export function StatsSection({ locale, dict }: StatsSectionProps) {
   return (
     <section className="py-16 md:py-24 bg-gradient-to-b from-muted/50 to-background">
       <div className="container mx-auto px-4">
@@ -26,15 +30,15 @@ export function StatsSection() {
           </div>
         </BlurFade>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
           {stats.map((stat, index) => (
             <BlurFade key={index} delay={0.4 + index * 0.1}>
-              <div className="flex flex-col items-center">
-                <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-2 text-center text-primary">
+              <div className="flex flex-col items-center text-center">
+                <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-2 text-primary">
                   <NumberTicker value={stat.value} />
                   {stat.suffix}
                 </h3>
-                <p className="text-sm text-muted-foreground text-center max-w-[200px]">
+                <p className="text-sm text-muted-foreground max-w-[200px]">
                   {stat.label}
                 </p>
               </div>

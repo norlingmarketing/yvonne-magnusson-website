@@ -3,15 +3,17 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { LocalizedLink } from "@/components/localized-link";
 import { SpeakingTopic } from "@/lib/types";
 import { Play, Users, Clock, CheckCircle } from "lucide-react";
-import Link from "next/link";
+import { type Locale } from "@/lib/routes";
 
 interface SpeakingTopicsProps {
   topics: SpeakingTopic[];
+  locale: string;
 }
 
-export function SpeakingTopics({ topics }: SpeakingTopicsProps) {
+export function SpeakingTopics({ topics, locale }: SpeakingTopicsProps) {
   return (
     <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
       {topics.map((topic, index) => (
@@ -114,9 +116,9 @@ export function SpeakingTopics({ topics }: SpeakingTopicsProps) {
               {/* CTA */}
               <div className="mt-auto pt-4 border-t border-border">
                 <Button asChild className="w-full" size="sm">
-                  <Link href="/kontakt">
+                  <LocalizedLink route="contact" locale={locale as Locale}>
                     Boka föreläsning
-                  </Link>
+                  </LocalizedLink>
                 </Button>
               </div>
             </CardContent>

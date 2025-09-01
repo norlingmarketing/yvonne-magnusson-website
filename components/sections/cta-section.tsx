@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import { LocalizedLink } from "@/components/localized-link";
 import { Dictionary } from "@/lib/types/dictionary";
 import { ReactNode } from "react";
+import { type Locale } from "@/lib/routes";
 
 interface CTASectionProps {
   locale: string;
@@ -44,8 +45,8 @@ export function CTASection({
   const description = customDescription || dict.cta.description;
   const primaryText = primaryButtonText || dict.cta.primaryButton;
   const secondaryText = secondaryButtonText || dict.cta.secondaryButton;
-  const primaryHref = primaryButtonHref || `/${locale}/kontakt`;
-  const secondaryHref = secondaryButtonHref || `/${locale}/tjanster`;
+  const primaryHref = primaryButtonHref || "contact";
+  const secondaryHref = secondaryButtonHref || "services";
 
   return (
     <section className={sectionClass}>
@@ -64,10 +65,10 @@ export function CTASection({
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button asChild size="lg" className={isDark ? "bg-primary hover:bg-primary/90" : undefined} variant={isDark ? undefined : "secondary"}>
-              <Link href={primaryHref} className="flex items-center gap-2">
+              <LocalizedLink route={primaryHref as any} locale={locale as Locale} className="flex items-center gap-2">
                 {primaryText}
                 {primaryButtonIcon}
-              </Link>
+              </LocalizedLink>
             </Button>
             <Button 
               asChild 
@@ -78,10 +79,10 @@ export function CTASection({
                 : "bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
               }
             >
-              <Link href={secondaryHref} className="flex items-center gap-2">
+              <LocalizedLink route={secondaryHref as any} locale={locale as Locale} className="flex items-center gap-2">
                 {secondaryText}
                 {secondaryButtonIcon}
-              </Link>
+              </LocalizedLink>
             </Button>
           </div>
         </div>

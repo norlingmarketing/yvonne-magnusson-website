@@ -2,13 +2,14 @@
 
 import { AnimatePresence, motion, MotionConfig } from "motion/react";
 import { useEffect, useMemo, useState } from "react";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { LocalizedLink } from "@/components/localized-link";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Dictionary } from "@/lib/types/dictionary";
+import { navigationRoutes, type Locale, getLocalizedPath } from "@/lib/routes";
 
 export function useScrollY() {
   const [scrollY, setScrollY] = useState(0);
@@ -37,15 +38,15 @@ export function MainNav({ locale, dict }: MainNavProps) {
 
   const navLinks = useMemo(
     () => [
-      { id: 1, label: dict.navigation.home, link: `/${locale}` },
-      { id: 2, label: dict.navigation.about, link: `/${locale}/om-yvonne` },
-      { id: 3, label: dict.navigation.services, link: `/${locale}/tjanster` },
-      { id: 4, label: dict.navigation.speaking, link: `/${locale}/forelasningar` },
-      { id: 5, label: dict.navigation.cases, link: `/${locale}/case-referenser` },
-      { id: 6, label: dict.navigation.insights, link: `/${locale}/insikter` },
-      { id: 7, label: dict.navigation.media, link: `/${locale}/media` },
+      { id: 1, label: dict.navigation.home, route: 'home' as const },
+      { id: 2, label: dict.navigation.about, route: 'about' as const },
+      { id: 3, label: dict.navigation.services, route: 'services' as const },
+      { id: 4, label: dict.navigation.speaking, route: 'speaking' as const },
+      { id: 5, label: dict.navigation.cases, route: 'cases' as const },
+      { id: 6, label: dict.navigation.insights, route: 'insights' as const },
+      { id: 7, label: dict.navigation.media, route: 'media' as const },
     ],
-    [dict, locale],
+    [dict],
   );
 
   return (
@@ -60,9 +61,9 @@ export function MainNav({ locale, dict }: MainNavProps) {
           }}
           transition={{ duration: 0.15 }}
         >
-          <Link href={`/${locale}`} className="text-2xl font-bold text-primary">
+          <LocalizedLink route="home" locale={locale as Locale} className="text-2xl font-bold text-primary">
             Yvonne Magnusson
-          </Link>
+          </LocalizedLink>
         </motion.div>
 
         {/* Desktop Navigation */}
@@ -84,24 +85,28 @@ export function MainNav({ locale, dict }: MainNavProps) {
           >
             <nav className="relative h-full items-center justify-between gap-x-3.5 md:flex">
               <ul className="flex h-full flex-col justify-center gap-6 md:flex-row md:justify-start md:gap-0 lg:gap-1">
-                {navLinks.map((navItem) => (
-                  <li
-                    key={navItem.id}
-                    className="flex items-center justify-center px-[0.75rem] py-[0.375rem]"
-                  >
-                    <Link 
-                      href={navItem.link}
-                      className={cn(
-                        "text-sm font-medium transition-colors hover:text-primary",
-                        pathname === navItem.link 
-                          ? "text-primary" 
-                          : "text-foreground"
-                      )}
+                {navLinks.map((navItem) => {
+                  const navPath = getLocalizedPath(navItem.route, locale as Locale);
+                  return (
+                    <li
+                      key={navItem.id}
+                      className="flex items-center justify-center px-[0.75rem] py-[0.375rem]"
                     >
-                      {navItem.label}
-                    </Link>
-                  </li>
-                ))}
+                      <LocalizedLink 
+                        route={navItem.route}
+                        locale={locale as Locale}
+                        className={cn(
+                          "text-sm font-medium transition-colors hover:text-primary",
+                          pathname === navPath 
+                            ? "text-primary" 
+                            : "text-foreground"
+                        )}
+                      >
+                        {navItem.label}
+                      </LocalizedLink>
+                    </li>
+                  );
+                })}
               </ul>
             </nav>
             <motion.div
@@ -129,12 +134,13 @@ export function MainNav({ locale, dict }: MainNavProps) {
                     className="shrink-0 whitespace-nowrap"
                   >
                     <li>
-                      <Link
-                        href={`/${locale}/kontakt`}
+                      <LocalizedLink
+                        route="contact"
+                        locale={locale as Locale}
                         className="relative inline-flex w-fit items-center justify-center gap-x-1.5 overflow-hidden rounded-full bg-primary px-3 py-1.5 text-primary-foreground outline-none hover:bg-primary/90 transition-colors text-sm"
                       >
                         {dict.navigation.contact}
-                      </Link>
+                      </LocalizedLink>
                     </li>
                   </motion.ul>
                 )}
@@ -155,9 +161,9 @@ export function MainNav({ locale, dict }: MainNavProps) {
           <LanguageSwitcher locale={locale} />
           <ThemeToggle />
           <Button asChild size="sm" className="rounded-full">
-            <Link href={`/${locale}/kontakt`}>
+            <LocalizedLink route="contact" locale={locale as Locale}>
               {dict.navigation.contact}
-            </Link>
+            </LocalizedLink>
           </Button>
         </motion.div>
 
@@ -226,22 +232,26 @@ export function MainNav({ locale, dict }: MainNavProps) {
               className="absolute top-full left-0 right-0 mt-2 bg-background/95 backdrop-blur-sm border border-border rounded-2xl p-4 shadow-lg md:hidden"
             >
               <ul className="space-y-2">
-                {navLinks.map((navItem) => (
-                  <li key={navItem.id}>
-                    <Link
-                      href={navItem.link}
-                      onClick={() => setActive(false)}
-                      className={cn(
-                        "block px-4 py-2 text-sm font-medium transition-colors hover:text-primary hover:bg-muted rounded-lg",
-                        pathname === navItem.link 
-                          ? "text-primary bg-muted" 
-                          : "text-foreground"
-                      )}
-                    >
-                      {navItem.label}
-                    </Link>
-                  </li>
-                ))}
+                {navLinks.map((navItem) => {
+                  const navPath = getLocalizedPath(navItem.route, locale as Locale);
+                  return (
+                    <li key={navItem.id}>
+                      <LocalizedLink
+                        route={navItem.route}
+                        locale={locale as Locale}
+                        onClick={() => setActive(false)}
+                        className={cn(
+                          "block px-4 py-2 text-sm font-medium transition-colors hover:text-primary hover:bg-muted rounded-lg",
+                          pathname === navPath 
+                            ? "text-primary bg-muted" 
+                            : "text-foreground"
+                        )}
+                      >
+                        {navItem.label}
+                      </LocalizedLink>
+                    </li>
+                  );
+                })}
                 <li className="pt-2 border-t border-border">
                   <div className="flex items-center gap-2 mb-3">
                     <LanguageSwitcher locale={locale} />
@@ -251,12 +261,13 @@ export function MainNav({ locale, dict }: MainNavProps) {
                     <span className="text-sm text-muted-foreground">{locale === 'sv' ? 'Tema' : 'Theme'}</span>
                   </div>
                   <Button asChild className="w-full">
-                    <Link
-                      href={`/${locale}/kontakt`}
+                    <LocalizedLink
+                      route="contact"
+                      locale={locale as Locale}
                       onClick={() => setActive(false)}
                     >
                       {dict.navigation.contact}
-                    </Link>
+                    </LocalizedLink>
                   </Button>
                 </li>
               </ul>

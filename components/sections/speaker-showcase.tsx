@@ -3,8 +3,9 @@
 import Image from "next/image";
 import { BlurFade } from "@/components/magicui/blur-fade";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import { LocalizedLink } from "@/components/localized-link";
 import { Award, Globe, Mic, Users } from "lucide-react";
+import { type Locale } from "@/lib/routes";
 
 const speakingHighlights = [
   {
@@ -29,7 +30,12 @@ const speakingHighlights = [
   }
 ];
 
-export function SpeakerShowcase() {
+interface SpeakerShowcaseProps {
+  locale: string;
+  dict: any;
+}
+
+export function SpeakerShowcase({ locale, dict }: SpeakerShowcaseProps) {
   return (
     <section className="py-20 bg-gradient-to-br from-muted/50 via-background to-muted/50">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -86,9 +92,9 @@ export function SpeakerShowcase() {
               
               <div className="pt-6">
                 <Button asChild size="lg">
-                  <Link href="/forelasningar" className="px-6 py-2">
+                  <LocalizedLink route="speaking" locale={locale as Locale} className="px-6 py-2">
                     Se föreläsningsämnen
-                  </Link>
+                  </LocalizedLink>
                 </Button>
               </div>
             </div>

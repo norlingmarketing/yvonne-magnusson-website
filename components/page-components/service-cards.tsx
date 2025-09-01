@@ -2,18 +2,20 @@ import { BlurFade } from "@/components/magicui/blur-fade";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import Link from "next/link";
+import { LocalizedLink } from "@/components/localized-link";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import { Service } from "@/lib/types";
 import { getIcon } from "@/lib/utils/icon-map";
 import { Dictionary } from "@/lib/types/dictionary";
+import { type Locale } from "@/lib/routes";
 
 interface ServiceCardsProps {
   services: Service[];
   dict: Dictionary;
+  locale: string;
 }
 
-export function ServiceCards({ services, dict }: ServiceCardsProps) {
+export function ServiceCards({ services, dict, locale }: ServiceCardsProps) {
   return (
     <div className="grid lg:grid-cols-2 gap-8">
       {services.map((service, index) => {
@@ -82,10 +84,10 @@ export function ServiceCards({ services, dict }: ServiceCardsProps) {
                 {/* CTA */}
                 <div className="pt-6 border-t">
                   <Button asChild className="w-full" size="lg">
-                    <Link href={service.href} className="flex items-center justify-center gap-2">
+                    <LocalizedLink route={service.route} locale={locale as Locale} className="flex items-center justify-center gap-2">
                       {dict.services.serviceCard.readMore}
                       <ArrowRight className="h-5 w-5" />
-                    </Link>
+                    </LocalizedLink>
                   </Button>
                 </div>
               </CardContent>

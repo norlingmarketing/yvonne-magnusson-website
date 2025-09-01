@@ -3,7 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, LucideIcon, ArrowRight } from "lucide-react";
-import Link from "next/link";
+import { LocalizedLink } from "@/components/localized-link";
+import { type Locale } from "@/lib/routes";
 
 interface ServiceDetailHeroProps {
   title: string;
@@ -16,6 +17,7 @@ interface ServiceDetailHeroProps {
   investment: string;
   ctaText?: string;
   ctaHref?: string;
+  locale: string;
 }
 
 export function ServiceDetailHero({
@@ -28,7 +30,8 @@ export function ServiceDetailHero({
   approach,
   investment,
   ctaText = "Boka kostnadsfritt samtal",
-  ctaHref = "/kontakt"
+  ctaHref = "/kontakt",
+  locale
 }: ServiceDetailHeroProps) {
   return (
     <section className="py-16 bg-gradient-to-b from-background to-muted/20">
@@ -65,15 +68,15 @@ export function ServiceDetailHero({
               <BlurFade delay={0.3}>
                 <div className="flex gap-4">
                   <Button asChild size="lg">
-                    <Link href={ctaHref}>
+                    <LocalizedLink href={ctaHref}>
                       {ctaText}
                       <ArrowRight className="h-5 w-5 ml-2" />
-                    </Link>
+                    </LocalizedLink>
                   </Button>
                   <Button variant="outline" size="lg" asChild>
-                    <Link href="/case-referenser">
+                    <LocalizedLink route="cases" locale={locale as Locale}>
                       Se resultat
-                    </Link>
+                    </LocalizedLink>
                   </Button>
                 </div>
               </BlurFade>

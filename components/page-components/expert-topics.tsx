@@ -1,8 +1,9 @@
 import { BlurFade } from "@/components/magicui/blur-fade";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { LocalizedLink } from "@/components/localized-link";
 import { MessageSquare } from "lucide-react";
-import Link from "next/link";
+import { type Locale } from "@/lib/routes";
 
 interface ExpertTopicsProps {
   topics: string[];
@@ -50,10 +51,10 @@ export function ExpertTopics({ topics, locale, dict }: ExpertTopicsProps) {
       <BlurFade delay={0.6}>
         <div className="text-center">
           <Button asChild size="lg">
-            <Link href={`/${locale}/kontakt`}>
+            <LocalizedLink route="contact" locale={locale as Locale}>
               <MessageSquare className="h-5 w-5 mr-2" />
               {dict.media.components.expertTopics.contactButton}
-            </Link>
+            </LocalizedLink>
           </Button>
         </div>
       </BlurFade>
