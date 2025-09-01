@@ -65,6 +65,38 @@
       "International Readiness",
       "Business Model Innovation"
     ],
+    "boardWorkIdealFor": [
+      "Retail and FMCG companies",
+      "Companies in transformation phase",
+      "International expansion",
+      "Digital transformation"
+    ],
+    "boardWorkApproach": "Ongoing board work with deep industry knowledge and focus on long-term value creation.",
+    "boardWorkInvestment": "According to board remuneration and time commitment",
+    "seniorAdvisorIdealFor": [
+      "Growth companies in retail",
+      "Management teams needing industry expertise",
+      "Companies with expansion plans",
+      "Owners seeking strategic advice"
+    ],
+    "seniorAdvisorApproach": "Monthly engagement with regular contact and strategic reviews.",
+    "seniorAdvisorInvestment": "Fixed monthly fee based on scope",
+    "interimExecutiveIdealFor": [
+      "Companies in crisis or turnaround",
+      "Growth companies needing experienced leadership",
+      "Ownership changes or transition situations",
+      "Companies with operational challenges"
+    ],
+    "interimExecutiveApproach": "3-18 month assignments with clear goals and ongoing follow-up.",
+    "interimExecutiveInvestment": "Monthly fee + performance-based bonus",
+    "workshopsIdealFor": [
+      "Management teams needing strategic clarity",
+      "Companies planning expansion",
+      "Teams implementing transformation",
+      "Boards needing deeper understanding"
+    ],
+    "workshopsApproach": "1-2 day intensive workshops with preparation and follow-up.",
+    "workshopsInvestment": "Fixed price per workshop incl. materials and follow-up",
     "serviceCard": {
       "whatIncluded": "What's included",
       "suitableFor": "Suitable for",
@@ -85,7 +117,29 @@
       "finalCtaDescription": "Let's discuss your challenges and find the most suitable solution for your transformation.",
       "finalCtaButton": "Book free consultation",
       "finalCtaSecondary": "View speaking"
-    }
+    },
+    "processSteps": [
+      {
+        "step": "01",
+        "title": "First conversation",
+        "description": "Free 15-30 minute conversation to understand your needs and challenges."
+      },
+      {
+        "step": "02",
+        "title": "Needs analysis",
+        "description": "Deeper review of situation, goals and prerequisites to tailor the solution."
+      },
+      {
+        "step": "03",
+        "title": "Proposal & planning",
+        "description": "Concrete proposal on approach, timeline and investment based on your specific needs."
+      },
+      {
+        "step": "04",
+        "title": "Implementation",
+        "description": "Structured implementation with ongoing communication and adaptation as needed."
+      }
+    ]
   },
   "pages": {
     "services": {

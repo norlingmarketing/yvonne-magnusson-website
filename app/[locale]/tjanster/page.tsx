@@ -5,7 +5,7 @@ import { ProcessSteps } from "@/components/page-components/process-steps";
 import { BlurFade } from "@/components/magicui/blur-fade";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { services, processSteps } from "@/lib/data/services";
+import { getServices, getProcessSteps } from "@/lib/data/services";
 import Link from "next/link";
 import { ArrowRight, Presentation } from "lucide-react";
 import { getDictionary } from "@/lib/dictionaries";
@@ -32,6 +32,8 @@ export default async function ServicesPage({
 }) {
   const { locale } = await params;
   const dict = await getDictionary(locale as 'en' | 'sv');
+  const services = getServices(dict, locale);
+  const processSteps = getProcessSteps(dict);
   return (
     <main className="min-h-screen">
       <PageHero

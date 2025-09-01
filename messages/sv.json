@@ -65,6 +65,38 @@
       "International Readiness",
       "Business Model Innovation"
     ],
+    "boardWorkIdealFor": [
+      "Retail- och FMCG-företag",
+      "Företag i transformationsfas", 
+      "Internationell expansion",
+      "Digital omställning"
+    ],
+    "boardWorkApproach": "Löpande styrelsearbete med djup branschkunskap och fokus på långsiktig värdeskapning.",
+    "boardWorkInvestment": "Enligt styrelsearvodering och tidsåtgång",
+    "seniorAdvisorIdealFor": [
+      "Tillväxtföretag inom retail",
+      "Ledningsgrupper som behöver branschexpertis",
+      "Företag med expansionsplaner",
+      "Ägare som söker strategisk rådgivning"
+    ],
+    "seniorAdvisorApproach": "Månatligt engagement med regelbunden kontakt och strategiska genomgångar.",
+    "seniorAdvisorInvestment": "Fast månadsarvode baserat på omfattning",
+    "interimExecutiveIdealFor": [
+      "Företag i kris eller turnaround",
+      "Tillväxtföretag som behöver erfaren ledning",
+      "Ägarbyten eller övergångssituationer",
+      "Företag med operativa utmaningar"
+    ],
+    "interimExecutiveApproach": "3-18 månaders uppdrag med tydliga mål och löpande uppföljning.",
+    "interimExecutiveInvestment": "Månadsarvode + prestationsbaserad bonus",
+    "workshopsIdealFor": [
+      "Ledningsgrupper som behöver strategisk klarhet",
+      "Företag som planerar expansion",
+      "Team som ska genomföra transformation",
+      "Styrelser som behöver djupare förståelse"
+    ],
+    "workshopsApproach": "1-2 dagars intensiva workshops med förarbete och uppföljning.",
+    "workshopsInvestment": "Fast pris per workshop inkl. material och uppföljning",
     "serviceCard": {
       "whatIncluded": "Vad ingår",
       "suitableFor": "Passar för",
@@ -85,7 +117,29 @@
       "finalCtaDescription": "Låt oss diskutera era utmaningar och hitta den mest lämpliga lösningen för er transformation.",
       "finalCtaButton": "Boka kostnadsfritt samtal",
       "finalCtaSecondary": "Se föreläsningar"
-    }
+    },
+    "processSteps": [
+      {
+        "step": "01",
+        "title": "Första samtalet",
+        "description": "Kostnadsfritt 15-30 minuters samtal för att förstå era behov och utmaningar."
+      },
+      {
+        "step": "02",
+        "title": "Behovsanalys", 
+        "description": "Djupare genomgång av situation, mål och förutsättningar för att skräddarsy lösningen."
+      },
+      {
+        "step": "03",
+        "title": "Förslag & planering",
+        "description": "Konkret förslag på upplägg, tidsplan och investering baserat på era specifika behov."
+      },
+      {
+        "step": "04",
+        "title": "Genomförande",
+        "description": "Strukturerat genomförande med löpande kommunikation och anpassning efter behov."
+      }
+    ]
   },
   "pages": {
     "services": {

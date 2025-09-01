@@ -49,6 +49,18 @@ export interface Dictionary {
     interimExecutiveFeatures: string[];
     workshopsDescription: string;
     workshopsFeatures: string[];
+    boardWorkIdealFor: string[];
+    boardWorkApproach: string;
+    boardWorkInvestment: string;
+    seniorAdvisorIdealFor: string[];
+    seniorAdvisorApproach: string;
+    seniorAdvisorInvestment: string;
+    interimExecutiveIdealFor: string[];
+    interimExecutiveApproach: string;
+    interimExecutiveInvestment: string;
+    workshopsIdealFor: string[];
+    workshopsApproach: string;
+    workshopsInvestment: string;
     serviceCard: {
       whatIncluded: string;
       suitableFor: string;
@@ -70,6 +82,11 @@ export interface Dictionary {
       finalCtaButton: string;
       finalCtaSecondary: string;
     };
+    processSteps: Array<{
+      step: string;
+      title: string;
+      description: string;
+    }>;
   };
   pages: {
     services: {
