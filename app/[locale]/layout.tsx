@@ -1,9 +1,8 @@
 import { notFound } from 'next/navigation';
-import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
-import { Footer } from '@/components/layout/footer';
-import { MainNav } from '@/components/navigation/main-nav';
 import { locales } from '@/lib/locale-config';
+import { getDictionary } from '@/lib/dictionaries';
+import { MainNav } from '@/components/navigation/main-nav';
+import { Footer } from '@/components/layout/footer';
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -22,17 +21,17 @@ export default async function LocaleLayout({
   if (!['en', 'sv'].includes(locale)) {
     notFound();
   }
-  
-  // Providing all messages to the client
-  const messages = await getMessages({ locale });
+
+  // Load dictionary for navigation and footer
+  const dict = await getDictionary(locale as 'sv' | 'en');
 
   return (
-    <NextIntlClientProvider messages={messages}>
-      <div className="flex min-h-screen flex-col">
-        <main className="flex-1">
-          {children}
-        </main>
-      </div>
-    </NextIntlClientProvider>
+    <div className="flex min-h-screen flex-col">
+      <MainNav locale={locale} dict={dict} />
+      <main className="flex-1">
+        {children}
+      </main>
+      <Footer locale={locale} dict={dict} />
+    </div>
   );
 }

@@ -37,6 +37,76 @@
     "boardWork": "Board Work",
     "seniorAdvisor": "Senior Advisor",
     "interimExecutive": "Interim Executive", 
-    "workshops": "Workshops"
+    "workshops": "Workshops",
+    "sectionTitle": "What I Offer",
+    "sectionSubtitle": "Four focused service areas to drive transformation and growth in retail and consumer markets.",
+    "viewAllServices": "View all services",
+    "boardWorkDescription": "Commercial acumen and strategic focus for boards on transformation journeys.",
+    "boardWorkFeatures": [
+      "Internationalization and digitalization",
+      "Cultural transformation",
+      "Strategic direction and oversight"
+    ],
+    "seniorAdvisorDescription": "Ongoing advisory for management teams and owners in retail and consumer.",
+    "seniorAdvisorFeatures": [
+      "2-3 days/month engagement",
+      "Strategic sparring",
+      "Retail & Consumer expertise"
+    ],
+    "interimExecutiveDescription": "CEO/CCO roles when transformation, turnaround or growth journey is needed.",
+    "interimExecutiveFeatures": [
+      "Rapid analysis and mobilization",
+      "Focus on KPI delivery",
+      "Experienced turnaround specialist"
+    ],
+    "workshopsDescription": "Tailored workshops for strategic development and transformation.",
+    "workshopsFeatures": [
+      "Retail Experience Sprint",
+      "International Readiness",
+      "Business Model Innovation"
+    ]
+  },
+  "credentials": {
+    "title": "Core Competencies",
+    "subtitle": "Specialized expertise areas that drive transformation forward",
+    "expertise": [
+      "Change Management",
+      "Cultural Transformation",
+      "Digital Transformation",
+      "Business Modelling",
+      "Internationalization",
+      "Retail Excellence"
+    ]
+  },
+  "testimonials": {
+    "title": "What Clients Say",
+    "subtitle": "Trust built through delivered results and long-term partnerships.",
+    "items": [
+      {
+        "quote": "Yvonne has a unique ability to combine strategic perspective with operational leadership – always with focus on sustainable profitability.",
+        "author": "Board Chairman",
+        "company": "Retail AB",
+        "role": "Previous collaboration"
+      },
+      {
+        "quote": "Under Yvonne's leadership we executed a successful turnaround that resulted in +40 MSEK improvement over two years.",
+        "author": "CFO",
+        "company": "Consumer Goods Nordic",
+        "role": "Interim assignment"
+      },
+      {
+        "quote": "Her expertise in digital transformation and internationalization was crucial for our expansion to Nordic markets.",
+        "author": "CEO",
+        "company": "Fashion Retail Group",
+        "role": "Senior Advisory"
+      }
+    ]
+  },
+  "cta": {
+    "subtitle": "READY TO BEGIN?",
+    "title": "Accelerate your transformation today",
+    "description": "Let's discuss how my expertise can help you navigate through change and create sustainable growth for the future.",
+    "primaryButton": "Book intro meeting",
+    "secondaryButton": "Read more about services"
   }
 }

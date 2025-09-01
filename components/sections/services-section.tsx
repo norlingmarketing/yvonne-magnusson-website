@@ -9,54 +9,42 @@ import { AnimatedGridPattern } from "@/components/magicui/animated-grid-pattern"
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
-const services = [
-  {
-    icon: "Users" as IconName,
-    title: "Styrelsearbete",
-    description: "Kommersiell skärpa och strategiskt fokus för styrelser i transformationsresor.",
-    features: [
-      "Internationalisering och digitalisering",
-      "Kulturell transformation",
-      "Strategisk riktning och uppsikt"
-    ],
-    href: "/tjanster/styrelsearbete",
-  },
-  {
-    icon: "Briefcase" as IconName,
-    title: "Senior Advisor",
-    description: "Löpande rådgivning för ledningsgrupper och ägare inom retail och consumer.",
-    features: [
-      "2-3 dagar/månad engagement",
-      "Strategisk sparring",
-      "Retail & Consumer expertis"
-    ],
-    href: "/tjanster/senior-advisor",
-  },
-  {
-    icon: "TrendingUp" as IconName,
-    title: "Interimledare",
-    description: "VD/CCO roller vid behov av förändring, turnaround eller tillväxtresa.",
-    features: [
-      "Snabb analys och mobilisering",
-      "Fokus på KPI-leverans",
-      "Erfaren turnaround-specialist"
-    ],
-    href: "/tjanster/interim-ledare",
-  },
-  {
-    icon: "Presentation" as IconName,
-    title: "Workshops",
-    description: "Skräddarsydda workshops för strategisk utveckling och transformation.",
-    features: [
-      "Retail Experience Sprint",
-      "International Readiness",
-      "Business Model Innovation"
-    ],
-    href: "/tjanster/workshops",
-  },
-];
+interface ServicesSectionProps {
+  locale: string;
+  dict: any;
+}
 
-export function ServicesSection() {
+export function ServicesSection({ locale, dict }: ServicesSectionProps) {
+  const services = [
+    {
+      icon: "Users" as IconName,
+      title: dict.services.boardWork,
+      description: dict.services.boardWorkDescription,
+      features: dict.services.boardWorkFeatures,
+      href: `/${locale}/tjanster/styrelsearbete`,
+    },
+    {
+      icon: "Briefcase" as IconName,
+      title: dict.services.seniorAdvisor,
+      description: dict.services.seniorAdvisorDescription,
+      features: dict.services.seniorAdvisorFeatures,
+      href: `/${locale}/tjanster/senior-advisor`,
+    },
+    {
+      icon: "TrendingUp" as IconName,
+      title: dict.services.interimExecutive,
+      description: dict.services.interimExecutiveDescription,
+      features: dict.services.interimExecutiveFeatures,
+      href: `/${locale}/tjanster/interim-ledare`,
+    },
+    {
+      icon: "Presentation" as IconName,
+      title: dict.services.workshops,
+      description: dict.services.workshopsDescription,
+      features: dict.services.workshopsFeatures,
+      href: `/${locale}/tjanster/workshops`,
+    },
+  ];
   return (
     <section className="relative py-20 bg-muted/50 overflow-hidden">
       {/* Animated Background Pattern */}
@@ -74,11 +62,10 @@ export function ServicesSection() {
         <BlurFade delay={0.2}>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Vad jag erbjuder
+              {dict.services.sectionTitle}
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Fyra fokuserade tjänsteområden för att driva transformation och tillväxt 
-              i retail och consumer markets.
+              {dict.services.sectionSubtitle}
             </p>
           </div>
         </BlurFade>
@@ -121,7 +108,7 @@ export function ServicesSection() {
                     </ul>
                     <Button variant="outline" className="w-full mt-auto" asChild>
                       <Link href={service.href} className="flex items-center justify-center gap-2">
-                        Läs mer
+                        {dict.common.readMore}
                         <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                       </Link>
                     </Button>
@@ -135,8 +122,8 @@ export function ServicesSection() {
         <BlurFade delay={0.8}>
           <div className="text-center">
             <Button asChild size="lg" className="px-8 py-3 text-lg">
-              <Link href="/tjanster" className="flex items-center gap-2">
-                Se alla tjänster
+              <Link href={`/${locale}/tjanster`} className="flex items-center gap-2">
+                {dict.services.viewAllServices}
                 <ArrowRight className="h-5 w-5" />
               </Link>
             </Button>

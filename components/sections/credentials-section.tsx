@@ -3,16 +3,13 @@
 import { BlurFade } from "@/components/magicui/blur-fade";
 import { Badge } from "@/components/ui/badge";
 
-const expertise = [
-  "Change Management",
-  "Cultural Transformation", 
-  "Digital Transformation",
-  "Business Modelling",
-  "Internationalisering",
-  "Retail Excellence",
-];
+interface CredentialsSectionProps {
+  locale: string;
+  dict: any;
+}
 
-export function CredentialsSection() {
+export function CredentialsSection({ locale, dict }: CredentialsSectionProps) {
+  const expertise = dict.credentials.expertise;
   return (
     <section className="py-20 bg-background">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -20,10 +17,10 @@ export function CredentialsSection() {
           <div className="bg-gradient-to-r from-muted/50 to-background rounded-2xl p-8 border border-border">
             <div className="text-center mb-8">
               <h3 className="text-2xl font-bold text-foreground mb-4">
-                Kärnkompetenser
+                {dict.credentials.title}
               </h3>
               <p className="text-muted-foreground">
-                Specialiserade expertområden som driver transformation framåt
+                {dict.credentials.subtitle}
               </p>
             </div>
             

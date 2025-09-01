@@ -6,29 +6,13 @@ import { Quote, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 
-const testimonials = [
-  {
-    quote: "Yvonne har en unik förmåga att kombinera strategiskt perspektiv med operativt ledarskap – alltid med fokus på hållbar lönsamhet.",
-    author: "Styrelseordförande",
-    company: "Retail AB",
-    role: "Tidigare samarbete",
-  },
-  {
-    quote: "Under Yvonnes ledning genomförde vi en framgångsrik turnaround som resulterade i +40 MSEK förbättring på två år.",
-    author: "CFO",
-    company: "Consumer Goods Nordic",
-    role: "Interimuppdrag",
-  },
-  {
-    quote: "Hennes expertis inom digital transformation och internationalisering var avgörande för vår expansion till nordiska marknader.",
-    author: "VD",
-    company: "Fashion Retail Group",
-    role: "Senior Advisory",
-  },
-];
+interface TestimonialsSectionProps {
+  locale: string;
+  dict: any;
+}
 
-
-export function TestimonialsSection() {
+export function TestimonialsSection({ locale, dict }: TestimonialsSectionProps) {
+  const testimonials = dict.testimonials.items;
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlay, setIsAutoPlay] = useState(true);
 
@@ -63,10 +47,10 @@ export function TestimonialsSection() {
         <BlurFade delay={0.2}>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Vad klienter säger
+              {dict.testimonials.title}
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Förtroende byggt genom levererade resultat och långsiktiga partnerskap.
+              {dict.testimonials.subtitle}
             </p>
           </div>
         </BlurFade>

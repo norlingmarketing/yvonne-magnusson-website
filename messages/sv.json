@@ -37,6 +37,76 @@
     "boardWork": "Styrelsearbete",
     "seniorAdvisor": "Senior Advisor", 
     "interimExecutive": "Interimledare",
-    "workshops": "Workshops"
+    "workshops": "Workshops",
+    "sectionTitle": "Vad jag erbjuder",
+    "sectionSubtitle": "Fyra fokuserade tjänsteområden för att driva transformation och tillväxt i retail och consumer markets.",
+    "viewAllServices": "Se alla tjänster",
+    "boardWorkDescription": "Kommersiell skärpa och strategiskt fokus för styrelser i transformationsresor.",
+    "boardWorkFeatures": [
+      "Internationalisering och digitalisering",
+      "Kulturell transformation",
+      "Strategisk riktning och uppsikt"
+    ],
+    "seniorAdvisorDescription": "Löpande rådgivning för ledningsgrupper och ägare inom retail och consumer.",
+    "seniorAdvisorFeatures": [
+      "2-3 dagar/månad engagement",
+      "Strategisk sparring",
+      "Retail & Consumer expertis"
+    ],
+    "interimExecutiveDescription": "VD/CCO roller vid behov av förändring, turnaround eller tillväxtresa.",
+    "interimExecutiveFeatures": [
+      "Snabb analys och mobilisering",
+      "Fokus på KPI-leverans",
+      "Erfaren turnaround-specialist"
+    ],
+    "workshopsDescription": "Skräddarsydda workshops för strategisk utveckling och transformation.",
+    "workshopsFeatures": [
+      "Retail Experience Sprint",
+      "International Readiness",
+      "Business Model Innovation"
+    ]
+  },
+  "credentials": {
+    "title": "Kärnkompetenser",
+    "subtitle": "Specialiserade expertområden som driver transformation framåt",
+    "expertise": [
+      "Change Management",
+      "Cultural Transformation",
+      "Digital Transformation",
+      "Business Modelling",
+      "Internationalisering",
+      "Retail Excellence"
+    ]
+  },
+  "testimonials": {
+    "title": "Vad klienter säger",
+    "subtitle": "Förtroende byggt genom levererade resultat och långsiktiga partnerskap.",
+    "items": [
+      {
+        "quote": "Yvonne har en unik förmåga att kombinera strategiskt perspektiv med operativt ledarskap – alltid med fokus på hållbar lönsamhet.",
+        "author": "Styrelseordförande",
+        "company": "Retail AB",
+        "role": "Tidigare samarbete"
+      },
+      {
+        "quote": "Under Yvonnes ledning genomförde vi en framgångsrik turnaround som resulterade i +40 MSEK förbättring på två år.",
+        "author": "CFO",
+        "company": "Consumer Goods Nordic",
+        "role": "Interimuppdrag"
+      },
+      {
+        "quote": "Hennes expertis inom digital transformation och internationalisering var avgörande för vår expansion till nordiska marknader.",
+        "author": "VD",
+        "company": "Fashion Retail Group",
+        "role": "Senior Advisory"
+      }
+    ]
+  },
+  "cta": {
+    "subtitle": "REDO ATT BÖRJA?",
+    "title": "Accelerera er transformation idag",
+    "description": "Låt oss diskutera hur min expertis kan hjälpa er navigera genom förändring och skapa hållbar tillväxt för framtiden.",
+    "primaryButton": "Boka intro-samtal",
+    "secondaryButton": "Läs mer om tjänster"
   }
 }

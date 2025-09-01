@@ -4,7 +4,6 @@ import { AnimatePresence, motion, MotionConfig } from "motion/react";
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useTranslations, useLocale } from 'next-intl';
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -24,25 +23,28 @@ export function useScrollY() {
   return scrollY;
 }
 
-export function MainNav() {
+interface MainNavProps {
+  locale: string;
+  dict: any;
+}
+
+export function MainNav({ locale, dict }: MainNavProps) {
   const scrollY = useScrollY();
   const pathname = usePathname();
   const [active, setActive] = useState(false);
-  const t = useTranslations('navigation');
-  const locale = useLocale();
 
   const navLinks = useMemo(
     () => [
-      { id: 1, label: t('home'), link: `/${locale}` },
-      { id: 2, label: t('about'), link: `/${locale}/om-yvonne` },
-      { id: 3, label: t('services'), link: `/${locale}/tjanster` },
-      { id: 4, label: t('speaking'), link: `/${locale}/forelasningar` },
-      { id: 5, label: t('cases'), link: `/${locale}/case-referenser` },
-      { id: 6, label: t('insights'), link: `/${locale}/insikter` },
-      { id: 7, label: t('media'), link: `/${locale}/media` },
-      { id: 8, label: t('contact'), link: `/${locale}/kontakt` },
+      { id: 1, label: dict.navigation.home, link: `/${locale}` },
+      { id: 2, label: dict.navigation.about, link: `/${locale}/om-yvonne` },
+      { id: 3, label: dict.navigation.services, link: `/${locale}/tjanster` },
+      { id: 4, label: dict.navigation.speaking, link: `/${locale}/forelasningar` },
+      { id: 5, label: dict.navigation.cases, link: `/${locale}/case-referenser` },
+      { id: 6, label: dict.navigation.insights, link: `/${locale}/insikter` },
+      { id: 7, label: dict.navigation.media, link: `/${locale}/media` },
+      { id: 8, label: dict.navigation.contact, link: `/${locale}/kontakt` },
     ],
-    [t, locale],
+    [dict, locale],
   );
 
   return (
@@ -130,7 +132,7 @@ export function MainNav() {
                         href={`/${locale}/kontakt`}
                         className="relative inline-flex w-fit items-center justify-center gap-x-1.5 overflow-hidden rounded-full bg-primary px-3 py-1.5 text-primary-foreground outline-none hover:bg-primary/90 transition-colors text-sm"
                       >
-                        {t('contact')}
+                        {dict.navigation.contact}
                       </Link>
                     </li>
                   </motion.ul>
@@ -152,7 +154,7 @@ export function MainNav() {
           <ThemeToggle />
           <Button asChild size="sm" className="rounded-full">
             <Link href={`/${locale}/kontakt`}>
-              {t('contact')}
+              {dict.navigation.contact}
             </Link>
           </Button>
         </motion.div>
@@ -248,7 +250,7 @@ export function MainNav() {
                       href={`/${locale}/kontakt`}
                       onClick={() => setActive(false)}
                     >
-                      {t('contact')}
+                      {dict.navigation.contact}
                     </Link>
                   </Button>
                 </li>
