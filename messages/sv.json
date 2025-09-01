@@ -860,6 +860,21 @@
       "mediaAppearances": "Medieframträdanden",
       "keynotePresentations": "Keynote Presentations", 
       "industryAwards": "Branschutmärkelser"
+    },
+    "components": {
+      "mediaKit": {
+        "content": "Innehåll:",
+        "downloadPackage": "Ladda ner paket"
+      },
+      "contact": {
+        "mediaContact": "Mediakontakt",
+        "availability": "Tillgänglighet",
+        "sendMediaRequest": "Skicka Medieanfrågan",
+        "interviews": "Intervjuer",
+        "commentary": "Kommentarer",
+        "speaking": "Tal & Paneler",
+        "articles": "Artiklar"
+      }
     }
   },
   "cta": {

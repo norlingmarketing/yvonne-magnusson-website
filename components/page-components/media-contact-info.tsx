@@ -12,7 +12,12 @@ const availabilityIcons = {
   "articles": PenTool,
 };
 
-export function MediaContactInfo() {
+interface MediaContactInfoProps {
+  locale: string;
+  dict: any;
+}
+
+export function MediaContactInfo({ locale, dict }: MediaContactInfoProps) {
   return (
     <div className="grid md:grid-cols-2 gap-8">
       {/* Contact Information */}
@@ -21,7 +26,7 @@ export function MediaContactInfo() {
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Phone className="h-5 w-5 text-primary" />
-              Mediakontakt
+              {dict.media.components.contact.mediaContact}
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
@@ -57,8 +62,8 @@ export function MediaContactInfo() {
             
             <div className="pt-4 border-t border-border">
               <Button asChild className="w-full">
-                <Link href="/kontakt">
-                  Skicka Medieanfrågan
+                <Link href={`/${locale}/kontakt`}>
+                  {dict.media.components.contact.sendMediaRequest}
                 </Link>
               </Button>
             </div>
@@ -72,7 +77,7 @@ export function MediaContactInfo() {
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Clock className="h-5 w-5 text-primary" />
-              Tillgänglighet
+              {dict.media.components.contact.availability}
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -88,10 +93,10 @@ export function MediaContactInfo() {
                       </div>
                       <div className="flex-1">
                         <p className="text-sm text-foreground font-medium capitalize">
-                          {key === "interviews" && "Intervjuer"}
-                          {key === "commentary" && "Kommentarer"}
-                          {key === "speaking" && "Tal & Paneler"}
-                          {key === "articles" && "Artiklar"}
+                          {key === "interviews" && dict.media.components.contact.interviews}
+                          {key === "commentary" && dict.media.components.contact.commentary}
+                          {key === "speaking" && dict.media.components.contact.speaking}
+                          {key === "articles" && dict.media.components.contact.articles}
                         </p>
                         <p className="text-xs text-muted-foreground mt-1">
                           {value}

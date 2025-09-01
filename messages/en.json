@@ -860,6 +860,21 @@
       "mediaAppearances": "Media Appearances",
       "keynotePresentations": "Keynote Presentations",
       "industryAwards": "Industry Awards"
+    },
+    "components": {
+      "mediaKit": {
+        "content": "Content:",
+        "downloadPackage": "Download Package"
+      },
+      "contact": {
+        "mediaContact": "Media Contact",
+        "availability": "Availability",
+        "sendMediaRequest": "Send Media Request",
+        "interviews": "Interviews",
+        "commentary": "Commentary",
+        "speaking": "Speaking & Panels",
+        "articles": "Articles"
+      }
     }
   },
   "cta": {

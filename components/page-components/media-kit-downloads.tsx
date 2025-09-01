@@ -6,6 +6,8 @@ import { Download, FileText, Image, Video } from "lucide-react";
 
 interface MediaKitDownloadsProps {
   items: MediaKitItem[];
+  locale: string;
+  dict: any;
 }
 
 const iconMap = {
@@ -14,7 +16,7 @@ const iconMap = {
   "Video": Video,
 };
 
-export function MediaKitDownloads({ items }: MediaKitDownloadsProps) {
+export function MediaKitDownloads({ items, locale, dict }: MediaKitDownloadsProps) {
   return (
     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
       {items.map((item, index) => {
@@ -39,7 +41,7 @@ export function MediaKitDownloads({ items }: MediaKitDownloadsProps) {
               
               <CardContent className="flex-1 flex flex-col">
                 <div className="space-y-2 mb-6 flex-1">
-                  <h4 className="font-medium text-foreground text-sm">Innehåll:</h4>
+                  <h4 className="font-medium text-foreground text-sm">{dict.media.components.mediaKit.content}</h4>
                   <ul className="space-y-1">
                     {item.items.map((file, fileIndex) => (
                       <li key={fileIndex} className="flex items-center justify-between text-xs">
@@ -62,7 +64,7 @@ export function MediaKitDownloads({ items }: MediaKitDownloadsProps) {
                 >
                   <a href={item.downloadUrl} download>
                     <Download className="h-4 w-4 mr-2" />
-                    Ladda ner paket
+                    {dict.media.components.mediaKit.downloadPackage}
                   </a>
                 </Button>
               </CardContent>

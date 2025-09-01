@@ -112,7 +112,7 @@ export default async function MediaPage({
             </div>
           </BlurFade>
 
-          <MediaKitDownloads items={mediaKit} />
+          <MediaKitDownloads items={mediaKit} locale={locale} dict={dict} />
         </div>
       </section>
 
@@ -212,7 +212,7 @@ export default async function MediaPage({
             </div>
           </BlurFade>
 
-          <MediaContactInfo />
+          <MediaContactInfo locale={locale} dict={dict} />
         </div>
       </section>
     </main>
