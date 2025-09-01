@@ -6,11 +6,11 @@ import { MediaAppearances } from "@/components/page-components/media-appearances
 import { ExpertTopics } from "@/components/page-components/expert-topics";
 import { MediaContactInfo } from "@/components/page-components/media-contact-info";
 import { 
-  pressReleases, 
-  mediaKit, 
-  mediaAppearances, 
-  expertTopics,
-  credentials
+  getPressReleases, 
+  getMediaKit, 
+  getMediaAppearances, 
+  getExpertTopics,
+  getCredentials
 } from "@/lib/data/media-kit";
 import { Badge } from "@/components/ui/badge";
 import { Camera, Users, Award, Star } from "lucide-react";
@@ -38,6 +38,11 @@ export default async function MediaPage({
 }) {
   const { locale } = await params;
   const dict = await getDictionary(locale as 'en' | 'sv');
+  const pressReleases = getPressReleases(locale);
+  const mediaKit = getMediaKit(locale);
+  const mediaAppearances = getMediaAppearances(locale);
+  const expertTopics = getExpertTopics(locale);
+  const credentials = getCredentials(locale);
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
