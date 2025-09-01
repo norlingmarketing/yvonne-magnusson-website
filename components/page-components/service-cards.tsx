@@ -22,23 +22,21 @@ export function ServiceCards({ services, dict, locale }: ServiceCardsProps) {
         const Icon = getIcon(service.icon);
         return (
           <BlurFade key={service.id} delay={0.3 + index * 0.1}>
-            <Card className="h-full hover:shadow-xl transition-all duration-300 group">
-              <CardHeader className={`bg-gradient-to-br ${service.color} rounded-t-lg`}>
-                <div className="flex items-start justify-between">
-                  <div className="flex items-center gap-4">
-                    <div className="p-3 bg-white rounded-lg shadow-sm">
-                      <Icon className={`h-8 w-8 ${service.iconColor}`} />
-                    </div>
-                    <div>
-                      <CardTitle className="text-2xl text-foreground group-hover:text-primary transition-colors">
-                        {service.title}
-                      </CardTitle>
-                    </div>
+            <Card className="h-full hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group bg-card border-border">
+              <CardHeader className="pb-6">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-xl group-hover:scale-105 group-hover:bg-primary/20 transition-all duration-300">
+                    <Icon className="h-8 w-8 text-primary" />
+                  </div>
+                  <div className="flex-1">
+                    <CardTitle className="text-2xl text-foreground group-hover:text-primary transition-colors mb-2">
+                      {service.title}
+                    </CardTitle>
+                    <CardDescription className="text-base text-muted-foreground">
+                      {service.description}
+                    </CardDescription>
                   </div>
                 </div>
-                <CardDescription className="text-base text-muted-foreground mt-4">
-                  {service.description}
-                </CardDescription>
               </CardHeader>
               
               <CardContent className="p-6 flex-1 flex flex-col">
