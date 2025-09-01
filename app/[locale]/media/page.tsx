@@ -194,7 +194,7 @@ export default async function MediaPage({
       {/* Expert Topics */}
       <section className="py-20 bg-muted/30">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <ExpertTopics topics={expertTopics} />
+          <ExpertTopics topics={expertTopics} locale={locale} dict={dict} />
         </div>
       </section>
 

@@ -6,17 +6,19 @@ import Link from "next/link";
 
 interface ExpertTopicsProps {
   topics: string[];
+  locale: string;
+  dict: any;
 }
 
-export function ExpertTopics({ topics }: ExpertTopicsProps) {
+export function ExpertTopics({ topics, locale, dict }: ExpertTopicsProps) {
   return (
     <div className="space-y-8">
       <div className="text-center">
         <h2 className="text-2xl font-bold text-foreground mb-4">
-          Expertområden för Mediekontakt
+          {dict.media.components.expertTopics.title}
         </h2>
         <p className="text-muted-foreground max-w-2xl mx-auto">
-          Yvonne är tillgänglig som expert inom följande områden för intervjuer, kommentarer och analyser.
+          {dict.media.components.expertTopics.subtitle}
         </p>
       </div>
 
@@ -38,9 +40,9 @@ export function ExpertTopics({ topics }: ExpertTopicsProps) {
       <BlurFade delay={0.6}>
         <div className="text-center">
           <Button asChild size="lg">
-            <Link href="/kontakt">
+            <Link href={`/${locale}/kontakt`}>
               <MessageSquare className="h-5 w-5 mr-2" />
-              Kontakta för Medieanfrågan
+              {dict.media.components.expertTopics.contactButton}
             </Link>
           </Button>
         </div>

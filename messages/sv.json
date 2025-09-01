@@ -874,6 +874,11 @@
         "commentary": "Kommentarer",
         "speaking": "Tal & Paneler",
         "articles": "Artiklar"
+      },
+      "expertTopics": {
+        "title": "Expertområden för Mediekontakt",
+        "subtitle": "Yvonne är tillgänglig som expert inom följande områden för intervjuer, kommentarer och analyser.",
+        "contactButton": "Kontakta för Medieanfrågan"
       }
     }
   },

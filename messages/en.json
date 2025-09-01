@@ -874,6 +874,11 @@
         "commentary": "Commentary",
         "speaking": "Speaking & Panels",
         "articles": "Articles"
+      },
+      "expertTopics": {
+        "title": "Expert Areas for Media Contact",
+        "subtitle": "Yvonne is available as an expert in the following areas for interviews, commentary, and analysis.",
+        "contactButton": "Contact for Media Inquiry"
       }
     }
   },
