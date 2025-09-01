@@ -222,14 +222,29 @@ export function MyComponent({ locale, dict }: ComponentProps) {
 - Structure: Nested objects matching component hierarchy
 - No fallback text in components (translations must be complete)
 
-**Critical Rules:**
-- ❌ NEVER use hardcoded text in components
-- ❌ NEVER use translation hooks (useTranslations, etc.)
-- ❌ NEVER add fallback text (`dict.title || "fallback"`)
-- ✅ ALWAYS pass dict via props from server components
-- ✅ ALWAYS use server-side dictionary loading
-- ✅ ALWAYS ensure complete translations in both languages
-- ✅ ALWAYS use locale in internal links: `/${locale}/page`
+**⚠️ CRITICAL TRANSLATION RULES - ZERO TOLERANCE FOR VIOLATIONS:**
+
+**❌ ABSOLUTE PROHIBITIONS:**
+- ❌ **NEVER use hardcoded text/copy in components** - THIS IS THE #1 RULE
+- ❌ **NEVER use string literals in JSX** like `<h1>Welcome to our site</h1>`
+- ❌ **NEVER hardcode Swedish/English text** like `"Föreläsningar"` or `"About Us"`
+- ❌ **NEVER use translation hooks** (useTranslations, useT, etc.)
+- ❌ **NEVER add fallback text** (`dict.title || "Default Title"`)
+- ❌ **NEVER put content arrays/objects directly in components**
+
+**✅ MANDATORY REQUIREMENTS:**
+- ✅ **ALL text MUST come from `dict` prop**: `{dict.section.title}`
+- ✅ **ALL components MUST receive `dict` via props** from server components
+- ✅ **ALL text MUST exist in both `/messages/en.json` AND `/messages/sv.json`**
+- ✅ **ALWAYS use server-side dictionary loading** via `getDictionary()`
+- ✅ **ALWAYS use locale in internal links**: `/${locale}/page`
+- ✅ **ALL content arrays MUST be in translation files**, not component files
+
+**Translation File Management:**
+- **English**: `/messages/en.json` - Primary language, complete translations required
+- **Swedish**: `/messages/sv.json` - Secondary language, must match en.json structure exactly
+- **Structure**: Nested objects by component/section (e.g., `hero.title`, `services.boardWork.description`)
+- **Completeness**: Every key in en.json MUST have corresponding translation in sv.json
 
 **URL Structure:**
 - Default: `/` → `/en` (English default)
@@ -324,6 +339,65 @@ export default function ServicesPage() {
 - **Positioning:** Premium transformation expert with 30+ years experience, 4 turnarounds
 - **Lead Generation:** Multiple contact forms, newsletter signup, strategic CTAs
 - **Credibility:** Case studies, testimonials, media appearances, speaking credentials
+
+### 🌐 TRANSLATION MANAGEMENT - CRITICAL REQUIREMENTS
+
+**🚨 ZERO TOLERANCE POLICY: NO HARDCODED TEXT ALLOWED**
+
+This section contains the most critical rules for this project. Violating these rules breaks the entire internationalization system.
+
+**❌ COMPLETELY FORBIDDEN:**
+```typescript
+// ❌ NEVER do this - hardcoded text
+export function MyComponent() {
+  return <h1>Welcome to our website</h1>; // BREAKS I18N
+}
+
+// ❌ NEVER do this - hardcoded arrays
+const services = [
+  { title: "Board Work", description: "..." }, // BREAKS I18N
+  { title: "Advisory", description: "..." }
+];
+
+// ❌ NEVER do this - mixed hardcoded/translated
+<button>{isSwedish ? "Kontakta oss" : "Contact us"}</button> // WRONG APPROACH
+```
+
+**✅ CORRECT IMPLEMENTATION:**
+```typescript
+// ✅ ALWAYS do this - use dictionary
+interface MyComponentProps {
+  locale: string;
+  dict: Dictionary;
+}
+
+export function MyComponent({ locale, dict }: MyComponentProps) {
+  return <h1>{dict.common.welcome}</h1>; // CORRECT
+}
+
+// ✅ ALWAYS do this - data from translations
+const services = dict.services.items; // CORRECT
+```
+
+**How to Add New Text Content:**
+1. **Add to English translation** (`/messages/en.json`) first
+2. **Add matching Swedish translation** (`/messages/sv.json`) 
+3. **Use in component**: `{dict.section.key}`
+4. **Never skip step 2** - both languages must always be complete
+
+**Translation File Structure:**
+```json
+{
+  "common": { "welcome": "Welcome", "contact": "Contact" },
+  "hero": { "title": "Transform Your Business", "subtitle": "..." },
+  "services": { "title": "Our Services", "items": [...] }
+}
+```
+
+**Enforcement:**
+- All PRs will be rejected if hardcoded text is found
+- Every component must use `dict` prop for ALL user-facing text
+- No exceptions, no fallbacks, no shortcuts
 
 ### Technical Patterns
 - **Metadata:** Use layout.tsx files for page-specific SEO metadata

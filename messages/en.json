@@ -26,6 +26,43 @@
     "ctaPrimary": "Book intro meeting",
     "ctaSecondary": "View speaking"
   },
+  "logoCloud": {
+    "title": "TRUSTED BY LEADING COMPANIES"
+  },
+  "statsSection": {
+    "title": "EXPERTISE IN NUMBERS",
+    "subtitle": "Proven leadership through results",
+    "stats": [
+      { "value": 30, "label": "Years of leadership expertise", "suffix": "+" },
+      { "value": 18, "label": "Years as CEO and leader", "suffix": "" },
+      { "value": 8, "label": "Board assignments completed", "suffix": "+" },
+      { "value": 6, "label": "Successful turnarounds", "suffix": "" }
+    ]
+  },
+  "speakerShowcase": {
+    "title": "Inspiring speaker & panelist",
+    "subtitle": "With passion for transformation and change leadership, I share insights from 30+ years of experience",
+    "buttonText": "View speaking topics",
+    "recentTitle": "Recent speaking engagements & panels",
+    "highlights": [
+      {
+        "title": "Keynote Speaker",
+        "description": "Leaders of Trade Copenhagen 2025"
+      },
+      {
+        "title": "Panel Discussions", 
+        "description": "Fashion Industry Summit & Retail Tech"
+      },
+      {
+        "title": "International Events",
+        "description": "Speaking across Nordics & Europe"
+      },
+      {
+        "title": "Expert Commentary",
+        "description": "DI Close & Industry Forums"
+      }
+    ]
+  },
   "footer": {
     "services": "Services",
     "company": "Company",

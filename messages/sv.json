@@ -26,6 +26,43 @@
     "ctaPrimary": "Boka intro-samtal",
     "ctaSecondary": "Se föreläsningar"
   },
+  "logoCloud": {
+    "title": "FÖRTROENDET FRÅN LEDANDE FÖRETAG"
+  },
+  "statsSection": {
+    "title": "EXPERTIS I SIFFROR",
+    "subtitle": "Bevisat ledarskap genom resultat",
+    "stats": [
+      { "value": 30, "label": "År av ledarskapsexpertis", "suffix": "+" },
+      { "value": 18, "label": "År som VD och ledare", "suffix": "" },
+      { "value": 8, "label": "Styrelseuppdrag genomförda", "suffix": "+" },
+      { "value": 6, "label": "Framgångsrika turnarounds", "suffix": "" }
+    ]
+  },
+  "speakerShowcase": {
+    "title": "Inspirerande föreläsare & paneldeltagare",
+    "subtitle": "Med passion för transformation och förändringsledning delar jag insikter från 30+ års erfarenhet",
+    "buttonText": "Se föreläsningsämnen",
+    "recentTitle": "Senaste föreläsningar & paneler",
+    "highlights": [
+      {
+        "title": "Keynote Speaker",
+        "description": "Leaders of Trade Copenhagen 2025"
+      },
+      {
+        "title": "Panel Discussions",
+        "description": "Fashion Industry Summit & Retail Tech"
+      },
+      {
+        "title": "International Events",
+        "description": "Speaking across Nordics & Europe"
+      },
+      {
+        "title": "Expert Commentary",
+        "description": "DI Close & Industry Forums"
+      }
+    ]
+  },
   "footer": {
     "services": "Tjänster",
     "company": "Företag",

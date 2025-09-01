@@ -4,29 +4,25 @@ import { NumberTicker } from "@/components/magicui/number-ticker";
 import { BlurFade } from "@/components/magicui/blur-fade";
 import { Dictionary } from "@/lib/types/dictionary";
 
-const stats = [
-  { value: 30, label: "År av ledarskapsexpertis", suffix: "+" },
-  { value: 18, label: "År som VD och ledare", suffix: "" },
-  { value: 8, label: "Styrelseuppdrag genomförda", suffix: "+" },
-  { value: 6, label: "Framgångsrika turnarounds", suffix: "" }
-];
 
 interface StatsSectionProps {
   locale: string;
   dict: Dictionary;
 }
 
-export function StatsSection({ locale: _locale, dict: _dict }: StatsSectionProps) {
+export function StatsSection({ locale: _locale, dict }: StatsSectionProps) {
+  const stats = dict.statsSection.stats;
+  
   return (
     <section className="py-16 md:py-24 bg-gradient-to-b from-muted/50 to-background">
       <div className="container mx-auto px-4">
         <BlurFade delay={0.2}>
           <div className="text-center space-y-4 py-6 mx-auto">
             <h2 className="text-sm text-primary font-mono font-medium tracking-tight">
-              EXPERTIS I SIFFROR
+              {dict.statsSection.title}
             </h2>
             <h4 className="text-5xl font-medium mb-2 text-balance max-w-3xl mx-auto tracking-tighter text-foreground">
-              Bevisat ledarskap genom resultat
+              {dict.statsSection.subtitle}
             </h4>
           </div>
         </BlurFade>

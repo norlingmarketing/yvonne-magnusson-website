@@ -31,12 +31,12 @@ interface LogoCloudSectionProps {
   dict: Dictionary;
 }
 
-export function LogoCloudSection({ locale: _locale, dict: _dict }: LogoCloudSectionProps) {
+export function LogoCloudSection({ locale: _locale, dict }: LogoCloudSectionProps) {
   return (
     <section className="py-14">
       <div className="container mx-auto px-4 md:px-8">
         <h3 className="text-center text-sm font-semibold text-muted-foreground mb-8">
-          FÖRTROENDET FRÅN LEDANDE FÖRETAG
+          {dict.logoCloud.title}
         </h3>
         <div className="relative">
           <Marquee pauseOnHover className="[--duration:30s]">

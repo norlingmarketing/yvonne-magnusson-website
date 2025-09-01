@@ -26,6 +26,28 @@ export interface Dictionary {
     ctaPrimary: string;
     ctaSecondary: string;
   };
+  logoCloud: {
+    title: string;
+  };
+  statsSection: {
+    title: string;
+    subtitle: string;
+    stats: Array<{
+      value: number;
+      label: string;
+      suffix: string;
+    }>;
+  };
+  speakerShowcase: {
+    title: string;
+    subtitle: string;
+    buttonText: string;
+    recentTitle: string;
+    highlights: Array<{
+      title: string;
+      description: string;
+    }>;
+  };
   footer: {
     services: string;
     company: string;
